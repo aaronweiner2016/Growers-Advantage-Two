@@ -1,0 +1,324 @@
+<!-- cards.njk -->
+{% extends "layouts/_layout.njk" %}
+{% set title = "Cards" %}
+
+{% block content %}
+    <div class="container-fluid py-0">
+        <div class="row">
+            {% include "partials/_sidebar.njk" %}
+
+            <div class="col-12 col-lg-6 col-xl-8 offset-lg-3 offset-xl-2">
+                <div class="row">
+                    <div class="col py-5 docs-text">
+                        <h1 class="h2">{{ title }}</h1>
+                        <div class="d-flex flex-wrap flex-md-nowrap align-items-baseline justify-content-between">
+                            <p class="lead text-muted mb-0">Bootstrap's cards provide a flexible and extensible content container with multiple variants and options.</p>
+                            <p class="font-size-5 font-weight-medium pl-md-4 mb-0"><a class="text-secondary text-nowrap" href="https://getbootstrap.com/docs/4.5/components/card/" target="_blank" rel="noopener">Bootstrap docs<svg width="13" height="13" class="ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right-1</title><path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z"></path></svg></a></p>
+                        </div>
+                        <hr>
+
+                        <section class="py-5" id="cards-basic">
+                            <div class="d-flex align-items-center">
+                                <h2 class="h3 mr-3 mt-3">Basic example</h2>
+                            </div>
+                            <div class="card rounded shadow-lg">
+                                <div class="card-header py-3 bg-white border-bottom">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item mr-2"><a class="nav-link active" href="#result1" data-toggle="tab" role="tab" aria-controls="result1" aria-selected="true"><svg width="16" height="16" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-1</title><path d="M23.432,10.524C20.787,7.614,16.4,4.538,12,4.6,7.6,4.537,3.213,7.615.568,10.524a2.211,2.211,0,0,0,0,2.948C3.182,16.351,7.507,19.4,11.839,19.4h.308c4.347,0,8.671-3.049,11.288-5.929A2.21,2.21,0,0,0,23.432,10.524ZM7.4,12A4.6,4.6,0,1,1,12,16.6,4.6,4.6,0,0,1,7.4,12Z"/><circle cx="12" cy="12" r="2"/></svg>Result</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#html1" data-toggle="tab" role="tab" aria-controls="html1" aria-selected="false"><svg width="15" height="15" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-code</title><path d="M21.414,4.915,17.086.587A2,2,0,0,0,15.672,0H4A2,2,0,0,0,2,2V22a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V6.329A2,2,0,0,0,21.414,4.915ZM10.864,18.96l-.019.018a.75.75,0,0,1-1.06-.036L6.452,15.371a.752.752,0,0,1,0-1.025l3.333-3.571.018-.019A.75.75,0,0,1,10.881,11.8L8.186,14.687a.249.249,0,0,0,0,.341l2.7,2.89A.751.751,0,0,1,10.864,18.96Zm6.684-3.59-3.333,3.571-.018.019a.75.75,0,0,1-1.078-1.043l2.7-2.888a.249.249,0,0,0,0-.341l-2.7-2.889a.751.751,0,0,1,1.1-1.025l3.333,3.571A.752.752,0,0,1,17.548,15.37Z"/></svg>HTML</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="result1" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="card bg-light">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title text-body">Card title</h3>
+                                                            <p class="card-text">
+                                                                Some quick example text to build on the card title and make up the bulk of the card's content. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis non dolore est fuga nobis ipsum illum eligendi nemo iure repellat.
+                                                            </p>
+                                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="html1" role="tabpanel">
+                                            <pre><code class="language-html"><script type="text/plain">
+                                            <div class="card-body">
+                                                <h3 class="card-title text-body">Card title</h3>
+                                                <p class="card-text">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's content. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis non dolore est fuga nobis ipsum illum eligendi nemo iure repellat.
+                                                </p>
+                                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                            </div>
+                                            </script></code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="py-5" id="cards-simple">
+                            <div class="d-flex align-items-center">
+                                <h2 class="h3 mr-3 mt-3">Simple card</h2>
+                            </div>
+                            <div class="card rounded shadow-lg">
+                                <div class="card-header py-3 bg-white border-bottom">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item mr-2"><a class="nav-link active" href="#result2" data-toggle="tab" role="tab" aria-controls="result2" aria-selected="true"><svg width="16" height="16" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-1</title><path d="M23.432,10.524C20.787,7.614,16.4,4.538,12,4.6,7.6,4.537,3.213,7.615.568,10.524a2.211,2.211,0,0,0,0,2.948C3.182,16.351,7.507,19.4,11.839,19.4h.308c4.347,0,8.671-3.049,11.288-5.929A2.21,2.21,0,0,0,23.432,10.524ZM7.4,12A4.6,4.6,0,1,1,12,16.6,4.6,4.6,0,0,1,7.4,12Z"/><circle cx="12" cy="12" r="2"/></svg>Result</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#html2" data-toggle="tab" role="tab" aria-controls="html2" aria-selected="false"><svg width="15" height="15" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-code</title><path d="M21.414,4.915,17.086.587A2,2,0,0,0,15.672,0H4A2,2,0,0,0,2,2V22a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V6.329A2,2,0,0,0,21.414,4.915ZM10.864,18.96l-.019.018a.75.75,0,0,1-1.06-.036L6.452,15.371a.752.752,0,0,1,0-1.025l3.333-3.571.018-.019A.75.75,0,0,1,10.881,11.8L8.186,14.687a.249.249,0,0,0,0,.341l2.7,2.89A.751.751,0,0,1,10.864,18.96Zm6.684-3.59-3.333,3.571-.018.019a.75.75,0,0,1-1.078-1.043l2.7-2.888a.249.249,0,0,0,0-.341l-2.7-2.889a.751.751,0,0,1,1.1-1.025l3.333,3.571A.752.752,0,0,1,17.548,15.37Z"/></svg>HTML</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="result2" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <div class="card shadow bg-light text-center">
+                                                        <div class="card-body py-5 px-2">
+                                                            <svg width="40" height="40" class="fill-secondary mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>building-modern-2</title><path d="M7.125,6h8a.5.5,0,0,0,.3-.9l-3.1-2.325a.5.5,0,0,1-.2-.4V1a1,1,0,0,0-2,0V2.375a.5.5,0,0,1-.2.4L6.825,5.1A.5.5,0,0,0,7.125,6Z"/><path d="M15.125,7.5h-8a.5.5,0,0,0-.5.5V23.5a.5.5,0,0,0,.5.5h8a.5.5,0,0,0,.5-.5V8A.5.5,0,0,0,15.125,7.5Zm-5,13a.75.75,0,0,1-1.5,0v-10a.75.75,0,0,1,1.5,0Zm3.5,0a.75.75,0,0,1-1.5,0v-10a.75.75,0,0,1,1.5,0Z"/><path d="M4.625,13h-4a.5.5,0,0,0-.5.5v10a.5.5,0,0,0,.5.5h4a.5.5,0,0,0,.5-.5v-10A.5.5,0,0,0,4.625,13Zm-1.25,8a.75.75,0,0,1-1.5,0V20a.75.75,0,0,1,1.5,0Zm0-4a.75.75,0,0,1-1.5,0V16a.75.75,0,0,1,1.5,0Z"/><path d="M23.42,12.811l-5.25-2.25a.75.75,0,0,0-1.045.689v12a.75.75,0,0,0,.75.75h5.25a.75.75,0,0,0,.75-.75V13.5A.749.749,0,0,0,23.42,12.811ZM19.875,20.5a.75.75,0,0,1-1.5,0v-1a.75.75,0,0,1,1.5,0Zm0-4.5a.75.75,0,0,1-1.5,0V15a.75.75,0,0,1,1.5,0Zm2.5,4.5a.75.75,0,0,1-1.5,0v-1a.75.75,0,0,1,1.5,0Zm0-4.5a.75.75,0,0,1-1.5,0V15a.75.75,0,0,1,1.5,0Z"/></svg>
+                                                            <p class="font-size-6 mb-0">Santa Clara, 2726 Vernon Street <br>California, CA 02110</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="html2" role="tabpanel">
+                                            <pre><code class="language-html"><script type="text/plain">
+                                            <div class="card shadow bg-light text-center">
+                                                <div class="card-body py-5 px-2">
+                                                    <svg width="40" height="40" class="fill-secondary mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>building-modern-2</title><path d="M7.125,6h8a.5.5,0,0,0,.3-.9l-3.1-2.325a.5.5,0,0,1-.2-.4V1a1,1,0,0,0-2,0V2.375a.5.5,0,0,1-.2.4L6.825,5.1A.5.5,0,0,0,7.125,6Z"/><path d="M15.125,7.5h-8a.5.5,0,0,0-.5.5V23.5a.5.5,0,0,0,.5.5h8a.5.5,0,0,0,.5-.5V8A.5.5,0,0,0,15.125,7.5Zm-5,13a.75.75,0,0,1-1.5,0v-10a.75.75,0,0,1,1.5,0Zm3.5,0a.75.75,0,0,1-1.5,0v-10a.75.75,0,0,1,1.5,0Z"/><path d="M4.625,13h-4a.5.5,0,0,0-.5.5v10a.5.5,0,0,0,.5.5h4a.5.5,0,0,0,.5-.5v-10A.5.5,0,0,0,4.625,13Zm-1.25,8a.75.75,0,0,1-1.5,0V20a.75.75,0,0,1,1.5,0Zm0-4a.75.75,0,0,1-1.5,0V16a.75.75,0,0,1,1.5,0Z"/><path d="M23.42,12.811l-5.25-2.25a.75.75,0,0,0-1.045.689v12a.75.75,0,0,0,.75.75h5.25a.75.75,0,0,0,.75-.75V13.5A.749.749,0,0,0,23.42,12.811ZM19.875,20.5a.75.75,0,0,1-1.5,0v-1a.75.75,0,0,1,1.5,0Zm0-4.5a.75.75,0,0,1-1.5,0V15a.75.75,0,0,1,1.5,0Zm2.5,4.5a.75.75,0,0,1-1.5,0v-1a.75.75,0,0,1,1.5,0Zm0-4.5a.75.75,0,0,1-1.5,0V15a.75.75,0,0,1,1.5,0Z"/></svg>
+                                                    <p class="font-size-6 mb-0">Santa Clara, 2726 Vernon Street <br>California, CA 02110</p>
+                                                </div>
+                                            </div>
+                                            </script></code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="py-5" id="cards-images">
+                            <div class="d-flex align-items-center">
+                                <h2 class="h3 mr-3 mt-3">Images</h2>
+                            </div>
+                            <div class="card rounded shadow-lg">
+                                <div class="card-header py-3 bg-white border-bottom">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item mr-2"><a class="nav-link active" href="#result3" data-toggle="tab" role="tab" aria-controls="result3" aria-selected="true"><svg width="16" height="16" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-1</title><path d="M23.432,10.524C20.787,7.614,16.4,4.538,12,4.6,7.6,4.537,3.213,7.615.568,10.524a2.211,2.211,0,0,0,0,2.948C3.182,16.351,7.507,19.4,11.839,19.4h.308c4.347,0,8.671-3.049,11.288-5.929A2.21,2.21,0,0,0,23.432,10.524ZM7.4,12A4.6,4.6,0,1,1,12,16.6,4.6,4.6,0,0,1,7.4,12Z"/><circle cx="12" cy="12" r="2"/></svg>Result</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#html3" data-toggle="tab" role="tab" aria-controls="html3" aria-selected="false"><svg width="15" height="15" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-code</title><path d="M21.414,4.915,17.086.587A2,2,0,0,0,15.672,0H4A2,2,0,0,0,2,2V22a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V6.329A2,2,0,0,0,21.414,4.915ZM10.864,18.96l-.019.018a.75.75,0,0,1-1.06-.036L6.452,15.371a.752.752,0,0,1,0-1.025l3.333-3.571.018-.019A.75.75,0,0,1,10.881,11.8L8.186,14.687a.249.249,0,0,0,0,.341l2.7,2.89A.751.751,0,0,1,10.864,18.96Zm6.684-3.59-3.333,3.571-.018.019a.75.75,0,0,1-1.078-1.043l2.7-2.888a.249.249,0,0,0,0-.341l-2.7-2.889a.751.751,0,0,1,1.1-1.025l3.333,3.571A.752.752,0,0,1,17.548,15.37Z"/></svg>HTML</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="result3" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <div class="card shadow">
+                                                        <img src="../assets/images/photos/photo-37.jpg" alt="photo-37" class="card-img-top">
+                                                        <div class="card-body">
+                                                            <p class="font-size-6 text-uppercase mb-0"><small class="font-weight-bold">May 28, 2019</small></p>
+                                                            <h3 class="h4 card-title mb-0">
+                                                                <a href="#" class="text-body stretched-link">
+                                                                    Quisque a aliquam enim. Vivamus venenatis et neque id iaculis
+                                                                    <svg width="25" height="25" class="fill-secondary ml-2 mt-n1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>navigation-next-alternate</title><path d="M23.7,10.209a1,1,0,0,0,0-1.414L20.2,5.3A1,1,0,0,0,18.5,6v1.75a.249.249,0,0,1-.25.25H12.5a4.005,4.005,0,0,0-4,4v2a1.5,1.5,0,0,0,3,0V12a1,1,0,0,1,1-1h5.75a.249.249,0,0,1,.25.25V13a1,1,0,0,0,1.708.707Z"></path><path d="M16,12.5a1,1,0,0,0-1,1V18a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,18V6a.5.5,0,0,1,.5-.5H15a1,1,0,1,0,2,0,2,2,0,0,0-2-2H2a2,2,0,0,0-2,2v13a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2v-5A1,1,0,0,0,16,12.5Z"></path></svg>
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="html3" role="tabpanel">
+                                            <pre><code class="language-html"><script type="text/plain">
+                                            <div class="card shadow">
+                                                <img src="../assets/images/photos/photo-37.jpg" alt="photo-37" class="card-img-top">
+                                                <div class="card-body">
+                                                    <p class="font-size-6 text-uppercase mb-0"><small class="font-weight-bold">May 28, 2019</small></p>
+                                                    <h3 class="h4 card-title mb-0">
+                                                        <a href="#" class="text-body stretched-link">
+                                                            Quisque a aliquam enim. Vivamus venenatis et neque id iaculis
+                                                            <svg width="25" height="25" class="fill-secondary ml-2 mt-n1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>navigation-next-alternate</title><path d="M23.7,10.209a1,1,0,0,0,0-1.414L20.2,5.3A1,1,0,0,0,18.5,6v1.75a.249.249,0,0,1-.25.25H12.5a4.005,4.005,0,0,0-4,4v2a1.5,1.5,0,0,0,3,0V12a1,1,0,0,1,1-1h5.75a.249.249,0,0,1,.25.25V13a1,1,0,0,0,1.708.707Z"></path><path d="M16,12.5a1,1,0,0,0-1,1V18a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,18V6a.5.5,0,0,1,.5-.5H15a1,1,0,1,0,2,0,2,2,0,0,0-2-2H2a2,2,0,0,0-2,2v13a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2v-5A1,1,0,0,0,16,12.5Z"></path></svg>
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            </script></code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="py-5" id="cards-horizontal">
+                            <div class="d-flex align-items-center">
+                                <h2 class="h3 mr-3 mt-3">Horizontal</h2>
+                            </div>
+                            <div class="card rounded shadow-lg">
+                                <div class="card-header py-3 bg-white border-bottom">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item mr-2"><a class="nav-link active" href="#result4" data-toggle="tab" role="tab" aria-controls="result4" aria-selected="true"><svg width="16" height="16" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-1</title><path d="M23.432,10.524C20.787,7.614,16.4,4.538,12,4.6,7.6,4.537,3.213,7.615.568,10.524a2.211,2.211,0,0,0,0,2.948C3.182,16.351,7.507,19.4,11.839,19.4h.308c4.347,0,8.671-3.049,11.288-5.929A2.21,2.21,0,0,0,23.432,10.524ZM7.4,12A4.6,4.6,0,1,1,12,16.6,4.6,4.6,0,0,1,7.4,12Z"/><circle cx="12" cy="12" r="2"/></svg>Result</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#html4" data-toggle="tab" role="tab" aria-controls="html4" aria-selected="false"><svg width="15" height="15" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-code</title><path d="M21.414,4.915,17.086.587A2,2,0,0,0,15.672,0H4A2,2,0,0,0,2,2V22a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V6.329A2,2,0,0,0,21.414,4.915ZM10.864,18.96l-.019.018a.75.75,0,0,1-1.06-.036L6.452,15.371a.752.752,0,0,1,0-1.025l3.333-3.571.018-.019A.75.75,0,0,1,10.881,11.8L8.186,14.687a.249.249,0,0,0,0,.341l2.7,2.89A.751.751,0,0,1,10.864,18.96Zm6.684-3.59-3.333,3.571-.018.019a.75.75,0,0,1-1.078-1.043l2.7-2.888a.249.249,0,0,0,0-.341l-2.7-2.889a.751.751,0,0,1,1.1-1.025l3.333,3.571A.752.752,0,0,1,17.548,15.37Z"/></svg>HTML</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="result4" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <div class="card shadow rounded">
+                                                        <div class="row no-gutters h-100">
+                                                            <div class="col-4 col-xl-3">
+                                                                <img src="../assets/images/profiles/profile-07.jpg" alt="profile-07" class="img-fluid w-100 card-img rounded-left">
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="card-body pt-3 pb-0 px-3">
+                                                                    <h3 class="h5 card-title mb-0">Matthew Wells</h3>
+                                                                    <a href="#" class="card-text small mb-0">@matty</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="html4" role="tabpanel">
+                                            <pre><code class="language-html"><script type="text/plain">
+                                            <div class="card shadow rounded">
+                                                <div class="row no-gutters h-100">
+                                                    <div class="col-4 col-xl-3">
+                                                        <img src="../assets/images/profiles/profile-07.jpg" alt="profile-07" class="img-fluid w-100 card-img rounded-left">
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="card-body pt-3 pb-0 px-3">
+                                                            <h3 class="h5 card-title mb-0">Matthew Wells</h3>
+                                                            <a href="#" class="card-text small mb-0">@matty</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </script></code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="py-5" id="cards-pricing">
+                            <div class="d-flex align-items-center">
+                                <h2 class="h3 mr-3 mt-3">Pricing</h2>
+                            </div>
+                            <div class="card rounded shadow-lg">
+                                <div class="card-header py-3 bg-white border-bottom">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item mr-2"><a class="nav-link active" href="#result5" data-toggle="tab" role="tab" aria-controls="result5" aria-selected="true"><svg width="16" height="16" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-1</title><path d="M23.432,10.524C20.787,7.614,16.4,4.538,12,4.6,7.6,4.537,3.213,7.615.568,10.524a2.211,2.211,0,0,0,0,2.948C3.182,16.351,7.507,19.4,11.839,19.4h.308c4.347,0,8.671-3.049,11.288-5.929A2.21,2.21,0,0,0,23.432,10.524ZM7.4,12A4.6,4.6,0,1,1,12,16.6,4.6,4.6,0,0,1,7.4,12Z"/><circle cx="12" cy="12" r="2"/></svg>Result</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#html5" data-toggle="tab" role="tab" aria-controls="html5" aria-selected="false"><svg width="15" height="15" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-code</title><path d="M21.414,4.915,17.086.587A2,2,0,0,0,15.672,0H4A2,2,0,0,0,2,2V22a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V6.329A2,2,0,0,0,21.414,4.915ZM10.864,18.96l-.019.018a.75.75,0,0,1-1.06-.036L6.452,15.371a.752.752,0,0,1,0-1.025l3.333-3.571.018-.019A.75.75,0,0,1,10.881,11.8L8.186,14.687a.249.249,0,0,0,0,.341l2.7,2.89A.751.751,0,0,1,10.864,18.96Zm6.684-3.59-3.333,3.571-.018.019a.75.75,0,0,1-1.078-1.043l2.7-2.888a.249.249,0,0,0,0-.341l-2.7-2.889a.751.751,0,0,1,1.1-1.025l3.333,3.571A.752.752,0,0,1,17.548,15.37Z"/></svg>HTML</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="result5" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <div class="card shadow text-center mb-5">
+                                                        <div class="card-body">
+                                                            <p class="mb-1">Bronze</p>
+                                                            <h3 class="h2"><span class="font-size-4">$</span>349</h3>
+                                                            <ul class="list-unstyled my-5 font-weight-bold font-size-5">
+                                                                <li class="py-2 bg-light">One person ticket</li>
+                                                                <li class="py-2">Lorem ipsum</li>
+                                                                <li class="py-2 bg-light">Dolor sit amet</li>
+                                                                <li class="py-2">Duis eleifend</li>
+                                                                <li class="py-2 bg-light">Aliquam malesuada</li>
+                                                            </ul>
+                                                            <a href="#" data-scroll class="btn btn-primary btn-block px-1">Buy Bronze</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="html5" role="tabpanel">
+                                            <pre><code class="language-html"><script type="text/plain">
+                                            <div class="card shadow text-center mb-5">
+                                                <div class="card-body">
+                                                    <p class="mb-1">Bronze</p>
+                                                    <h3 class="h2"><span class="font-size-4">$</span>349</h3>
+                                                    <ul class="list-unstyled my-5 font-weight-bold font-size-5">
+                                                        <li class="py-2 bg-light">One person ticket</li>
+                                                        <li class="py-2">Lorem ipsum</li>
+                                                        <li class="py-2 bg-light">Dolor sit amet</li>
+                                                        <li class="py-2">Duis eleifend</li>
+                                                        <li class="py-2 bg-light">Aliquam malesuada</li>
+                                                    </ul>
+                                                    <a href="#" data-scroll class="btn btn-primary btn-block px-1">Buy Bronze</a>
+                                                </div>
+                                            </div>
+                                            </script></code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="py-5" id="cards-info">
+                            <div class="d-flex align-items-center">
+                                <h2 class="h3 mr-3 mt-3">Info</h2>
+                            </div>
+                            <div class="card rounded shadow-lg">
+                                <div class="card-header py-3 bg-white border-bottom">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item mr-2"><a class="nav-link active" href="#result6" data-toggle="tab" role="tab" aria-controls="result6" aria-selected="true"><svg width="16" height="16" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-1</title><path d="M23.432,10.524C20.787,7.614,16.4,4.538,12,4.6,7.6,4.537,3.213,7.615.568,10.524a2.211,2.211,0,0,0,0,2.948C3.182,16.351,7.507,19.4,11.839,19.4h.308c4.347,0,8.671-3.049,11.288-5.929A2.21,2.21,0,0,0,23.432,10.524ZM7.4,12A4.6,4.6,0,1,1,12,16.6,4.6,4.6,0,0,1,7.4,12Z"/><circle cx="12" cy="12" r="2"/></svg>Result</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#html6" data-toggle="tab" role="tab" aria-controls="html6" aria-selected="false"><svg width="15" height="15" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-code</title><path d="M21.414,4.915,17.086.587A2,2,0,0,0,15.672,0H4A2,2,0,0,0,2,2V22a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V6.329A2,2,0,0,0,21.414,4.915ZM10.864,18.96l-.019.018a.75.75,0,0,1-1.06-.036L6.452,15.371a.752.752,0,0,1,0-1.025l3.333-3.571.018-.019A.75.75,0,0,1,10.881,11.8L8.186,14.687a.249.249,0,0,0,0,.341l2.7,2.89A.751.751,0,0,1,10.864,18.96Zm6.684-3.59-3.333,3.571-.018.019a.75.75,0,0,1-1.078-1.043l2.7-2.888a.249.249,0,0,0,0-.341l-2.7-2.889a.751.751,0,0,1,1.1-1.025l3.333,3.571A.752.752,0,0,1,17.548,15.37Z"/></svg>HTML</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="result6" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <div class="card bg-secondary text-white shadow h-100">
+                                                        <div class="card-body">
+                                                            <svg width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>vr-360-remote-controller</title><path d="M10.75,7h-3a1.5,1.5,0,0,0-1.5,1.5v14A1.5,1.5,0,0,0,7.75,24h3a1.5,1.5,0,0,0,1.5-1.5V8.5A1.5,1.5,0,0,0,10.75,7Zm-1.5,7a2,2,0,1,1,2-2A2,2,0,0,1,9.25,14Z"/><circle cx="9.25" cy="12" r="0.75"/><path d="M4.466,9.892a.75.75,0,1,0-.432-1.436A10.9,10.9,0,0,0,2.587,9a.25.25,0,0,1-.33-.335,7.754,7.754,0,0,1,8.361-4.291.75.75,0,0,0,.264-1.477A9.244,9.244,0,0,0,3.809,19.469a.749.749,0,1,0,.882-1.212,7.779,7.779,0,0,1-2.425-2.915.25.25,0,0,1,.33-.335,10.962,10.962,0,0,0,1.438.537.75.75,0,1,0,.432-1.436C2.664,13.567,1.5,12.74,1.5,12S2.664,10.433,4.466,9.892Z"/><path d="M15.671,6.394a.751.751,0,0,0-.163,1.049A7.889,7.889,0,0,1,16.24,8.66.251.251,0,0,1,15.909,9a10.654,10.654,0,0,0-1.443-.54.75.75,0,1,0-.432,1.436C15.836,10.433,17,11.26,17,12s-1.164,1.567-2.966,2.108a.751.751,0,0,0-.5.934c.29.962.914.509.935.5a10.962,10.962,0,0,0,1.438-.537.25.25,0,0,1,.33.335,7.779,7.779,0,0,1-2.425,2.915.75.75,0,0,0-.165,1.048c.517.706.843.314,1.047.164A9.277,9.277,0,0,0,18.5,12a9.163,9.163,0,0,0-1.781-5.443A.75.75,0,0,0,15.671,6.394Z"/><path d="M18.5,2a1.491,1.491,0,0,0-.42.06.064.064,0,0,1-.055-.01A.062.062,0,0,1,18,2a1,1,0,0,1,1-1,.5.5,0,0,0,0-1,2,2,0,0,0-2,2V3.5A1.5,1.5,0,1,0,18.5,2Zm0,2a.5.5,0,1,1,.5-.5A.5.5,0,0,1,18.5,4Z"/><path d="M16,3.5a1.491,1.491,0,0,0-.269-.857.25.25,0,0,1,0-.286,1.5,1.5,0,1,0-2.68-1.244.5.5,0,0,0,.967.257A.5.5,0,1,1,14.5,2a.5.5,0,0,0,0,1,.5.5,0,1,1-.482.635.5.5,0,1,0-.963.267A1.5,1.5,0,0,0,16,3.5Z"/><path d="M22.5,0A1.5,1.5,0,0,0,21,1.5v2a1.5,1.5,0,0,0,3,0v-2A1.5,1.5,0,0,0,22.5,0ZM23,3.5a.5.5,0,0,1-1,0v-2a.5.5,0,0,1,1,0Z"/></svg>
+                                                            <h3 class="h4 mt-5">Navigation</h3>
+                                                            <p class="font-size-6 mb-0">Pellentesque auctor rhoncus finibus etim aliquam</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="html6" role="tabpanel">
+                                            <pre><code class="language-html"><script type="text/plain">
+                                            <div class="card bg-secondary text-white shadow h-100">
+                                                <div class="card-body">
+                                                    <svg width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>vr-360-remote-controller</title><path d="M10.75,7h-3a1.5,1.5,0,0,0-1.5,1.5v14A1.5,1.5,0,0,0,7.75,24h3a1.5,1.5,0,0,0,1.5-1.5V8.5A1.5,1.5,0,0,0,10.75,7Zm-1.5,7a2,2,0,1,1,2-2A2,2,0,0,1,9.25,14Z"/><circle cx="9.25" cy="12" r="0.75"/><path d="M4.466,9.892a.75.75,0,1,0-.432-1.436A10.9,10.9,0,0,0,2.587,9a.25.25,0,0,1-.33-.335,7.754,7.754,0,0,1,8.361-4.291.75.75,0,0,0,.264-1.477A9.244,9.244,0,0,0,3.809,19.469a.749.749,0,1,0,.882-1.212,7.779,7.779,0,0,1-2.425-2.915.25.25,0,0,1,.33-.335,10.962,10.962,0,0,0,1.438.537.75.75,0,1,0,.432-1.436C2.664,13.567,1.5,12.74,1.5,12S2.664,10.433,4.466,9.892Z"/><path d="M15.671,6.394a.751.751,0,0,0-.163,1.049A7.889,7.889,0,0,1,16.24,8.66.251.251,0,0,1,15.909,9a10.654,10.654,0,0,0-1.443-.54.75.75,0,1,0-.432,1.436C15.836,10.433,17,11.26,17,12s-1.164,1.567-2.966,2.108a.751.751,0,0,0-.5.934c.29.962.914.509.935.5a10.962,10.962,0,0,0,1.438-.537.25.25,0,0,1,.33.335,7.779,7.779,0,0,1-2.425,2.915.75.75,0,0,0-.165,1.048c.517.706.843.314,1.047.164A9.277,9.277,0,0,0,18.5,12a9.163,9.163,0,0,0-1.781-5.443A.75.75,0,0,0,15.671,6.394Z"/><path d="M18.5,2a1.491,1.491,0,0,0-.42.06.064.064,0,0,1-.055-.01A.062.062,0,0,1,18,2a1,1,0,0,1,1-1,.5.5,0,0,0,0-1,2,2,0,0,0-2,2V3.5A1.5,1.5,0,1,0,18.5,2Zm0,2a.5.5,0,1,1,.5-.5A.5.5,0,0,1,18.5,4Z"/><path d="M16,3.5a1.491,1.491,0,0,0-.269-.857.25.25,0,0,1,0-.286,1.5,1.5,0,1,0-2.68-1.244.5.5,0,0,0,.967.257A.5.5,0,1,1,14.5,2a.5.5,0,0,0,0,1,.5.5,0,1,1-.482.635.5.5,0,1,0-.963.267A1.5,1.5,0,0,0,16,3.5Z"/><path d="M22.5,0A1.5,1.5,0,0,0,21,1.5v2a1.5,1.5,0,0,0,3,0v-2A1.5,1.5,0,0,0,22.5,0ZM23,3.5a.5.5,0,0,1-1,0v-2a.5.5,0,0,1,1,0Z"/></svg>
+                                                    <h3 class="h4 mt-5">Navigation</h3>
+                                                    <p class="font-size-6 mb-0">Pellentesque auctor rhoncus finibus etim aliquam</p>
+                                                </div>
+                                            </div>
+                                            </script></code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3 col-xl-2 sidebar sidebar-right py-6 d-none d-lg-block">
+                <h4 class="h5">Jump to</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-0"><a href="#cards-basic" data-scroll class="nav-link small">Basic example</a></li>
+                    <li class="nav-item mb-0"><a href="#cards-simple" data-scroll class="nav-link small">Simple card</a></li>
+                    <li class="nav-item mb-0"><a href="#cards-images" data-scroll class="nav-link small">Images</a></li>
+                    <li class="nav-item mb-0"><a href="#cards-horizontal" data-scroll class="nav-link small">Horizontal</a></li>
+                    <li class="nav-item mb-0"><a href="#cards-pricing" data-scroll class="nav-link small">Pricing</a></li>
+                    <li class="nav-item mb-0"><a href="#cards-info" data-scroll class="nav-link small">Info</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

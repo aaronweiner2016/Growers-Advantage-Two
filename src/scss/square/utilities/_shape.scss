@@ -1,0 +1,80 @@
+//
+// Shape
+//
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        .square#{$infix} {
+            position: relative;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            @include media-breakpoint-up(lg) {
+                .square-inner {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                padding-bottom: 100%;
+            }
+        }
+
+        .rectangle#{$infix} {
+            position: relative;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            .rectangle-inner {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                padding-bottom: 50%;
+            }
+        }
+    }
+}
+
+.bottom-line,
+.upper-line {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 70px;
+        max-width: 20%;
+        height: 3px;
+        background-color: currentColor;
+    }
+}
+
+.bottom-line {
+    &::after {
+        bottom: -10%;
+    }
+}
+
+.upper-line {
+    &::after {
+        top: -10%;
+    }
+}

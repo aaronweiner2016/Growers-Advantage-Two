@@ -1,0 +1,214 @@
+{
+	"navbar": [
+        {
+            "nav_title": "Overview",
+            "nav_link": "./index.html"
+        },
+		{
+            "nav_title": "Demos",
+            "nav_link": "#",
+            "dropdown": [
+                {
+                    "dropdown_column_class": "col-6 col-md-4 col-lg-6",
+                    "dropdown_column": [
+                        {
+                            "dropdown_header": "Organization",
+                            "dropdown_section_class": "col",
+                            "dropdown_section": [
+                                {
+                                    "dropdown_title": "Event",
+                                    "dropdown_link": "./event.html"
+                                },
+                                {
+                                    "dropdown_title": "Case study",
+                                    "dropdown_link": "./case-study.html"
+                                },
+                                {
+                                    "dropdown_title": "Photography",
+                                    "dropdown_link": "./photography.html"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "dropdown_column_class": "col-6 col-md-4 col-lg-6",
+                    "dropdown_column": [
+                        {
+                            "dropdown_header": "Product",
+                            "dropdown_section_class": "col",
+                            "dropdown_section": [
+                                {
+                                    "dropdown_title": "SaaS",
+                                    "dropdown_link": "./saas.html"
+                                },
+                                {
+                                    "dropdown_title": "Presentation",
+                                    "dropdown_link": "./presentation.html"
+                                },
+                                {
+                                    "dropdown_title": "App",
+                                    "dropdown_link": "./app.html"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nav_title": "Pages",
+            "nav_link": "#",
+            "dropdown": [
+                {
+                    "dropdown_column_class": "col-6 col-md-4",
+                    "dropdown_column": [
+                        {
+                            "dropdown_header": "Company",
+                            "dropdown_section_class": "col-6 col-md-12",
+                            "dropdown_section": [
+                                {
+                                    "dropdown_title": "About",
+                                    "dropdown_link": "./about.html"
+                                },
+                                {
+                                    "dropdown_title": "Team",
+                                    "dropdown_link": "./team.html"
+                                },
+                                {
+                                    "dropdown_title": "Portfolio",
+                                    "dropdown_link": "./portfolio.html"
+                                },
+                                {
+                                    "dropdown_title": "Services",
+                                    "dropdown_link": "./services.html"
+                                },
+                                {
+                                    "dropdown_title": "Contact",
+                                    "dropdown_link": "./contact.html"
+                                },
+                                {
+                                    "dropdown_title": "Pricing",
+                                    "dropdown_link": "./pricing.html"
+                                },
+                                {
+                                    "dropdown_title": "FAQs",
+                                    "dropdown_link": "./faqs.html"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "dropdown_column_class": "col-6 col-md-4",
+                    "dropdown_column": [
+                        {
+                            "dropdown_header": "Job",
+                            "dropdown_section_class": "col-12",
+                            "dropdown_section": [
+                                {
+                                    "dropdown_title": "Careers",
+                                    "dropdown_link": "./careers.html"
+                                },
+                                {
+                                    "dropdown_title": "Opening",
+                                    "dropdown_link": "./careers-single.html"
+                                }
+                            ]
+                        },
+                        {
+                            "dropdown_header": "Blog",
+                            "dropdown_section_class": "col-12",
+                            "dropdown_section": [
+                                {
+                                    "dropdown_title": "Listing",
+                                    "dropdown_link": "./blog.html"
+                                },
+                                {
+                                    "dropdown_title": "Blog post",
+                                    "dropdown_link": "./blog-single.html"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "dropdown_column_class": "col-12 col-md-4",
+                    "dropdown_column": [
+                        {
+                            "dropdown_header": "Account",
+                            "dropdown_section_class": "col-6 col-md-12",
+                            "dropdown_section": [
+                                {
+                                    "dropdown_title": "Sign up",
+                                    "dropdown_link": "./sign-up.html"
+                                },
+                                {
+                                    "dropdown_title": "Sign in",
+                                    "dropdown_link": "./sign-in.html"
+                                },
+                                {
+                                    "dropdown_title": "Recover",
+                                    "dropdown_link": "./password-reset.html"
+                                }
+                            ]
+                        },
+                        {
+                            "dropdown_header": "Utility",
+                            "dropdown_section_class": "col-6 col-md-12",
+                            "dropdown_section": [
+                                {
+                                    "dropdown_title": "Coming soon",
+                                    "dropdown_link": "./coming-soon.html"
+                                },
+                                {
+                                    "dropdown_title": "Legal",
+                                    "dropdown_link": "./legal.html"
+                                },
+                                {
+                                    "dropdown_title": "404",
+                                    "dropdown_link": "./404.html"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nav_title": "Docs",
+            "nav_link": "#",
+            "dropdown": [
+                {
+                    "dropdown_column_class": "col",
+                    "dropdown_column": [
+                        {
+                            "dropdown_header": "Get started",
+                            "dropdown_section_class": "col",
+                            "dropdown_section": [
+                                {
+                                    "dropdown_title": "Documentation",
+                                    "dropdown_link": "./docs/index.html",
+                                    "dropdown_svg": "<svg width='35' height='35' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><title>checklist-pen</title><path d='M7.968,7.413a.752.752,0,0,0-1.055.118L5.437,9.376,4.53,8.469A.75.75,0,0,0,3.469,9.53l1.5,1.5a.765.765,0,0,0,1.116-.062l2-2.5A.751.751,0,0,0,7.968,7.413Z'/><path d='M6.913,13.031,5.437,14.876l-.907-.907A.75.75,0,0,0,3.469,15.03l1.5,1.5a.765.765,0,0,0,1.116-.062l2-2.5a.75.75,0,1,0-1.172-.937Z'/><path d='M20.5,8H17a.5.5,0,0,0-.5.5V18A1.5,1.5,0,0,0,18,19.5h1.5A1.5,1.5,0,0,0,21,18V8.5A.5.5,0,0,0,20.5,8Z'/><path d='M24,3a3,3,0,0,0-3-3H17a.5.5,0,0,0-.5.5v6A.5.5,0,0,0,17,7h3.5a.5.5,0,0,0,.5-.5V2a1,1,0,0,1,1,1l0,8a1,1,0,1,0,2,0Z'/><path d='M15,3a1,1,0,0,0-1-1H1A1,1,0,0,0,0,3V21a1,1,0,0,0,1,1H14a1,1,0,0,0,0-2H2V4H14A1,1,0,0,0,15,3Z'/><path d='M12.5,9.249H10a.75.75,0,0,0,0,1.5h2.5a.75.75,0,0,0,0-1.5Z'/><path d='M12.5,14.749H10a.75.75,0,1,0,0,1.5h2.5a.75.75,0,0,0,0-1.5Z'/><path d='M18.749,20.5a1,1,0,0,0-1,1V23a1,1,0,1,0,2,0V21.5A1,1,0,0,0,18.749,20.5Z'/></svg>",
+                                    "dropdown_text": "Development guides"
+                                },
+                                {
+                                    "dropdown_title": "Components, plugins",
+                                    "dropdown_link": "./docs/alerts.html",
+                                    "dropdown_svg": "<svg width='35' height='35' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><title>ui-columns</title><path d='M22,0H2A2,2,0,0,0,0,2V9a2,2,0,0,0,2,2H22a2,2,0,0,0,2-2V2A2,2,0,0,0,22,0ZM14.75,8.5a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,8.5v-6A.5.5,0,0,1,2.5,2H14.25a.5.5,0,0,1,.5.5ZM21,6.856a.728.728,0,0,1-1.182.568l-1.745-1.4a.727.727,0,0,1,0-1.136l1.745-1.4A.727.727,0,0,1,21,4.064Z'/><path d='M4,4.75h7.5a.75.75,0,0,0,0-1.5H4a.75.75,0,0,0,0,1.5Z'/><path d='M4,7.75H8.5a.75.75,0,0,0,0-1.5H4a.75.75,0,0,0,0,1.5Z'/><path d='M22,13H2a2,2,0,0,0-2,2v7a2,2,0,0,0,2,2H22a2,2,0,0,0,2-2V15A2,2,0,0,0,22,13Zm-7.25,8.5a.5.5,0,0,1-.5.5H2.5a.5.5,0,0,1-.5-.5v-6a.5.5,0,0,1,.5-.5H14.25a.5.5,0,0,1,.5.5ZM21,19.856a.728.728,0,0,1-1.182.568l-1.745-1.4a.727.727,0,0,1,0-1.136l1.745-1.4A.727.727,0,0,1,21,17.064Z'/><path d='M4,17.75h7.5a.75.75,0,0,0,0-1.5H4a.75.75,0,0,0,0,1.5Z'/><path d='M4,20.75H8.5a.75.75,0,0,0,0-1.5H4a.75.75,0,0,0,0,1.5Z'/></svg>",
+                                    "dropdown_text": "Full list of components"
+                                },
+                                {
+                                    "dropdown_title": "Changelog<span class='badge badge-pill badge-secondary ml-2'>1.0.2</span>",
+                                    "dropdown_link": "./docs/changelog.html",
+                                    "dropdown_svg": "<svg width='35' height='35' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><title>list-add</title><path d='M6,2.5H19.5a1,1,0,0,0,0-2H6a1,1,0,0,0,0,2Z'/><path d='M6,8.5H19.5a1,1,0,0,0,0-2H6a1,1,0,0,0,0,2Z'/><path d='M10,13.5a1,1,0,0,0-1-1H6a1,1,0,1,0,0,2H9A1,1,0,0,0,10,13.5Z'/><path d='M2.5.5h-1a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Z'/><path d='M2.5,6.5h-1a1,1,0,0,0,0,2h1a1,1,0,1,0,0-2Z'/><path d='M2.5,12.5h-1a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Z'/><path d='M17.5,11A6.5,6.5,0,1,0,24,17.5,6.508,6.508,0,0,0,17.5,11Zm.75,9a.75.75,0,1,1-1.5,0V18.5a.25.25,0,0,0-.25-.25H15a.75.75,0,0,1,0-1.5h1.5a.25.25,0,0,0,.25-.25V15a.75.75,0,1,1,1.5,0v1.5a.25.25,0,0,0,.25.25H20a.75.75,0,0,1,0,1.5H18.5a.25.25,0,0,0-.25.25Z'/></svg>",
+                                    "dropdown_text": "Check what's new"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

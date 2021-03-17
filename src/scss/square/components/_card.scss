@@ -1,0 +1,19 @@
+//
+// Card
+//
+
+a {
+    &.card-body,
+    &.card-footer,
+    &.card {
+        color: inherit;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.card-title {
+    margin-bottom: 1rem;
+}

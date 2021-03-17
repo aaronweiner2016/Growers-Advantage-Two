@@ -1,0 +1,13 @@
+//
+// Animations
+//
+
+.fadeIn {
+    opacity: 1;
+    transition: opacity .5s ease;
+}
+
+.fadeOut {
+    opacity: 0;
+    transition: opacity .5s ease;
+}

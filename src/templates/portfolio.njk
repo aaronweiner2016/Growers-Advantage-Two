@@ -1,0 +1,155 @@
+<!-- portfolio.njk -->
+{% extends "layouts/_layout.njk" %}
+{% set title = "Portfolio" %}
+{% set logoColor = "#ffffff" %}
+{% set navbarDark = true %}
+{% set navbarFull = true %}
+
+{% block content %}
+    <section class="py-13 py-lg-15 mb-n4 mb-lg-n5" id="content">
+        <div class="bg-primary bg-image bg-cover overlay overlay-primary overlay-70" data-jarallax data-speed=".8" style="background-image: url(assets/images/photos/photo-09.jpg);">
+            <div class="container h-100">
+                <div class="row align-items-center justify-content-center h-100 text-center text-white">
+                    <div class="col-lg-7">
+                        <h1 class="display-4">We deliver quality</h1>
+                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis nibh sit amet eros luctus fringilla. Proin porta orci malesuada</p>
+                        <nav class="nav justify-content-center">
+                            <a class="badge badge-pill badge-soft-white h6 text-uppercase mx-1 py-2 px-3 mb-2 active" href="#" data-filter="*" data-target="#portfolio" data-link-group="categories">All</a>
+                            <a class="badge badge-pill badge-soft-white h6 text-uppercase mx-1 py-2 px-3 mb-2" href="#" data-filter=".illustration" data-target="#portfolio" data-link-group="categories">Illustration</a>
+                            <a class="badge badge-pill badge-soft-white h6 text-uppercase mx-1 py-2 px-3 mb-2" href="#" data-filter=".branding" data-target="#portfolio" data-link-group="categories">Branding</a>
+                            <a class="badge badge-pill badge-soft-white h6 text-uppercase mx-1 py-2 px-3 mb-2" href="#" data-filter=".photographing" data-target="#portfolio" data-link-group="categories">Photographing</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-4 pb-lg-5">
+        <div class="container">
+            <div class="row mx-n3 grid" data-isotope='{"layoutMode": "masonry", "itemSelector": ".grid-item"}' id="portfolio">
+                <div class="grid-item branding col-md-6 col-lg-4 px-3 mb-5">
+                    <a href="#" class="card shadow lift rounded text-body">
+                        <picture>
+                            <source srcset="assets/images/photos/photo-10.webp" type="image/webp">
+                            <source srcset="assets/images/photos/photo-10.jpg" type="image/jpg"> 
+                            <img src="assets/images/photos/photo-10.jpg" alt="photo-10" class="img-fluid w-100 card-img-top rounded-top">
+                        </picture>
+                        <div class="card-body py-4">
+                            <p class="card-text"><strong>Nike Comfort</strong><br/><span class="small text-muted">Branding</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item photographing col-md-6 col-lg-4 px-3 mb-5">
+                    <a href="#" class="card shadow lift rounded text-body">
+                        <picture>
+                            <source srcset="assets/images/photos/photo-11.webp" type="image/webp">
+                            <source srcset="assets/images/photos/photo-11.jpg" type="image/jpg"> 
+                            <img src="assets/images/photos/photo-11.jpg" alt="photo-11" class="img-fluid w-100 card-img-top rounded-top">
+                        </picture>
+                        <div class="card-body py-4">
+                            <p class="card-text"><strong>Just a couple of eggs</strong><br/><span class="small text-muted">Photographing</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item branding col-md-6 col-lg-4 px-3 mb-5">
+                    <a href="#" class="card shadow lift rounded text-body">
+                        <picture>
+                            <source srcset="assets/images/photos/photo-12.webp" type="image/webp">
+                            <source srcset="assets/images/photos/photo-12.jpg" type="image/jpg"> 
+                            <img src="assets/images/photos/photo-12.jpg" alt="photo-12" class="img-fluid w-100 card-img-top rounded-top">
+                        </picture>
+                        <div class="card-body py-4">
+                            <p class="card-text"><strong>The flying pen</strong><br/><span class="small text-muted">Branding</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item photographing col-md-6 col-lg-4 px-3 mb-5">
+                    <a href="#" class="card shadow lift rounded text-body">
+                        <picture>
+                            <source srcset="assets/images/photos/photo-13.webp" type="image/webp">
+                            <source srcset="assets/images/photos/photo-13.jpg" type="image/jpg"> 
+                            <img src="assets/images/photos/photo-13.jpg" alt="photo-13" class="img-fluid w-100 card-img-top rounded-top">
+                        </picture>
+                        <div class="card-body py-4">
+                            <p class="card-text"><strong>Medusas</strong><br/><span class="small text-muted">Photographing</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item photographing col-md-6 col-lg-4 px-3 mb-5">
+                    <a href="#" class="card shadow lift rounded text-body">
+                        <picture>
+                            <source srcset="assets/images/photos/photo-14.webp" type="image/webp">
+                            <source srcset="assets/images/photos/photo-14.jpg" type="image/jpg"> 
+                            <img src="assets/images/photos/photo-14.jpg" alt="photo-14" class="img-fluid w-100 card-img-top rounded-top">
+                        </picture>
+                        <div class="card-body py-4">
+                            <p class="card-text"><strong>Turbooo</strong><br/><span class="small text-muted">Photographing</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item illustration col-md-6 col-lg-4 px-3 mb-5">
+                    <a href="#" class="card shadow lift rounded text-body">
+                        <picture>
+                            <source srcset="assets/images/photos/photo-15.webp" type="image/webp">
+                            <source srcset="assets/images/photos/photo-15.jpg" type="image/jpg"> 
+                            <img src="assets/images/photos/photo-15.jpg" alt="photo-15" class="img-fluid w-100 card-img-top rounded-top">
+                        </picture>
+                        <div class="card-body py-4">
+                            <p class="card-text"><strong>Healthy colors</strong><br/><span class="small text-muted">Illustration</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item illustration col-md-6 col-lg-4 px-3 mb-5">
+                    <a href="#" class="card shadow lift rounded text-body">
+                        <picture>
+                            <source srcset="assets/images/photos/photo-16.webp" type="image/webp">
+                            <source srcset="assets/images/photos/photo-16.jpg" type="image/jpg"> 
+                            <img src="assets/images/photos/photo-16.jpg" alt="photo-16" class="img-fluid w-100 card-img-top rounded-top">
+                        </picture>
+                        <div class="card-body py-4">
+                            <p class="card-text"><strong>MARVEL Universe</strong><br/><span class="small text-muted">Illustration</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item branding col-md-6 col-lg-4 px-3 mb-5">
+                    <a href="#" class="card shadow lift rounded text-body">
+                        <picture>
+                            <source srcset="assets/images/photos/photo-17.webp" type="image/webp">
+                            <source srcset="assets/images/photos/photo-17.jpg" type="image/jpg"> 
+                            <img src="assets/images/photos/photo-17.jpg" alt="photo-17" class="img-fluid w-100 card-img-top rounded-top">
+                        </picture>
+                        <div class="card-body py-4">
+                            <p class="card-text"><strong>Mr. Deadpool</strong><br/><span class="small text-muted">Branding</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item branding col-md-6 col-lg-4 px-3 mb-5">
+                    <a href="#" class="card shadow lift rounded text-body">
+                        <picture>
+                            <source srcset="assets/images/photos/photo-18.webp" type="image/webp">
+                            <source srcset="assets/images/photos/photo-18.jpg" type="image/jpg"> 
+                            <img src="assets/images/photos/photo-18.jpg" alt="photo-18" class="img-fluid w-100 card-img-top rounded-top">
+                        </picture>
+                        <div class="card-body py-4">
+                            <p class="card-text"><strong>Please Sir, I want some more</strong><br/><span class="small text-muted">Branding</span></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6 mt-6 py-lg-7 mt-lg-7 bg-light">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-6 col-xl-7 text-center text-lg-right">
+                    <h2 class="h3 mb-lg-0">Start your new project with Square</h2>
+                </div>
+                <div class="col text-center text-lg-left">
+                    <a href="https://themes.getbootstrap.com/product/square" target="_blank" rel="noopener" class="btn btn-secondary text-uppercase">Purchase now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

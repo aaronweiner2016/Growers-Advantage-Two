@@ -1,0 +1,46 @@
+<!-- coming-soon.njk -->
+{% extends "layouts/_layout.njk" %}
+{% set title = "Coming soon" %}
+{% set logoColor = "#ffffff" %}
+{% set navbarFull = true %}
+{% set fullScreen = true %}
+
+{% block content %}
+    <section id="content">
+        <div class="bg-image bg-cover w-100 vh-100" style="background-image: url(assets/images/photos/photo-57.jpg);"></div>
+        <div class="container">
+            <div class="row vh-100 text-center text-white">
+                <div class="col d-flex flex-column align-self-end">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-12" data-aos="zoom-in">
+                            <h1 class="display-1 mb-5 opacity-70">Ride with elegance</h1>
+                        </div>
+                        <div class="col-md-8 col-xl-6">
+                            <p class="font-size-6 opacity-50 mb-2">I want to know more about Square products</p>
+                            <div class="input-group">
+                                <input type="email" class="form-control border-0" placeholder="Email address" aria-label="Email address" aria-describedby="email-addon">
+                                <div class="input-group-append">
+                                    <button class="btn btn-secondary text-uppercase px-3 px-lg-5" type="button" id="email-addon">Subscribe</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 d-flex flex-column align-self-end">
+                    <h2 class="h3 mb-1 font-weight-normal">Coming Soon</h2>
+                    <div class="row justify-content-center" data-countdown data-end-date="March 31, 2021 23:59:59" data-end-message="Let's Begin!"> <!--Other format for data-end-date="2020-12-31T23:59:59.000Z" -->
+                        <div class="col-auto">
+                            <div class="row justify-content-center display-4 mb-5 text-center">
+                                <div class="col-auto px-3"><span class="days">0</span><span class="font-size-5 font-weight-lighter d-block mt-n1">days</span></div>
+                                <div class="col-auto px-3"><span class="hours">0</span><span class="font-size-5 font-weight-lighter d-block mt-n1">hours</span></div>
+                                <div class="col-auto px-3"><span class="minutes">0</span><span class="font-size-5 font-weight-lighter d-block mt-n1">minutes</span></div>
+                                <div class="col-auto px-3"><span class="seconds">0</span><span class="font-size-5 font-weight-lighter d-block mt-n1">seconds</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

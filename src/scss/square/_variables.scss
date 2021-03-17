@@ -1,0 +1,408 @@
+//
+// Variables
+//
+
+// Color system
+$white:    #fff !default;
+$gray-100: #f9f9f9 !default;
+$gray-200: #eeeeee !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #c4c4c4 !default;
+$gray-500: #adb5bd !default;
+$gray-600: #999999 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$grays: () !default;
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+$blue:    #012545 !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #c7473f !default;
+$orange:  #fd7e14 !default;
+$yellow:  #e1be5f !default;
+$green:   #60c39b !default;
+$teal:    #46c5af !default;
+$cyan:    #359bd0 !default;
+
+$colors: () !default;
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+  ),
+  $colors
+);
+
+$primary:       #232323 !default;
+$secondary:     #da3458 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+$gray:          $gray-600 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark,
+    "white":      $white,
+    "gray":       $gray
+  ),
+  $theme-colors
+);
+
+// Set a specific jump point for requesting color jumps
+$theme-color-interval:                      8% !default;
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold:                  200 !default;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark:                             $primary !default;
+$yiq-text-light:                            $white !default;
+
+
+// Options
+$enable-caret:                              false !default;
+$enable-shadows:                            true !default;
+$enable-responsive-font-sizes:              true !default;
+$enable-validation-icons:                   false !default;
+
+
+// Spacing
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 2.25),
+    6: ($spacer * 3.75),
+    7: ($spacer * 4.75),
+    8: ($spacer * 6.25),
+    9: ($spacer * 7.75),
+    10: ($spacer * 9.5),
+    11: ($spacer * 11),
+    12: ($spacer * 12.5),
+    13: ($spacer * 14.5),
+    14: ($spacer * 16),
+    15: ($spacer * 19)
+  ),
+  $spacers
+);
+
+
+// Body
+$body-color:                                $primary !default;
+
+
+// Links
+$link-color:                                theme-color("secondary") !default;
+$link-decoration:                           none !default;
+$link-hover-color:                          darken($link-color, 7.5%) !default;
+$link-hover-decoration:                     underline !default;
+$emphasized-link-hover-darken-percentage:   15% !default;
+
+
+// Paragraphs
+$paragraph-margin-bottom:                   2rem !default;
+
+
+// Components
+$border-color:                              $gray-300 !default;
+
+$border-radius:                             .15625rem !default;
+$border-radius-lg:                          $border-radius !default;
+$border-radius-sm:                          $border-radius !default;
+
+$box-shadow-sm:                             0 .3125rem .5rem rgba($primary, .075) !default;
+$box-shadow:                                0 .625rem 1rem rgba($primary, .1) !default;
+$box-shadow-lg:                             0 .9375rem 2rem rgba($primary, .15) !default;
+
+$box-shadow-sm-lift:                        0 .5rem .5rem rgba($primary, .1) !default;
+$box-shadow-lift:                           0 .8125rem 1rem rgba($primary, .15) !default;
+$box-shadow-lg-lift:                        0 1.125rem 2rem rgba($primary, .2) !default;
+
+$component-active-bg:                       theme-color("primary") !default;
+
+
+// Typography
+$font-family-sans-serif:                    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-base:                          $font-family-sans-serif !default;
+
+$font-size-base:                            1.125rem !default;
+$font-size-lg:                              $font-size-base * 1.25 !default;
+$font-size-sm:                              .85rem !default;
+$line-height-base:                          1.6 !default;
+
+$font-weight-lighter:                       200 !default;
+$font-weight-light:                         300 !default;
+$font-weight-normal:                        400 !default;
+$font-weight-bold:                          700 !default;
+$font-weight-bolder:                        900 !default;
+
+$headings-margin-bottom:                    $spacer !default;
+$headings-font-weight:                      $font-weight-bolder !default;
+$headings-line-height:                      1.4 !default;
+
+$h1-font-size:                              2.25rem !default;
+$h2-font-size:                              1.875rem !default;
+$h3-font-size:                              1.375rem !default;
+$h4-font-size:                              $font-size-base !default;
+$h5-font-size:                              1rem !default;
+$h6-font-size:                              .9375rem !default;
+
+$display1-size:                             5.625rem !default;
+$display2-size:                             4.6875rem !default;
+$display3-size:                             3.4375rem !default;
+$display4-size:                             2.8125rem !default;
+
+$display1-weight:                           $font-weight-bolder !default;
+$display2-weight:                           $font-weight-bolder !default;
+$display3-weight:                           $font-weight-bolder !default;
+$display4-weight:                           $font-weight-bolder !default;
+
+$lead-font-size:                            $font-size-base * 1.1675 !default;
+$lead-font-weight:                          $font-weight-normal !default;
+
+$small-font-size:                           80% !default;
+
+$text-muted:                                $gray-600 !default;
+
+$blockquote-small-color:                    rgba($primary, .7) !default;
+$blockquote-small-font-size:                $font-size-base !default;
+$blockquote-font-size:                      $font-size-base * 1.33275 !default;
+
+
+// Grid columns
+$grid-gutter-width:                         4rem !default;
+
+
+// Navs
+$nav-font-size:                             1rem !default;
+$nav-link-color:                            $primary !default;
+$nav-tabs-link-active-color:                $secondary !default;
+
+
+// Navbar
+$navbar-padding-y:                          $spacer * 1.5625 !default;
+$navbar-padding-x:                          $grid-gutter-width / 4 !default;
+$navbar-nav-link-padding-x:                 1.25rem !default;
+
+$navbar-brand-padding-y:                    0 !default;
+
+$navbar-toggler-padding-y:                  0 !default;
+$navbar-toggler-padding-x:                  0 !default;
+
+$navbar-dark-color:                         $white !default;
+$navbar-dark-hover-color:                   rgba($white, .65) !default;
+$navbar-dark-active-color:                  rgba($white, .65) !default;
+$navbar-dark-toggler-icon-bg:               url("data:image/svg+xml,%3Csvg version='1.1' xmlns:svgjs='http://svgjs.com/svgjs' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 140 140' style='enable-background:new 0 0 140 140;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E.st1000%7Bfill:#{$navbar-dark-color}%7D%3C/style%3E%3Cg transform='matrix(5.833333333333333,0,0,5.833333333333333,0,0)'%3E%3Cpath class='st1000' d='M0.5,2.5h23v3h-23V2.5z'/%3E%3Cpath class='st1000' d='M0.5,10.5h23v3h-23V10.5z'/%3E%3Cpath class='st1000' d='M0.5,18.5h23v3h-23V18.5z'/%3E%3C/g%3E%3C/svg%3E") !default;
+$navbar-dark-toggler-border-color:          transparent !default;
+$navbar-light-color:                        $primary !default;
+$navbar-light-hover-color:                  rgba($primary, .65) !default;
+$navbar-light-active-color:                 rgba($primary, .65) !default;
+$navbar-light-toggler-icon-bg:              url("data:image/svg+xml,%3Csvg version='1.1' xmlns:svgjs='http://svgjs.com/svgjs' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 140 140' style='enable-background:new 0 0 140 140;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E.st1000%7Bfill:#{$navbar-light-color}%7D%3C/style%3E%3Cg transform='matrix(5.833333333333333,0,0,5.833333333333333,0,0)'%3E%3Cpath class='st1000' d='M0.5,2.5h23v3h-23V2.5z'/%3E%3Cpath class='st1000' d='M0.5,10.5h23v3h-23V10.5z'/%3E%3Cpath class='st1000' d='M0.5,18.5h23v3h-23V18.5z'/%3E%3C/g%3E%3C/svg%3E") !default;
+$navbar-light-toggler-border-color:         transparent !default;
+
+
+// Dropdowns
+$dropdown-padding-y:                        .875rem !default;
+$dropdown-spacer:                           0 !default;
+$dropdown-font-size:                        1rem !default;
+$dropdown-border-radius:                    0 !default;
+$dropdown-border-width:                     0 !default;
+$dropdown-inner-border-radius:              $dropdown-border-radius !default;
+$dropdown-box-shadow:                       $box-shadow !default;
+
+$dropdown-link-color:                       $primary !default;
+$dropdown-link-hover-color:                 $secondary !default;
+$dropdown-link-hover-bg:                    transparent !default;
+
+$dropdown-link-active-color:                $dropdown-link-hover-color !default;
+$dropdown-link-active-bg:                   $dropdown-link-hover-bg !default;
+
+$dropdown-item-padding-y:                   .25rem !default;
+$dropdown-item-padding-x:                   2.5rem !default;
+$dropdown-header-color:                     $primary !default;
+$dropdown-delay-time:                       unset !default;
+
+
+// Buttons + Forms
+$input-btn-padding-y:                       .8125rem !default;
+$input-btn-padding-x:                       1rem !default;
+$input-btn-font-size:                       1rem !default;
+$input-btn-line-height:                     1.5 !default;
+
+$input-btn-padding-y-sm:                    .1875rem !default;
+$input-btn-padding-x-sm:                    1rem !default;
+$input-btn-font-size-sm:                    $input-btn-font-size !default;
+
+$input-btn-padding-y-lg:                    1.0625rem !default;
+$input-btn-padding-x-lg:                    1rem !default;
+$input-btn-font-size-lg:                    $input-btn-font-size !default;
+
+$input-btn-focus-width:                     .2rem !default;
+$input-btn-focus-color:                     rgba($component-active-bg, .25) !default;
+$input-btn-focus-box-shadow:                0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+
+// Buttons
+$btn-padding-y:                             $input-btn-padding-y !default;
+$btn-padding-x:                             $input-btn-padding-x * 3 !default;
+
+$btn-font-size-sm:                          .875rem !default;
+$btn-line-height-sm:                        1.75 !default;
+$btn-padding-y-sm:                          $input-btn-padding-y-sm !default;
+$btn-padding-x-sm:                          $input-btn-padding-x-sm * 1.25 !default;
+
+$btn-padding-y-lg:                          $input-btn-padding-y-lg !default;
+$btn-padding-x-lg:                          $input-btn-padding-x-lg * 3.5 !default;
+
+$btn-font-weight:                           $font-weight-bold !default;
+$btn-box-shadow:                            none !important !default;
+$btn-disabled-opacity:                      .65 !default;
+
+$btn-active-box-shadow:                     none !default;
+
+
+// Forms
+$input-padding-y:                           $input-btn-padding-y !default;
+$input-padding-x:                           $input-btn-padding-x !default;
+$input-line-height:                         $input-btn-line-height !default;
+
+$input-padding-y-sm:                        $input-btn-padding-y-sm !default;
+$input-padding-x-sm:                        $input-btn-padding-x-sm !default;
+$input-font-size-sm:                        $input-btn-font-size-sm !default;
+
+$input-padding-y-lg:                        $input-btn-padding-y-lg !default;
+$input-padding-x-lg:                        $input-btn-padding-x-lg !default;
+$input-font-size-lg:                        $input-btn-font-size-lg !default;
+
+$input-box-shadow:                          inset 0 0 0 transparent !default;
+$input-focus-box-shadow:                    $input-btn-focus-box-shadow !default;
+$input-placeholder-color:                   $gray-400 !default;
+
+$input-bg:                                  $white !default;
+$input-color:                               $gray-700 !default;
+$input-border-color:                        $gray-400 !default;
+
+$input-group-addon-color:                   $input-color !default;
+$input-group-addon-bg:                      $input-border-color !default;
+$input-group-addon-border-color:            $input-border-color !default;
+
+
+// Cards
+$card-spacer-x:                             $grid-gutter-width/2 !default;
+$card-spacer-y:                             $grid-gutter-width/2 !default;
+$card-border-width:                         0 !default;
+$card-border-radius:                        0 !default;
+$card-columns-count:                        2 !default;
+$card-columns-gap:                          $grid-gutter-width/2 !default;
+
+
+// Badges
+$badge-font-size:                           .75rem !default;
+$badge-font-weight:                         $font-weight-normal !default;
+$badge-padding-y:                           .275em !default;
+$badge-padding-x:                           1em !default;
+$badge-pill-padding-x:                      $badge-padding-x !default;
+
+
+// Alerts
+$alert-bg-level:                            0 !default;
+$alert-border-width:                        0 !default;
+$alert-color-level:                         -12.5 !default;
+
+
+// Figures
+$figure-caption-font-size:                  67% !default;
+$figure-caption-color:                      $primary !default;
+
+
+// Close
+$close-font-size:                           1.325rem !default;
+
+
+// Code
+$code-color:                                $red !default;
+
+// Utilities
+$overflows:                                 auto, hidden, visible !default;
+
+
+//
+// Square specific variables
+//
+
+// Preloader
+$preloader-bg-color:                        $white !default;
+$preloader-shape-color:                     $primary !default;
+$preloader-zindex:                          99999 !default;
+
+
+// Swiper
+$swiper-navigation-color:                   $primary !default;
+$swiper-navigation-color-dark:              $white !default;
+$swiper-navigation-prev-icon:               url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Ekeyboard-arrow-left%3C/title%3E%3Cpath d='M22.5,10.5H7.027a.25.25,0,0,1-.25-.25V7.222A1,1,0,0,0,5.07,6.515L.292,11.293a1,1,0,0,0,0,1.414L5.07,17.485a1,1,0,0,0,.707.293,1,1,0,0,0,1-1V13.75a.25.25,0,0,1,.25-.25H22.5a1.5,1.5,0,0,0,0-3Z' fill='#{encodecolor($swiper-navigation-color)}'/%3E%3C/svg%3E") !default;
+$swiper-navigation-next-icon:               url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Ekeyboard-arrow-right%3C/title%3E%3Cpath d='M23.707,11.291,18.929,6.513a1,1,0,0,0-1.707.707v3.028a.25.25,0,0,1-.25.25H1.5a1.5,1.5,0,0,0,0,3H16.972a.25.25,0,0,1,.25.25v3.028a1,1,0,0,0,1.707.707l4.778-4.778a1,1,0,0,0,0-1.414Z' fill='#{encodecolor($swiper-navigation-color)}'/%3E%3C/svg%3E") !default;
+$swiper-navigation-prev-icon-dark:          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Ekeyboard-arrow-left%3C/title%3E%3Cpath d='M22.5,10.5H7.027a.25.25,0,0,1-.25-.25V7.222A1,1,0,0,0,5.07,6.515L.292,11.293a1,1,0,0,0,0,1.414L5.07,17.485a1,1,0,0,0,.707.293,1,1,0,0,0,1-1V13.75a.25.25,0,0,1,.25-.25H22.5a1.5,1.5,0,0,0,0-3Z' fill='#{encodecolor($swiper-navigation-color-dark)}'/%3E%3C/svg%3E") !default;
+$swiper-navigation-next-icon-dark:          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Ekeyboard-arrow-right%3C/title%3E%3Cpath d='M23.707,11.291,18.929,6.513a1,1,0,0,0-1.707.707v3.028a.25.25,0,0,1-.25.25H1.5a1.5,1.5,0,0,0,0,3H16.972a.25.25,0,0,1,.25.25v3.028a1,1,0,0,0,1.707.707l4.778-4.778a1,1,0,0,0,0-1.414Z' fill='#{encodecolor($swiper-navigation-color-dark)}'/%3E%3C/svg%3E")!default;
+
+
+// Photoswipe
+$pswp-icon-color:                           $white !default;
+$pswp-toolbar-close-icon:                   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Eremove%3C/title%3E%3Cpath d='M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z' fill='#{encodecolor($pswp-icon-color)}'/%3E%3C/svg%3E") !default;
+$pswp-toolbar-share-icon:                   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Eshare%3C/title%3E%3Cpath d='M19,14a4.976,4.976,0,0,0-3.586,1.53L9.921,12.783A4.948,4.948,0,0,0,10,12a4.935,4.935,0,0,0-.079-.783L15.414,8.47A4.991,4.991,0,1,0,14,5a4.948,4.948,0,0,0,.079.784L8.586,8.529a5,5,0,1,0,0,6.941l5.493,2.746A4.935,4.935,0,0,0,14,19a5,5,0,1,0,5-5Z' fill='#{encodecolor($pswp-icon-color)}'/%3E%3C/svg%3E") !default;
+$pswp-toolbar-fullscreen-icon:              url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Ecursor-select-frame%3C/title%3E%3Cpath d='M9,0H2A2,2,0,0,0,0,2V9a1,1,0,0,0,1,1H2A1,1,0,0,0,3,9V3.5A.5.5,0,0,1,3.5,3H9a1,1,0,0,0,1-1V1A1,1,0,0,0,9,0Z' fill='#{encodecolor($pswp-icon-color)}'/%3E%3Cpath d='M22,0H15a1,1,0,0,0-1,1V2a1,1,0,0,0,1,1h5.5a.5.5,0,0,1,.5.5V9a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V2A2,2,0,0,0,22,0Z' fill='#{encodecolor($pswp-icon-color)}'/%3E%3Cpath d='M9,21H3.5a.5.5,0,0,1-.5-.5V15a1,1,0,0,0-1-1H1a1,1,0,0,0-1,1v7a2,2,0,0,0,2,2H9a1,1,0,0,0,1-1V22A1,1,0,0,0,9,21Z' fill='#{encodecolor($pswp-icon-color)}'/%3E%3Cpath d='M23,14H22a1,1,0,0,0-1,1v5.5a.5.5,0,0,1-.5.5H15a1,1,0,0,0-1,1v1a1,1,0,0,0,1,1h7a2,2,0,0,0,2-2V15A1,1,0,0,0,23,14Z' fill='#{encodecolor($pswp-icon-color)}'/%3E%3C/svg%3E");
+$pswp-toolbar-normalscreen-icon:            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Ecursor-select-frame-1%3C/title%3E%3Cpath d='M9,0H8A1,1,0,0,0,7,1v5.75A.25.25,0,0,1,6.75,7H1A1,1,0,0,0,0,8V9a1,1,0,0,0,1,1H8a2,2,0,0,0,2-2V1A1,1,0,0,0,9,0Z' fill='#{encodecolor($pswp-icon-color)}'/%3E%3Cpath d='M23,7H17.25a.25.25,0,0,1-.25-.25V1a1,1,0,0,0-1-1H15a1,1,0,0,0-1,1V8a2,2,0,0,0,2,2h7a1,1,0,0,0,1-1V8A1,1,0,0,0,23,7Z' fill='#{encodecolor($pswp-icon-color)}'/%3E%3Cpath d='M8,14H1a1,1,0,0,0-1,1v1a1,1,0,0,0,1,1H6.75a.25.25,0,0,1,.25.25V23a1,1,0,0,0,1,1H9a1,1,0,0,0,1-1V16A2,2,0,0,0,8,14Z' fill='#{encodecolor($pswp-icon-color)}'/%3E%3Cpath d='M23,14H16a2,2,0,0,0-2,2v7a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1v-5.75a.25.25,0,0,1,.25-.25H23a1,1,0,0,0,1-1V15A1,1,0,0,0,23,14Z' fill='#{encodecolor($pswp-icon-color)}'/%3E%3C/svg%3E")!default;
+$pswp-toolbar-zoomin-icon:                  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Ezoom-in-1%3C/title%3E%3Cpath d='M23.414,20.591,19.2,16.377A10.51,10.51,0,1,0,16.372,19.2l4.214,4.214a2.027,2.027,0,0,0,2.828,0A2,2,0,0,0,23.414,20.591ZM10.5,2.005a8.5,8.5,0,1,1-8.5,8.5A8.51,8.51,0,0,1,10.5,2.005Z' fill='#{encodecolor($pswp-icon-color)}'/%3E%3Cpath d='M7,11.505H9.5v2.5a1,1,0,1,0,2,0v-2.5H14a1,1,0,0,0,0-2H11.5v-2.5a1,1,0,1,0-2,0v2.5H7a1,1,0,0,0,0,2Z' fill='#{encodecolor($pswp-icon-color)}'/%3E%3C/svg%3E") !default;
+$pswp-toolbar-zoomout-icon:                 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Ezoom-out-1%3C/title%3E%3Cpath d='M23.414,20.59,19.2,16.376A10.5,10.5,0,1,0,16.372,19.2l4.214,4.213a2.023,2.023,0,0,0,2.828,0A2,2,0,0,0,23.414,20.59ZM10.5,2A8.5,8.5,0,1,1,2,10.5,8.51,8.51,0,0,1,10.5,2Z' fill='#{encodecolor($pswp-icon-color)}'/%3E%3Cpath d='M7,11.5h7a1,1,0,0,0,0-2H7a1,1,0,1,0,0,2Z' fill='#{encodecolor($pswp-icon-color)}'/%3E%3C/svg%3E") !default;
+$pswp-toolbar-play-icon:                    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Econtrols-play%3C/title%3E%3Cpath d='M23.14,10.608,2.253.164A1.559,1.559,0,0,0,0,1.557V22.444a1.558,1.558,0,0,0,2.253,1.392L23.14,13.393A1.557,1.557,0,0,0,23.14,10.608Z' fill='#{encodecolor($pswp-icon-color)}'/%3E%3C/svg%3E") !default;
+$pswp-toolbar-pause-icon:                   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Econtrols-pause%3C/title%3E%3Crect x='3' y='1' width='7' height='22' rx='1.5' ry='1.5' fill='#{encodecolor($pswp-icon-color)}'/%3E%3Crect x='14' y='1' width='7' height='22' rx='1.5' ry='1.5' fill='#{encodecolor($pswp-icon-color)}'/%3E%3C/svg%3E") !default;
+$pswp-navigation-prev-icon:                 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Ekeyboard-arrow-left%3C/title%3E%3Cpath d='M22.5,10.5H7.027a.25.25,0,0,1-.25-.25V7.222A1,1,0,0,0,5.07,6.515L.292,11.293a1,1,0,0,0,0,1.414L5.07,17.485a1,1,0,0,0,.707.293,1,1,0,0,0,1-1V13.75a.25.25,0,0,1,.25-.25H22.5a1.5,1.5,0,0,0,0-3Z' fill='#{encodecolor($pswp-icon-color)}'/%3E%3C/svg%3E") !default;
+$pswp-navigation-next-icon:                 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Ekeyboard-arrow-right%3C/title%3E%3Cpath d='M23.707,11.291,18.929,6.513a1,1,0,0,0-1.707.707v3.028a.25.25,0,0,1-.25.25H1.5a1.5,1.5,0,0,0,0,3H16.972a.25.25,0,0,1,.25.25v3.028a1,1,0,0,0,1.707.707l4.778-4.778a1,1,0,0,0,0-1.414Z' fill='#{encodecolor($pswp-icon-color)}'/%3E%3C/svg%3E") !default;
+
+
+// Mapbox
+$map-marker-color:                          $primary;

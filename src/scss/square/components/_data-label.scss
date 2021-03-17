@@ -1,0 +1,16 @@
+//
+// Data-label
+//
+
+@include media-breakpoint-down(md) {
+    [data-label] {
+        text-align: right;
+
+        &::before {
+            content: attr(data-label);
+            float: left;
+            color: $gray;
+            font-size: $h6-font-size;
+        }
+    }
+}

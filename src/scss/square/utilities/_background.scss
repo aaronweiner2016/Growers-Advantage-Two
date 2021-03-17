@@ -1,0 +1,84 @@
+//
+// Background
+//
+
+@each $color, $value in $grays {
+    .bg-gray#{$color} {
+        color: color-yiq($value);
+        background-color: #{$value};
+    }
+}
+
+
+$layer-widths: (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
+$layer-heights: (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
+$layer-verticals: "top", "bottom";
+$layer-horizontals: "left", "right";
+
+@each $layer-height in $layer-heights {
+    @each $layer-width in $layer-widths {
+        @each $layer-vertical in $layer-verticals {
+            @each $layer-horizontal in $layer-horizontals {
+                @each $color, $value in $theme-colors {
+                    @if ($color == 'primary') or ($color == 'secondary') or ($color == 'white') or ($color == 'light') {
+                        .bg-layer-#{$color}-#{$layer-vertical}-#{$layer-height}-#{$layer-horizontal}-#{$layer-width} {
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                #{$layer-horizontal}: 0;
+                                #{$layer-vertical}: 0;
+                                width: #{$layer-width * 1%};
+                                height: #{$layer-height * 1%};
+                                background-color: $value;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    [class^="bg-layer-"],
+    [class*=" bg-layer-"] {
+        &::before {
+            width: 100%;
+        }
+    }
+}
+
+.bg-image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+}
+
+.bg-cover {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    backface-visibility: hidden;
+}
+
+.bg-contain {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    backface-visibility: hidden;
+}
+
+$bg-positions-y: "top", "bottom", "center";
+$bg-positions-x: "left", "right", "center";
+
+@each $bg-position-y in $bg-positions-y {
+    @each $bg-position-x in $bg-positions-x {
+        .bg-position-#{$bg-position-y}-#{$bg-position-x} {
+            background-position-y: #{$bg-position-y};
+            background-position-x: #{$bg-position-x};
+        }
+    }
+}

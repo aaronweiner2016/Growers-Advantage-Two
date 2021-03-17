@@ -1,0 +1,158 @@
+<!-- blog.njk -->
+{% extends "layouts/_layout.njk" %}
+{% set title = "Listing" %}
+{% set logoColor = "#ffffff" %}
+{% set navbarDark = true %}
+{% set navbarFull = true %}
+
+{% block content %}
+    <section class="bg-primary pt-11 pt-lg-12 text-white bg-layer-white-bottom-50-left-100">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>News about Us</h1>
+                    <a href="blog-single.html">
+                        <picture>
+                            <source srcset="assets/images/photos/photo-33.webp" type="image/webp">
+                            <source srcset="assets/images/photos/photo-33.jpg" type="image/jpg"> 
+                            <img src="assets/images/photos/photo-33.jpg" alt="photo-33" class="h-auto img-fullplus" data-aos="fade-down">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="content" data-aos="fade-up">
+        <div class="container mb-7 mb-lg-10 mt-n7">
+            <div class="row">
+                <div class="col">
+                    <div class="p-5 px-lg-7 py-lg-6 bg-white shadow">
+                        <div class="row no-gutters">
+                            <div class="col-lg-8">
+                                <p class="small text-uppercase font-weight-bold mb-0">July 27, 2019</p>
+                                <h2>We finished our office redesign, <br/>it's pretty cool!</h2>
+                            </div>
+                            <div class="col-lg-8 col-xl-9">
+                                <p class="lead mb-lg-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales malesuada quam id malesuada. Curabitur ut ullamcorper libero. Sed vulputate, eros id varius volutpat, mauris lorem laoreet risus at elit. Aliquam ac pulvinar eros...</p>
+                            </div>
+                            <div class="col-lg-4 col-xl-3 d-flex justify-content-lg-end align-items-start">
+                                <a href="blog-single.html" class="btn btn-secondary text-uppercase d-inline-flex align-items-center px-3 px-sm-5">Read more<svg width="20" height="20" class="ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>navigation-next-alternate</title><path d="M23.7,10.209a1,1,0,0,0,0-1.414L20.2,5.3A1,1,0,0,0,18.5,6v1.75a.249.249,0,0,1-.25.25H12.5a4.005,4.005,0,0,0-4,4v2a1.5,1.5,0,0,0,3,0V12a1,1,0,0,1,1-1h5.75a.249.249,0,0,1,.25.25V13a1,1,0,0,0,1.708.707Z"/><path d="M16,12.5a1,1,0,0,0-1,1V18a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,18V6a.5.5,0,0,1,.5-.5H15a1,1,0,1,0,2,0,2,2,0,0,0-2-2H2a2,2,0,0,0-2,2v13a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2v-5A1,1,0,0,0,16,12.5Z"/></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light">
+        <div class="container pt-6 pb-7 pt-lg-7 pb-lg-10">
+            <div class="row">
+                <div class="col">
+                    <h2>Latest articles</h2>
+
+                    <a class="card shadow-sm lift mb-5 mb-lg-6" href="blog-single.html">
+                        <div class="row no-gutters">
+                            <div class="col-lg-5 py-8 py-md-9">
+                                <div class="bg-image bg-cover" style="background-image: url(assets/images/photos/photo-34.jpg);"></div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="card-body p-5 py-lg-6 px-lg-5">
+                                    <p class="font-size-6 text-uppercase font-weight-bold mb-0">July 27, 2019</p>
+                                    <h3 class="card-title">Sed nec tempor felis. Praesent lacinia mollis porttitor praesent aliquet sed<svg width="22" height="22" class="fill-secondary ml-2 mt-n1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>navigation-next-alternate</title><path d="M23.7,10.209a1,1,0,0,0,0-1.414L20.2,5.3A1,1,0,0,0,18.5,6v1.75a.249.249,0,0,1-.25.25H12.5a4.005,4.005,0,0,0-4,4v2a1.5,1.5,0,0,0,3,0V12a1,1,0,0,1,1-1h5.75a.249.249,0,0,1,.25.25V13a1,1,0,0,0,1.708.707Z"/><path d="M16,12.5a1,1,0,0,0-1,1V18a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,18V6a.5.5,0,0,1,.5-.5H15a1,1,0,1,0,2,0,2,2,0,0,0-2-2H2a2,2,0,0,0-2,2v13a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2v-5A1,1,0,0,0,16,12.5Z"/></svg></h3>
+                                    <p class="card-text">Etiam eu dignissim orci. Vestibulum mollis efficitur arcu, a interdum ligula porta in. Pellentesque eget vulputate massa. Duis eu rutrum dolor. Ut rutrum lacus et tellus congue congue. Curabitur condimentum viverra augue, id rutrum nulla tincidunt ac nam eu laoreet tortor...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="card shadow-sm lift mb-5 mb-lg-6" href="blog-single.html">
+                        <div class="row no-gutters">
+                            <div class="col-lg-5 order-lg-last py-8 py-md-9">
+                                <div class="bg-image bg-cover" style="background-image: url(assets/images/photos/photo-35.jpg);"></div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="card-body p-5 py-lg-6 px-lg-5">
+                                    <p class="font-size-6 text-uppercase font-weight-bold mb-0">July 10, 2019</p>
+                                    <h3 class="card-title">Cras efficitur pellentesque purus, at rutrum tellus. Nullam at pretium ex<svg width="22" height="22" class="fill-secondary ml-2 mt-n1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>navigation-next-alternate</title><path d="M23.7,10.209a1,1,0,0,0,0-1.414L20.2,5.3A1,1,0,0,0,18.5,6v1.75a.249.249,0,0,1-.25.25H12.5a4.005,4.005,0,0,0-4,4v2a1.5,1.5,0,0,0,3,0V12a1,1,0,0,1,1-1h5.75a.249.249,0,0,1,.25.25V13a1,1,0,0,0,1.708.707Z"/><path d="M16,12.5a1,1,0,0,0-1,1V18a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,18V6a.5.5,0,0,1,.5-.5H15a1,1,0,1,0,2,0,2,2,0,0,0-2-2H2a2,2,0,0,0-2,2v13a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2v-5A1,1,0,0,0,16,12.5Z"/></svg></h3>
+                                    <p class="card-text">Nunc ex risus, venenatis mollis scelerisque non, molestie id lacus. Nullam convallis egestas dolor id condimentum. Curabitur et cursus risus. Mauris tristique, nibh eget tempor malesuada, dolor nibh mollis lectus, eu tristique justo elit at dui. Maecenas nec commodo velit, at sollicitudin ligula.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="card shadow-sm lift mb-5 mb-lg-6" href="blog-single.html">
+                        <div class="row no-gutters">
+                            <div class="col-lg-5 py-8 py-md-9">
+                                <div class="bg-image bg-cover" style="background-image: url(assets/images/photos/photo-36.jpg);"></div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="card-body p-5 py-lg-6 px-lg-5">
+                                    <p class="font-size-6 text-uppercase font-weight-bold mb-0">July 02, 2019</p>
+                                    <h3 class="card-title">Nulla suscipit quis diam ac fringilla. Vestibulum lectus lacus, ultrices at mi at<svg width="22" height="22" class="fill-secondary ml-2 mt-n1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>navigation-next-alternate</title><path d="M23.7,10.209a1,1,0,0,0,0-1.414L20.2,5.3A1,1,0,0,0,18.5,6v1.75a.249.249,0,0,1-.25.25H12.5a4.005,4.005,0,0,0-4,4v2a1.5,1.5,0,0,0,3,0V12a1,1,0,0,1,1-1h5.75a.249.249,0,0,1,.25.25V13a1,1,0,0,0,1.708.707Z"/><path d="M16,12.5a1,1,0,0,0-1,1V18a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,18V6a.5.5,0,0,1,.5-.5H15a1,1,0,1,0,2,0,2,2,0,0,0-2-2H2a2,2,0,0,0-2,2v13a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2v-5A1,1,0,0,0,16,12.5Z"/></svg></h3>
+                                    <p class="card-text">Fusce maximus tortor ac sodales eleifend. Donec dictum nisi vitae lectus congue interdum. In hendrerit velit eget felis accumsan, vitae sollicitudin orci aliquet. Praesent consequat augue neque, in interdum sapien varius ac. Aenean eget ligula nibh. Curabitur finibus eget nibh tincidunt.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="card shadow-sm lift mb-5 mb-lg-6" href="blog-single.html">
+                        <div class="row no-gutters">
+                            <div class="col-lg-5 order-lg-last py-8 py-md-9">
+                                <div class="bg-image bg-cover" style="background-image: url(assets/images/photos/photo-37.jpg);"></div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="card-body p-5 py-lg-6 px-lg-5">
+                                    <p class="font-size-6 text-uppercase font-weight-bold mb-0">May 28, 2019</p>
+                                    <h3 class="card-title">Quisque a aliquam enim. Vivamus venenatis et neque id iaculis<svg width="22" height="22" class="fill-secondary ml-2 mt-n1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>navigation-next-alternate</title><path d="M23.7,10.209a1,1,0,0,0,0-1.414L20.2,5.3A1,1,0,0,0,18.5,6v1.75a.249.249,0,0,1-.25.25H12.5a4.005,4.005,0,0,0-4,4v2a1.5,1.5,0,0,0,3,0V12a1,1,0,0,1,1-1h5.75a.249.249,0,0,1,.25.25V13a1,1,0,0,0,1.708.707Z"/><path d="M16,12.5a1,1,0,0,0-1,1V18a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,18V6a.5.5,0,0,1,.5-.5H15a1,1,0,1,0,2,0,2,2,0,0,0-2-2H2a2,2,0,0,0-2,2v13a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2v-5A1,1,0,0,0,16,12.5Z"/></svg></h3>
+                                    <p class="card-text">Nam feugiat nisi sit amet lacinia volutpat. Cras nec malesuada odio. Aenean eu tellus non neque rutrum venenatis ac ut massa. Donec accumsan luctus ante, eget consequat lectus egestas vitae. Nulla pulvinar eros in sagittis malesuada. Donec finibus eleifend sem.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="card shadow-sm lift mb-5 mb-lg-6" href="blog-single.html">
+                        <div class="row no-gutters">
+                            <div class="col-lg-5 py-8 py-md-9">
+                                <div class="bg-image bg-cover" style="background-image: url(assets/images/photos/photo-38.jpg);"></div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="card-body p-5 py-lg-6 px-lg-5">
+                                    <p class="font-size-6 text-uppercase font-weight-bold mb-0">Jan 14, 2019</p>
+                                    <h3 class="card-title">Nunc ex risus, venenatis mollis scelerisque non, molestie id lacus convallis egesta<svg width="22" height="22" class="fill-secondary ml-2 mt-n1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>navigation-next-alternate</title><path d="M23.7,10.209a1,1,0,0,0,0-1.414L20.2,5.3A1,1,0,0,0,18.5,6v1.75a.249.249,0,0,1-.25.25H12.5a4.005,4.005,0,0,0-4,4v2a1.5,1.5,0,0,0,3,0V12a1,1,0,0,1,1-1h5.75a.249.249,0,0,1,.25.25V13a1,1,0,0,0,1.708.707Z"/><path d="M16,12.5a1,1,0,0,0-1,1V18a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,18V6a.5.5,0,0,1,.5-.5H15a1,1,0,1,0,2,0,2,2,0,0,0-2-2H2a2,2,0,0,0-2,2v13a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2v-5A1,1,0,0,0,16,12.5Z"/></svg></h3>
+                                    <p class="card-text">Maecenas orci ipsum, maximus id ex at, dapibus congue est. Mauris vel sollicitudin urna. Morbi feugiat sollicitudin maximus. Quisque et metus sodales, ultricies nisi vel, hendrerit dui. Vestibulum varius ante at nisl vulputate mollis. Integer ac consectetur felis, quis laoreet urna...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="row" data-aos="fade-up">
+                        <div class="col">
+                            <button class="btn btn-primary text-uppercase d-block mx-auto">Load more<svg width="16" height="16" class="ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right-1</title><path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z"></path></svg></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6 py-lg-7 bg-white">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-6 col-xl-7">
+                    <h2 class="h3 mb-0">Subscribe to our newsletter</h2>
+                    <p class="font-size-5 text-muted mb-3 mb-lg-0">Get a fresh on every week</p>
+                </div>
+                <div class="col">
+                    <div class="input-group">
+                        <input class="form-control" type="email" placeholder="Email address" aria-label="Email address" aria-describedby="email-addon" />
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary text-uppercase px-4" type="button" id="email-addon">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,245 @@
+<!-- gallery.njk -->
+{% extends "layouts/_layout.njk" %}
+{% set title = "Gallery" %}
+
+{% block content %}
+    <div class="container-fluid py-0">
+        <div class="row">
+            {% include "partials/_sidebar.njk" %}
+
+            <div class="col-12 col-lg-6 col-xl-8 offset-lg-3 offset-xl-2">
+                <div class="row">
+                    <div class="col py-5 docs-text">
+                        <div class="d-flex align-items-center">
+                            <h1 class="h2 mr-3 mt-3">{{ title }}</h1>
+                            <span class="badge badge-pill badge-soft-secondary py-2">
+                                <span class="text-uppercase font-weight-bold">Square only</span>
+                            </span>
+                        </div>
+                        <div class="d-flex flex-wrap flex-md-nowrap align-items-baseline justify-content-between">
+                            <p class="lead text-muted mb-0">PhotoSwipe - JavaScript image gallery for mobile and desktop.</p>
+                            <p class="font-size-5 font-weight-medium pl-md-4 mb-0"><a class="text-secondary text-nowrap" href="https://photoswipe.com/" target="_blank" rel="noopener">PhotoSwipe docs<svg width="13" height="13" class="ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right-1</title><path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z"></path></svg></a></p>
+                        </div>
+                        <hr>
+
+                        <section class="pt-6 pb-5" id="gallery-basic">
+                            <div class="d-flex align-items-center">
+                                <h2 class="h3 mr-3 mt-3">Basic example</h2>
+                            </div>
+                            <p>You can active the component by adding <code>gallery</code> class to an element. With <code>data-options</code> attribute you can setup/override mode settings. You need to define the image in a <code>figure</code> tag. You can add <code>figcaption</code> too to create a title for the gallery item.</p>
+                            <p>Define the <code>data-size</code> and provide a link for the full size image.</p>
+                            <p class="font-italic text-muted font-size-5">Note: the gallery has been extended with an image slider function.</p>
+
+                            <div class="card rounded shadow-lg">
+                                <div class="card-header py-3 bg-white border-bottom">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item mr-2"><a class="nav-link active" href="#result1" data-toggle="tab" role="tab" aria-controls="result1" aria-selected="true"><svg width="16" height="16" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-1</title><path d="M23.432,10.524C20.787,7.614,16.4,4.538,12,4.6,7.6,4.537,3.213,7.615.568,10.524a2.211,2.211,0,0,0,0,2.948C3.182,16.351,7.507,19.4,11.839,19.4h.308c4.347,0,8.671-3.049,11.288-5.929A2.21,2.21,0,0,0,23.432,10.524ZM7.4,12A4.6,4.6,0,1,1,12,16.6,4.6,4.6,0,0,1,7.4,12Z"/><circle cx="12" cy="12" r="2"/></svg>Result</a></li>
+                                        <li class="nav-item mr-2"><a class="nav-link" href="#html1" data-toggle="tab" role="tab" aria-controls="html1" aria-selected="false"><svg width="15" height="15" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-code</title><path d="M21.414,4.915,17.086.587A2,2,0,0,0,15.672,0H4A2,2,0,0,0,2,2V22a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V6.329A2,2,0,0,0,21.414,4.915ZM10.864,18.96l-.019.018a.75.75,0,0,1-1.06-.036L6.452,15.371a.752.752,0,0,1,0-1.025l3.333-3.571.018-.019A.75.75,0,0,1,10.881,11.8L8.186,14.687a.249.249,0,0,0,0,.341l2.7,2.89A.751.751,0,0,1,10.864,18.96Zm6.684-3.59-3.333,3.571-.018.019a.75.75,0,0,1-1.078-1.043l2.7-2.888a.249.249,0,0,0,0-.341l-2.7-2.889a.751.751,0,0,1,1.1-1.025l3.333,3.571A.752.752,0,0,1,17.548,15.37Z"/></svg>HTML</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#nunjucks1" data-toggle="tab" role="tab" aria-controls="nunjucks1" aria-selected="false"><svg width="15" height="15" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-code-1-alternate</title><path d="M21.707,5.708,16.293.294A1,1,0,0,0,15.586,0H4A2,2,0,0,0,2,2V22a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V6.415A1,1,0,0,0,21.707,5.708ZM20,21.5a.5.5,0,0,1-.5.5H4.5a.5.5,0,0,1-.5-.5V2.5A.5.5,0,0,1,4.5,2H14.965a.5.5,0,0,1,.353.147l4.535,4.535A.5.5,0,0,1,20,7.036Z"/><path d="M8.952,11.137V9.965c0-.169.265-.214.423-.214h.6a1,1,0,1,0,0-2h-.6A2.275,2.275,0,0,0,6.952,9.965l0,1.027a.245.245,0,0,1-.107.2c-.354.239-1.462.965-1.462.965a1,1,0,0,0,0,1.678l1.455.952A.249.249,0,0,1,6.952,15v1.036a2.275,2.275,0,0,0,2.423,2.214h.6a1,1,0,1,0,0-2h-.6c-.158,0-.423-.045-.423-.214V14.865a2.077,2.077,0,0,0-.881-1.673.243.243,0,0,1,0-.382A2.077,2.077,0,0,0,8.952,11.137Z"/><path d="M18.564,12.131s-1.671-.922-1.711-.943a.238.238,0,0,1-.1-.163V9.965a2.366,2.366,0,0,0-2.627-2.214h-.686a1,1,0,1,0,0,2h.686c.439,0,.627.163.627.214v1.172a2.027,2.027,0,0,0,.933,1.671.241.241,0,0,1,0,.392,2.022,2.022,0,0,0-.936,1.665v1.172c0,.052-.188.214-.627.214h-.686a1,1,0,0,0,0,2h.686a2.366,2.366,0,0,0,2.627-2.214l-.01-1.018c0-.064.022-.1.107-.155s1.709-.993,1.709-.993a1,1,0,0,0,0-1.74Z"/></svg>Nunjucks</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="result1" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <div class="card-columns gallery" data-options='{"bgOpacity": 0.97}'>
+                                                        <div class="card">
+                                                            <figure class="mb-0">
+                                                                <a href="../assets/images/photos/photo-40.jpg" data-size="894x1260" title="Image 1">
+                                                                    <img src="../assets/images/photos/photo-40.jpg" alt="photo-40" class="card-img">
+                                                                </a>
+                                                                <figcaption class="sr-only">Image caption 1</figcaption>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="card">
+                                                            <figure class="mb-0">
+                                                                <a href="../assets/images/photos/photo-41.jpg" data-size="640x427" title="Image 2">
+                                                                    <img src="../assets/images/photos/photo-41.jpg" alt="photo-41" class="card-img">
+                                                                </a>
+                                                                <figcaption class="sr-only">Image caption 2</figcaption>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="card">
+                                                            <figure class="mb-0">
+                                                                <a href="../assets/images/photos/photo-42.jpg" data-size="640x427" title="Image 3">
+                                                                    <img src="../assets/images/photos/photo-42.jpg" alt="photo-42" class="card-img">
+                                                                </a>
+                                                                <figcaption class="sr-only">Image caption 3</figcaption>
+                                                            </figure>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="html1" role="tabpanel">
+                                            <pre><code class="language-html"><script type="text/plain">
+                                            <body>
+                                                <div class="gallery" data-options='{"bgOpacity": 0.97}'>
+                                                    <figure>
+                                                        <a href="../assets/images/photos/photo-40.jpg" data-size="894x1260" title="Image 1">
+                                                            <img src="../assets/images/photos/photo-40.jpg" alt="...">
+                                                        </a>
+                                                        <figcaption class="sr-only">Image caption 1</figcaption>
+                                                    </figure>
+                                                    <figure>
+                                                        <a href="../assets/images/photos/photo-41.jpg" data-size="640x427" title="Image 2">
+                                                            <img src="../assets/images/photos/photo-41.jpg" alt="...">
+                                                        </a>
+                                                        <figcaption class="sr-only">Image caption 2</figcaption>
+                                                    </figure>
+                                                    <figure>
+                                                        <a href="../assets/images/photos/photo-42.jpg" data-size="640x427" title="Image 3">
+                                                            <img src="../assets/images/photos/photo-42.jpg" alt="...">
+                                                        </a>
+                                                        <figcaption class="sr-only">Image caption 3</figcaption>
+                                                    </figure>
+                                                </div>
+
+                                                <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                                                    <div class="pswp__bg"></div>
+                                                    <div class="pswp__scroll-wrap">
+                                                        <div class="pswp__container">
+                                                            <div class="pswp__item"></div>
+                                                            <div class="pswp__item"></div>
+                                                            <div class="pswp__item"></div>
+                                                        </div>
+
+                                                        <div class="pswp__ui pswp__ui--hidden">
+                                                            <div class="pswp__top-bar">
+                                                                <div class="pswp__counter"></div>
+                                                                <button class="pswp__button pswp__button--close" title="Close (Esc)"><span class="sr-only">Close</span></button>
+                                                                <button class="pswp__button pswp__button--share"><span class="sr-only">Share</span></button>
+                                                                <button class="pswp__button pswp__button--fs"><span class="sr-only">Toggle fullscreen</span></button>
+                                                                <button class="pswp__button pswp__button--zoom"><span class="sr-only">Zoom in/out</span></button>
+                                                                <button class="pswp__button pswp__button--playpause"><span class="sr-only">Play/pause</span></button>
+
+                                                                <div class="pswp__preloader">
+                                                                    <div class="pswp__preloader__icn">
+                                                                    <div class="pswp__preloader__cut">
+                                                                        <div class="pswp__preloader__donut"></div>
+                                                                    </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                                                                <div class="pswp__share-tooltip"></div> 
+                                                            </div>
+
+                                                            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"><span class="sr-only">Previous</span></button>
+                                                            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"><span class="sr-only">Next</span></button>
+
+                                                            <div class="pswp__caption">
+                                                                <div class="pswp__caption__center"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                             </body>
+                                            </script></code></pre>
+                                        </div>
+                                        <div class="tab-pane fade" id="nunjucks1" role="tabpanel">
+                                            <pre><code class="language-html"><script type="text/plain">
+<body>
+    <div class="gallery" data-options='{"bgOpacity": 0.97}'>
+        <figure>
+            <a href="../assets/images/photos/photo-40.jpg" data-size="894x1260" title="Image 1">
+                <img src="../assets/images/photos/photo-40.jpg" alt="...">
+            </a>
+            <figcaption class="sr-only">Image caption 1</figcaption>
+        </figure>
+        <figure>
+            <a href="../assets/images/photos/photo-41.jpg" data-size="640x427" title="Image 2">
+                <img src="../assets/images/photos/photo-41.jpg" alt="...">
+            </a>
+            <figcaption class="sr-only">Image caption 2</figcaption>
+        </figure>
+        <figure>
+            <a href="../assets/images/photos/photo-42.jpg" data-size="640x427" title="Image 3">
+                <img src="../assets/images/photos/photo-42.jpg" alt="...">
+            </a>
+            <figcaption class="sr-only">Image caption 3</figcaption>
+        </figure>
+    </div>
+
+                                                {% raw %}   {% include "partials/_photoswipe.njk" %}{% endraw %}
+</body>
+                                            </script></code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="py-5" id="gallery-video">
+                            <div class="d-flex align-items-center">
+                                <h2 class="h3 mr-3 mt-3">Video gallery</h2>
+                            </div>
+                            <p>Create gallery from videos, for example embedded YouTube. Use <code>data-type="video"</code> attribute and add the embedded video elements inside <code>data-video='...'</code> attribute.</p>
+
+                            <div class="card rounded shadow-lg mb-6">
+                                <div class="card-header py-3 bg-white border-bottom">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item mr-2"><a class="nav-link active" href="#result2" data-toggle="tab" role="tab" aria-controls="result2" aria-selected="true"><svg width="16" height="16" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-1</title><path d="M23.432,10.524C20.787,7.614,16.4,4.538,12,4.6,7.6,4.537,3.213,7.615.568,10.524a2.211,2.211,0,0,0,0,2.948C3.182,16.351,7.507,19.4,11.839,19.4h.308c4.347,0,8.671-3.049,11.288-5.929A2.21,2.21,0,0,0,23.432,10.524ZM7.4,12A4.6,4.6,0,1,1,12,16.6,4.6,4.6,0,0,1,7.4,12Z"/><circle cx="12" cy="12" r="2"/></svg>Result</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#html2" data-toggle="tab" role="tab" aria-controls="html2" aria-selected="false"><svg width="15" height="15" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-code</title><path d="M21.414,4.915,17.086.587A2,2,0,0,0,15.672,0H4A2,2,0,0,0,2,2V22a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V6.329A2,2,0,0,0,21.414,4.915ZM10.864,18.96l-.019.018a.75.75,0,0,1-1.06-.036L6.452,15.371a.752.752,0,0,1,0-1.025l3.333-3.571.018-.019A.75.75,0,0,1,10.881,11.8L8.186,14.687a.249.249,0,0,0,0,.341l2.7,2.89A.751.751,0,0,1,10.864,18.96Zm6.684-3.59-3.333,3.571-.018.019a.75.75,0,0,1-1.078-1.043l2.7-2.888a.249.249,0,0,0,0-.341l-2.7-2.889a.751.751,0,0,1,1.1-1.025l3.333,3.571A.752.752,0,0,1,17.548,15.37Z"/></svg>HTML</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="result2" role="tabpanel">
+                                            <div class="card-columns gallery" data-options='{"bgOpacity": 0.97}'>
+                                               <div class="card">
+                                                    <figure class="mb-0">
+                                                        <a href="#" data-type="video" data-video='<div class="d-flex align-items-center p-3 p-lg-8 h-100"><div class="embed-responsive embed-responsive-16by9"><iframe class="pswp__video embed-responsive-item" src="https://www.youtube.com/embed/eftt9qos36Y" frameborder="0" allowfullscreen></iframe></div></div>'>
+                                                            <img src="../assets/images/photos/photo-41.jpg" alt="photo-41" class="card-img">
+                                                        </a>
+                                                        <figcaption class="sr-only">Video caption 1</figcaption>
+                                                    </figure>
+                                                </div>
+                                                <div class="card">
+                                                    <figure class="mb-0">
+                                                        <a href="#" data-type="video" data-video='<div class="d-flex align-items-center p-3 p-lg-8 h-100"><div class="embed-responsive embed-responsive-16by9"><iframe class="pswp__video embed-responsive-item" src="https://www.youtube.com/embed/vOxmsqd8f58" frameborder="0" allowfullscreen></iframe></div></div>'>
+                                                            <img src="../assets/images/photos/photo-42.jpg" alt="photo-41" class="card-img">
+                                                        </a>
+                                                        <figcaption class="sr-only">Video caption 2</figcaption>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="html2" role="tabpanel">
+                                            <pre><code class="language-html"><script type="text/plain">
+                                            <div class="gallery" data-options='{"bgOpacity": 0.97}'>
+                                               <figure>
+                                                    <a href="#" data-type="video" data-video='><div class="embed-responsive embed-responsive-16by9"><iframe class="pswp__video embed-responsive-item" src="https://www.youtube.com/embed/eftt9qos36Y" frameborder="0" allowfullscreen></iframe></div>'>
+                                                        <img src="../assets/images/photos/photo-41.jpg" alt="photo-41" class="card-img">
+                                                    </a>
+                                                    <figcaption class="sr-only">Video caption 1</figcaption>
+                                                </figure>
+                                                <figure>
+                                                    <a href="#" data-type="video" data-video='<div class="embed-responsive embed-responsive-16by9"><iframe class="pswp__video embed-responsive-item" src="https://www.youtube.com/embed/vOxmsqd8f58" frameborder="0" allowfullscreen></iframe></div>'>
+                                                        <img src="../assets/images/photos/photo-42.jpg" alt="photo-41" class="card-img">
+                                                    </a>
+                                                    <figcaption class="sr-only">Video caption 2</figcaption>
+                                                </figure>
+                                            </div>
+                                            </script></code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3 col-xl-2 sidebar sidebar-right py-6 d-none d-lg-block">
+                <h4 class="h5">Jump to</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-0"><a href="#gallery-basic" data-scroll class="nav-link small">Basic example</a></li>
+                    <li class="nav-item mb-0"><a href="#gallery-video" data-scroll class="nav-link small">Video gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

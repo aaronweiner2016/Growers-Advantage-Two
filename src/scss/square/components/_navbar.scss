@@ -1,0 +1,197 @@
+//
+// Navbar
+//
+
+.navbar-nav {
+    .nav-item {
+        position: relative;
+    }
+
+    .nav-link {
+        &::before {
+            content: "";
+            position: absolute;
+            left: $navbar-nav-link-padding-x;
+            right: $navbar-nav-link-padding-x;
+            bottom: -3px;
+            height: 3px;
+            background-color: $secondary;
+            opacity: 0;
+        }
+
+        @include active() {
+            color: $navbar-light-active-color;
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include hover-focus() {
+                outline: 0;
+                color: $navbar-light-hover-color;
+
+                &::before {
+                    transition: opacity .75s ease;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .dropdown-menu {
+        @include media-breakpoint-up(lg) {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .3s ease, transform .5s ease;
+            transform-origin: top center;
+            top: calc(100% + 3px);
+        }
+
+        @include media-breakpoint-down(md) {
+            box-shadow: none !important;
+            padding-top: .25rem;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -3px;
+            height: 3px;
+            background-color: $secondary;
+            opacity: 0;
+            left: 50%;
+            width: 0%;
+            text-align: center;
+            transition: opacity .3s ease, visibility .3s ease, transform .5s ease;
+        }
+
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            transition-delay: $dropdown-delay-time;
+
+            @include media-breakpoint-up(lg) {
+                &::before {
+                    opacity: 1;
+                    animation: line .4s ease .4s forwards;
+                }
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            &:not(.dropdown-menu-left):not(.dropdown-menu-right) {
+                left: 50%;
+                transform: translate3d(-50%, 12px, 0);
+
+                &.show {
+                    transform: translate3d(-50%, 0, 0);
+                }
+            }
+
+            &.dropdown-menu-left,
+            &.dropdown-menu-right {
+                transform: translate3d(0, 12px, 0);
+
+                &.show {
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+
+            &.dropdown-menu-left {
+                left: $navbar-nav-link-padding-x;
+            }
+
+            &.dropdown-menu-right {
+                right: $navbar-nav-link-padding-x;
+            }
+        }
+    }
+}
+
+.navbar-dark {
+    .nav-link {
+        @include active() {
+            color: $navbar-dark-active-color;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .navbar-collapse {
+        background-color: $white;
+        padding: 1rem;
+        box-shadow: $box-shadow; 
+        position: fixed;
+        top: 5.5rem;
+        left: 1rem;
+        height: auto;
+        max-height: calc(100% - 6.25rem);
+        width: calc(100% - 2rem);
+        overflow-x: hidden;
+        overflow-y: scroll;
+        border-top: 3px solid $secondary;
+
+        &.collapsing,
+        &.show {
+            transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+            transform-origin: top right;
+        }
+
+        &.collapsing {
+            opacity: 0;
+            transform: scale(.9);
+        }
+
+        &.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+.navbar-toggler {
+    position: relative;
+    z-index: 1;
+}
+
+@include media-breakpoint-down(md) {
+    .dropdown-header {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        color: $secondary;
+    }
+
+    .dropdown-item {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .navbar-nav {
+        .nav-item {
+            border-bottom: 1px solid $border-color;
+        }
+
+        .nav-link {
+            color: $navbar-light-color !important;
+        }
+    }
+}
+
+.navbar-brand {
+    position: relative;
+    z-index: 1;
+}
+
+.navbar-togglable {
+    transition: all .3s ease-in-out;
+    transition-property: background-color, color;
+}
+
+@keyframes line {
+    from {
+        left: 50%;
+        width: 0%;
+    }
+    to {
+        left: 0%;
+        width: 100%;
+    }
+}

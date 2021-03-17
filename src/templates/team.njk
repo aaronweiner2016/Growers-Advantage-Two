@@ -1,0 +1,200 @@
+<!-- team.njk -->
+{% extends "layouts/_layout.njk" %}
+{% set title = "Team" %}
+{% set logoColor = "#ffffff" %}
+{% set navbarDark = true %}
+{% set navbarFull = true %}
+
+{% block content %}
+    <section class="py-13 py-lg-15">
+        <div class="bg-image bg-cover overlay overlay-primary overlay-50" data-jarallax data-speed=".8" style="background-image: url(assets/images/photos/photo-08.jpg);">
+            <div class="container h-100">
+                <div class="row align-items-center justify-content-center h-100 text-center text-white">
+                    <div class="col-lg-6">
+                        <h1 class="display-4">Meet the team</h1>
+
+                        <div class="gallery">
+                            <div>
+                                <figure class="mb-0">
+                                    <a href="#" class="text-white" data-type="video" data-video='<div class="d-flex align-items-center p-3 p-lg-8 h-100"><div class="embed-responsive embed-responsive-16by9"><iframe class="pswp__video embed-responsive-item" src="https://www.youtube.com/embed/eftt9qos36Y" frameborder="0" allowfullscreen></iframe></div></div>'>
+                                        <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>button-play-1</title><path d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm4.828,12.894L9.447,16.584h0A1,1,0,0,1,8,15.69V8.308a1,1,0,0,1,1.446-.895L16.829,11.1A1,1,0,0,1,16.828,12.893Z"/></svg>
+                                    </a>
+                                    <figcaption class="sr-only">Grandfather Mountain Afternoon Clouds Time Lapse Clip</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-6 mb-lg-7 bg-light" id="content">
+        <div class="container pt-8">
+            <div class="row justify-content-center align-items-center text-center">
+                <div class="col-lg-10">
+                    <div class="swiper">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper pb-8">
+                                <div class="swiper-slide">
+                                    <div class="row justify-content-center align-items-center text-center">
+                                        <div class="col">
+                                            <p class="font-italic">It's a top notch theme, this Square! It gives me everything that I needed. <br class="d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie accumsan interdum. <br class="d-none d-md-block">Fusce tincidunt ante a elit commodo semper. Suspendisse a nulla vitae nisl lobortis dictum. Vivamus et urna venenatis nibh varius molestie ut eget sem. Sed maximus eros a cursus iaculis.</p>
+                                            <p class="font-size-6 text-muted mb-0">Nelson Harris, CEO of AweSum</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="row justify-content-center align-items-center text-center">
+                                        <div class="col">
+                                            <p class="font-italic">Just as I imagined! The team have almost read my mind about eveything. <br class="d-none d-md-block">Nam ultricies, velit eu congue viverra,sapien sapien finibus ante, eu eleifend ante tellus a justo. <br class="d-none d-md-block">Phasellus bibendum malesuada enim, a varius eros tempor ac. <br>Suspendisse sit amet vehicula leo, sit amet tristique orci.</p>
+                                            <p class="font-size-6 text-muted mb-0">Corban Atkin, CEO of Kalibra</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="row justify-content-center align-items-center text-center">
+                                        <div class="col">
+                                            <p class="font-italic">We will definetely continue to work with the Square team, we are very satistied with them. <br class="d-none d-md-block">Praesent sed pretium lacus, tempor tempus nunc. Vivamus blandit nisi et posuere molestie. <br class="d-none d-md-block">Sed quis interdum metus, eget molestie massa. <br>Fusce semper, ligula ut aliquam vestibulum, purus nulla gravida ligula.</p>
+                                            <p class="font-size-6 text-muted mb-0">Stanislaw Arnold, Manager of Sony</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-pagination w-100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6 py-lg-7">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Our leadership team</h2>
+                </div>
+            </div>
+            <div class="row px-3">
+                <div class="col-md-6 col-lg-4 px-3 mb-5" data-aos="fade-up">
+                    <div class="card shadow lift rounded">
+                        <picture>
+                            <source srcset="assets/images/profiles/profile-01.webp" type="image/webp">
+                            <source srcset="assets/images/profiles/profile-01.jpg" type="image/jpg"> 
+                            <img src="assets/images/profiles/profile-01.jpg" alt="profile-01" class="img-fluid w-100 card-img-top rounded-top">
+                        </picture>
+                        <div class="card-body py-4">
+                            <p class="card-text"><strong>Daryl Lawrence</strong><br/><span class="small">CO - funder and CEO</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 px-3 mb-5" data-aos="fade-up" data-aos-delay="50">
+                    <div class="card shadow lift rounded">
+                        <picture>
+                            <source srcset="assets/images/profiles/profile-02.webp" type="image/webp">
+                            <source srcset="assets/images/profiles/profile-02.jpg" type="image/jpg"> 
+                            <img src="assets/images/profiles/profile-02.jpg" alt="profile-02" class="img-fluid w-100 card-img-top rounded-top">
+                        </picture>
+                        <div class="card-body py-4">
+                            <p class="card-text"><strong>Matthew Stanley</strong><br/><span class="small">Head of Business Development</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 px-3 mb-5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card shadow lift rounded">
+                        <picture>
+                            <source srcset="assets/images/profiles/profile-03.webp" type="image/webp">
+                            <source srcset="assets/images/profiles/profile-03.jpg" type="image/jpg"> 
+                            <img src="assets/images/profiles/profile-03.jpg" alt="profile-03" class="img-fluid w-100 card-img-top rounded-top">
+                        </picture>
+                        <div class="card-body py-4">
+                            <p class="card-text"><strong>Wilma Collins</strong><br/><span class="small">Head of Product</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 px-3 mb-5" data-aos="fade-up">
+                    <div class="card shadow lift rounded">
+                        <picture>
+                            <source srcset="assets/images/profiles/profile-04.webp" type="image/webp">
+                            <source srcset="assets/images/profiles/profile-04.jpg" type="image/jpg"> 
+                            <img src="assets/images/profiles/profile-04.jpg" alt="profile-04" class="img-fluid w-100 card-img-top rounded-top">
+                        </picture>
+                        <div class="card-body py-4">
+                            <p class="card-text"><strong>Owen Hicks</strong><br/><span class="small">UI Specialist</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 px-3 mb-5" data-aos="fade-up" data-aos-delay="50">
+                    <div class="card shadow lift rounded">
+                        <picture>
+                            <source srcset="assets/images/profiles/profile-05.webp" type="image/webp">
+                            <source srcset="assets/images/profiles/profile-05.jpg" type="image/jpg"> 
+                            <img src="assets/images/profiles/profile-05.jpg" alt="profile-05" class="img-fluid w-100 card-img-top rounded-top">
+                        </picture>
+                        <div class="card-body py-4">
+                            <p class="card-text"><strong>Cassandra Dixon</strong><br/><span class="small">Front-end Developer</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 px-3 mb-5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card shadow lift rounded">
+                        <picture>
+                            <source srcset="assets/images/profiles/profile-06.webp" type="image/webp">
+                            <source srcset="assets/images/profiles/profile-06.jpg" type="image/jpg"> 
+                            <img src="assets/images/profiles/profile-06.jpg" alt="profile-06" class="img-fluid w-100 card-img-top rounded-top">
+                        </picture>
+                        <div class="card-body py-4">
+                            <p class="card-text"><strong>Leroy Ray</strong><br/><span class="small">Back-end Developer</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-5 pb-6 mb-6 pb-lg-7 mb-lg-7">
+        <div class="container">
+            <div class="row justify-content-center text-center font-size-3">
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p class="mb-5"><span class="display-2">1M</span><br/><span class="d-block text-muted font-weight-lighter mt-n3">sold products</span></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="mb-5"><span class="display-2">15M</span><br/><span class="d-block text-muted font-weight-lighter mt-n3">lines of code</span></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="mb-5"><span class="display-2">20k+</span><br/><span class="d-block text-muted font-weight-lighter mt-n3">customers</span></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="mb-lg-0"><span class="display-2">112</span><br/><span class="d-block text-muted font-weight-lighter mt-n3">active projects</span></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="mb-lg-0"><span class="display-2">7</span><br/><span class="d-block text-muted font-weight-lighter mt-n3">awards</span></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="mb-0"><span class="display-2">∞</span><br/><span class="d-block text-muted font-weight-lighter mt-n3">coffee and tea</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6 mt-6 py-lg-7 mt-lg-7 bg-light">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-6 col-xl-7 text-center">
+                    <h2 class="h3 mb-lg-0">Are you talented? <span class="font-weight-lighter">Would you like to join us?</span></h2>
+                </div>
+                <div class="col text-center text-lg-left">
+                    <a href="#" class="btn btn-secondary text-uppercase d-inline-flex align-items-center">Open jobs<svg width="16" height="16" class="ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>job-seach-team-man</title><path d="M17.75,18.75a4.738,4.738,0,0,0-3.324,1.359.251.251,0,0,0-.055.276A7.979,7.979,0,0,1,15,23.5c0,.081,0,.161,0,.242a.249.249,0,0,0,.25.258H22a.5.5,0,0,0,.5-.5A4.755,4.755,0,0,0,17.75,18.75Z"/><path d="M12,11.437a5.063,5.063,0,0,0-10.125,0c0,1.421,1.13,5.063,5.063,5.063A5.093,5.093,0,0,0,12,11.437ZM4.075,10.351a.25.25,0,0,1,.159-.15.253.253,0,0,1,.217.034A6.744,6.744,0,0,0,9.79,11.269a.172.172,0,0,1,.21.168,3.063,3.063,0,1,1-5.925-1.086Z"/><path d="M13.5,23.5A6.75,6.75,0,0,0,0,23.5a.5.5,0,0,0,.5.5H13A.5.5,0,0,0,13.5,23.5ZM6,19.487a.75.75,0,0,1,1.5,0v1.455a.75.75,0,0,1-1.5,0Z"/><path d="M21.013,15.078A3.263,3.263,0,1,0,17.75,18.34,3.267,3.267,0,0,0,21.013,15.078Z"/><path d="M23.707,10.292,21.311,7.9a.249.249,0,0,1-.036-.306,5.009,5.009,0,1,0-1.684,1.683.25.25,0,0,1,.306.037l2.4,2.4a1,1,0,1,0,1.414-1.415ZM14,5a3,3,0,1,1,3,3A3,3,0,0,1,14,5Z"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

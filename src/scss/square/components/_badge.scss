@@ -1,0 +1,24 @@
+//
+// Badge
+//
+
+@each $color, $value in $theme-colors {
+    .badge-soft-#{$color} {
+        background-color: rgba($value, .1);
+        color: $value;
+
+        @at-root {
+            a#{&} {
+                @include hover-focus() {
+                    background-color: $value;
+                    color: color-yiq($value);
+                }
+            }
+        }
+
+        @include active(){
+            background-color: $value;
+            color: color-yiq($value);
+        }
+    }
+}

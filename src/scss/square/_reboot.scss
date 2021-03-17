@@ -1,0 +1,20 @@
+//
+// Reboot
+//
+
+html {
+    overflow-x: hidden;
+}
+
+// Stisky footer
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+
+    main {
+        flex-grow: 1;
+        height: 100%;
+    }
+}

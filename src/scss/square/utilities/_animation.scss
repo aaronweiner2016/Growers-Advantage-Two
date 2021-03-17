@@ -1,0 +1,24 @@
+//
+// Animation
+//
+
+.lift {
+    transition: box-shadow .3s ease, transform .3s ease;
+
+    @include hover-focus() {
+        box-shadow: $box-shadow-lift !important;
+        transform: translate3d(0, -6px, 0) !important;
+    }
+
+    &.shadow-sm {
+        @include hover-focus() {
+            box-shadow: $box-shadow-sm-lift !important;
+        }
+    }
+
+    &.shadow-lg {
+        @include hover-focus() {
+            box-shadow: $box-shadow-lg-lift !important;
+        }
+    }
+}

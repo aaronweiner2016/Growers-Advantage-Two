@@ -1,0 +1,16 @@
+//
+// Hover
+//
+
+@mixin focus() {
+    &:focus {
+        @content;
+    }
+}
+
+@mixin active() {
+    &:active,
+    &.active {
+        @content;
+    }
+}

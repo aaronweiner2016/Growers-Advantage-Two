@@ -1,0 +1,94 @@
+<!-- smooth-scroll.njk -->
+{% extends "layouts/_layout.njk" %}
+{% set title = "Smooth scroll" %}
+
+{% block content %}
+    <div class="container-fluid py-0">
+        <div class="row">
+            {% include "partials/_sidebar.njk" %}
+
+            <div class="col-12 col-lg-6 col-xl-8 offset-lg-3 offset-xl-2">
+                <div class="row">
+                    <div class="col py-5 docs-text">
+                        <div class="d-flex align-items-center">
+                            <h1 class="h2 mr-3 mt-3">{{ title }}</h1>
+                            <span class="badge badge-pill badge-soft-secondary py-2">
+                                <span class="text-uppercase font-weight-bold">Square only</span>
+                            </span>
+                        </div>
+                        <div class="d-flex flex-wrap flex-md-nowrap align-items-baseline justify-content-between">
+                            <p class="lead text-muted mb-0">Smooth Scroll - Without a doubt our most popular and widely used plugin.</p>
+                            <p class="font-size-5 font-weight-medium pl-md-4 mb-0"><a class="text-secondary text-nowrap" href="https://github.com/cferdinandi/smooth-scroll" target="_blank" rel="noopener">Smooth Scroll docs<svg width="13" height="13" class="ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right-1</title><path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z"></path></svg></a></p>
+                        </div>
+                        <hr>
+
+                        <section class="pt-6 pb-5" id="smooth-scroll-basic">
+                            <p>By adding <code>data-scroll</code> attribute you can initialise the component. No special markup needed—just standard anchor links. Simply give the anchor location an ID.</p>
+
+                            <div class="card rounded shadow-lg mb-6">
+                                <div class="card-header py-3 bg-white border-bottom">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item mr-2"><a class="nav-link active" href="#result1" data-toggle="tab" role="tab" aria-controls="result1" aria-selected="true"><svg width="16" height="16" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-1</title><path d="M23.432,10.524C20.787,7.614,16.4,4.538,12,4.6,7.6,4.537,3.213,7.615.568,10.524a2.211,2.211,0,0,0,0,2.948C3.182,16.351,7.507,19.4,11.839,19.4h.308c4.347,0,8.671-3.049,11.288-5.929A2.21,2.21,0,0,0,23.432,10.524ZM7.4,12A4.6,4.6,0,1,1,12,16.6,4.6,4.6,0,0,1,7.4,12Z"/><circle cx="12" cy="12" r="2"/></svg>Result</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#html1" data-toggle="tab" role="tab" aria-controls="html1" aria-selected="false"><svg width="15" height="15" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-code</title><path d="M21.414,4.915,17.086.587A2,2,0,0,0,15.672,0H4A2,2,0,0,0,2,2V22a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V6.329A2,2,0,0,0,21.414,4.915ZM10.864,18.96l-.019.018a.75.75,0,0,1-1.06-.036L6.452,15.371a.752.752,0,0,1,0-1.025l3.333-3.571.018-.019A.75.75,0,0,1,10.881,11.8L8.186,14.687a.249.249,0,0,0,0,.341l2.7,2.89A.751.751,0,0,1,10.864,18.96Zm6.684-3.59-3.333,3.571-.018.019a.75.75,0,0,1-1.078-1.043l2.7-2.888a.249.249,0,0,0,0-.341l-2.7-2.889a.751.751,0,0,1,1.1-1.025l3.333,3.571A.752.752,0,0,1,17.548,15.37Z"/></svg>HTML</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="result1" role="tabpanel">
+                                            <a href="#heading" data-scroll class="btn btn-secondary mb-3">Scroll down to the heading</a>
+                                            <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat mauris et ligula mattis volutpat. Vestibulum consequat ornare lectus, vitae bibendum metus ullamcorper ut. Cras quis placerat neque. Aliquam id massa vitae leo commodo porta. Fusce varius est ac congue luctus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In nisl nisl, varius sed diam vel, pellentesque auctor leo. Curabitur lectus felis, vehicula vel mauris ut, rhoncus condimentum turpis. Maecenas nec dolor orci. Curabitur non est ut lectus porta vestibulum at at risus.
+                                            </p>
+                                            <p>
+                                            Quisque posuere justo sed auctor vulputate. Morbi feugiat in tellus in egestas. Aliquam fermentum vitae odio ut dignissim. Suspendisse lobortis id lacus non varius. Praesent ac pellentesque nulla. Suspendisse vehicula auctor magna, ac mollis nulla rutrum eu. Cras id aliquet erat, quis aliquam lectus. Pellentesque dui dolor, iaculis vel auctor vel, bibendum eget turpis. Vestibulum vestibulum, mauris luctus molestie ullamcorper, quam nibh dapibus sapien, eu auctor ligula leo nec erat. Integer pharetra mollis ultricies. Vivamus accumsan urna ac scelerisque pulvinar. Nam consequat viverra arcu et consectetur.
+                                            </p>
+                                            <p>
+                                            Morbi tellus augue, pharetra quis quam eu, ultricies feugiat tellus. Nunc pellentesque nunc in blandit elementum. In ut felis velit. Cras dignissim porttitor tincidunt. Vestibulum venenatis at felis et cursus. Sed ut vehicula orci. Cras imperdiet tempor interdum. Suspendisse aliquet urna justo, eget iaculis libero fringilla sit amet. Praesent et dapibus felis. Mauris dolor augue, finibus at tortor at, aliquam convallis urna. Vivamus sed eros non dui pellentesque dictum. Suspendisse potenti. Praesent porta diam in risus bibendum, nec mollis leo egestas.
+                                            </p>
+                                            <p>
+                                            Mauris et ultricies turpis. Vivamus nibh orci, tempus a orci id, iaculis euismod urna. Nullam nec scelerisque sem, sit amet mollis ex. Maecenas vehicula lorem eget erat rutrum commodo. Integer ligula est, interdum eget massa et, aliquet pellentesque nibh. Aenean ut sem mauris. Maecenas vel congue nisi. Quisque nunc orci, porta a commodo sed, commodo vitae libero. Maecenas accumsan venenatis elit a pellentesque. Fusce in lobortis nunc.
+                                            </p>
+                                            <p>
+                                            Duis gravida enim sed justo vulputate, eget pretium metus feugiat. Suspendisse iaculis nunc est, eget viverra nisi porta in. Vestibulum tincidunt odio in nunc ultrices posuere. Vestibulum sed cursus mauris, ultricies aliquam erat. Praesent dictum libero id metus tincidunt, a commodo purus interdum. Fusce ac ante quis ante ornare mattis non molestie nisl. Mauris vehicula efficitur lectus id dignissim. Maecenas maximus a quam ut fringilla. Nulla lobortis in ex sed hendrerit. Sed imperdiet fringilla mi ac suscipit. Mauris commodo a urna quis hendrerit. Vivamus fringilla sem non urna dapibus porta scelerisque nec felis. Maecenas vel sapien mi. Curabitur sem sem, pretium et tortor at, fermentum maximus turpis. Phasellus sem lacus, posuere nec elementum ac, suscipit ut est. Integer turpis orci, finibus blandit elit sit amet, porttitor fringilla tellus.
+                                            </p>
+                                            <h3 id="heading">Why hello!</h3>
+                                            <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat mauris et ligula mattis volutpat. Vestibulum consequat ornare lectus, vitae bibendum metus ullamcorper ut. Cras quis placerat neque. Aliquam id massa vitae leo commodo porta. Fusce varius est ac congue luctus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In nisl nisl, varius sed diam vel, pellentesque auctor leo. Curabitur lectus felis, vehicula vel mauris ut, rhoncus condimentum turpis. Maecenas nec dolor orci. Curabitur non est ut lectus porta vestibulum at at risus.
+                                            </p>
+                                            <p>
+                                            Quisque posuere justo sed auctor vulputate. Morbi feugiat in tellus in egestas. Aliquam fermentum vitae odio ut dignissim. Suspendisse lobortis id lacus non varius. Praesent ac pellentesque nulla. Suspendisse vehicula auctor magna, ac mollis nulla rutrum eu. Cras id aliquet erat, quis aliquam lectus. Pellentesque dui dolor, iaculis vel auctor vel, bibendum eget turpis. Vestibulum vestibulum, mauris luctus molestie ullamcorper, quam nibh dapibus sapien, eu auctor ligula leo nec erat. Integer pharetra mollis ultricies. Vivamus accumsan urna ac scelerisque pulvinar. Nam consequat viverra arcu et consectetur.
+                                            </p>
+                                            <p>
+                                            Morbi tellus augue, pharetra quis quam eu, ultricies feugiat tellus. Nunc pellentesque nunc in blandit elementum. In ut felis velit. Cras dignissim porttitor tincidunt. Vestibulum venenatis at felis et cursus. Sed ut vehicula orci. Cras imperdiet tempor interdum. Suspendisse aliquet urna justo, eget iaculis libero fringilla sit amet. Praesent et dapibus felis. Mauris dolor augue, finibus at tortor at, aliquam convallis urna. Vivamus sed eros non dui pellentesque dictum. Suspendisse potenti. Praesent porta diam in risus bibendum, nec mollis leo egestas.
+                                            </p>
+                                            <p>
+                                            Mauris et ultricies turpis. Vivamus nibh orci, tempus a orci id, iaculis euismod urna. Nullam nec scelerisque sem, sit amet mollis ex. Maecenas vehicula lorem eget erat rutrum commodo. Integer ligula est, interdum eget massa et, aliquet pellentesque nibh. Aenean ut sem mauris. Maecenas vel congue nisi. Quisque nunc orci, porta a commodo sed, commodo vitae libero. Maecenas accumsan venenatis elit a pellentesque. Fusce in lobortis nunc.
+                                            </p>
+                                            <p>
+                                            Duis gravida enim sed justo vulputate, eget pretium metus feugiat. Suspendisse iaculis nunc est, eget viverra nisi porta in. Vestibulum tincidunt odio in nunc ultrices posuere. Vestibulum sed cursus mauris, ultricies aliquam erat. Praesent dictum libero id metus tincidunt, a commodo purus interdum. Fusce ac ante quis ante ornare mattis non molestie nisl. Mauris vehicula efficitur lectus id dignissim. Maecenas maximus a quam ut fringilla. Nulla lobortis in ex sed hendrerit. Sed imperdiet fringilla mi ac suscipit. Mauris commodo a urna quis hendrerit. Vivamus fringilla sem non urna dapibus porta scelerisque nec felis. Maecenas vel sapien mi. Curabitur sem sem, pretium et tortor at, fermentum maximus turpis. Phasellus sem lacus, posuere nec elementum ac, suscipit ut est. Integer turpis orci, finibus blandit elit sit amet, porttitor fringilla tellus.
+                                            </p>
+                                            <p>
+                                            Mauris non eleifend enim. Ut vulputate, nisl in pharetra gravida, sem ligula porta nulla, in mattis lorem est eget lorem. Cras imperdiet mauris urna, sit amet sollicitudin mi molestie porttitor. Maecenas ac efficitur elit. Duis vel ante enim. Pellentesque ut diam vitae mi consectetur malesuada sed nec quam. Donec sed nunc elementum, interdum mi eget, porta nisi. Fusce eu fermentum quam.
+                                            </p>
+                                        </div>
+                                        <div class="tab-pane fade" id="html1" role="tabpanel">
+                                            <pre><code class="language-html"><script type="text/plain">
+                                            <a href="#heading" data-scroll  class="btn btn-secondary">Scroll down to the heading</a>
+                                            ...
+                                            <h3 id="heading">Why hello!</h3>
+                                            </script></code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3 col-xl-2 sidebar sidebar-right py-6 d-none d-lg-block">
+                
+            </div>
+        </div>
+    </div>
+{% endblock %}

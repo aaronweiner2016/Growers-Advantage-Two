@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <!-- Meta viewport tag-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- SEO Meta Tags-->
+        <meta name="description" content="Square - Premium Bootstrap Theme">
+        <meta name="keywords" content="bootstrap, theme, template, multipurpose, landing, html5, css3, javascript, event, case study, photography, about, team, portfolio, services, contact, pricing, faqs, careers, blog, sign in, sign up, coming soon, legal">
+        <meta name="author" content="Webinning Ltd.">
+
+        <!-- Page title-->
+        <title>{% if title %}{{ title }} | {% endif %}Square - Premium Bootstrap Theme</title>
+
+        {% include "partials/_favicons.njk" %}
+
+        <!-- Theme Stylesheets -->
+        {% if environment == 'production' %}
+            <link href="assets/css/theme.min.css" rel="stylesheet">
+        {% else %}
+            <link href="assets/css/theme.css" rel="stylesheet">
+        {% endif %}
+
+        {% if environment == 'production' %}
+            {% include "partials/_gtag.njk" %}
+        {% endif %}
+    </head> 
+    
+    <body>
+        {% include "layouts/_header.njk" %}
+
+        <!-- Main content -->
+        <main>
+            {% block content %} {% endblock content %}
+        </main>
+
+        {% include "layouts/_footer.njk" %}
+        {% include "partials/_photoswipe.njk" %}
+
+        {% if environment == 'production' %}
+            <!-- Core Javascripts -->
+            <script src="assets/js/theme.core.min.js"></script>
+
+            <!-- Theme Javascripts -->
+            <script src="assets/js/theme.min.js"></script>
+        {% else %}
+            <!-- Core Javascripts -->
+            <script src="assets/js/theme.core.js"></script>
+
+            <!-- Theme Javascripts -->
+            <script src="assets/js/theme.js"></script>
+        {% endif %}
+    </body>
+</html>

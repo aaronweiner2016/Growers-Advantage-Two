@@ -1,0 +1,47 @@
+<!-- customisation.njk -->
+{% extends "layouts/_layout.njk" %}
+{% set title = "Customisation" %}
+
+{% block content %}
+    <div class="container-fluid py-0">
+        <div class="row">
+            {% include "partials/_sidebar.njk" %}
+
+            <div class="col-12 col-lg-6 col-xl-8 offset-lg-3 offset-xl-2">
+                <div class="row">
+                    <div class="col py-5 docs-text">
+                        <h1 class="h2">{{ title }}</h1>
+                        <hr>
+
+                        <section class="py-5" id="theming">
+                            <h2 class="h3 mt-3">Theming</h2>
+                            <p>Utilize our source SASS files to take advantage of variables, mixins and more. Whenever possible avoid modifying Square's core files. For SASS, that means creating your own stylesheet that imports Bootstrap so that you can modify and extend it.</p>
+                            <p>To avoid file loss, overrides of your custom styles or any other conflicts during the upgrade process, create or modify your styles with these 2 files <code>src/scss/custom/</code>:</p>
+                            <ul class="mb-4">
+                                <li><code>_variables.scss</code> - Variables file for customizing or overriding Bootstrap core and Square elements/components that have been tied to variables.</li>
+                                <li><code>_styles.scss</code> - Create a new style in here.</li>
+                            </ul>
+
+                            <div class="alert alert-info small mt-3 mb-4">
+                                Note: Custom files along with Bootstrap core CSS files will be generated in to the <strong>theme.css</strong> file.
+                            </div>
+
+                            <p>Every SASS variable in Square includes the !default flag allowing you to override the variable's default value in your own SASS without modifying either Bootstrap or Square's source code. Copy and paste variables as needed, modify their values and remove the !default flag. If a variable has already been assigned then it won't be re-assigned by the default values in Square.</p>
+                            <p>You will find the complete list of Front's variables in <code>src/scss/square/_variables.scss</code>.</p>
+                            <p>Here's an example that changes the color of the template in the <code>src/scss/custom/_variables.scss</code> file when importing and compiling:</p>
+                            <pre><code class="language-scss"><script type="text/plain">
+                            $primary: #d138f2;
+                            $secondary: #191919;
+                            </script></code></pre>
+                            <hr class="mb-0">
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3 col-xl-2 sidebar sidebar-right py-6 d-none d-lg-block">
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

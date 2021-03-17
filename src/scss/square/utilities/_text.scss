@@ -1,0 +1,58 @@
+//
+// Text
+//
+
+.font-italic,
+em {
+    font-variation-settings: "slnt" 10;
+}
+
+.font-size-1,
+.font-size-2,
+.font-size-3,
+.font-size-4,
+.font-size-5,
+.font-size-6 {
+    line-height: $headings-line-height;
+}
+
+.font-size-1 {
+    font-size: $h1-font-size;
+}
+.font-size-2 {
+    font-size: $h2-font-size;
+}
+.font-size-3 {
+    font-size: $h3-font-size;
+}
+.font-size-4 {
+    font-size: $h4-font-size;
+}
+.font-size-5 {
+    font-size: $h5-font-size;
+}
+.font-size-6 {
+    font-size: $h6-font-size;
+}
+
+.drop-caps {
+    p {
+        &:first-of-type::first-letter {
+            font-size: $font-size-base * 3.1;
+            font-weight: 900;
+            line-height: $line-height-base / 2;
+            float: left;
+            padding: 9px 5px 0 0;
+        }
+
+        &.lead {
+            &:first-of-type::first-letter {
+                font-size: $lead-font-size * 3.05;
+            }
+        }
+    }
+}
+
+.text-underline {
+    text-decoration: underline;
+}

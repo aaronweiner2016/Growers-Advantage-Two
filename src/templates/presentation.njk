@@ -1,0 +1,342 @@
+<!-- presentation.njk -->
+{% extends "layouts/_layout.njk" %}
+{% set title = "Presentation" %}
+{% set logoColor = "#ffffff" %}
+{% set navbarDark = true %}
+{% set navbarFull = true %}
+
+{% block content %}
+    <section class="bg-primary pb-6 pb-md-0" id="content">
+        <div class="container">
+            <div class="row no-gutters align-items-center">
+                <div class="col-md-8" data-aos="fade-right">
+                    <div class="img-shifted shift-left vh-75 py-12 py-lg-15">
+                        <div class="bg-image bg-cover overlay overlay-primary-gradient-top-50 overlay-50 d-none d-md-block" style="background-image: url(assets/images/photos/photo-80.jpg);" data-jarallax data-speed=".8"></div>
+                    </div>
+
+                    <div class="position-absolute top-50 mt-5 mt-md-0 mt-xl-n7 left-0 pr-md-9 pr-lg-12 text-white">
+                        <h1>The new GPS by drones -<br class="d-none d-lg-block"/>Visual Positioning System</h1>
+                        <p class="mb-3 md-md-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris leo erat, posuere eget neque a, lobortis auctor est. Curabitur ac libero quis felis pulvinar posuere.</p>
+                    </div>
+                </div>
+                <div class="col-md d-flex flex-column align-items-center ml-md-n7" data-aos="fade-left" data-aos-delay="300">
+                    <div class="swiper">
+                        <div class="swiper-container swiper-dark w-100" data-options='{"spaceBetween": 0, "slidesPerView": "auto"}'>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source srcset="assets/images/photos/photo-81.webp" type="image/webp">
+                                        <source srcset="assets/images/photos/photo-81.jpg" type="image/jpg"> 
+                                        <img src="assets/images/photos/photo-81.jpg" alt="photo-81" class="img-fluid w-100">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source srcset="assets/images/photos/photo-82.webp" type="image/webp">
+                                        <source srcset="assets/images/photos/photo-82.jpg" type="image/jpg"> 
+                                        <img src="assets/images/photos/photo-82.jpg" alt="photo-82" class="img-fluid w-100">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source srcset="assets/images/photos/photo-83.webp" type="image/webp">
+                                        <source srcset="assets/images/photos/photo-83.jpg" type="image/jpg"> 
+                                        <img src="assets/images/photos/photo-83.jpg" alt="photo-83" class="img-fluid w-100">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 w-100">
+                        <div class="d-flex justify-content-end swiper-dark">
+                            <div class="swiper-btn swiper-btn-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
+                            <div class="swiper-btn swiper-btn-next ml-3" tabindex="0" role="button" aria-label="Next slide"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light py-7 py-lg-8 mb-6 mb-lg-7">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 mb-7 mb-lg-0" data-aos="fade-right">
+                    <h2 class="font-weight-normal"><strong>Visual Positioning System</strong> (VPS) <strong>and</strong> Obstacle Avoidance</h2>
+                    <p>Curabitur elit sem, sollicitudin vitae pharetra vel, accumsan eget eros. Morbi consectetur libero eu commodo lacinia. In orci lectus, sollicitudin vitae magna ac, tincidunt varius lectus.</p>
+                    <p>Nulla elementum eros purus, sit amet auctor lectus pharetra in. Vestibulum dui augue, euismod in metus vitae, pharetra vehicula neque. Aenean a orci enim. Donec est sem, venenatis et diam ac, viverra cursus ligula. Aliquam sapien diam, dignissim eu orci at, viverra dapibus urna.</p>
+                    <a href="#" class="btn btn-primary text-uppercase d-inline-flex align-items-center">Read more<svg width="16" height="16" class="ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right-1</title><path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z"/></svg></a>
+                </div>
+                <div class="col-md-9 col-lg-5">
+                    <div class="row">
+                        <div class="col-md-6 pr-md-3 mb-5" data-aos="fade-up">
+                            <div class="card bg-secondary text-white shadow h-100">
+                                <div class="card-body">
+                                    <svg width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>vr-360-remote-controller</title><path d="M10.75,7h-3a1.5,1.5,0,0,0-1.5,1.5v14A1.5,1.5,0,0,0,7.75,24h3a1.5,1.5,0,0,0,1.5-1.5V8.5A1.5,1.5,0,0,0,10.75,7Zm-1.5,7a2,2,0,1,1,2-2A2,2,0,0,1,9.25,14Z"/><circle cx="9.25" cy="12" r="0.75"/><path d="M4.466,9.892a.75.75,0,1,0-.432-1.436A10.9,10.9,0,0,0,2.587,9a.25.25,0,0,1-.33-.335,7.754,7.754,0,0,1,8.361-4.291.75.75,0,0,0,.264-1.477A9.244,9.244,0,0,0,3.809,19.469a.749.749,0,1,0,.882-1.212,7.779,7.779,0,0,1-2.425-2.915.25.25,0,0,1,.33-.335,10.962,10.962,0,0,0,1.438.537.75.75,0,1,0,.432-1.436C2.664,13.567,1.5,12.74,1.5,12S2.664,10.433,4.466,9.892Z"/><path d="M15.671,6.394a.751.751,0,0,0-.163,1.049A7.889,7.889,0,0,1,16.24,8.66.251.251,0,0,1,15.909,9a10.654,10.654,0,0,0-1.443-.54.75.75,0,1,0-.432,1.436C15.836,10.433,17,11.26,17,12s-1.164,1.567-2.966,2.108a.751.751,0,0,0-.5.934c.29.962.914.509.935.5a10.962,10.962,0,0,0,1.438-.537.25.25,0,0,1,.33.335,7.779,7.779,0,0,1-2.425,2.915.75.75,0,0,0-.165,1.048c.517.706.843.314,1.047.164A9.277,9.277,0,0,0,18.5,12a9.163,9.163,0,0,0-1.781-5.443A.75.75,0,0,0,15.671,6.394Z"/><path d="M18.5,2a1.491,1.491,0,0,0-.42.06.064.064,0,0,1-.055-.01A.062.062,0,0,1,18,2a1,1,0,0,1,1-1,.5.5,0,0,0,0-1,2,2,0,0,0-2,2V3.5A1.5,1.5,0,1,0,18.5,2Zm0,2a.5.5,0,1,1,.5-.5A.5.5,0,0,1,18.5,4Z"/><path d="M16,3.5a1.491,1.491,0,0,0-.269-.857.25.25,0,0,1,0-.286,1.5,1.5,0,1,0-2.68-1.244.5.5,0,0,0,.967.257A.5.5,0,1,1,14.5,2a.5.5,0,0,0,0,1,.5.5,0,1,1-.482.635.5.5,0,1,0-.963.267A1.5,1.5,0,0,0,16,3.5Z"/><path d="M22.5,0A1.5,1.5,0,0,0,21,1.5v2a1.5,1.5,0,0,0,3,0v-2A1.5,1.5,0,0,0,22.5,0ZM23,3.5a.5.5,0,0,1-1,0v-2a.5.5,0,0,1,1,0Z"/></svg>
+                                    <h3 class="h4 mt-5">Navigation</h3>
+                                    <p class="font-size-6 mb-0">Pellentesque auctor rhoncus finibus etim aliquam</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pl-md-3 mb-5" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card shadow h-100">
+                                <div class="card-body">
+                                    <svg width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>trip-distance</title><path d="M5.5,8.5A5.506,5.506,0,0,0,0,14c0,3.555,4.545,8.922,4.74,9.15a1,1,0,0,0,1.52,0C6.453,22.923,11,17.561,11,14A5.506,5.506,0,0,0,5.5,8.5Zm0,8A2.5,2.5,0,1,1,8,14,2.5,2.5,0,0,1,5.5,16.5Z"/><path d="M19.5.5A4.505,4.505,0,0,0,15,5c0,3.171,3.978,7.185,4.146,7.354a.5.5,0,0,0,.708,0C20.022,12.185,24,8.171,24,5A4.505,4.505,0,0,0,19.5.5Zm0,6A1.5,1.5,0,1,1,21,5,1.5,1.5,0,0,1,19.5,6.5Z"/><path d="M17.187,14.643l-7.2,6.22a1,1,0,0,0,1.307,1.514l7.2-6.221a1,1,0,1,0-1.306-1.513Z"/></svg>
+                                    <h3 class="h4 mt-5">Distance</h3>
+                                    <p class="font-size-6 mb-0">Nulla porttitor odio a suscipit facilisis at maecenas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 pr-md-3 mb-5 mb-lg-0" data-aos="fade-up">
+                            <div class="card shadow h-100">
+                                <div class="card-body">
+                                    <svg width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>camera-display</title><path d="M21.444,6.125H20.128a.534.534,0,0,1-.481-.346C19.029,4.475,18.39,3.125,17,3.125H12c-1.071,0-1.636.778-2.659,2.191-.384.527-.51.809-.844.809h-6C.434,6.125,0,7.334,0,8.348V18.736a2.254,2.254,0,0,0,2.556,2.389H21.444A2.254,2.254,0,0,0,24,18.736V8.348C24,7.334,23.557,6.125,21.444,6.125Zm-1.444,6H17.5a.5.5,0,0,1,0-1H20a.5.5,0,0,1,0,1Zm.5,2.5a.5.5,0,0,1-.5.5H17.5a.5.5,0,0,1,0-1H20A.5.5,0,0,1,20.5,14.625Zm-6-3.5v6a1,1,0,0,1-1,1H4a1,1,0,0,1-1-1v-6a1,1,0,0,1,1-1h9.5A1,1,0,0,1,14.5,11.125Z"/><path d="M2.5,5.109l3,.016h0a.5.5,0,0,0,.5-.5v-.25a1.5,1.5,0,0,0-1.5-1.5h-1A1.5,1.5,0,0,0,2,4.375v.234A.5.5,0,0,0,2.5,5.109Z"/></svg>
+                                    <h3 class="h4 mt-5">Panorama</h3>
+                                    <p class="font-size-6 mb-0">Pellentesque auctor rhoncus finibus etim aliquam</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pl-md-3" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card shadow h-100">
+                                <div class="card-body">
+                                    <svg width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>earth-move</title><path d="M12,4.992a7,7,0,0,0,0,14h0a7,7,0,0,0,0-14Zm.193,11.964a.25.25,0,0,1-.386,0,8.091,8.091,0,0,1-1.255-2.121.248.248,0,0,1,.025-.233.251.251,0,0,1,.207-.11h2.432a.25.25,0,0,1,.232.343A8.074,8.074,0,0,1,12.193,16.956Zm-1.9-3.964a.249.249,0,0,1-.248-.222A6.986,6.986,0,0,1,10,11.992a7.206,7.206,0,0,1,.044-.777.25.25,0,0,1,.249-.223h3.414a.249.249,0,0,1,.248.223,6.739,6.739,0,0,1,0,1.555.248.248,0,0,1-.248.222Zm-3.793-1a5.38,5.38,0,0,1,.06-.787.25.25,0,0,1,.247-.213H8.284a.25.25,0,0,1,.249.272c-.02.236-.033.478-.033.728s.013.493.033.729a.25.25,0,0,1-.249.271H6.807a.25.25,0,0,1-.247-.213A5.369,5.369,0,0,1,6.5,11.992Zm5.307-4.963A.245.245,0,0,1,12,6.938a.248.248,0,0,1,.193.091,8.1,8.1,0,0,1,1.255,2.12.25.25,0,0,1-.232.343H10.784a.25.25,0,0,1-.232-.343A8.083,8.083,0,0,1,11.807,7.029Zm3.66,4.235a.25.25,0,0,1,.249-.272h1.477a.25.25,0,0,1,.247.213,5.191,5.191,0,0,1,0,1.574.249.249,0,0,1-.247.213H15.716a.25.25,0,0,1-.249-.271c.02-.236.033-.478.033-.729S15.487,11.5,15.467,11.264Zm1.211-2.153a.25.25,0,0,1-.213.381H15.338a.25.25,0,0,1-.239-.177,9.329,9.329,0,0,0-.746-1.771.251.251,0,0,1,.343-.338A5.542,5.542,0,0,1,16.678,9.111ZM9.3,7.206a.251.251,0,0,1,.343.338A9.329,9.329,0,0,0,8.9,9.315a.25.25,0,0,1-.239.177H7.535a.249.249,0,0,1-.212-.381A5.531,5.531,0,0,1,9.3,7.206ZM7.322,14.874a.253.253,0,0,1,0-.254.25.25,0,0,1,.218-.128H8.662a.25.25,0,0,1,.239.178,9.318,9.318,0,0,0,.746,1.77.25.25,0,0,1-.343.338A5.53,5.53,0,0,1,7.322,14.874Zm7.374,1.9a.251.251,0,0,1-.343-.338,9.318,9.318,0,0,0,.746-1.77.25.25,0,0,1,.239-.178h1.127a.25.25,0,0,1,.212.382A5.52,5.52,0,0,1,14.7,16.778Z"/><path d="M9.13,2.655a.5.5,0,0,0,.37.837h5a.5.5,0,0,0,.37-.837L12.74.319a1.035,1.035,0,0,0-1.48,0Z"/><path d="M23.673,11.253l-2.336-2.13a.5.5,0,0,0-.837.369v5a.5.5,0,0,0,.3.458.512.512,0,0,0,.2.042.5.5,0,0,0,.337-.13l2.336-2.13a1,1,0,0,0,0-1.479Z"/><path d="M14.5,20.492h-5a.5.5,0,0,0-.37.837l2.13,2.337a1,1,0,0,0,1.48,0l2.13-2.337a.5.5,0,0,0-.37-.837Z"/><path d="M3.2,9.035a.5.5,0,0,0-.539.088L.327,11.253a1,1,0,0,0,0,1.479l2.336,2.13a.5.5,0,0,0,.337.13.512.512,0,0,0,.2-.042.5.5,0,0,0,.3-.458v-5A.5.5,0,0,0,3.2,9.035Z"/></svg>
+                                    <h3 class="h4 mt-5">Positioning</h3>
+                                    <p class="font-size-6 mb-0">Sed egestas elit vestibulum orci vitae pharetra</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6 py-lg-7">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-7 col-sm-6 col-md-4 col-lg-3 px-4 px-lg-4 mb-7 mb-lg-0">
+                    <picture>
+                        <source srcset="assets/images/photos/photo-84.webp" type="image/webp">
+                        <source srcset="assets/images/photos/photo-84.jpg" type="image/jpg"> 
+                        <img src="assets/images/photos/photo-84.jpg" alt="photo-84" class="img-fluid w-100 shadow-sm">
+                    </picture>
+                </div>
+                <div class="col-9 col-sm-8 col-md-5 col-lg-4 mb-7 mb-lg-0 ml-n10">
+                    <picture>
+                        <source srcset="assets/images/photos/photo-85.webp" type="image/webp">
+                        <source srcset="assets/images/photos/photo-85.jpg" type="image/jpg"> 
+                        <img src="assets/images/photos/photo-85.jpg" alt="photo-85" class="img-fluid w-100 shadow-sm">
+                    </picture>
+                </div>
+                <div class="col-md">
+                    <h2>How to use Visual Positioning Systems safely</h2>
+                    <p>Suspendisse rhoncus dolor at lorem laoreet vehicula. Vestibulum volutpat faucibus massa, et consequat leo finibus non. In iaculis lectus sed luctus facilisis.</p>
+                    <div class="d-flex" data-aos="fade-left">
+                        <div class="d-flex align-items-start mt-1">
+                            <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check</title><path d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z"/></svg>
+                        </div>
+                        <div class="ml-2">
+                            <p class="font-size-5 mb-3">Not to flight above monochrome surfaces with VPS on</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex" data-aos="fade-left" data-aos-delay="100">
+                        <div class="d-flex align-items-start mt-1">
+                            <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check</title><path d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z"/></svg>
+                        </div>
+                        <div class="ml-2">
+                            <p class="font-size-5 mb-3">Deactivate VPS when flying over water</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex" data-aos="fade-left" data-aos-delay="200">
+                        <div class="d-flex align-items-start mt-1">
+                            <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check</title><path d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z"/></svg>
+                        </div>
+                        <div class="ml-2">
+                            <p class="font-size-5 mb-3">Not to fly over moving objects with VPS on</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex" data-aos="fade-left" data-aos-delay="300">
+                        <div class="d-flex align-items-start mt-1">
+                            <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check</title><path d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z"/></svg>
+                        </div>
+                        <div class="ml-2">
+                            <p class="font-size-5 mb-3">Not to fly objects with high contrast with VPS on</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex" data-aos="fade-left" data-aos-delay="300">
+                        <div class="d-flex align-items-start mt-1">
+                            <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check</title><path d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z"/></svg>
+                        </div>
+                        <div class="ml-2">
+                            <p class="font-size-5 mb-3">Not to fly over surfaces able to absorb ultrasound</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex" data-aos="fade-left" data-aos-delay="300">
+                        <div class="d-flex align-items-start mt-1">
+                            <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check</title><path d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z"/></svg>
+                        </div>
+                        <div class="ml-2">
+                            <p class="font-size-5 mb-3">Not to fly in an area where lighting conditions change</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex" data-aos="fade-left" data-aos-delay="300">
+                        <div class="d-flex align-items-start mt-1">
+                            <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check</title><path d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z"/></svg>
+                        </div>
+                        <div class="ml-2">
+                            <p class="font-size-5 mb-0">Not to fly over surfaces with consistent textures with VPS on</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6 pt-lg-7 pb-lg-8">
+        <div class="container">
+            <div class="row row-cols-md-2 row-cols-lg-3 mt-4">
+                <div class="col-md d-flex mb-5" data-aos="zoom-in">
+                    <div>
+                        <svg class="mr-3" width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>single-man-search</title><path d="M23.414,23.414a2,2,0,0,0,0-2.828l-4.069-4.069a.25.25,0,0,1-.033-.313A10.508,10.508,0,1,0,16.2,19.312a.249.249,0,0,1,.313.033l4.069,4.069A2,2,0,0,0,23.414,23.414ZM10.5,2A8.5,8.5,0,1,1,2,10.5,8.51,8.51,0,0,1,10.5,2Z"/><path d="M5.285,15.736A.491.491,0,0,0,5.712,16H15a.491.491,0,0,0,.427-.262.562.562,0,0,0,.006-.527A5.8,5.8,0,0,0,10.363,12a5.818,5.818,0,0,0-5.081,3.21A.566.566,0,0,0,5.285,15.736Z"/><path d="M10.354,11A3.75,3.75,0,0,0,14.1,7.25a3.75,3.75,0,0,0-7.5,0A3.749,3.749,0,0,0,10.354,11ZM12.1,7.25a1.75,1.75,0,0,1-3.5,0,1.683,1.683,0,0,1,.037-.35A.5.5,0,0,1,9.3,6.533,7.834,7.834,0,0,0,11.851,7a.254.254,0,0,1,.253.252Z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="h4">Search and rescue</h3>
+                        <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="col-md d-flex mb-5" data-aos="zoom-in">
+                    <div>
+                        <svg class="mr-3" width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>lock-5</title><path d="M18.75,11.725V6.75a6.75,6.75,0,0,0-13.5,0v4.975a8,8,0,1,0,13.5,0ZM12,18a2,2,0,1,1,2-2A2,2,0,0,1,12,18Zm4.25-9.619a.5.5,0,0,1-.722.448,7.922,7.922,0,0,0-7.056,0,.5.5,0,0,1-.722-.448V6.75a4.25,4.25,0,0,1,8.5,0Z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="h4">Security</h3>
+                        <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="col-md d-flex mb-5" data-aos="zoom-in">
+                    <div>
+                        <svg class="mr-3" width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>paper-write</title><path d="M19,18.587a1,1,0,0,0-1,1V21.75a.25.25,0,0,1-.249.25l-15.5.024A.25.25,0,0,1,2,21.774V4.749a.25.25,0,0,1,.25-.25H3.5a1,1,0,1,0,0-2H2A1.99,1.99,0,0,0,0,4.474V22.025A1.989,1.989,0,0,0,2,24H18a1.989,1.989,0,0,0,2-1.974V19.587A1,1,0,0,0,19,18.587Z"/><path d="M16.5,4.5h1.25a.25.25,0,0,1,.25.25V5.5a1,1,0,0,0,2,0v-1a2,2,0,0,0-2-2H16.5a1,1,0,0,0,0,2Z"/><path d="M7,5.5h6A1.5,1.5,0,0,0,14.5,4V3.5A1.5,1.5,0,0,0,13,2H12A2,2,0,0,0,8,2H7A1.5,1.5,0,0,0,5.5,3.5V4A1.5,1.5,0,0,0,7,5.5Z"/><path d="M4,10a1,1,0,0,0,1,1h8a1,1,0,0,0,0-2H5A1,1,0,0,0,4,10Z"/><path d="M5,14a1,1,0,0,0,0,2H9.5a1,1,0,0,0,0-2Z"/><path d="M23.415,8.241a2.021,2.021,0,0,0-2.828,0l-7.869,7.87a.493.493,0,0,0-.111.168l-1.414,3.535a.5.5,0,0,0,.65.649l3.535-1.414a.48.48,0,0,0,.168-.11l7.869-7.869A2,2,0,0,0,23.415,8.241Z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="h4">Inspections</h3>
+                        <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+
+                <div class="col-md d-flex mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+                    <div>
+                        <svg class="mr-3" width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>drone-picture</title><path d="M18.875,10.375h-5a.75.75,0,0,0,0,1.5h5a.75.75,0,0,0,0-1.5Z"/><path d="M5.875,11.875a.75.75,0,0,0,0-1.5h-5a.75.75,0,0,0,0,1.5Z"/><path d="M19.375,16.125a1.5,1.5,0,0,0-1.5-1.5h-.5a.25.25,0,0,1-.25-.25v-.75a.75.75,0,0,0-1.5,0v.75a.25.25,0,0,1-.25.25h-1a2.561,2.561,0,0,1-1.9-.845,3.5,3.5,0,0,0-5.2,0,2.565,2.565,0,0,1-1.9.845h-1a.25.25,0,0,1-.25-.25v-.75a.75.75,0,0,0-1.5,0v.75a.25.25,0,0,1-.25.25h-.5a1.5,1.5,0,0,0,0,3h3.5a2.557,2.557,0,0,1,.637.081.251.251,0,0,1,.182.193.248.248,0,0,1-.094.248,6.243,6.243,0,0,0-2.475,4.978.75.75,0,0,0,1.5,0,4.753,4.753,0,0,1,2.459-4.16.249.249,0,0,1,.266.015c.027.019.054.038.082.056A.251.251,0,0,1,8,19.382a2.25,2.25,0,1,0,3.748,0,.251.251,0,0,1,.069-.346c.028-.018.055-.037.082-.056a.249.249,0,0,1,.266-.015,4.753,4.753,0,0,1,2.459,4.16.75.75,0,0,0,1.5,0,6.243,6.243,0,0,0-2.475-4.978.25.25,0,0,1,.088-.441,2.563,2.563,0,0,1,.637-.081h3.5A1.5,1.5,0,0,0,19.375,16.125Zm-9.5,5.25a.75.75,0,1,1,.75-.75A.751.751,0,0,1,9.875,21.375Z"/><path d="M22.458,1.125H21.419l-.1-.237A1.411,1.411,0,0,0,20.059.125H17.983a1.425,1.425,0,0,0-1.284.8l-.079.2H13.292a1.4,1.4,0,0,0-1.417,1.389V7.736a1.4,1.4,0,0,0,1.417,1.389h9.166a1.4,1.4,0,0,0,1.417-1.389V2.514A1.4,1.4,0,0,0,22.458,1.125Zm-3.583,2a2,2,0,1,1-2,2A2,2,0,0,1,18.875,3.125Z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="h4">Aerial photography & video </h3>
+                        <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="col-md d-flex mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+                    <div>
+                        <svg class="mr-3" width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>trip-road-circle</title><path d="M18.887,13a.5.5,0,0,0,.353-.146c.185-.185,4.51-4.55,4.51-7.991a4.864,4.864,0,0,0-9.728,0c0,3.441,4.327,7.806,4.511,7.991A.5.5,0,0,0,18.887,13ZM17.25,4.864A1.637,1.637,0,1,1,18.886,6.5,1.637,1.637,0,0,1,17.25,4.864Z"/><path d="M19.149,14.481a1.767,1.767,0,0,1-.262.019,2,2,0,0,1-1.414-.586c-2.108-2.105-4.739-5.673-4.937-8.709a.5.5,0,0,0-.387-.455A9.573,9.573,0,0,0,10,4.5,9.739,9.739,0,0,0,.8,17.477a.5.5,0,0,0,.8.211c.4-.351.8-.676,1.187-.959a.75.75,0,0,1,.889,1.209,19.8,19.8,0,0,0-1.552,1.285.5.5,0,0,0-.071.66,9.739,9.739,0,0,0,17.662-4.867.5.5,0,0,0-.569-.535ZM9.6,16.134a5.769,5.769,0,0,0-1.084-.1h0a5.875,5.875,0,0,0-1.548.211.739.739,0,0,1-.2.026.75.75,0,0,1-.2-1.474,7.443,7.443,0,0,1,1.939-.263h0a7.365,7.365,0,0,1,1.361.129A.75.75,0,1,1,9.6,16.134Zm7.283,2.2a.752.752,0,0,1-.715.522.762.762,0,0,1-.228-.035,18.193,18.193,0,0,1-2.827-1.269.762.762,0,0,1-.331-1.018.739.739,0,0,1,1-.325l.023.012A16.812,16.812,0,0,0,16.4,17.4.75.75,0,0,1,16.885,18.337Z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="h4">Surveying & GIS (mapping)</h3>
+                        <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="col-md d-flex" data-aos="zoom-in" data-aos-delay="200">
+                    <div>
+                        <svg class="mr-3" width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>shipment</title><path d="M22.083,21.625h-.208a.25.25,0,0,1-.25-.25V14.542a.25.25,0,0,1,.25-.25h.208a.917.917,0,1,0,0-1.834H20.454a.25.25,0,0,1-.153-.052l-4.988-3.88a.917.917,0,0,0-1.126,1.448l2.619,2.037a.25.25,0,0,1-.153.447H7.347a.25.25,0,0,1-.153-.447L9.813,9.974A.917.917,0,0,0,8.687,8.526L3.7,12.406a.25.25,0,0,1-.153.052H1.917a.917.917,0,0,0,0,1.834h.208a.25.25,0,0,1,.25.25v6.833a.25.25,0,0,1-.25.25H1.917a.917.917,0,1,0,0,1.833H22.083a.917.917,0,1,0,0-1.833Zm-3.437-5.958V20.25a.688.688,0,1,1-1.375,0V15.667a.688.688,0,1,1,1.375,0Zm-4.125,0V20.25a.688.688,0,1,1-1.375,0V15.667a.688.688,0,1,1,1.375,0Zm-3.667,0V20.25a.688.688,0,1,1-1.375,0V15.667a.688.688,0,1,1,1.375,0Zm-4.125,0V20.25a.688.688,0,1,1-1.375,0V15.667a.688.688,0,1,1,1.375,0Z"/><path d="M12,8.792a1.828,1.828,0,0,0,1.026-3.344.25.25,0,0,1-.109-.207V1.458a.917.917,0,0,0-1.834,0V5.241a.25.25,0,0,1-.109.207A1.828,1.828,0,0,0,12,8.792Z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="h4">Unmanned cargo system</h3>
+                        <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6 mb-6 py-lg-7 mb-lg-7 overflow-hidden">
+        <div class="container-fluid px-0">
+            <div class="row">
+                <div class="col px-5 px-xl-2">
+                    <div class="swiper container position-relative">
+                        <div class="swiper-container swiper-scaled overflow-visible" data-options='{"centeredSlides": true, "slidesPerView": "auto", "loop": true, "spaceBetween": 32, "breakpoints": {"768": {"spaceBetween": 16}, "1200": {"spaceBetween": 64}}}'>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <picture>
+                                            <source srcset="assets/images/photos/photo-86.webp" type="image/webp">
+                                            <source srcset="assets/images/photos/photo-86.jpg" type="image/jpg"> 
+                                            <img src="assets/images/photos/photo-86.jpg" alt="photo-86" class="img-fluid w-100">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <picture>
+                                            <source srcset="assets/images/photos/photo-87.webp" type="image/webp">
+                                            <source srcset="assets/images/photos/photo-87.jpg" type="image/jpg"> 
+                                            <img src="assets/images/photos/photo-87.jpg" alt="photo-87" class="img-fluid w-100">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <picture>
+                                            <source srcset="assets/images/photos/photo-88.webp" type="image/webp">
+                                            <source srcset="assets/images/photos/photo-88.jpg" type="image/jpg"> 
+                                            <img src="assets/images/photos/photo-88.jpg" alt="photo-88" class="img-fluid w-100">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <picture>
+                                            <source srcset="assets/images/photos/photo-89.webp" type="image/webp">
+                                            <source srcset="assets/images/photos/photo-89.jpg" type="image/jpg"> 
+                                            <img src="assets/images/photos/photo-89.jpg" alt="photo-89" class="img-fluid w-100">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <picture>
+                                            <source srcset="assets/images/photos/photo-90.webp" type="image/webp">
+                                            <source srcset="assets/images/photos/photo-90.jpg" type="image/jpg"> 
+                                            <img src="assets/images/photos/photo-90.jpg" alt="photo-90" class="img-fluid w-100">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="position-absolute left-0 top-50 container d-flex justify-content-between">
+                            <div class="swiper-btn swiper-btn-prev ml-n5 ml-lg-n6 ml-xl-n7" tabindex="0" role="button" aria-label="Previous slide"></div>
+                            <div class="swiper-btn swiper-btn-next mr-n5 mr-lg-n6 mr-xl-n7" tabindex="0" role="button" aria-label="Next slide"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6 mt-6 py-lg-7 mt-lg-7 bg-light">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-6 col-xl-7 text-center text-lg-right">
+                    <h2 class="h3 mb-lg-0">Start your new project with Square</h2>
+                </div>
+                <div class="col text-center text-lg-left">
+                    <a href="https://themes.getbootstrap.com/product/square" target="_blank" rel="noopener" class="btn btn-secondary text-uppercase">Purchase now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

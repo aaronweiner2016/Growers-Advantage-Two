@@ -1,0 +1,66 @@
+<!-- index.njk -->
+{% extends "layouts/_layout.njk" %}
+{% set title = "Introduction" %}
+
+{% block content %}
+    <div class="container-fluid py-0">
+        <div class="row">
+            {% include "partials/_sidebar.njk" %}
+
+            <div class="col-12 col-lg-6 col-xl-8 offset-lg-3 offset-xl-2">
+                <div class="row">
+                    <div class="col py-5 docs-text">
+                        <h1 class="h2">{{ title }}</h1>
+                        <div class="d-flex flex-wrap flex-md-nowrap align-items-baseline justify-content-between">
+                            <p class="lead text-muted mb-0">Get started with Square - Premium Bootstrap Theme for building responsive, mobile-first sites with Bootstrap.</p>
+                        </div>
+                        <hr>
+
+                        <div class="alert alert-info small mt-5 mb-4">
+                            <h4 class="alert-heading">Square is a Static HTML Template</h4>
+                            <p class="mb-0">For the time being, we do <strong>NOT</strong> offer any tutorials or any other materials on how to integrate Front with any CMS, Web Application framework (including Angular JS, Ruby on Rails and others) or any other similar technology. <br>However, since <strong>Square is a static HTML/CSS and JS template</strong>, then it <em>should be compatible</em> with any backend technology.</p>
+                        </div>
+
+                        <section class="py-5" id="getting-started">
+                            <h2 class="h3 mt-3">Getting started</h2>
+                            <p>This guide will help you get started with Square! All the important stuff – compiling the source, file structure, build tools, components, plugins and utilities – is documented here, but should you have any questions, always feel free to reach out to square@webinning.co.uk.</p>
+                            <hr class="mb-0">
+                        </section>
+
+                        <section class="py-5" id="supported-browsers">
+                            <h2 class="h3 mt-3">Supported browsers</h2>
+                            <p>Bootstrap and Square support the latest, stable releases of all major browsers and platforms. On Windows, we support Internet Explorer 10-11 / Microsoft Edge.<br>
+                            Alternative browsers which use the latest version of WebKit, Blink, or Gecko, whether directly or via the platform's web view API, are not explicitly supported. However, Bootstrap should (in most cases) display and function correctly in these browsers as well.<br>
+                            You can find our supported range of browsers and their versions in our <code>.browserslistrc</code> file
+                            </p>
+                            <p>We use <a href="https://github.com/postcss/autoprefixer" target="_blank">Autoprefixer</a> to handle intended browser support via CSS prefixes, which uses <a href="https://github.com/browserslist/browserslist" target="_blank">Browserslist</a> to manage these browser versions. Consult their documentation for how to integrate these tools into your projects.</p>
+                            <hr class="mb-0">
+                        </section>
+
+                        <section class="py-5" id="javascript">
+                            <h2 class="h3 mt-3">JavaScript</h2>
+                            <p>Our code is written in vanilla JS, which means there are no dependencies such as jQuery or anything else. Bootstrap v4 still depends on jQuery but we wanted to prepare for the forthcoming Bootstrap v5 where jQuery will be deprecated.<br>If you want to extend Square with your own JavaScript code you can still use jQuery but we strongly suggest sticking with plain JS.</p>
+                            <p class="font-italic font-size-5">Note: Unlike other themes you don't need to worry about adding or removing plugin paths, when required. Square uses an automatic injection method – In other words, the system recognises the plugin and imports all of the necessary files. This cuts out hassle for you and means pages load even faster!</p>
+                            <hr class="mb-0">
+                        </section>
+
+                        <section class="py-5" id="square-support">
+                            <h2 class="h3 mt-3">Square support</h2>
+                            <p>We provide full and free support for bug fixes and guidance on using the theme. To access support, follow the support link in your Bootstrap Themes dashboard.</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3 col-xl-2 sidebar sidebar-right py-6 d-none d-lg-block">
+                <h4 class="h5">Jump to</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-0"><a href="#getting-started" data-scroll class="nav-link small">Getting started</a></li>
+                    <li class="nav-item mb-0"><a href="#supported-browsers" data-scroll class="nav-link small">Supported browsers</a></li>
+                    <li class="nav-item mb-0"><a href="#javascript" data-scroll class="nav-link small">JavaScript</a></li>
+                    <li class="nav-item mb-0"><a href="#square-support" data-scroll class="nav-link small">Square support</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

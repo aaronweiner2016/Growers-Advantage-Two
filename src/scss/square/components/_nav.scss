@@ -1,0 +1,12 @@
+//
+// Nav
+//
+
+.nav-link {
+    font-size: $nav-font-size;
+    color: $nav-link-color;
+
+    @include hover-focus() {
+        color: $nav-link-color;
+    }
+}

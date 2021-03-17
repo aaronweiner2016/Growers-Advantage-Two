@@ -1,0 +1,41 @@
+{
+    "base": {
+        "dir": "./temp",
+        "node": "./node_modules",
+        "start": "index.html"
+    },
+    "src": {
+        "base": "./src",
+        "scss": "./src/scss",
+        "templates":  "./src/templates",
+        "js": "./src/js",
+        "fonts": "./src/fonts",
+        "images": "./src/images",
+        "docs": "./src/docs"
+    },
+    "temp": {
+        "base": "./temp",
+        "assets": "./temp/assets",
+        "layouts": "./temp/layouts",
+        "partials": "./temp/partials",
+        "js": "./temp/assets/js",
+        "css": "./temp/assets/css",
+        "fonts": "./temp/assets/fonts",
+        "images": "./temp/assets/images",
+        "vendor": "./temp/assets/vendor",
+        "docs": "./temp/docs"
+    },
+    "dist": {
+        "base": "./dist",
+        "assets": "./dist/assets",
+        "css": "./dist/assets/css",
+        "js": "./dist/assets/js",
+        "pages": "./dist/pages",
+        "layouts": "./dist/layouts",
+        "partials": "./dist/partials",
+        "vendor": "./dist/assets/vendor",
+        "fonts": "./dist/assets/fonts",
+        "images": "./dist/assets/images",
+        "docs": "./dist/docs"
+    }
+}

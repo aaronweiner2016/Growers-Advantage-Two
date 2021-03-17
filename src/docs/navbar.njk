@@ -1,0 +1,317 @@
+<!-- navbar.njk -->
+{% extends "layouts/_layout.njk" %}
+{% set title = "Navbar" %}
+
+{% block content %}
+    <div class="container-fluid py-0">
+        <div class="row">
+            {% include "partials/_sidebar.njk" %}
+
+            <div class="col-12 col-lg-6 col-xl-8 offset-lg-3 offset-xl-2">
+                <div class="row">
+                    <div class="col py-5 docs-text">
+                        <h1 class="h2">{{ title }}</h1>
+                        <div class="d-flex flex-wrap flex-md-nowrap align-items-baseline justify-content-between">
+                            <p class="lead text-muted mb-0">Powerful, responsive navigation header, the navbar.</p>
+                            <p class="font-size-5 font-weight-medium pl-md-4 mb-0"><a class="text-secondary text-nowrap" href="https://getbootstrap.com/docs/4.5/components/navbar/" target="_blank" rel="noopener">Bootstrap docs<svg width="13" height="13" class="ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right-1</title><path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z"></path></svg></a></p>
+                        </div>
+                        <hr>
+
+                        <section class="py-5" id="navbar-basic">
+                            <div class="d-flex align-items-center">
+                                <h2 class="h3 mr-3 mt-3">Examples</h2>
+                            </div>
+                            <div class="card rounded shadow-lg">
+                                <div class="card-body px-0">
+                                    <header class="navbar navbar-light navbar-expand-lg align-items-center w-100">
+                                        <div class="position-relative container-fluid">
+                                            {% include "partials/_skip-main.njk" %}
+
+                                            <!-- Brand -->
+                                            <a class="navbar-brand mr-auto" href="index.html" aria-label="Click to go back to Homepage">
+                                                <svg width="160" height="50" class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 701 217"><path d="M122.73 185.24l12.57-15.05c8.77 7.2 18.58 11.4 29.58 11.4 8.37 0 12.7-3.4 12.7-8.25 0-5.36-4.2-6.54-17.28-9.68-19.23-4.32-33.5-9.56-33.5-27.62 0-17.27 13.87-28.8 34.42-28.8 15 0 26.83 4.32 36.38 12.3l-11.38 16c-8.2-6.3-17.28-9.54-25.65-9.54-7.2 0-11.26 3.4-11.26 7.85 0 5.5 4.32 7.33 17.67 10.2 20.15 4.32 33.1 10.07 33.1 27 0 18.06-13.74 29.3-36 29.3-15.96-.08-30.48-5.3-41.35-15.13zm190.7-6.02l8 6.94-10.87 12.56-8.77-7.6a49.08 49.08 0 0 1-28.53 9.16c-26.18 0-48.25-21.3-48.25-46.6s22.12-46.46 48.3-46.46 48.43 21.2 48.43 46.46a44 44 0 0 1-8.3 25.52zm-28.14-2.48l-9.28-8.12 10.86-12.56 9.56 8.24a26 26 0 0 0 2.22-10.6c0-14.13-11.64-26.17-25.4-26.17s-25.4 12-25.4 26.17 11.66 26.3 25.4 26.3a23.74 23.74 0 0 0 12.04-3.26zm51.57-17.4V108.8h22.38v49.47c0 12.7 8.12 21.73 19.37 21.73s19.5-9 19.5-21.73V108.8h22.25v50.52c0 24.08-17.14 41-41.75 41s-41.75-16.92-41.75-41zm158.23 26.3h-35.6l-5.24 13.1H429.1l35.6-89.9h25.13l35.6 89.9H500.3zm-6.93-17.53l-10.87-27.62-10.86 27.62zm102.35 30.62l-19.77-28.14h-11v28.14h-22.37v-89.9h41.75c19.76 0 34.16 12.7 34.16 30.9 0 13.1-7.46 23.42-19.1 28.14l21.73 30.88zm-30.76-48.55H577c7.72 0 13.2-4.2 13.2-10.47s-5.5-10.47-13.2-10.47h-17.26zm92.66-21.34v14h44v20h-44v15.87h48.43v20H630v-89.9h70.8v20z" fill='{{logoColor|default("#232323", true)}}'/><path d="M3.33 3.3h210.03v210.03H3.33z" fill="none" stroke='{{logoColor|default("#232323", true)}}' stroke-miterlimit="10" stroke-width="6"/></svg>
+                                            </a>
+
+                                            {% if not fullScreen %}
+                                                <!-- Toggler -->
+                                                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+
+                                                <!-- Collapse -->
+                                                <div class="collapse navbar-collapse" id="navbarCollapse1">
+                                                    <!-- Navigation -->
+                                                    <ul class="navbar-nav ml-auto">
+                                                        {% for item in navbar %}
+                                                            <li class="nav-item {% if item.dropdown | length %}{{ 'dropdown' }} {% endif %}">
+                                                                <a class="nav-link {% if item.dropdown | length %}{{ 'dropdown-toggle' }}{% endif %} {% if item.nav_title === title %}{{ 'active' }}{% endif %}" href="{{ item.nav_link }}" {% if item.dropdown | length %} id="navbar{{ item.nav_title | replace(' ', '') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {% endif %}>
+                                                                    {{ item.nav_title }}
+                                                                </a>
+                                                                {% if item.dropdown | length %}
+                                                                    <div class="dropdown-menu d-block d-lg-table" aria-labelledby="navbar{{ item.nav_title | replace(' ', '') }}">
+                                                                        <div class="row no-gutters d-flex d-lg-table-row flex-lg-nowrap mb-2">
+                                                                            {% for dropdown_cols in item.dropdown %}
+                                                                                <div class="d-lg-table-cell {{ dropdown_cols.dropdown_column_class }}">
+                                                                                    {% if dropdown_cols.dropdown_column | length %}
+                                                                                        <div class="row no-gutters d-lg-table-row">
+                                                                                            {% for dropdown_sect in dropdown_cols.dropdown_column %}
+                                                                                                <div class="{{ dropdown_sect.dropdown_section_class }}">
+                                                                                                    <h6 class="dropdown-header text-uppercase pt-3 pb-2">{{ dropdown_sect.dropdown_header }}</h6>
+                                                                                                    {% for dropdown_item in dropdown_sect.dropdown_section %}
+                                                                                                        <a class="dropdown-item pt-0 pb-1 {% if dropdown_item.dropdown_title === title %}{{ 'active' }}{% endif %} {% if dropdown_item.dropdown_svg | length %}{{'d-flex align-items-center'}}{% if not loop.last%} mb-2{% endif %}{% endif %}" href="{{ dropdown_item.dropdown_link }}">
+                                                                                                            {% if dropdown_item.dropdown_svg | length %}
+                                                                                                                <span class="mr-3">
+                                                                                                                    {{ dropdown_item.dropdown_svg | safe }}
+                                                                                                                </span>
+                                                                                                            {% endif %}
+                                                                                                            <span>
+                                                                                                                {{ dropdown_item.dropdown_title | safe  }}
+                                                                                                                {% if dropdown_item.dropdown_text | length %}
+                                                                                                                    <small class="text-muted d-block mt-n1">{{ dropdown_item.dropdown_text }}</small>
+                                                                                                                {% endif %}   
+                                                                                                            </span>
+                                                                                                        </a>
+                                                                                                    {% endfor %}
+                                                                                                </div>
+                                                                                            {% endfor %}
+                                                                                        </div>
+                                                                                    {% endif %}
+                                                                                </div>
+                                                                            {% endfor %}
+                                                                        </div>
+                                                                    </div>
+                                                                {% endif %}
+                                                            </li>
+                                                        {% endfor %}
+                                                    </ul>
+
+                                                    <!-- Buy button -->
+                                                    <a class="btn btn-sm btn-secondary text-uppercase mt-3 mt-lg-0 ml-lg-4 d-block d-lg-inline-block" href="#" target="_blank">Buy now</a>
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    </header>
+                                </div>
+
+                                <div class="card-body bg-primary px-0">
+                                    <header class="navbar navbar-dark navbar-expand-lg align-items-center w-100">
+                                        <div class="position-relative container-fluid">
+                                            {% include "partials/_skip-main.njk" %}
+
+                                            <!-- Brand -->
+                                            <a class="navbar-brand mr-auto" href="index.html" aria-label="Click to go back to Homepage">
+                                                <svg width="160" height="50" class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 701 217"><path d="M122.73 185.24l12.57-15.05c8.77 7.2 18.58 11.4 29.58 11.4 8.37 0 12.7-3.4 12.7-8.25 0-5.36-4.2-6.54-17.28-9.68-19.23-4.32-33.5-9.56-33.5-27.62 0-17.27 13.87-28.8 34.42-28.8 15 0 26.83 4.32 36.38 12.3l-11.38 16c-8.2-6.3-17.28-9.54-25.65-9.54-7.2 0-11.26 3.4-11.26 7.85 0 5.5 4.32 7.33 17.67 10.2 20.15 4.32 33.1 10.07 33.1 27 0 18.06-13.74 29.3-36 29.3-15.96-.08-30.48-5.3-41.35-15.13zm190.7-6.02l8 6.94-10.87 12.56-8.77-7.6a49.08 49.08 0 0 1-28.53 9.16c-26.18 0-48.25-21.3-48.25-46.6s22.12-46.46 48.3-46.46 48.43 21.2 48.43 46.46a44 44 0 0 1-8.3 25.52zm-28.14-2.48l-9.28-8.12 10.86-12.56 9.56 8.24a26 26 0 0 0 2.22-10.6c0-14.13-11.64-26.17-25.4-26.17s-25.4 12-25.4 26.17 11.66 26.3 25.4 26.3a23.74 23.74 0 0 0 12.04-3.26zm51.57-17.4V108.8h22.38v49.47c0 12.7 8.12 21.73 19.37 21.73s19.5-9 19.5-21.73V108.8h22.25v50.52c0 24.08-17.14 41-41.75 41s-41.75-16.92-41.75-41zm158.23 26.3h-35.6l-5.24 13.1H429.1l35.6-89.9h25.13l35.6 89.9H500.3zm-6.93-17.53l-10.87-27.62-10.86 27.62zm102.35 30.62l-19.77-28.14h-11v28.14h-22.37v-89.9h41.75c19.76 0 34.16 12.7 34.16 30.9 0 13.1-7.46 23.42-19.1 28.14l21.73 30.88zm-30.76-48.55H577c7.72 0 13.2-4.2 13.2-10.47s-5.5-10.47-13.2-10.47h-17.26zm92.66-21.34v14h44v20h-44v15.87h48.43v20H630v-89.9h70.8v20z" fill='{{logoColor|default("#ffffff", true)}}'/><path d="M3.33 3.3h210.03v210.03H3.33z" fill="none" stroke='{{logoColor|default("#ffffff", true)}}' stroke-miterlimit="10" stroke-width="6"/></svg>
+                                            </a>
+
+                                            {% if not fullScreen %}
+                                                <!-- Toggler -->
+                                                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse2" aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+
+                                                <!-- Collapse -->
+                                                <div class="collapse navbar-collapse" id="navbarCollapse2">
+                                                    <!-- Navigation -->
+                                                    <ul class="navbar-nav ml-auto">
+                                                        {% for item in navbar %}
+                                                            <li class="nav-item {% if item.dropdown | length %}{{ 'dropdown' }} {% endif %}">
+                                                                <a class="nav-link {% if item.dropdown | length %}{{ 'dropdown-toggle' }}{% endif %} {% if item.nav_title === title %}{{ 'active' }}{% endif %}" href="{{ item.nav_link }}" {% if item.dropdown | length %} id="navbar{{ item.nav_title | replace(' ', '') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {% endif %}>
+                                                                    {{ item.nav_title }}
+                                                                </a>
+                                                                {% if item.dropdown | length %}
+                                                                    <div class="dropdown-menu d-block d-lg-table" aria-labelledby="navbar{{ item.nav_title | replace(' ', '') }}">
+                                                                        <div class="row no-gutters d-flex d-lg-table-row flex-lg-nowrap mb-2">
+                                                                            {% for dropdown_cols in item.dropdown %}
+                                                                                <div class="d-lg-table-cell {{ dropdown_cols.dropdown_column_class }}">
+                                                                                    {% if dropdown_cols.dropdown_column | length %}
+                                                                                        <div class="row no-gutters d-lg-table-row">
+                                                                                            {% for dropdown_sect in dropdown_cols.dropdown_column %}
+                                                                                                <div class="{{ dropdown_sect.dropdown_section_class }}">
+                                                                                                    <h6 class="dropdown-header text-uppercase pt-3 pb-2">{{ dropdown_sect.dropdown_header }}</h6>
+                                                                                                    {% for dropdown_item in dropdown_sect.dropdown_section %}
+                                                                                                        <a class="dropdown-item pt-0 pb-1 {% if dropdown_item.dropdown_title === title %}{{ 'active' }}{% endif %} {% if dropdown_item.dropdown_svg | length %}{{'d-flex align-items-center'}}{% if not loop.last%} mb-2{% endif %}{% endif %}" href="{{ dropdown_item.dropdown_link }}">
+                                                                                                            {% if dropdown_item.dropdown_svg | length %}
+                                                                                                                <span class="mr-3">
+                                                                                                                    {{ dropdown_item.dropdown_svg | safe }}
+                                                                                                                </span>
+                                                                                                            {% endif %}
+                                                                                                            <span>
+                                                                                                                {{ dropdown_item.dropdown_title | safe  }}
+                                                                                                                {% if dropdown_item.dropdown_text | length %}
+                                                                                                                    <small class="text-muted d-block mt-n1">{{ dropdown_item.dropdown_text }}</small>
+                                                                                                                {% endif %}   
+                                                                                                            </span>
+                                                                                                        </a>
+                                                                                                    {% endfor %}
+                                                                                                </div>
+                                                                                            {% endfor %}
+                                                                                        </div>
+                                                                                    {% endif %}
+                                                                                </div>
+                                                                            {% endfor %}
+                                                                        </div>
+                                                                    </div>
+                                                                {% endif %}
+                                                            </li>
+                                                        {% endfor %}
+                                                    </ul>
+
+                                                    <!-- Buy button -->
+                                                    <a class="btn btn-sm btn-secondary text-uppercase mt-3 mt-lg-0 ml-lg-4 d-block d-lg-inline-block" href="#" target="_blank">Buy now</a>
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    </header>
+                                </div>
+
+                                <div class="card-body px-0">
+                                    <header class="navbar navbar-light navbar-expand-lg align-items-center w-100">
+                                        <div class="position-relative container-fluid">
+                                            {% include "partials/_skip-main.njk" %}
+
+                                            <!-- Brand -->
+                                            <a class="navbar-brand mr-auto" href="index.html" aria-label="Click to go back to Homepage">
+                                                <svg width="160" height="50" class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 701 217"><path d="M122.73 185.24l12.57-15.05c8.77 7.2 18.58 11.4 29.58 11.4 8.37 0 12.7-3.4 12.7-8.25 0-5.36-4.2-6.54-17.28-9.68-19.23-4.32-33.5-9.56-33.5-27.62 0-17.27 13.87-28.8 34.42-28.8 15 0 26.83 4.32 36.38 12.3l-11.38 16c-8.2-6.3-17.28-9.54-25.65-9.54-7.2 0-11.26 3.4-11.26 7.85 0 5.5 4.32 7.33 17.67 10.2 20.15 4.32 33.1 10.07 33.1 27 0 18.06-13.74 29.3-36 29.3-15.96-.08-30.48-5.3-41.35-15.13zm190.7-6.02l8 6.94-10.87 12.56-8.77-7.6a49.08 49.08 0 0 1-28.53 9.16c-26.18 0-48.25-21.3-48.25-46.6s22.12-46.46 48.3-46.46 48.43 21.2 48.43 46.46a44 44 0 0 1-8.3 25.52zm-28.14-2.48l-9.28-8.12 10.86-12.56 9.56 8.24a26 26 0 0 0 2.22-10.6c0-14.13-11.64-26.17-25.4-26.17s-25.4 12-25.4 26.17 11.66 26.3 25.4 26.3a23.74 23.74 0 0 0 12.04-3.26zm51.57-17.4V108.8h22.38v49.47c0 12.7 8.12 21.73 19.37 21.73s19.5-9 19.5-21.73V108.8h22.25v50.52c0 24.08-17.14 41-41.75 41s-41.75-16.92-41.75-41zm158.23 26.3h-35.6l-5.24 13.1H429.1l35.6-89.9h25.13l35.6 89.9H500.3zm-6.93-17.53l-10.87-27.62-10.86 27.62zm102.35 30.62l-19.77-28.14h-11v28.14h-22.37v-89.9h41.75c19.76 0 34.16 12.7 34.16 30.9 0 13.1-7.46 23.42-19.1 28.14l21.73 30.88zm-30.76-48.55H577c7.72 0 13.2-4.2 13.2-10.47s-5.5-10.47-13.2-10.47h-17.26zm92.66-21.34v14h44v20h-44v15.87h48.43v20H630v-89.9h70.8v20z" fill='{{logoColor|default("#232323", true)}}'/><path d="M3.33 3.3h210.03v210.03H3.33z" fill="none" stroke='{{logoColor|default("#232323", true)}}' stroke-miterlimit="10" stroke-width="6"/></svg>
+                                            </a>
+
+                                            {% if not fullScreen %}
+                                                <!-- Toggler -->
+                                                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse3" aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+
+                                                <!-- Collapse -->
+                                                <div class="collapse navbar-collapse" id="navbarCollapse3">
+                                                    <!-- Navigation -->
+                                                    <ul class="navbar-nav mx-auto">
+                                                        {% for item in navbar %}
+                                                            <li class="nav-item {% if item.dropdown | length %}{{ 'dropdown' }} {% endif %}">
+                                                                <a class="nav-link {% if item.dropdown | length %}{{ 'dropdown-toggle' }}{% endif %} {% if item.nav_title === title %}{{ 'active' }}{% endif %}" href="{{ item.nav_link }}" {% if item.dropdown | length %} id="navbar{{ item.nav_title | replace(' ', '') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {% endif %}>
+                                                                    {{ item.nav_title }}
+                                                                </a>
+                                                                {% if item.dropdown | length %}
+                                                                    <div class="dropdown-menu d-block d-lg-table" aria-labelledby="navbar{{ item.nav_title | replace(' ', '') }}">
+                                                                        <div class="row no-gutters d-flex d-lg-table-row flex-lg-nowrap mb-2">
+                                                                            {% for dropdown_cols in item.dropdown %}
+                                                                                <div class="d-lg-table-cell {{ dropdown_cols.dropdown_column_class }}">
+                                                                                    {% if dropdown_cols.dropdown_column | length %}
+                                                                                        <div class="row no-gutters d-lg-table-row">
+                                                                                            {% for dropdown_sect in dropdown_cols.dropdown_column %}
+                                                                                                <div class="{{ dropdown_sect.dropdown_section_class }}">
+                                                                                                    <h6 class="dropdown-header text-uppercase pt-3 pb-2">{{ dropdown_sect.dropdown_header }}</h6>
+                                                                                                    {% for dropdown_item in dropdown_sect.dropdown_section %}
+                                                                                                        <a class="dropdown-item pt-0 pb-1 {% if dropdown_item.dropdown_title === title %}{{ 'active' }}{% endif %} {% if dropdown_item.dropdown_svg | length %}{{'d-flex align-items-center'}}{% if not loop.last%} mb-2{% endif %}{% endif %}" href="{{ dropdown_item.dropdown_link }}">
+                                                                                                            {% if dropdown_item.dropdown_svg | length %}
+                                                                                                                <span class="mr-3">
+                                                                                                                    {{ dropdown_item.dropdown_svg | safe }}
+                                                                                                                </span>
+                                                                                                            {% endif %}
+                                                                                                            <span>
+                                                                                                                {{ dropdown_item.dropdown_title | safe  }}
+                                                                                                                {% if dropdown_item.dropdown_text | length %}
+                                                                                                                    <small class="text-muted d-block mt-n1">{{ dropdown_item.dropdown_text }}</small>
+                                                                                                                {% endif %}   
+                                                                                                            </span>
+                                                                                                        </a>
+                                                                                                    {% endfor %}
+                                                                                                </div>
+                                                                                            {% endfor %}
+                                                                                        </div>
+                                                                                    {% endif %}
+                                                                                </div>
+                                                                            {% endfor %}
+                                                                        </div>
+                                                                    </div>
+                                                                {% endif %}
+                                                            </li>
+                                                        {% endfor %}
+                                                    </ul>
+
+                                                    <!-- Buy button -->
+                                                    <a class="btn btn-sm btn-secondary text-uppercase mt-3 mt-lg-0 ml-lg-4 d-block d-lg-inline-block" href="#" target="_blank">Buy now</a>
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    </header>
+                                </div>
+
+                                <div class="card-body bg-primary px-0">
+                                    <header class="navbar navbar-dark navbar-expand-lg align-items-center w-100">
+                                        <div class="position-relative container-fluid">
+                                            {% include "partials/_skip-main.njk" %}
+
+                                            <!-- Brand -->
+                                            <a class="navbar-brand mr-auto" href="index.html" aria-label="Click to go back to Homepage">
+                                                <svg width="160" height="50" class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 701 217"><path d="M122.73 185.24l12.57-15.05c8.77 7.2 18.58 11.4 29.58 11.4 8.37 0 12.7-3.4 12.7-8.25 0-5.36-4.2-6.54-17.28-9.68-19.23-4.32-33.5-9.56-33.5-27.62 0-17.27 13.87-28.8 34.42-28.8 15 0 26.83 4.32 36.38 12.3l-11.38 16c-8.2-6.3-17.28-9.54-25.65-9.54-7.2 0-11.26 3.4-11.26 7.85 0 5.5 4.32 7.33 17.67 10.2 20.15 4.32 33.1 10.07 33.1 27 0 18.06-13.74 29.3-36 29.3-15.96-.08-30.48-5.3-41.35-15.13zm190.7-6.02l8 6.94-10.87 12.56-8.77-7.6a49.08 49.08 0 0 1-28.53 9.16c-26.18 0-48.25-21.3-48.25-46.6s22.12-46.46 48.3-46.46 48.43 21.2 48.43 46.46a44 44 0 0 1-8.3 25.52zm-28.14-2.48l-9.28-8.12 10.86-12.56 9.56 8.24a26 26 0 0 0 2.22-10.6c0-14.13-11.64-26.17-25.4-26.17s-25.4 12-25.4 26.17 11.66 26.3 25.4 26.3a23.74 23.74 0 0 0 12.04-3.26zm51.57-17.4V108.8h22.38v49.47c0 12.7 8.12 21.73 19.37 21.73s19.5-9 19.5-21.73V108.8h22.25v50.52c0 24.08-17.14 41-41.75 41s-41.75-16.92-41.75-41zm158.23 26.3h-35.6l-5.24 13.1H429.1l35.6-89.9h25.13l35.6 89.9H500.3zm-6.93-17.53l-10.87-27.62-10.86 27.62zm102.35 30.62l-19.77-28.14h-11v28.14h-22.37v-89.9h41.75c19.76 0 34.16 12.7 34.16 30.9 0 13.1-7.46 23.42-19.1 28.14l21.73 30.88zm-30.76-48.55H577c7.72 0 13.2-4.2 13.2-10.47s-5.5-10.47-13.2-10.47h-17.26zm92.66-21.34v14h44v20h-44v15.87h48.43v20H630v-89.9h70.8v20z" fill='{{logoColor|default("#ffffff", true)}}'/><path d="M3.33 3.3h210.03v210.03H3.33z" fill="none" stroke='{{logoColor|default("#ffffff", true)}}' stroke-miterlimit="10" stroke-width="6"/></svg>
+                                            </a>
+
+                                            {% if not fullScreen %}
+                                                <!-- Toggler -->
+                                                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse4" aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+
+                                                <!-- Collapse -->
+                                                <div class="collapse navbar-collapse" id="navbarCollapse4">
+                                                    <!-- Navigation -->
+                                                    <ul class="navbar-nav ml-auto">
+                                                        {% for item in navbar %}
+                                                            <li class="nav-item {% if item.dropdown | length %}{{ 'dropdown' }} {% endif %}">
+                                                                <a class="nav-link {% if item.dropdown | length %}{{ 'dropdown-toggle' }}{% endif %} {% if item.nav_title === title %}{{ 'active' }}{% endif %}" href="{{ item.nav_link }}" {% if item.dropdown | length %} id="navbar{{ item.nav_title | replace(' ', '') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {% endif %}>
+                                                                    {{ item.nav_title }}
+                                                                </a>
+                                                                {% if item.dropdown | length %}
+                                                                    <div class="dropdown-menu d-block d-lg-table" aria-labelledby="navbar{{ item.nav_title | replace(' ', '') }}">
+                                                                        <div class="row no-gutters d-flex d-lg-table-row flex-lg-nowrap mb-2">
+                                                                            {% for dropdown_cols in item.dropdown %}
+                                                                                <div class="d-lg-table-cell {{ dropdown_cols.dropdown_column_class }}">
+                                                                                    {% if dropdown_cols.dropdown_column | length %}
+                                                                                        <div class="row no-gutters d-lg-table-row">
+                                                                                            {% for dropdown_sect in dropdown_cols.dropdown_column %}
+                                                                                                <div class="{{ dropdown_sect.dropdown_section_class }}">
+                                                                                                    <h6 class="dropdown-header text-uppercase pt-3 pb-2">{{ dropdown_sect.dropdown_header }}</h6>
+                                                                                                    {% for dropdown_item in dropdown_sect.dropdown_section %}
+                                                                                                        <a class="dropdown-item pt-0 pb-1 {% if dropdown_item.dropdown_title === title %}{{ 'active' }}{% endif %} {% if dropdown_item.dropdown_svg | length %}{{'d-flex align-items-center'}}{% if not loop.last%} mb-2{% endif %}{% endif %}" href="{{ dropdown_item.dropdown_link }}">
+                                                                                                            {% if dropdown_item.dropdown_svg | length %}
+                                                                                                                <span class="mr-3">
+                                                                                                                    {{ dropdown_item.dropdown_svg | safe }}
+                                                                                                                </span>
+                                                                                                            {% endif %}
+                                                                                                            <span>
+                                                                                                                {{ dropdown_item.dropdown_title | safe  }}
+                                                                                                                {% if dropdown_item.dropdown_text | length %}
+                                                                                                                    <small class="text-muted d-block mt-n1">{{ dropdown_item.dropdown_text }}</small>
+                                                                                                                {% endif %}   
+                                                                                                            </span>
+                                                                                                        </a>
+                                                                                                    {% endfor %}
+                                                                                                </div>
+                                                                                            {% endfor %}
+                                                                                        </div>
+                                                                                    {% endif %}
+                                                                                </div>
+                                                                            {% endfor %}
+                                                                        </div>
+                                                                    </div>
+                                                                {% endif %}
+                                                            </li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    </header>
+                                </div>
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3 col-xl-2 sidebar sidebar-right py-6 d-none d-lg-block">
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

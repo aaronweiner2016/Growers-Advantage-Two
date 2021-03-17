@@ -1,0 +1,13 @@
+//
+// Collapse
+//
+
+.collapse-arrow {
+    transition: transform .3s ease-in-out;
+}
+
+[aria-expanded=true] {
+    .collapse-arrow {
+        transform: rotate(-180deg);
+    }
+}

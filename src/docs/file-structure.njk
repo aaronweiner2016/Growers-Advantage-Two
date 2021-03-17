@@ -1,0 +1,107 @@
+<!-- file-structure.njk -->
+{% extends "layouts/_layout.njk" %}
+{% set title = "File structure" %}
+
+{% block content %}
+    <div class="container-fluid py-0">
+        <div class="row">
+            {% include "partials/_sidebar.njk" %}
+
+            <div class="col-12 col-lg-6 col-xl-8 offset-lg-3 offset-xl-2">
+                <div class="row">
+                    <div class="col py-5 docs-text">
+                        <h1 class="h2">{{ title }}</h1>
+                        <hr>
+                        
+                        <section class="py-5">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th class="w-25">Folder/file name</th>
+                                            <th class="w-75">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="w-25"><span class="font-weight-medium"><code>dist</code></span></td>
+                                            <td class="w-75">Generated production files, like HTML, css, js, images and vendor files.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-25"><span class="font-weight-medium"><code>node_modules</code></span></td>
+                                            <td class="w-75">Directory where npm installs dependencies.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-25"><span class="font-weight-medium"><code>src</code></span></td>
+                                            <td class="w-75">This folder holds all template source files that are then processed (compiled/minified) to dist folder.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-25"><span class="font-weight-medium"><code>src/images</code></span></td>
+                                            <td class="w-75">Image assets folder. Organised into subfolders for ease of use.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-25"><span class="font-weight-medium"><code>src/js</code></span></td>
+                                            <td class="w-75">This folder contains the main <code>theme.js</code> file that is processed (compiled/minified) to <code>dist/js/theme.min.js</code>.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-25"><span class="font-weight-medium"><code>src/scss</code></span></td>
+                                            <td class="w-75">This folder contains all project <code>sass</code> files that are compiled and minified to styles in <code>dist/css/</code> folder.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-25"><span class="font-weight-medium"><code>src/templates</code></span></td>
+                                            <td class="w-75">This folder contains all nunjuck files that are compiled into HTML in dist folder.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-25"><span class="font-weight-medium"><code>dist/docs</code></span></td>
+                                            <td class="w-75">This folder contains the documentation files. Also available online.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-25"><span class="font-weight-medium"><code>webpack.mix.js</code></span></td>
+                                            <td class="w-75">All the build commands for Webpack.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-25"><span class="font-weight-medium"><code>gulpfile.js</code></span></td>
+                                            <td class="w-75">All the build commands for Gulp.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-25"><span class="font-weight-medium"><code>package.json</code></span></td>
+                                            <td class="w-75">List of dependencies and npm information.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-25"><span class="font-weight-medium"><code>babel.config.json</code></span></td>
+                                            <td class="w-75">This file tells the Babel how we want our code to transpile.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-25"><span class="font-weight-medium"><code>paths.json</code></span></td>
+                                            <td class="w-75">Information for Webpack and Gulp config files in json format.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-25"><span class="font-weight-medium"><code>data.json</code></span></td>
+                                            <td class="w-75">Helper data (like menu) in json format.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-25"><span class="font-weight-medium"><code>.browserlistrc</code></span></td>
+                                            <td class="w-75">The config file to set up target browsers for Gulp and Webpack.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-25"><span class="font-weight-medium"><code>.gitignore</code></span></td>
+                                            <td class="w-75">Hides all unnecessary files from Git.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="alert alert-info small mt-3 mb-4">
+                                Note: If you do not use Front-End setup with Node.js and Webpack or Gulp and want to directly edit html/scss/js files, look in the <strong>dist</strong> folder
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3 col-xl-2 sidebar sidebar-right py-6 d-none d-lg-block">
+                
+            </div>
+        </div>
+    </div>
+{% endblock %}

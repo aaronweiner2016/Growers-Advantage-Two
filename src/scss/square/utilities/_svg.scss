@@ -1,0 +1,23 @@
+//
+// SVG
+//
+
+svg {
+    fill: currentColor;
+}
+
+@each $color, $value in $theme-colors {
+    .fill-#{$color} {
+        fill: $value !important;
+    }
+
+    .stroke-#{$color} {
+        stroke: $value !important;
+    }
+}
+
+a, button {
+    > svg {
+        pointer-events: none;
+    }
+}

@@ -1,0 +1,68 @@
+//
+// Preloader
+//
+
+.preloader {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $preloader-zindex; 
+    background-color: $preloader-bg-color;
+}
+
+.preloader-shape {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border: 4px solid $preloader-shape-color;
+    animation: preloader 2s infinite ease;
+
+    &::after {
+        content: "";
+        vertical-align: top;
+        display: inline-block;
+        width: 100%;
+        background-color: $preloader-shape-color;
+        animation: preloader-shape 2s infinite ease-in;
+    }
+}
+
+  
+@keyframes preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes preloader-shape {
+    0% {
+        height: 0%;
+    }
+
+    50% {
+        height: 100%;
+    }
+    
+    100% {
+        height: 0%;
+    }
+}

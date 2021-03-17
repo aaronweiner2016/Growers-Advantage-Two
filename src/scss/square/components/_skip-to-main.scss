@@ -1,0 +1,44 @@
+//
+// Skip to main
+//
+
+.skip-to-main {
+    position: absolute !important;
+    top: -1000px;
+    left: $grid-gutter-width/2;
+    padding: $btn-padding-y-sm $btn-padding-x-sm;
+    font-size: $btn-font-size-sm;
+    line-height: $btn-line-height-sm;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    z-index: #{$zindex-modal + 1};
+    border: 1px dashed $gray-600;
+    border-radius: $border-radius-sm;
+    background-color: $navbar-light-color;
+    color: $navbar-dark-color;
+
+    &:active,
+    &:focus,
+    &:hover {
+        top: calc(100% + 15px);
+        overflow: visible;
+        width: auto;
+        height: auto;
+        box-shadow: $input-btn-focus-box-shadow;
+
+        @include media-breakpoint-down(md) {
+            position: fixed !important;
+            top: .5rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.navbar-dark {
+    .skip-to-main {
+        background-color: $navbar-dark-color;
+        color: $navbar-light-color;
+    }
+}

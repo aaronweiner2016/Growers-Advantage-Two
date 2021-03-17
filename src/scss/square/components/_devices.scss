@@ -1,0 +1,43 @@
+//
+// Devices
+//
+
+.device-iphone {
+    position: relative;
+
+    img {
+        position: relative;
+        object-fit: cover;
+        overflow: hidden;
+
+        &.screen {
+            position: absolute;
+            top: 2.5%;
+            left: 8%;
+            width: 84.2%;
+            height: 92.8%;
+            border-radius: 5%;
+        }
+        
+    }
+}
+
+.device-laptop {
+    position: relative;
+
+    img {
+        position: relative;
+        object-fit: cover;
+        overflow: hidden;
+
+        &.screen {
+            position: absolute;
+            top: 0.5%;
+            left: 14.5%;
+            width: 70.5%;
+            height: 87%;
+            border-radius: 4.5% 4.5% 0 0;
+        }
+        
+    }
+}

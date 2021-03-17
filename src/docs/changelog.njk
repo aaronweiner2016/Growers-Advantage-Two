@@ -1,0 +1,113 @@
+<!-- changelog.njk -->
+{% extends "layouts/_layout.njk" %}
+{% set title = "Changelog" %}
+
+{% block content %}
+    <div class="container-fluid py-0">
+        <div class="row">
+            {% include "partials/_sidebar.njk" %}
+
+            <div class="col-12 col-lg-6 col-xl-8 offset-lg-3 offset-xl-2">
+                <div class="row">
+                    <div class="col py-5 docs-text">
+                        <h1 class="h2">{{ title }}</h1>
+                        <hr>
+                        
+                        <section class="py-5">
+                            <p class="d-flex align-items-center"><span class="badge badge-pill badge-secondary py-1 mr-1">v1.0.2</span> - Nov 26, 2020</p>
+                            <ul class="mb-4">
+                                <li>New: Shifted image running outside container (till the edge)</li>
+                                <li>Update: slightly redesigned Overview page</li>
+                                <li>Update: Laravel-mix version from 5.0.4 to 5.0.5</li>
+                                <li>Fix: picture's source type from image/png to image/jpg when the images are jpg</li>
+                            </ul>
+                            <p class="mb-2">Updated files:</p>
+                            <ul>
+                                <li>data.json</li>
+                                <li>package.json</li>
+                                <li>src/js/theme.js</li>
+                                <li>src/templates/about.njk</li>
+                                <li>src/templates/app.njk</li>
+                                <li>src/templates/blog-single.njk</li>
+                                <li>src/templates/blog.njk</li>
+                                <li>src/templates/careers-single.njk</li>
+                                <li>src/templates/careers.njk</li>
+                                <li>src/templates/case-study.njk</li>
+                                <li>src/templates/event.njk</li>
+                                <li>src/templates/index.njk</li>
+                                <li>src/templates/photography.njk</li>
+                                <li>src/templates/portfolio.njk</li>
+                                <li>src/templates/presentation.njk</li>
+                                <li>src/templates/sass.njk</li>
+                                <li>src/templates/services.njk</li>
+                                <li>src/templates/team.njk</li>
+                                <li>src/scss/square/mixins/_container.scss</li>
+                                <li>src/scss/square/utilities/_image.scss</li>
+                                <li>src/docs/changelog.njk</li>
+                                <li>src/docs/credit-images.njk</li>
+                                <li>src/docs/partials/_sidebar.njk</li>
+                            </ul>
+                            <p class="mb-2">New files:</p>
+                            <ul class="mb-6">
+                                <li>src/images/photos/photo-94.jpg</li>
+                                <li>src/images/photos/photo-94.webp</li>
+                            </ul>
+                            
+                            <p class="d-flex align-items-center"><span class="badge badge-pill badge-secondary py-1 mr-1">v1.0.1</span> - Sept 1, 2020</p>
+                            <ul class="mb-4">
+                                <li>New: add thumbnail version of slider (changes in HTML)</li>
+                                <li>Update: slightly redesigned Overview page</li>
+                                <li>Update: rewrite menu paths to support submenu</li>
+                                <li>Update: remove unnecessary empty script end style from documentation pages</li>
+                                <li>Update: improved documentation for thumbnail slider</li>
+                                <li>Update: improved documentation for SVG</li>
+                                <li>Update: improved documentation for dismissing alerts</li>
+                                <li>Update: improved documentation for build tools</li>
+                            </ul>
+                            <p class="mb-2">Updated files:</p>
+                            <ul>
+                                <li>data.json</li>
+                                <li>src/js/theme.js</li>
+                                <li>src/scss/square/vendor/swiper/swiper.scss</li>
+                                <li>src/templates/about.njk</li>
+                                <li>src/templates/app.njk</li>
+                                <li>src/templates/blog-single.njk</li>
+                                <li>src/templates/careers.njk</li>
+                                <li>src/templates/case-study.njk</li>
+                                <li>src/templates/event.njk</li>
+                                <li>src/templates/index.njk</li>
+                                <li>src/templates/photography.njk</li>
+                                <li>src/templates/presentation.njk</li>
+                                <li>src/templates/sign-up.njk</li>
+                                <li>src/templates/team.njk</li>
+                                <li>src/templates/layouts/_header.njk</li>
+                                <li>src/docs/layouts/_layout.njk</li>
+                                <li>src/docs/alerts.njk</li>
+                                <li>src/docs/build-tools.njk</li>
+                                <li>src/docs/slider.njk</li>
+                                <li>src/docs/svg.njk</li>
+                                <li>src/docs/partials/_sidebar.njk</li>
+                                <li>src/docs/changelog.njk</li>
+                                <li>src/docs/credit-images.njk</li>
+                            </ul>
+                            <p class="mb-2">New files:</p>
+                            <ul class="mb-6">
+                                <li>src/images/photos/photo-93.jpg</li>
+                                <li>src/images/photos/photo-93.webp</li>
+                            </ul>
+
+                            <p class="d-flex align-items-center"><span class="badge badge-pill badge-secondary py-1 mr-1">v1.0.0</span> - Aug 12, 2020</p>
+                            <ul>
+                                <li>Initial release of Square. Lots more coming soon!</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3 col-xl-2 sidebar sidebar-right py-6 d-none d-lg-block">
+                
+            </div>
+        </div>
+    </div>
+{% endblock %}

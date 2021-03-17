@@ -1,0 +1,11 @@
+//
+// Z-index
+//
+
+$zindex: 10;
+
+@for $i from -10 through $zindex {
+    .z-index-#{$i} {
+        z-index: #{($i)} !important;
+    }
+}

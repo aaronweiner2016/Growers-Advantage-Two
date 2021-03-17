@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <!-- Meta viewport tag-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- SEO Meta Tags-->
+        <meta name="description" content="Square - Premium Bootstrap Theme">
+        <meta name="keywords" content="bootstrap, theme, template, multipurpose, landing, html5, css3, javascript, event, case study, photography, about, team, portfolio, services, contact, pricing, faqs, careers, blog, sign in, sign up, coming soon, legal">
+        <meta name="author" content="Webinning Ltd.">
+
+        <!-- Page Title -->
+        <title>
+        {% if title %}
+            {{ title }} | Square Documentation - Premium Bootstrap Theme
+        {% else %}
+            Square Documentation - Premium Bootstrap Theme
+        {% endif %}
+        </title>
+        {% include "partials/_favicons.njk" %}
+
+        <!-- Docs Stylesheets -->
+        {% if environment == 'production' %}
+            <link href="../assets/css/theme.min.css" rel="stylesheet">
+            <link href="assets/css/docs.min.css" rel="stylesheet">
+        {% else %}
+            <link href="../assets/css/theme.css" rel="stylesheet">
+            <link href="assets/css/docs.css" rel="stylesheet">
+        {% endif %}
+    </head> 
+    
+    <body>
+        {% if title == "Preloader" %}
+            {% include "partials/_preloader.njk" %}
+        {% endif %}
+
+        {% include "layouts/_header.njk" %}
+
+        <main>
+            {% block content %} {% endblock content %}
+        </main>
+
+        {% include "partials/_photoswipe.njk" %}
+
+        {% if environment == 'production' %}
+            <!-- Core Javascripts -->
+            <script src="../assets/js/theme.core.min.js"></script>
+
+            <!-- Theme Javascripts -->
+            <script src="../assets/js/theme.min.js"></script>
+        {% else %}
+            <!-- Core Javascripts -->
+            <script src="../assets/js/theme.core.js"></script>
+
+            <!-- Theme Javascripts -->
+            <script src="../assets/js/theme.js"></script>
+        {% endif %}
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/prism.min.js" integrity="sha512-rYNMWcr8EuYc/6mSBu0wD+hSoA4KkHvYRlmJEJGQI4bsho0OiX8fPOVB822QQZizkTUdkUCnJLnN8SAUBg9y9w==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/toolbar/prism-toolbar.min.js" integrity="sha512-cu2C9EssrOrVXT4thyL4gz/qWyh3Lq9XbICUXYyh3zJRCSKk1J08tBKPXnsSpdpZXOliaK/OJBygw/l0twAmwA==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" integrity="sha512-zL0U6NsaJoiT+QkM0blggablpxMe1EygJ9RW/xVm4KzI8hbrx8HPFT7ThtMbK3epnriDZSuHlM1GNLpAZwWOLw==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js" integrity="sha512-fF+EEI/XAsZi//s2n/a86G2cU4f8srVqNaYBIJNzJ/71x5Aest5HO7goXLmNnSeduCrIUePjJIjcOhRwzXdOPw==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-scss.min.js" integrity="sha512-rAb9BrnkhMpxN7NoOM7WwPa3phfCMMUZw568Tyzlj9frNsdUUeltfCTATD6ccnVLtnERR+ZXS85Ybs7wo9IiTQ==" crossorigin="anonymous"></script>
+    </body>
+</html>

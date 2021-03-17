@@ -1,0 +1,26 @@
+//
+// Images
+//
+
+.figure {
+    position: relative;
+}
+
+.figure-caption {
+    position: absolute;
+    left: $grid-gutter-width / 4;
+    bottom: -.3rem;
+    background-color: $white;
+    padding: .5rem 1.5rem .5rem .75rem;
+
+    &.text-right {
+        left: auto;
+        right: $grid-gutter-width / 4;
+        padding: .5rem .75rem .5rem 1.5rem;
+    }
+}
+
+// IE 11 fixture
+picture {
+    min-height: .1px;
+}

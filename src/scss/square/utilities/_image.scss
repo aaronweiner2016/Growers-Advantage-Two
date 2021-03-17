@@ -1,0 +1,35 @@
+//
+// Image
+//
+
+// Shifted images
+.img-shifted {
+    position: relative;
+    overflow: hidden;
+
+    &.shift-left {
+        width: 100%;
+        @include make-widths-outside-container();
+        float: right;
+    }
+
+    &.shift-right {
+        width: 100%;
+        @include make-widths-outside-container();
+    }
+
+    &.img-shifted-with-edge {
+        &.shift-left {
+            @include make-widths-outside-container-with-edge();
+        }
+    
+        &.shift-right {
+            @include make-widths-outside-container-with-edge();
+        }
+    }
+}
+
+.img-fullplus {
+    margin-left: -#{$grid-gutter-width * 2};
+    width: calc(100% + #{$grid-gutter-width * 4});
+}

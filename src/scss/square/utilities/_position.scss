@@ -1,0 +1,30 @@
+//
+// Position
+//
+
+$position-sizes: (0, 25, 50, 75, 100);
+
+@each $size in $position-sizes {
+    .top-#{$size} {
+        top: #{$size}% !important;
+        transform: translateY(-#{$size}#{"%"});
+    }
+    .bottom-#{$size} {
+        bottom: #{$size}% !important;
+        transform: translateY(#{$size}#{"%"});
+    }
+    .left-#{$size} {
+        left: #{$size}% !important;
+        transform: translateX(-#{$size}#{"%"});
+    }
+    .right-#{$size} {
+        right: #{$size}% !important;
+        transform: translateX(#{$size}#{"%"});
+    }
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,374 @@
+<!-- forms.njk -->
+{% extends "layouts/_layout.njk" %}
+{% set title = "Forms" %}
+
+{% block content %}
+    <div class="container-fluid py-0">
+        <div class="row">
+            {% include "partials/_sidebar.njk" %}
+
+            <div class="col-12 col-lg-6 col-xl-8 offset-lg-3 offset-xl-2">
+                <div class="row">
+                    <div class="col py-5 docs-text">
+                        <div class="d-flex align-items-center">
+                            <h1 class="h2 mr-3 mt-3">{{ title }}</h1>
+                            <span class="badge badge-pill badge-soft-secondary py-2">
+                                <span class="text-uppercase font-weight-bold">Square only</span>
+                            </span>
+                        </div>
+                        <div class="d-flex flex-wrap flex-md-nowrap align-items-baseline justify-content-between">
+                            <p class="lead text-muted mb-0">Examples and usage guidelines for form control styles.</p>
+                            <p class="font-size-5 font-weight-medium pl-md-4 mb-0"><a class="text-secondary text-nowrap" href="https://getbootstrap.com/docs/4.5/components/forms/" target="_blank" rel="noopener">Bootstrap docs<svg width="13" height="13" class="ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right-1</title><path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z"></path></svg></a></p>
+                        </div>
+                        <hr>
+                        
+                        <section class="py-5" id="forms-basic">
+                            <div class="d-flex align-items-center">
+                                <h2 class="h3 mr-3 mt-3">Basic examples</h2>
+                            </div>
+                            <p>Here's a quick example to demonstrate Bootstrap's form styles. Keep reading for documentation on required classes, form layout, and more.</p>
+
+                            <div class="card rounded shadow-lg mb-6">
+                                <div class="card-header py-3 bg-white border-bottom">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item mr-2"><a class="nav-link active" href="#result1" data-toggle="tab" role="tab" aria-controls="result1" aria-selected="true"><svg width="16" height="16" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-1</title><path d="M23.432,10.524C20.787,7.614,16.4,4.538,12,4.6,7.6,4.537,3.213,7.615.568,10.524a2.211,2.211,0,0,0,0,2.948C3.182,16.351,7.507,19.4,11.839,19.4h.308c4.347,0,8.671-3.049,11.288-5.929A2.21,2.21,0,0,0,23.432,10.524ZM7.4,12A4.6,4.6,0,1,1,12,16.6,4.6,4.6,0,0,1,7.4,12Z"/><circle cx="12" cy="12" r="2"/></svg>Result</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#html1" data-toggle="tab" role="tab" aria-controls="html1" aria-selected="false"><svg width="15" height="15" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-code</title><path d="M21.414,4.915,17.086.587A2,2,0,0,0,15.672,0H4A2,2,0,0,0,2,2V22a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V6.329A2,2,0,0,0,21.414,4.915ZM10.864,18.96l-.019.018a.75.75,0,0,1-1.06-.036L6.452,15.371a.752.752,0,0,1,0-1.025l3.333-3.571.018-.019A.75.75,0,0,1,10.881,11.8L8.186,14.687a.249.249,0,0,0,0,.341l2.7,2.89A.751.751,0,0,1,10.864,18.96Zm6.684-3.59-3.333,3.571-.018.019a.75.75,0,0,1-1.078-1.043l2.7-2.888a.249.249,0,0,0,0-.341l-2.7-2.889a.751.751,0,0,1,1.1-1.025l3.333,3.571A.752.752,0,0,1,17.548,15.37Z"/></svg>HTML</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="result1" role="tabpanel">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Email address</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleInputPassword1">Password</label>
+                                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                                </div>
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane fade" id="html1" role="tabpanel">
+                                            <pre><code class="language-html"><script type="text/plain">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Email address</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleInputPassword1">Password</label>
+                                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                                </div>
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </form>
+                                            </script></code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="py-5" id="forms-controls">
+                            <div class="d-flex align-items-center">
+                                <h2 class="h3 mr-3 mt-3">Form controls</h2>
+                            </div>
+                            <p>Textual form controls—like <code>&lt;input&gt;</code>s, <code>&lt;select&gt;</code>s, and <code>&lt;textarea&gt;</code>s—are styled with the <code>.form-control</code> class. Included are styles for general appearance, focus state, sizing, and more.</p>
+
+                            <div class="card rounded shadow-lg">
+                                <div class="card-header py-3 bg-white border-bottom">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item mr-2"><a class="nav-link active" href="#result2" data-toggle="tab" role="tab" aria-controls="result2" aria-selected="true"><svg width="16" height="16" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-1</title><path d="M23.432,10.524C20.787,7.614,16.4,4.538,12,4.6,7.6,4.537,3.213,7.615.568,10.524a2.211,2.211,0,0,0,0,2.948C3.182,16.351,7.507,19.4,11.839,19.4h.308c4.347,0,8.671-3.049,11.288-5.929A2.21,2.21,0,0,0,23.432,10.524ZM7.4,12A4.6,4.6,0,1,1,12,16.6,4.6,4.6,0,0,1,7.4,12Z"/><circle cx="12" cy="12" r="2"/></svg>Result</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#html2" data-toggle="tab" role="tab" aria-controls="html2" aria-selected="false"><svg width="15" height="15" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-code</title><path d="M21.414,4.915,17.086.587A2,2,0,0,0,15.672,0H4A2,2,0,0,0,2,2V22a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V6.329A2,2,0,0,0,21.414,4.915ZM10.864,18.96l-.019.018a.75.75,0,0,1-1.06-.036L6.452,15.371a.752.752,0,0,1,0-1.025l3.333-3.571.018-.019A.75.75,0,0,1,10.881,11.8L8.186,14.687a.249.249,0,0,0,0,.341l2.7,2.89A.751.751,0,0,1,10.864,18.96Zm6.684-3.59-3.333,3.571-.018.019a.75.75,0,0,1-1.078-1.043l2.7-2.888a.249.249,0,0,0,0-.341l-2.7-2.889a.751.751,0,0,1,1.1-1.025l3.333,3.571A.752.752,0,0,1,17.548,15.37Z"/></svg>HTML</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="result2" role="tabpanel">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput1">Email address</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlSelect1">Example select</label>
+                                                    <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlSelect2">Example multiple select</label>
+                                                        <select multiple class="form-control" id="exampleFormControlSelect2">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane fade" id="html2" role="tabpanel">
+                                            <pre><code class="language-html"><script type="text/plain">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput1">Email address</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlSelect1">Example select</label>
+                                                    <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlSelect2">Example multiple select</label>
+                                                    <select multiple class="form-control" id="exampleFormControlSelect2">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                </div>
+                                            </form>
+                                            </script></code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="py-5" id="forms-sizing">
+                            <div class="d-flex align-items-center">
+                                <h2 class="h3 mr-3 mt-3">Sizing</h2>
+                            </div>
+                            <p>Set heights using classes like <code>.form-control-lg</code> and <code>.form-control-sm</code>.</p>
+
+                            <div class="card rounded shadow-lg">
+                                <div class="card-header py-3 bg-white border-bottom">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item mr-2"><a class="nav-link active" href="#result3" data-toggle="tab" role="tab" aria-controls="result3" aria-selected="true"><svg width="16" height="16" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-1</title><path d="M23.432,10.524C20.787,7.614,16.4,4.538,12,4.6,7.6,4.537,3.213,7.615.568,10.524a2.211,2.211,0,0,0,0,2.948C3.182,16.351,7.507,19.4,11.839,19.4h.308c4.347,0,8.671-3.049,11.288-5.929A2.21,2.21,0,0,0,23.432,10.524ZM7.4,12A4.6,4.6,0,1,1,12,16.6,4.6,4.6,0,0,1,7.4,12Z"/><circle cx="12" cy="12" r="2"/></svg>Result</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#html3" data-toggle="tab" role="tab" aria-controls="html3" aria-selected="false"><svg width="15" height="15" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-code</title><path d="M21.414,4.915,17.086.587A2,2,0,0,0,15.672,0H4A2,2,0,0,0,2,2V22a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V6.329A2,2,0,0,0,21.414,4.915ZM10.864,18.96l-.019.018a.75.75,0,0,1-1.06-.036L6.452,15.371a.752.752,0,0,1,0-1.025l3.333-3.571.018-.019A.75.75,0,0,1,10.881,11.8L8.186,14.687a.249.249,0,0,0,0,.341l2.7,2.89A.751.751,0,0,1,10.864,18.96Zm6.684-3.59-3.333,3.571-.018.019a.75.75,0,0,1-1.078-1.043l2.7-2.888a.249.249,0,0,0,0-.341l-2.7-2.889a.751.751,0,0,1,1.1-1.025l3.333,3.571A.752.752,0,0,1,17.548,15.37Z"/></svg>HTML</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="result3" role="tabpanel">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-lg" placeholder=".form-control-lg">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder=".form-control">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-sm" placeholder=".form-control-sm">
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="html3" role="tabpanel">
+                                            <pre><code class="language-html"><script type="text/plain">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-lg" placeholder=".form-control-lg">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder=".form-control">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-sm" placeholder=".form-control-sm">
+                                            </div>
+                                            </script></code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="py-5" id="forms-input-group">
+                            <div class="d-flex align-items-center">
+                                <h2 class="h3 mr-3 mt-3">Input group</h2>
+                            </div>
+                            <p>Place one add-on or button on either side of an input. You may also place one on both sides of an input. Remember to place <label>s outside the input group.</p>
+
+                            <div class="card rounded shadow-lg">
+                                <div class="card-header py-3 bg-white border-bottom">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item mr-2"><a class="nav-link active" href="#result4" data-toggle="tab" role="tab" aria-controls="result4" aria-selected="true"><svg width="16" height="16" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-1</title><path d="M23.432,10.524C20.787,7.614,16.4,4.538,12,4.6,7.6,4.537,3.213,7.615.568,10.524a2.211,2.211,0,0,0,0,2.948C3.182,16.351,7.507,19.4,11.839,19.4h.308c4.347,0,8.671-3.049,11.288-5.929A2.21,2.21,0,0,0,23.432,10.524ZM7.4,12A4.6,4.6,0,1,1,12,16.6,4.6,4.6,0,0,1,7.4,12Z"/><circle cx="12" cy="12" r="2"/></svg>Result</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#html4" data-toggle="tab" role="tab" aria-controls="html4" aria-selected="false"><svg width="15" height="15" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-code</title><path d="M21.414,4.915,17.086.587A2,2,0,0,0,15.672,0H4A2,2,0,0,0,2,2V22a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V6.329A2,2,0,0,0,21.414,4.915ZM10.864,18.96l-.019.018a.75.75,0,0,1-1.06-.036L6.452,15.371a.752.752,0,0,1,0-1.025l3.333-3.571.018-.019A.75.75,0,0,1,10.881,11.8L8.186,14.687a.249.249,0,0,0,0,.341l2.7,2.89A.751.751,0,0,1,10.864,18.96Zm6.684-3.59-3.333,3.571-.018.019a.75.75,0,0,1-1.078-1.043l2.7-2.888a.249.249,0,0,0,0-.341l-2.7-2.889a.751.751,0,0,1,1.1-1.025l3.333,3.571A.752.752,0,0,1,17.548,15.37Z"/></svg>HTML</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="result4" role="tabpanel">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                                </div>
+
+                                                <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text" id="basic-addon2">@example.com</span>
+                                                </div>
+                                                </div>
+
+                                                <label for="basic-url">Your vanity URL</label>
+                                                <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                                                </div>
+                                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                                </div>
+
+                                                <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">$</span>
+                                                </div>
+                                                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">.00</span>
+                                                </div>
+                                                </div>
+
+                                                <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">With textarea</span>
+                                                </div>
+                                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="html4" role="tabpanel">
+                                            <pre><code class="language-html"><script type="text/plain">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                                </div>
+
+                                                <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text" id="basic-addon2">@example.com</span>
+                                                </div>
+                                                </div>
+
+                                                <label for="basic-url">Your vanity URL</label>
+                                                <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                                                </div>
+                                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                                </div>
+
+                                                <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">$</span>
+                                                </div>
+                                                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">.00</span>
+                                                </div>
+                                                </div>
+
+                                                <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">With textarea</span>
+                                                </div>
+                                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                                            </div>
+                                            </script></code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="py-5" id="forms-validation">
+                            <div class="d-flex align-items-center">
+                                <h2 class="h3 mr-3 mt-3">Validation</h2>
+                            </div>
+                            <p>Provide valuable, actionable feedback to your users with HTML5 form validation–available in all our supported browsers..</p>
+
+                            <div class="card rounded shadow-lg">
+                                <div class="card-header py-3 bg-white border-bottom">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item mr-2"><a class="nav-link active" href="#result5" data-toggle="tab" role="tab" aria-controls="result5" aria-selected="true"><svg width="16" height="16" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-1</title><path d="M23.432,10.524C20.787,7.614,16.4,4.538,12,4.6,7.6,4.537,3.213,7.615.568,10.524a2.211,2.211,0,0,0,0,2.948C3.182,16.351,7.507,19.4,11.839,19.4h.308c4.347,0,8.671-3.049,11.288-5.929A2.21,2.21,0,0,0,23.432,10.524ZM7.4,12A4.6,4.6,0,1,1,12,16.6,4.6,4.6,0,0,1,7.4,12Z"/><circle cx="12" cy="12" r="2"/></svg>Result</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#html5" data-toggle="tab" role="tab" aria-controls="html5" aria-selected="false"><svg width="15" height="15" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-code</title><path d="M21.414,4.915,17.086.587A2,2,0,0,0,15.672,0H4A2,2,0,0,0,2,2V22a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V6.329A2,2,0,0,0,21.414,4.915ZM10.864,18.96l-.019.018a.75.75,0,0,1-1.06-.036L6.452,15.371a.752.752,0,0,1,0-1.025l3.333-3.571.018-.019A.75.75,0,0,1,10.881,11.8L8.186,14.687a.249.249,0,0,0,0,.341l2.7,2.89A.751.751,0,0,1,10.864,18.96Zm6.684-3.59-3.333,3.571-.018.019a.75.75,0,0,1-1.078-1.043l2.7-2.888a.249.249,0,0,0,0-.341l-2.7-2.889a.751.751,0,0,1,1.1-1.025l3.333,3.571A.752.752,0,0,1,17.548,15.37Z"/></svg>HTML</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="result5" role="tabpanel">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control is-valid" value="Valid input">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="text" class="form-control is-invalid" value="Invalid input">
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="html5" role="tabpanel">
+                                            <pre><code class="language-html"><script type="text/plain">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control is-valid" value="Valid input">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="text" class="form-control is-invalid" value="Invalid input">
+                                            </div>
+                                            </script></code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3 col-xl-2 sidebar sidebar-right py-6 d-none d-lg-block">
+                <h4 class="h5">Jump to</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-0"><a href="#forms-basic" data-scroll class="nav-link small">Basic examples</a></li>
+                    <li class="nav-item mb-0"><a href="#forms-controls" data-scroll class="nav-link small">Form controls</a></li>
+                    <li class="nav-item mb-0"><a href="#forms-sizing" data-scroll class="nav-link small">Sizing</a></li>
+                    <li class="nav-item mb-0"><a href="#forms-input-group" data-scroll class="nav-link small">Input group</a></li>
+                    <li class="nav-item mb-0"><a href="#forms-validation" data-scroll class="nav-link small">Validation</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

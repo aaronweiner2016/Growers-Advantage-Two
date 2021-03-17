@@ -1,0 +1,169 @@
+<!-- badges.njk -->
+{% extends "layouts/_layout.njk" %}
+{% set title = "Badges" %}
+
+{% block content %}
+    <div class="container-fluid py-0">
+        <div class="row">
+            {% include "partials/_sidebar.njk" %}
+
+            <div class="col-12 col-lg-6 col-xl-8 offset-lg-3 offset-xl-2">
+                <div class="row">
+                    <div class="col py-5 docs-text">
+                        <h1 class="h2">{{ title }}</h1>
+                        <div class="d-flex flex-wrap flex-md-nowrap align-items-baseline justify-content-between">
+                            <p class="lead text-muted mb-0">Examples for badges, our small count and labeling component</p>
+                            <p class="font-size-5 font-weight-medium pl-md-4 mb-0"><a class="text-secondary text-nowrap" href="https://getbootstrap.com/docs/4.5/components/badge/" target="_blank" rel="noopener">Bootstrap docs<svg width="13" height="13" class="ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right-1</title><path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z"></path></svg></a></p>
+                        </div>
+                        <hr>
+
+                        <section class="py-5" id="badges-basic">
+                            <div class="d-flex align-items-center">
+                                <h2 class="h3 mr-3 mt-3">Basic examples</h2>
+                            </div>
+                            <div class="card rounded shadow-lg">
+                                <div class="card-header py-3 bg-white border-bottom">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item mr-2"><a class="nav-link active" href="#result1" data-toggle="tab" role="tab" aria-controls="result1" aria-selected="true"><svg width="16" height="16" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-1</title><path d="M23.432,10.524C20.787,7.614,16.4,4.538,12,4.6,7.6,4.537,3.213,7.615.568,10.524a2.211,2.211,0,0,0,0,2.948C3.182,16.351,7.507,19.4,11.839,19.4h.308c4.347,0,8.671-3.049,11.288-5.929A2.21,2.21,0,0,0,23.432,10.524ZM7.4,12A4.6,4.6,0,1,1,12,16.6,4.6,4.6,0,0,1,7.4,12Z"/><circle cx="12" cy="12" r="2"/></svg>Result</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#html1" data-toggle="tab" role="tab" aria-controls="html1" aria-selected="false"><svg width="15" height="15" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-code</title><path d="M21.414,4.915,17.086.587A2,2,0,0,0,15.672,0H4A2,2,0,0,0,2,2V22a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V6.329A2,2,0,0,0,21.414,4.915ZM10.864,18.96l-.019.018a.75.75,0,0,1-1.06-.036L6.452,15.371a.752.752,0,0,1,0-1.025l3.333-3.571.018-.019A.75.75,0,0,1,10.881,11.8L8.186,14.687a.249.249,0,0,0,0,.341l2.7,2.89A.751.751,0,0,1,10.864,18.96Zm6.684-3.59-3.333,3.571-.018.019a.75.75,0,0,1-1.078-1.043l2.7-2.888a.249.249,0,0,0,0-.341l-2.7-2.889a.751.751,0,0,1,1.1-1.025l3.333,3.571A.752.752,0,0,1,17.548,15.37Z"/></svg>HTML</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="result1" role="tabpanel">
+                                            <span class="badge badge-primary">Primary</span>
+                                            <span class="badge badge-secondary">Secondary</span>
+                                            <span class="badge badge-success">Success</span>
+                                            <span class="badge badge-danger">Danger</span>
+                                            <span class="badge badge-warning">Warning</span>
+                                            <span class="badge badge-info">Info</span>
+                                            <span class="badge badge-light">Light</span>
+                                            <span class="badge badge-dark">Dark</span>
+                                            <br>
+                                            <br>
+                                            <button type="button" class="btn btn-primary">
+                                                Notifications <span class="badge badge-light">4</span>
+                                            </button>
+                                        </div>
+                                        <div class="tab-pane fade" id="html1" role="tabpanel">
+                                            <pre><code class="language-html"><script type="text/plain">
+                                            <span class="badge badge-primary">Primary</span>
+                                            <span class="badge badge-secondary">Secondary</span>
+                                            <span class="badge badge-success">Success</span>
+                                            <span class="badge badge-danger">Danger</span>
+                                            <span class="badge badge-warning">Warning</span>
+                                            <span class="badge badge-info">Info</span>
+                                            <span class="badge badge-light">Light</span>
+                                            <span class="badge badge-dark">Dark</span>
+
+                                            <button type="button" class="btn btn-primary">
+                                                Notifications <span class="badge badge-light">4</span>
+                                            </button>
+                                            </script></code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="py-5" id="badges-soft">
+                            <div class="d-flex align-items-center">
+                                <h2 class="h3 mr-3 mt-3">Soft</h2>
+                                <span class="badge badge-pill badge-soft-secondary py-1">
+                                    <span class="small text-uppercase font-weight-bold">Square only</span>
+                                </span>
+                            </div>
+                            <p>Creates a soft variation of badges.</p>
+
+                            <div class="card rounded shadow-lg">
+                                <div class="card-header py-3 bg-white border-bottom">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item mr-2"><a class="nav-link active" href="#result2" data-toggle="tab" role="tab" aria-controls="result2" aria-selected="true"><svg width="16" height="16" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-1</title><path d="M23.432,10.524C20.787,7.614,16.4,4.538,12,4.6,7.6,4.537,3.213,7.615.568,10.524a2.211,2.211,0,0,0,0,2.948C3.182,16.351,7.507,19.4,11.839,19.4h.308c4.347,0,8.671-3.049,11.288-5.929A2.21,2.21,0,0,0,23.432,10.524ZM7.4,12A4.6,4.6,0,1,1,12,16.6,4.6,4.6,0,0,1,7.4,12Z"/><circle cx="12" cy="12" r="2"/></svg>Result</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#html2" data-toggle="tab" role="tab" aria-controls="html2" aria-selected="false"><svg width="15" height="15" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-code</title><path d="M21.414,4.915,17.086.587A2,2,0,0,0,15.672,0H4A2,2,0,0,0,2,2V22a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V6.329A2,2,0,0,0,21.414,4.915ZM10.864,18.96l-.019.018a.75.75,0,0,1-1.06-.036L6.452,15.371a.752.752,0,0,1,0-1.025l3.333-3.571.018-.019A.75.75,0,0,1,10.881,11.8L8.186,14.687a.249.249,0,0,0,0,.341l2.7,2.89A.751.751,0,0,1,10.864,18.96Zm6.684-3.59-3.333,3.571-.018.019a.75.75,0,0,1-1.078-1.043l2.7-2.888a.249.249,0,0,0,0-.341l-2.7-2.889a.751.751,0,0,1,1.1-1.025l3.333,3.571A.752.752,0,0,1,17.548,15.37Z"/></svg>HTML</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="result2" role="tabpanel">
+                                            <span class="badge badge-soft-primary">Primary</span>
+                                            <span class="badge badge-soft-secondary">Secondary</span>
+                                            <span class="badge badge-soft-success">Success</span>
+                                            <span class="badge badge-soft-danger">Danger</span>
+                                            <span class="badge badge-soft-warning">Warning</span>
+                                            <span class="badge badge-soft-info">Info</span>
+                                            <span class="badge badge-soft-light">Light</span>
+                                            <span class="badge badge-soft-dark">Dark</span>
+                                        </div>
+                                        <div class="tab-pane fade" id="html2" role="tabpanel">
+                                            <pre><code class="language-html"><script type="text/plain">
+                                            <span class="badge badge-soft-primary">Primary</span>
+                                            <span class="badge badge-soft-secondary">Secondary</span>
+                                            <span class="badge badge-soft-success">Success</span>
+                                            <span class="badge badge-soft-danger">Danger</span>
+                                            <span class="badge badge-soft-warning">Warning</span>
+                                            <span class="badge badge-soft-info">Info</span>
+                                            <span class="badge badge-soft-light">Light</span>
+                                            <span class="badge badge-soft-dark">Dark</span>
+                                            </script></code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="py-5" id="badges-pill">
+                            <div class="d-flex align-items-center">
+                                <h2 class="h3 mr-3 mt-3">Pill badges</h2>
+                            </div>
+                            <p>Use the <code class="highlighter-rouge">.badge-pill</code> modifier class to make badges more rounded (with a larger <code class="highlighter-rouge">border-radius</code> and additional horizontal <code class="highlighter-rouge">padding</code>). Useful if you miss the badges from v3.</p>
+
+                            <div class="card rounded shadow-lg">
+                                <div class="card-header py-3 bg-white border-bottom">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item mr-2"><a class="nav-link active" href="#result3" data-toggle="tab" role="tab" aria-controls="result3" aria-selected="true"><svg width="16" height="16" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-1</title><path d="M23.432,10.524C20.787,7.614,16.4,4.538,12,4.6,7.6,4.537,3.213,7.615.568,10.524a2.211,2.211,0,0,0,0,2.948C3.182,16.351,7.507,19.4,11.839,19.4h.308c4.347,0,8.671-3.049,11.288-5.929A2.21,2.21,0,0,0,23.432,10.524ZM7.4,12A4.6,4.6,0,1,1,12,16.6,4.6,4.6,0,0,1,7.4,12Z"/><circle cx="12" cy="12" r="2"/></svg>Result</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#html3" data-toggle="tab" role="tab" aria-controls="html3" aria-selected="false"><svg width="15" height="15" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-code</title><path d="M21.414,4.915,17.086.587A2,2,0,0,0,15.672,0H4A2,2,0,0,0,2,2V22a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V6.329A2,2,0,0,0,21.414,4.915ZM10.864,18.96l-.019.018a.75.75,0,0,1-1.06-.036L6.452,15.371a.752.752,0,0,1,0-1.025l3.333-3.571.018-.019A.75.75,0,0,1,10.881,11.8L8.186,14.687a.249.249,0,0,0,0,.341l2.7,2.89A.751.751,0,0,1,10.864,18.96Zm6.684-3.59-3.333,3.571-.018.019a.75.75,0,0,1-1.078-1.043l2.7-2.888a.249.249,0,0,0,0-.341l-2.7-2.889a.751.751,0,0,1,1.1-1.025l3.333,3.571A.752.752,0,0,1,17.548,15.37Z"/></svg>HTML</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="result3" role="tabpanel">
+                                            <span class="badge badge-pill badge-primary">Primary</span>
+                                            <span class="badge badge-pill badge-secondary">Secondary</span>
+                                            <span class="badge badge-pill badge-success">Success</span>
+                                            <span class="badge badge-pill badge-danger">Danger</span>
+                                            <span class="badge badge-pill badge-warning">Warning</span>
+                                            <span class="badge badge-pill badge-info">Info</span>
+                                            <span class="badge badge-pill badge-light">Light</span>
+                                            <span class="badge badge-pill badge-dark">Dark</span>
+                                        </div>
+                                        <div class="tab-pane fade" id="html3" role="tabpanel">
+                                            <pre><code class="language-html"><script type="text/plain">
+                                            <span class="badge badge-pill badge-primary">Primary</span>
+                                            <span class="badge badge-pill badge-secondary">Secondary</span>
+                                            <span class="badge badge-pill badge-success">Success</span>
+                                            <span class="badge badge-pill badge-danger">Danger</span>
+                                            <span class="badge badge-pill badge-warning">Warning</span>
+                                            <span class="badge badge-pill badge-info">Info</span>
+                                            <span class="badge badge-pill badge-light">Light</span>
+                                            <span class="badge badge-pill badge-dark">Dark</span>
+                                            </script></code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3 col-xl-2 sidebar sidebar-right py-6 d-none d-lg-block">
+                <h4 class="h5">Jump to</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-0"><a href="#badges-basic" data-scroll class="nav-link small">Basic examples</a></li>
+                    <li class="nav-item mb-0"><a href="#badges-soft" data-scroll class="nav-link small">Soft</a></li>
+                    <li class="nav-item mb-0"><a href="#badges-pill" data-scroll class="nav-link small">Pill badges</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
