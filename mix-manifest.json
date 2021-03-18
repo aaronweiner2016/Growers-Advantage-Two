@@ -38,6 +38,10 @@
     "/temp/assets/images/icons/favicons/mstile-70x70.png": "/temp/assets/images/icons/favicons/mstile-70x70.png",
     "/temp/assets/images/icons/favicons/safari-pinned-tab.svg": "/temp/assets/images/icons/favicons/safari-pinned-tab.svg",
     "/temp/assets/images/icons/favicons/site.webmanifest": "/temp/assets/images/icons/favicons/site.webmanifest",
+    "/temp/assets/images/images-growers/light.jpeg": "/temp/assets/images/images-growers/light.jpeg",
+    "/temp/assets/images/images-growers/lightnew.png": "/temp/assets/images/images-growers/lightnew.png",
+    "/temp/assets/images/images-growers/logo.png": "/temp/assets/images/images-growers/logo.png",
+    "/temp/assets/images/images-growers/purp.jpeg": "/temp/assets/images/images-growers/purp.jpeg",
     "/temp/assets/images/photos/photo-01.jpg": "/temp/assets/images/photos/photo-01.jpg",
     "/temp/assets/images/photos/photo-01.webp": "/temp/assets/images/photos/photo-01.webp",
     "/temp/assets/images/photos/photo-02.jpg": "/temp/assets/images/photos/photo-02.jpg",
@@ -308,9 +312,5 @@
     "/temp/assets/images/profiles/profile-16.jpg": "/temp/assets/images/profiles/profile-16.jpg",
     "/temp/assets/images/profiles/profile-16.webp": "/temp/assets/images/profiles/profile-16.webp",
     "/temp/assets/images/profiles/profile-17.jpg": "/temp/assets/images/profiles/profile-17.jpg",
-    "/temp/assets/images/profiles/profile-17.webp": "/temp/assets/images/profiles/profile-17.webp",
-    "/temp/assets/images/images-growers/logo.png": "/temp/assets/images/images-growers/logo.png",
-    "/temp/assets/images/images-growers/purp.jpeg": "/temp/assets/images/images-growers/purp.jpeg",
-    "/temp/assets/images/src/images/images-growers/logo.png": "/temp/assets/images/src/images/images-growers/logo.png",
-    "/temp/assets/images/src/images/images-growers/purp.jpeg": "/temp/assets/images/src/images/images-growers/purp.jpeg"
+    "/temp/assets/images/profiles/profile-17.webp": "/temp/assets/images/profiles/profile-17.webp"
 }
