@@ -3,8 +3,12 @@
     <div class="position-relative container{{'-fluid' if navbarFull}}">
         {% include "partials/_skip-main.njk" %}
 
+        {% if navPic%}
         
-        <a href="./index.html"><img src="assets/images/images-growers/logo.png" style="max-width: 100px; max-height: 100px;"></img></a>
+            <a href="./index.html"><img src="assets/images/images-growers/logo.png" style="max-width: 100px; max-height: 100px;"></img></a>
+
+        {% endif %}
+
 
         {% if not fullScreen %}
             <!-- Toggler -->
