@@ -2,7 +2,7 @@
   "_args": [
     [
       "cookieconsent@3.1.1",
-      "C:\\AaronWeiner\\Growers-Advantage-Two"
+      "C:\\Users\\Aaron Weiner\\work\\Growers-Advantage-Two"
     ]
   ],
   "_from": "cookieconsent@3.1.1",
@@ -26,7 +26,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/cookieconsent/-/cookieconsent-3.1.1.tgz",
   "_spec": "3.1.1",
-  "_where": "C:\\AaronWeiner\\Growers-Advantage-Two",
+  "_where": "C:\\Users\\Aaron Weiner\\work\\Growers-Advantage-Two",
   "author": {
     "name": "Osano, Inc., a Public Benefit Corporation"
   },

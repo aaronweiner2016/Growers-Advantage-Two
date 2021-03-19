@@ -2,7 +2,7 @@
   "_args": [
     [
       "sticky-js@1.3.0",
-      "C:\\AaronWeiner\\Growers-Advantage-Two"
+      "C:\\Users\\Aaron Weiner\\work\\Growers-Advantage-Two"
     ]
   ],
   "_from": "sticky-js@1.3.0",
@@ -26,7 +26,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/sticky-js/-/sticky-js-1.3.0.tgz",
   "_spec": "1.3.0",
-  "_where": "C:\\AaronWeiner\\Growers-Advantage-Two",
+  "_where": "C:\\Users\\Aaron Weiner\\work\\Growers-Advantage-Two",
   "author": {
     "name": "rgalus",
     "email": "biuro@rafalgalus.pl"
