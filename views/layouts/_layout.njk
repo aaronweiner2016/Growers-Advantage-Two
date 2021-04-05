@@ -5,17 +5,108 @@
 
         <!-- Meta viewport tag-->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
+
         <!-- SEO Meta Tags-->
+
+        <!--PingBacks?.......................................-->
+
+        <!--<link rel="canonical" href="">-->
+        <!--<link rel="shortlink" href="https://growray.com/">-->
+
+        <!--Homepage-->
         <meta name="description" content="Growers Advantage">
-        <meta name="keywords" content="bootstrap, theme, template, multipurpose, landing, html5, css3, javascript, event, case study, photography, about, team, portfolio, services, contact, pricing, faqs, careers, blog, sign in, sign up, coming soon, legal">
-        <meta name="author" content="Webinning Ltd.">
+        <meta name="keywords" content="grow lights, lights, marijuana grow lights, marijuana, thc">
+        <meta name="author" content="Growers Advantage">
+
+        <!--<meta property="og:locale" content"">
+        <meta property="og:type" content"">
+        <meta property="og:title" content"">
+        <meta property="og:url" content"">
+        <meta property="og:site_name" content"Growers Advantage">
+        <meta property="" content"">-->
+
+        <!--404-->
+        <!-- <meta name="description" content="Growers Advantage">
+        <meta name="keywords" content="grow lights, lights, marijuana grow lights, marijuana, thc, ">
+        <meta name="author" content="Growers Advantage">
+        <meta property="og:locale" content"">
+        <meta property="og:type" content"">
+        <meta property="og:title" content"">
+        <meta property="og:url" content"">
+        <meta property="og:site_name" content"Growers Advantage">
+        <meta property="" content"">-->
+
+        <!--About-->
+        <!--<meta name="description" content="Growers Advantage">
+        <meta name="keywords" content="grow lights, lights, marijuana grow lights, marijuana, thc, ">
+        <meta name="author" content="Growers Advantage">
+        <meta property="og:locale" content"">
+        <meta property="og:type" content"">
+        <meta property="og:title" content"">
+        <meta property="og:url" content"">
+        <meta property="og:site_name" content"Growers Advantage">
+        <meta property="" content"">-->
+
+        <!--Case Study-->
+        <!--<meta name="description" content="Growers Advantage">
+        <meta name="keywords" content="grow lights, lights, marijuana grow lights, marijuana, thc, ">
+        <meta name="author" content="Growers Advantage">
+        <meta property="og:locale" content"">
+        <meta property="og:type" content"">
+        <meta property="og:title" content"">
+        <meta property="og:url" content"">
+        <meta property="og:site_name" content"Growers Advantage">
+        <meta property="" content"">-->
+
+        <!--Contact-->
+        <!--<meta name="description" content="Growers Advantage">
+        <meta name="keywords" content="grow lights, lights, marijuana grow lights, marijuana, thc, ">
+        <meta name="author" content="Growers Advantage">
+        <meta property="og:locale" content"">
+        <meta property="og:type" content"">
+        <meta property="og:title" content"">
+        <meta property="og:url" content"">
+        <meta property="og:site_name" content"Growers Advantage">
+        <meta property="" content"">-->
+
+        <!--Presentation-->
+        <!--<meta name="description" content="Growers Advantage">
+        <meta name="keywords" content="grow lights, lights, marijuana grow lights, marijuana, thc, ">
+        <meta name="author" content="Growers Advantage">
+        <meta property="og:locale" content"">
+        <meta property="og:type" content"">
+        <meta property="og:title" content"">
+        <meta property="og:url" content"">
+        <meta property="og:site_name" content"Growers Advantage">
+        <meta property="" content"">-->
+
+        <!--Pricing-->
+        <!--<meta name="description" content="Growers Advantage">
+        <meta name="keywords" content="grow lights, lights, marijuana grow lights, marijuana, thc, ">
+        <meta name="author" content="Growers Advantage">
+        <meta property="og:locale" content"">
+        <meta property="og:type" content"">
+        <meta property="og:title" content"">
+        <meta property="og:url" content"">
+        <meta property="og:site_name" content"Growers Advantage">
+        <meta property="" content"">-->
+        
+        <!--Services-->
+        <!--<meta name="description" content="Growers Advantage">
+        <meta name="keywords" content="grow lights, lights, marijuana grow lights, marijuana, thc, ">
+        <meta name="author" content="Growers Advantage">
+        <meta property="og:locale" content"">
+        <meta property="og:type" content"">
+        <meta property="og:title" content"">
+        <meta property="og:url" content"">
+        <meta property="og:site_name" content"Growers Advantage">
+        <meta property="" content""> -->
+
 
         <!-- Page title-->
-        <title>{% if title %}{{ title }} | {% endif %}Growers Advantage</title>
+        <title>
+            {% if title %}{{ title }} | {% endif %}Growers Advantage - Marijuana Grow Lights</title>
         <link rel="icon" href="assets/images/images-growers/logo.png">
-
-        {% include "partials/_favicons.njk" %}
 
         <!-- Theme Stylesheets -->
         {% if environment == 'production' %}
@@ -27,14 +118,14 @@
         {% if environment == 'production' %}
             {% include "partials/_gtag.njk" %}
         {% endif %}
-    </head> 
-    
+    </head>
+
     <body>
         {% include "layouts/_header.njk" %}
 
         <!-- Main content -->
         <main>
-            {% block content %} {% endblock content %}
+            {% block content %}{% endblock content %}
         </main>
 
         {% include "layouts/_footer.njk" %}

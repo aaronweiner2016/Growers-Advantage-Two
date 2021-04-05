@@ -32512,7 +32512,7 @@ em {
   top: 0;
   width: 60%;
   height: 100%;
-  background-color: #232323;
+  background-color: #36454f;
 }
 
 .bg-layer-secondary-top-100-left-60::before {
@@ -33533,7 +33533,7 @@ em {
 }
 
 .vh-75 {
-  height: 75vh !important;
+  height: 90vh !important;
 }
 
 .min-vw-75 {
@@ -37757,7 +37757,7 @@ a.pswp__share--download:hover {
 }
 
 /* pswp__ui--one-slide class is added when there is just one item in gallery */
-.pswp__ui--one-slide .pswp__button--arrow--left,
+.pswp__ui--one-slide .pswp__button--arrow--left
 .pswp__ui--one-slide .pswp__button--arrow--right,
 .pswp__ui--one-slide .pswp__counter {
   display: none;
