@@ -7,6 +7,10 @@ const data = {
 
 module.exports = function(app) {
 
+  // app.get("/", (req, res) => {
+  //   res.render("coming-soon.njk", data)
+  // })
+
   app.get("/", (req, res) => {
     res.render("index.njk", data)
   })
