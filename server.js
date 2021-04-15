@@ -1,7 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const nunjucks = require('nunjucks')
-
+const db = require("./models");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
@@ -16,8 +16,11 @@ nunjucks.configure('views', {
 })
 
 require("./controllers/html-routes")(app);
-// require("./controllers/api-routes")(app);
+require("./controllers/api-routes")(app);
 
-app.listen(PORT, function() {
-  console.log("App listening on PORT " + PORT);
-});
+db.sequelize.sync({force: false}).then(()=>{
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
+})
+
