@@ -2,8 +2,6 @@
 {% extends "layouts/_layout.njk" %}
 {% set displayNone = true %}
 {% set displayNone2 = true %}
-<!-- coming-soon.njk -->
-{% extends "layouts/_layout.njk" %}
 {% set title = "Coming soon" %}
 {% set fullScreen = true %}
 
@@ -101,11 +99,11 @@
             </div>
         </div>
 
-        <section style="width: 100%;" class="d-flex justify-content-center mt-4">
+        <section style="width: 100%;" class="d-flex justify-content-center mt-4 mr-2 ml-2">
             <form method="post" action="/api/email" class="d-flex flex-column">
                 <div class="form-group d-flex flex-row">
                     <input name="email" placeholder="email@email.com...">
-                    <button type="submit" class="btn btn-primary ml-1">Submit</button>
+                    <button type="submit" class="ml-1" style="max-width: 100px; width: 100%; background-color: #789904; color: white;">Submit</button>
                 </div>
                 <small class="form-text text-muted mt-0">We will not share your email.</small>
             </form>
