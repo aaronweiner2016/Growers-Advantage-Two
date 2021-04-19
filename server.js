@@ -4,7 +4,7 @@ const nunjucks = require('nunjucks')
 const db = require("./models");
 const app = express();
 const PORT = process.env.PORT || 8080;
-const sslRedirect = require('heroku-ssl-redirect');
+// var sslRedirect = require('heroku-ssl-redirect');
 
 app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
@@ -16,7 +16,7 @@ nunjucks.configure('views', {
   express: app
 })
 
-app.use(sslRedirect());
+// app.use(sslRedirect());
 
 require("./controllers/html-routes")(app);
 require("./controllers/api-routes")(app);
