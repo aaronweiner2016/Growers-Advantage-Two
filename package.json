@@ -80,7 +80,6 @@
         "countup.js": "1.9.3",
         "express": "^4.17.1",
         "fetch-inject": "^2.0.4",
-        "heroku-ssl-redirect": "^0.1.1",
         "imagesloaded": "^4.1.4",
         "isotope-layout": "^3.0.6",
         "jarallax": "^1.12.1",
@@ -98,7 +97,6 @@
         "string-includes-polyfill": "^1.0.3",
         "swiper": "^5.4.5",
         "typed.js": "^2.0.11",
-        "whatwg-fetch": "^3.2.0",
-        "yarn": "^1.22.10"
+        "whatwg-fetch": "^3.2.0"
     }
 }
