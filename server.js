@@ -16,9 +16,10 @@ app.use((req, res, next) => {
       console.log('WHAT IS HAPPENING', req.headers.host, req.headers.host.includes('www.'));
       if (req.headers.host.includes('www.')) {
         return res.redirect('https://' + req.headers.host + req.url);
-      } else {
-        return res.redirect('https://www.' + req.url);
-      }
+      } else if (!req.headers.host.includes('www.')) {
+        return res.redirect('https://www.' + req.headers.host + req.url);
+      } else if (!req.headers.host.includes('https://www.'))
+        return res.redirect('https://www.' + req.headers.host + req.url);
     }
     else
       return next();
