@@ -32,7 +32,7 @@ app.use(function (req, res, next) {
 
   // respond with html page
   if (req.accepts('html')) {
-    res.render('404', { url: "https://www.growersadvantage.org/404" });
+    res.render('404', { url: req.url });
     return;
   }
 
@@ -43,7 +43,7 @@ app.use(function (req, res, next) {
   }
 
   // default to plain-text. send()
-  res.type('txt').send('Not found');
+  res.type('txt').send('404.njk');
 });
 
 
