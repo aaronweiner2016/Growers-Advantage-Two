@@ -14,10 +14,10 @@ app.use((req, res, next) => {
   if (process.env.NODE_ENV === 'production') {
     if (req.headers['x-forwarded-proto'] !== 'https') {
       console.log('WHAT IS HAPPENING', req.headers.host, req.headers.host.includes('www.'));
-      if (req.headers.host.includes('www.')) {
-        return res.redirect('https://' + req.headers.host + req.url);
+      if (!req.headers.host.includes('www.')) {
+        return res.redirect('https://www.growersadvantage.org');
       }
-      return res.redirect('https://www.' + req.headers.host + req.url);
+      return res.redirect('https://www.growersadvantage.org');
     }
     else
       return next();
@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 });
 
 
-;
+
 
 
 nunjucks.configure('views', {
