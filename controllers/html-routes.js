@@ -43,4 +43,29 @@ module.exports = function (app) {
     res.render("404.njk", data)
   })
 
+  app.get("/residential", (req, res) => {
+    res.render("product/residential.njk", data)
+  })
+
+  app.get("/cart", (req, res) => {
+    res.render("product/cart.njk", data)
+  })
+
+  // app.get("/checkout", (req, res) => {
+  //   res.render("product/checkout.njk", data)
+  // })
+
+  app.get("/product", (req, res) => {
+    res.render("product/product.njk", data)
+  })
+
+
+  app.get("/search", (req, res) => {
+    res.render("search/search.njk", data)
+  })
+
+  app.get("/case-study-1", (req, res) => {
+    res.render("search/case-study/case-study-1.njk", data)
+  })
+
 }
