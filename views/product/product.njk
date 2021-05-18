@@ -7,20 +7,20 @@
     <div style="height: 200px;"></div>
 
     <!--Section: Block Content-->
-    <section style="margin-right: 15%; margin-left: 15%; margin-bottom: 100px;">
+    <section style="margin-right: 10%; margin-left: 10%; margin-bottom: 100px;">
 
         <div class="row">
             <div class="col-md-6 mb-4 mb-md-0">
 
-                <div class="mdb-lightbox">
+                {# <div class="mdb-lightbox">
 
                     <div class="row product-gallery mx-1">
 
                         <div class="col-12 mb-0">
                             <figure class="view overlay rounded z-depth-1 main-img">
-                                <a href="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/15a.jpg"
+                                <a href="assets/images/images-growers/light.jpeg"
                 data-size="710x823">
-                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/15a.jpg"
+                                    <img src="assets/images/images-growers/light.jpeg"
                   class="img-fluid z-depth-1">
                                 </a>
                             </figure>
@@ -28,17 +28,54 @@
 
                     </div>
 
+                </div> #}
+
+                <div class="container" style="width: 400px; width: 100%; height: 375px; margin-top: 50px;">
+                    <div class="carousel">
+                        <input type="radio" name="slides" checked="checked" id="slide-1">
+                        <input type="radio" name="slides" id="slide-2">
+
+                        <ul class="carousel__slides">
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="assets/images/images-growers/light.jpeg" alt="Light">
+                                    </div>
+                                </figure>
+                            </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="assets/images/images-growers/light.jpeg" alt="light">
+                                    </div>
+                                </figure>
+                            </li>
+
+                        </ul>
+                        <ul class="carousel__thumbnails">
+                            <li>
+                                <label for="slide-1"><img src="assets/images/images-growers/light.jpeg" alt="stock-app"></label>
+                            </li>
+
+                            <li>
+                                <label for="slide-2"><img src="assets/images/images-growers/light.jpeg"
+                                    alt="daily-planner"></label>
+                            </li>
+
+                        </ul>
+                    </div>
                 </div>
 
             </div>
+
             <div class="col-md-6">
 
-                <h5>Fantasy T-shirt</h5>
-                <p class="mb-2 text-muted text-uppercase small">Shirts</p>
+                <h5>GA4000</h5>
+                <p class="mb-2 text-muted text-uppercase small">Residential Light</p>
 
                 <p>
                     <span class="mr-1">
-                        <strong>$12.99</strong></span></p>
+                        <strong>$2200.00</strong></span></p>
                 <p class="pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit
         error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam. Distinctio,
         officia quis dolore quos sapiente tempore alias.</p>
@@ -49,19 +86,19 @@
                                 <th class="pl-0 w-25" scope="row">
                                     <strong>Model</strong>
                                 </th>
-                                <td>Shirt 5407X</td>
+                                <td>GA4000</td>
                             </tr>
                             <tr>
                                 <th class="pl-0 w-25" scope="row">
-                                    <strong>Color</strong>
+                                    <strong>Watts</strong>
                                 </th>
-                                <td>Black</td>
+                                <td>1200</td>
                             </tr>
                             <tr>
                                 <th class="pl-0 w-25" scope="row">
                                     <strong>Delivery</strong>
                                 </th>
-                                <td>USA, Europe</td>
+                                <td>USA</td>
                             </tr>
                         </tbody>
                     </table>
@@ -72,7 +109,6 @@
                         <tbody>
                             <tr>
                                 <td class="pl-0 pb-0 w-25">Quantity</td>
-                                <td class="pb-0">Select size</td>
                             </tr>
                             <tr>
                                 <td class="pl-0">
@@ -84,31 +120,11 @@
                     class="plus"></button>
                                     </div>
                                 </td>
-                                <td>
-                                    <div class="mt-1">
-                                        <div class="form-check form-check-inline pl-0">
-                                            <input type="radio" class="form-check-input" id="small" name="materialExampleRadios"
-                      checked>
-                                            <label class="form-check-label small text-uppercase card-link-secondary"
-                      for="small">Small</label>
-                                        </div>
-                                        <div class="form-check form-check-inline pl-0">
-                                            <input type="radio" class="form-check-input" id="medium" name="materialExampleRadios">
-                                            <label class="form-check-label small text-uppercase card-link-secondary"
-                      for="medium">Medium</label>
-                                        </div>
-                                        <div class="form-check form-check-inline pl-0">
-                                            <input type="radio" class="form-check-input" id="large" name="materialExampleRadios">
-                                            <label class="form-check-label small text-uppercase card-link-secondary"
-                      for="large">Large</label>
-                                        </div>
-                                    </div>
-                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <button type="button" class="btn btn-primary btn-md mr-1 mb-2" id="buy-now">Buy now</button>
+                <button type="button" style="background-color: #789904;" class="btn btn-primary btn-md mr-1 mb-2" id="buy-now">Buy now</button>
                 <button type="button" class="btn btn-light btn-md mr-1 mb-2">
                     <i
           class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
@@ -116,7 +132,53 @@
         </div>
 
     </section>
-    <!--Section: Block Content-->
+
+    <div class="tabset" style="margin-right: 15%; margin-left: 15%; margin-bottom: 100px;">
+        <!-- Tab 1 -->
+        <input type="radio" name="tabset" id="tab1" aria-controls="Table" checked>
+        <label for="tab1">Specs</label>
+        <!-- Tab 2 -->
+        <input type="radio" name="tabset" id="tab2" aria-controls="Other">
+        <label for="tab2">Other</label>
+        <!-- Tab 3 -->
+        <input type="radio" name="tabset" id="tab3" aria-controls="Other">
+        <label for="tab3">Other</label>
+
+        <div class="tab-panels">
+            <section id="Table" class="tab-panel">
+                <table class="table">
+                    <thead style="background-color: #90c23e; color: white;">
+                        <tr>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Energy Used</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="Other" class="tab-panel">More Info</section>
+            <section id="Other" class="tab-panel">More Info!!!!!!</section>
+        </div>
+
+    </div>
+
     <script>
         var buyNow = document.querySelector('#buy-now');
 

@@ -1,4 +1,5 @@
 const db = require('../models');
+
 module.exports = function (app) {
 
     app.post("/api/email", (req, res) => {

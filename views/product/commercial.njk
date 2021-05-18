@@ -108,151 +108,21 @@
             </div>
             <div class="row pt-3 text-center d-flex justify-content-center">
                 {% for product in products %}
-                    <div class="mr-3" data-aos="fade-up">
-                        <h3>{{product.product_name}}</h3>
-                        <a href="/product">
+                    <button id="productButton" style="background: none; color: inherit; border: none; padding: 0; font: inherit; cursor: pointer; outline: inherit;">
+                        <div class="mr-3" data-aos="fade-up">
+                            <h3 id="productName">{{product.product_name}}</h3>
+                            {# <a href="/product"> #}
                             <picture>
                                 <source srcset="assets/images/images-growers/grow-tall.png" type="image/jpg">
                                 <img style="height: 500px;" src="assets/images/images-growers/grow-tall.png" alt="printscreen-04" class="img-fluid shadow lift">
                             </picture>
-                        </a>
-                    </div>
+                            {# </a> #}
+                        </div>
+                    </button>
                 {% endfor %}
             </div>
         </div>
     </section>
-
-    {# {% for item in items %}
-        <li>{{ item.title }}</li>
-    {% else %}
-        <li>This would display if the 'item' collection were empty</li> #}
-
-    {# <section class="py-6 my-6 py-lg-7 my-lg-7" style="background-color: #f5a800;">
-        <div class="container-fluid px-0">
-            <div class="row no-gutters">
-                <div class="col-lg-6">
-                    <div class="bg-image bg-cover" style="background-image: url(assets/images/images-growers/cannabis1.jpg);" data-jarallax data-speed=".9"></div>
-                </div>
-                <div class="col-lg-5 p-5 p-lg-7 mt-2 align-items-center">
-                    <h2>We deliver <span class="font-weight-lighter" data-typed data-options='{"strings": ["High Yields", "Max Efficiency", "Quality Products"]}'></span></h2>
-                    <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis commodo tortor a mi auctor dapibus. Morbi rutrum, nisi eu sodales.</p>
-
-                    <div class="mt-6 mb-5">
-                        <div class="d-flex" data-aos="fade-left">
-                            <div class="d-flex align-items-start mt-1">
-                                <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <title>check</title>
-                                    <path d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z"></path>
-                                </svg>
-                            </div>
-                            <div class="ml-2">
-                                <h3 class="h5 mb-1">Lorem ipsum dolor sit amet</h3>
-                                <p class="font-size-5 mb-3">Quisque ultricies quam in rhoncus dictum. Morbi viverra mi non ex auctor, sit amet efficitur sem.</p>
-                            </div>
-                        </div>
-                        <div class="d-flex" data-aos="fade-left" data-aos-delay="100">
-                            <div class="d-flex align-items-start mt-1">
-                                <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <title>check</title>
-                                    <path d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z"></path>
-                                </svg>
-                            </div>
-                            <div class="ml-2">
-                                <h3 class="h5 mb-1">Vestibulum ante ipsum</h3>
-                                <p class="font-size-5 mb-3">Donec consequat ultrices nunc eget faucibus. Suspendisse placerat.</p>
-                            </div>
-                        </div>
-                        <div class="d-flex" data-aos="fade-left" data-aos-delay="200">
-                            <div class="d-flex align-items-start mt-1">
-                                <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <title>check</title>
-                                    <path d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z"></path>
-                                </svg>
-                            </div>
-                            <div class="ml-2">
-                                <h3 class="h5 mb-1">Mauris turpis mi</h3>
-                                <p class="font-size-5 mb-3">Nunc tortor eros, posuere in nibh non, ornare fermentum leo. Nulla sit amet erat a tortor egestas.</p>
-                            </div>
-                        </div>
-                        <div class="d-flex" data-aos="fade-left" data-aos-delay="300">
-                            <div class="d-flex align-items-start mt-1">
-                                <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <title>check</title>
-                                    <path d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z"></path>
-                                </svg>
-                            </div>
-                            <div class="ml-2">
-                                <h3 class="h5 mb-1">Phasellus pulvinar euismod</h3>
-                                <p class="font-size-5 mb-3">Phasellus quis vehicula metus. Vivamus pulvinar vulputate sapien, id bibendum urna rutrum. </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="#" class="btn btn-secondary text-uppercase d-block d-lg-inline-flex align-items-center">Contact Us<svg width="16" height="16" class="ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <title>arrow-right-1</title><path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section> #}
-
-    {# <section class="py-6 py-lg-7">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-xl-7 mb-7 mb-lg-0" data-aos="fade-right">
-                    <picture>
-                        <source srcset="assets/images/images-growers/cannabis1.jpg" type="image/jpg">
-                        <img src="assets/images/images-growers/cannabis1.jpg" alt="editor" class="img-fluid w-100 shadow-sm">
-                    </picture>
-                </div>
-                <div class="col">
-                    <div class="d-flex" data-aos="fade-left">
-                        <div class="d-flex align-items-start mt-1">
-                            <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <title>check</title><path d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z"/></svg>
-                        </div>
-                        <div class="ml-2">
-                            <h4 class="h5 mb-1">Higher yields</h4>
-                            <p class="font-size-5 mb-4">Take advantage of Nunjucks template engine or HTML to work with Square in the way that suits you best</p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex" data-aos="fade-left" data-aos-delay="100">
-                        <div class="d-flex align-items-start mt-1">
-                            <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <title>check</title><path d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z"/></svg>
-                        </div>
-                        <div class="ml-2">
-                            <h4 class="h5 mb-1">30,000+ unique icons in svg, pdf and png format</h4>
-                            <p class="font-size-5 mb-4">Extensive library of 10,500 icons in three different weights to embellish and enhance designs, all for free. You name it, it's there!</p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex" data-aos="fade-left" data-aos-delay="200">
-                        <div class="d-flex align-items-start mt-1">
-                            <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <title>check</title><path d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z"/></svg>
-                        </div>
-                        <div class="ml-2">
-                            <h4 class="h5 mb-1">Works both with Webpack and Gulp</h4>
-                            <p class="font-size-5 mb-4">Use your preferred building tool with no restrictions</p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex" data-aos="fade-left" data-aos-delay="300">
-                        <div class="d-flex align-items-start mt-1">
-                            <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <title>check</title><path d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z"/></svg>
-                        </div>
-                        <div class="ml-2">
-                            <h4 class="h5 mb-1">Premium plugins for FREE</h4>
-                            <p class="font-size-5 mb-0">No hidden extras. With Square, everything is free when it comes to premium plugins</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> #}
 
     <section class="py-7 py-lg-8 mb-6 mb-lg-7">
         <div class="container">
@@ -315,5 +185,7 @@
             </div>
         </div>
     </section>
+
+    <script src="/assets/js/clickProductCommercial.js"></script>
 
 {% endblock content %}
