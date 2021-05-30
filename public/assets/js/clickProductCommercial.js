@@ -1,7 +1,7 @@
 var productButton = document.getElementById('productButton');
-var productName = document.getElementById('productName').textContent;
+var productId = document.getElementById('productName').dataset.id;
 
 productButton.addEventListener('click', () => {
-    console.log(productName)
-    location.replace('/product');
+    console.log(productId)
+    location.replace('/product/' + productId);
 })

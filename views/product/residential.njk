@@ -108,15 +108,17 @@
             </div>
             <div class="row pt-3 text-center d-flex justify-content-center">
                 {% for product in products %}
-                    <div class="mr-3" data-aos="fade-up">
-                        <h3>{{product.product_name}}</h3>
-                        <a href="/product">
+                    <button id="productButton" style="background: none; color: inherit; border: none; padding: 0; font: inherit; cursor: pointer; outline: inherit; ">
+                        <div class="mr-3" data-aos="fade-up">
+                            <h3 data-id={{product.id}} id="productName">{{product.product_name}}</h3>
+                            {# <a href="/product"> #}
                             <picture>
                                 <source srcset="assets/images/images-growers/grow-tall.png" type="image/jpg">
                                 <img style="height: 500px;" src="assets/images/images-growers/grow-tall.png" alt="printscreen-04" class="img-fluid shadow lift">
                             </picture>
-                        </a>
-                    </div>
+                            {# </a> #}
+                        </div>
+                    </button>
                 {% endfor %}
             </div>
         </div>
@@ -315,5 +317,7 @@
             </div>
         </div>
     </section>
+
+    <script src="/assets/js/clickProductCommercial.js"></script>
 
 {% endblock content %}

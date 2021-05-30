@@ -20,6 +20,10 @@ module.exports = function (sequelize) {
         type: DataTypes.STRING,
         allowNull: false
       },
+      type: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
       price: {
         type: DataTypes.DECIMAL(10, 2),
         allowNull: false,
@@ -29,11 +33,19 @@ module.exports = function (sequelize) {
       },
       stock: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
         defaultValue: 10,
         validate: {
           isNumeric: true
         }
+      },
+      details: {
+        type: DataTypes.TEXT,
+        allowNull: true
+      },
+      image: {
+        type: DataTypes.TEXT,
+        allowNull: true
       },
       category_id: {
         type: DataTypes.INTEGER,

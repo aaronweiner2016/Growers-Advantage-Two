@@ -39,14 +39,14 @@
                             <li class="carousel__slide">
                                 <figure>
                                     <div>
-                                        <img src="assets/images/images-growers/light.jpeg" alt="Light">
+                                        <img src="/assets/images/images-growers/light.jpeg" alt="Light">
                                     </div>
                                 </figure>
                             </li>
                             <li class="carousel__slide">
                                 <figure>
                                     <div>
-                                        <img src="assets/images/images-growers/light.jpeg" alt="light">
+                                        <img src="/assets/images/images-growers/light.jpeg" alt="light">
                                     </div>
                                 </figure>
                             </li>
@@ -54,11 +54,11 @@
                         </ul>
                         <ul class="carousel__thumbnails">
                             <li>
-                                <label for="slide-1"><img src="assets/images/images-growers/light.jpeg" alt="stock-app"></label>
+                                <label for="slide-1"><img src="/assets/images/images-growers/light.jpeg" alt="stock-app"></label>
                             </li>
 
                             <li>
-                                <label for="slide-2"><img src="assets/images/images-growers/light.jpeg"
+                                <label for="slide-2"><img src="/assets/images/images-growers/light.jpeg"
                                     alt="daily-planner"></label>
                             </li>
 
@@ -70,15 +70,13 @@
 
             <div class="col-md-6">
 
-                <h5>GA4000</h5>
-                <p class="mb-2 text-muted text-uppercase small">Residential Light</p>
+                <h5>{{product.product_name}}</h5>
+                <p class="mb-2 text-muted text-uppercase small">{{product.type}}</p>
 
                 <p>
                     <span class="mr-1">
-                        <strong>$2200.00</strong></span></p>
-                <p class="pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit
-        error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam. Distinctio,
-        officia quis dolore quos sapiente tempore alias.</p>
+                        <strong>${{product.price}}</strong></span></p>
+                <p class="pt-1">{{product.details}}</p>
                 <div class="table-responsive">
                     <table class="table table-sm table-borderless mb-0">
                         <tbody>
@@ -86,7 +84,7 @@
                                 <th class="pl-0 w-25" scope="row">
                                     <strong>Model</strong>
                                 </th>
-                                <td>GA4000</td>
+                                <td>{{product.product_name}}</td>
                             </tr>
                             <tr>
                                 <th class="pl-0 w-25" scope="row">
