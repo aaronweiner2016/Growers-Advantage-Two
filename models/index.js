@@ -3,6 +3,8 @@
 const Product = require('./Product');
 const Email = require('./email');
 const Category = require('./Category');
+const BlogCategory = require('./BlogCategories');
+const BlogPosts = require('./BlogPosts');
 
 const Sequelize = require('sequelize');
 const env = process.env.NODE_ENV || 'development';
@@ -19,6 +21,8 @@ if (config.use_env_variable) {
 db.Category = Category(sequelize);
 db.Product = Product(sequelize);
 db.Email = Email(sequelize);
+db.BlogCategory = BlogCategory(sequelize);
+db.BlogPosts = BlogPosts(sequelize);
 
 Object.keys(db).forEach(modelName => {
   if (db[modelName].associate) {
@@ -28,5 +32,6 @@ Object.keys(db).forEach(modelName => {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+
 
 module.exports = db;

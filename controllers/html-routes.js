@@ -121,9 +121,9 @@ router.get("/cart", async (req, res) => {
 
 
 
-// router.get("/checkout",async (req, res) => {
-//   res.render("product/checkout.njk", data)
-// })
+router.get("/checkout", async (req, res) => {
+  res.render("product/checkout.njk", data)
+})
 
 
 
