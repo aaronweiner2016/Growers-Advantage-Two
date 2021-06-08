@@ -6,7 +6,9 @@ const db = require("./models");
 const app = express();
 const PORT = process.env.PORT || 8080;
 const routes = require("./controllers");
+const cookieParser = require("cookie-parser");
 
+app.use(cookieParser());
 app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

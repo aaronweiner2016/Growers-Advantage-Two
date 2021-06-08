@@ -8,48 +8,268 @@
     <section style="height: 150px;"></section>
 
     <!-- Section: Categories -->
-    <section style="margin-left: 5px; margin-bottom: 10px; border: 1px solid black; width: 18%;">
+    <section class="d-flex flex-row" style="margin-left: 10px;">
+        <div style="margin-left: 5px; margin-bottom: 10px; border: 1px solid black;" class="col-3">
 
-        <h5 class="ml-1">Plant Health</h5>
-        <div class="text-muted small text-uppercase mb-5">
+            <a class="badge badge-pill badge-soft-secondary h6 text-uppercase mx-1 py-2 px-3 mb-2 active" href="#" data-filter="*" data-target="#portfolio" data-link-group="categories">All</a>
+            <h5 class="ml-1">Plant Health</h5>
+            <div class="text-muted small text-uppercase mb-5">
 
-            <p class="mb-3 ml-3">
-                <a href="#!" class="card-link-secondary">Sea of Green</a>
-            </p>
-            <p class="mb-3 ml-3">
-                <a href="#!" class="card-link-secondary">Soil</a>
-            </p>
-            <p class="mb-3 ml-3">
-                <a href="#!" class="card-link-secondary">Light</a>
-            </p>
+                <p class="mb-3 ml-3">
+                    <a class="badge badge-pill badge-soft-secondary h6 text-uppercase mx-1 py-2 px-3 mb-2" href="#" data-filter=".illustration" data-target="#portfolio" data-link-group="categories">Illustration</a>
+                </p>
+                <p class="mb-3 ml-3">
+                    <a href="#!" class="card-link-secondary">Light</a>
+                </p>
+            </div>
+            <h5 class="ml-1">Indoor Growing</h5>
+            <div class="text-muted small text-uppercase mb-5">
+                <p class="mb-3 ml-3">
+                    <a class="badge badge-pill badge-soft-secondary h6 text-uppercase mx-1 py-2 px-3 mb-2" href="#" data-filter=".branding" data-target="#portfolio" data-link-group="categories">Humidity</a>
+                </p>
+                <p class="mb-3 ml-3">
+                    <a href="#!" class="card-link-secondary">Temperature</a>
+                </p>
+            </div>
+            <h5 class="ml-1">Growers Advantage</h5>
+            <div class="text-muted small text-uppercase mb-5">
+                <p class="mb-3 ml-3">
+                    <a class="badge badge-pill badge-soft-secondary h6 text-uppercase mx-1 py-2 px-3 mb-2" href="#" data-filter=".photographing" data-target="#portfolio" data-link-group="categories">Testimonials</a>
+                </p>
+                <p class="mb-3 ml-3">
+                    <a href="#!" class="card-link-secondary">Mission Statement</a>
+                </p>
+                <p class="mb-3 ml-3">
+                    <a href="#!" class="card-link-secondary">Shorts</a>
+                </p>
+            </div>
+
         </div>
+        <div class="col-8">
+            <div class="tab-pane fade show active" id="result1" role="tabpanel">
 
-        <h5 class="ml-1">Indoor Growing</h5>
-        <div class="text-muted small text-uppercase mb-5">
+                <div class="row mx-n3 grid" data-isotope='{"layoutMode": "masonry", "itemSelector": ".grid-item"}' id="portfolio">
+                    <div class="grid-item branding col-md-6 col-lg-4 px-3 mb-5">
+                        <div class="card shadow rounded">
+                            <img src="../assets/images/photos/photo-10.jpg" alt="photo-10" class="img-fluid w-100 card-img rounded">
+                        </div>
+                    </div>
+                    <div class="grid-item photographing col-md-6 col-lg-4 px-3 mb-5">
+                        <div class="card shadow rounded">
+                            <img src="../assets/images/photos/photo-11.jpg" alt="photo-11" class="img-fluid w-100 card-img rounded">
+                        </div>
+                    </div>
+                    <div class="grid-item branding col-md-6 col-lg-4 px-3 mb-5">
+                        <div class="card shadow rounded">
+                            <img src="../assets/images/photos/photo-12.jpg" alt="photo-12" class="img-fluid w-100 card-img rounded">
+                        </div>
+                    </div>
+                    <div class="grid-item photographing col-md-6 col-lg-4 px-3 mb-5">
+                        <div class="card shadow rounded">
+                            <img src="../assets/images/photos/photo-13.jpg" alt="photo-13" class="img-fluid w-100 card-img rounded">
+                        </div>
+                    </div>
+                    <div class="grid-item photographing col-md-6 col-lg-4 px-3 mb-5">
+                        <div class="card shadow rounded">
+                            <img src="../assets/images/photos/photo-14.jpg" alt="photo-14" class="img-fluid w-100 card-img rounded">
+                        </div>
+                    </div>
+                    <div class="grid-item illustration col-md-6 col-lg-4 px-3 mb-5">
+                        <div class="card shadow rounded">
+                            <img src="../assets/images/photos/photo-15.jpg" alt="photo-15" class="img-fluid w-100 card-img rounded">
+                        </div>
+                    </div>
+                    <div class="grid-item illustration col-md-6 col-lg-4 px-3 mb-5">
+                        <div class="card shadow rounded">
+                            <img src="../assets/images/photos/photo-16.jpg" alt="photo-16" class="img-fluid w-100 card-img rounded">
+                        </div>
+                    </div>
+                    <div class="grid-item branding col-md-6 col-lg-4 px-3 mb-5">
+                        <div class="card shadow rounded">
+                            <img src="../assets/images/photos/photo-17.jpg" alt="photo-17" class="img-fluid w-100 card-img rounded">
+                        </div>
+                    </div>
+                    <div class="grid-item branding col-md-6 col-lg-4 px-3 mb-5">
+                        <div class="card shadow rounded">
+                            <img src="../assets/images/photos/photo-18.jpg" alt="photo-18" class="img-fluid w-100 card-img rounded">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="html1" role="tabpanel">
+                <pre><code class="language-html"><script type="text/plain">
+                <nav class="nav">
+                    <a href="#" data-filter="*" data-target="#portfolio">All</a>
+                    <a href="#" data-filter=".illustration" data-target="#portfolio">Illustration</a>
+                    <a href="#" data-filter=".branding" data-target="#portfolio">Branding</a>
+                    <a href="#" data-filter=".photographing" data-target="#portfolio">Photographing</a>
+                </nav>
 
-            <p class="mb-3 ml-3">
-                <a href="#!" class="card-link-secondary">Humidity</a>
-            </p>
-            <p class="mb-3 ml-3">
-                <a href="#!" class="card-link-secondary">Temperature</a>
-            </p>
+                <div data-isotope='{"layoutMode": "masonry", "itemSelector": ".grid-item"}' id="portfolio">
+                    <div class="grid-item branding">
+                        <img src="../assets/images/photos/photo-10.jpg" alt="..." class="img-fluid w-100 rounded">
+                    </div>
+                    <div class="grid-item photographing">
+                        <img src="../assets/images/photos/photo-11.jpg" alt="..." class="img-fluid w-100 rounded">
+                    </div>
+                    <div class="grid-item branding">
+                        <img src="../assets/images/photos/photo-12.jpg" alt="..." class="img-fluid w-100 rounded">
+                    </div>
+                    <div class="grid-item photographing">
+                        <img src="../assets/images/photos/photo-13.jpg" alt="..." class="img-fluid w-100 rounded">
+                    </div>
+                    <div class="grid-item photographing">
+                        <img src="../assets/images/photos/photo-14.jpg" alt="..." class="img-fluid w-100 rounded">
+                    </div>
+                    <div class="grid-item illustration">
+                        <img src="../assets/images/photos/photo-15.jpg" alt="..." class="img-fluid w-100 rounded">
+                    </div>
+                    <div class="grid-item illustration">
+                        <img src="../assets/images/photos/photo-16.jpg" alt="..." class="img-fluid w-100 rounded">
+                    </div>
+                    <div class="grid-item branding">
+                        <img src="../assets/images/photos/photo-17.jpg" alt="..." class="img-fluid w-100 rounded">
+                    </div>
+                    <div class="grid-item branding">
+                        <img src="../assets/images/photos/photo-18.jpg" alt="..." class="img-fluid w-100 rounded">
+                    </div>
+                </div>
+                </script></code></pre>
+            </div>
         </div>
-        <h5 class="ml-1">Growers Advantage</h5>
-        <div class="text-muted small text-uppercase mb-5">
+    </section>
 
-            <p class="mb-3 ml-3">
-                <a href="#!" class="card-link-secondary">Testimonial</a>
-            </p>
-            <p class="mb-3 ml-3">
-                <a href="#!" class="card-link-secondary">Mission Statement</a>
-            </p>
-            <p class="mb-3 ml-3">
-                <a href="#!" class="card-link-secondary">Shorts</a>
-            </p>
+    <div style="height: 100px;"></div>
+
+    <section  style="margin-left: 10px;">
+        <div style="margin-bottom: 10px; border: 1px solid black;" class="col-7 d-flex flex-row">
+
+            <a class="badge badge-pill badge-soft-secondary h6 text-uppercase mx-1 py-2 px-3 mb-2 active" href="#" data-filter="*" data-target="#portfolio" data-link-group="categories">All</a>
+            <h5 class="ml-1">Plant Health</h5>
+            <div class="text-muted small text-uppercase mb-5">
+
+                <p class="mb-3 ml-3">
+                    <a class="badge badge-pill badge-soft-secondary h6 text-uppercase mx-1 py-2 px-3 mb-2" href="#" data-filter=".illustration" data-target="#portfolio" data-link-group="categories">Illustration</a>
+                </p>
+                <p class="mb-3 ml-3">
+                    <a href="#!" class="card-link-secondary">Light</a>
+                </p>
+            </div>
+            <h5 class="ml-1">Indoor Growing</h5>
+            <div class="text-muted small text-uppercase mb-5">
+                <p class="mb-3 ml-3">
+                    <a class="badge badge-pill badge-soft-secondary h6 text-uppercase mx-1 py-2 px-3 mb-2" href="#" data-filter=".branding" data-target="#portfolio" data-link-group="categories">Humidity</a>
+                </p>
+                <p class="mb-3 ml-3">
+                    <a href="#!" class="card-link-secondary">Temperature</a>
+                </p>
+            </div>
+            <h5 class="ml-1">Growers Advantage</h5>
+            <div class="text-muted small text-uppercase mb-5">
+                <p class="mb-3 ml-3">
+                    <a class="badge badge-pill badge-soft-secondary h6 text-uppercase mx-1 py-2 px-3 mb-2" href="#" data-filter=".photographing" data-target="#portfolio" data-link-group="categories">Testimonials</a>
+                </p>
+                <p class="mb-3 ml-3">
+                    <a href="#!" class="card-link-secondary">Mission Statement</a>
+                </p>
+                <p class="mb-3 ml-3">
+                    <a href="#!" class="card-link-secondary">Shorts</a>
+                </p>
+            </div>
+
         </div>
-    </p>
+        <div class="col-8">
+            <div class="tab-pane fade show active" id="result1" role="tabpanel">
 
-</section>
-<!-- Section: Categories -->
+                <div class="row mx-n3 grid" data-isotope='{"layoutMode": "masonry", "itemSelector": ".grid-item"}' id="portfolio">
+                    <div class="grid-item branding col-md-6 col-lg-4 px-3 mb-5">
+                        <div class="card shadow rounded">
+                            <img src="../assets/images/photos/photo-10.jpg" alt="photo-10" class="img-fluid w-100 card-img rounded">
+                        </div>
+                    </div>
+                    <div class="grid-item photographing col-md-6 col-lg-4 px-3 mb-5">
+                        <div class="card shadow rounded">
+                            <img src="../assets/images/photos/photo-11.jpg" alt="photo-11" class="img-fluid w-100 card-img rounded">
+                        </div>
+                    </div>
+                    <div class="grid-item branding col-md-6 col-lg-4 px-3 mb-5">
+                        <div class="card shadow rounded">
+                            <img src="../assets/images/photos/photo-12.jpg" alt="photo-12" class="img-fluid w-100 card-img rounded">
+                        </div>
+                    </div>
+                    <div class="grid-item photographing col-md-6 col-lg-4 px-3 mb-5">
+                        <div class="card shadow rounded">
+                            <img src="../assets/images/photos/photo-13.jpg" alt="photo-13" class="img-fluid w-100 card-img rounded">
+                        </div>
+                    </div>
+                    <div class="grid-item photographing col-md-6 col-lg-4 px-3 mb-5">
+                        <div class="card shadow rounded">
+                            <img src="../assets/images/photos/photo-14.jpg" alt="photo-14" class="img-fluid w-100 card-img rounded">
+                        </div>
+                    </div>
+                    <div class="grid-item illustration col-md-6 col-lg-4 px-3 mb-5">
+                        <div class="card shadow rounded">
+                            <img src="../assets/images/photos/photo-15.jpg" alt="photo-15" class="img-fluid w-100 card-img rounded">
+                        </div>
+                    </div>
+                    <div class="grid-item illustration col-md-6 col-lg-4 px-3 mb-5">
+                        <div class="card shadow rounded">
+                            <img src="../assets/images/photos/photo-16.jpg" alt="photo-16" class="img-fluid w-100 card-img rounded">
+                        </div>
+                    </div>
+                    <div class="grid-item branding col-md-6 col-lg-4 px-3 mb-5">
+                        <div class="card shadow rounded">
+                            <img src="../assets/images/photos/photo-17.jpg" alt="photo-17" class="img-fluid w-100 card-img rounded">
+                        </div>
+                    </div>
+                    <div class="grid-item branding col-md-6 col-lg-4 px-3 mb-5">
+                        <div class="card shadow rounded">
+                            <img src="../assets/images/photos/photo-18.jpg" alt="photo-18" class="img-fluid w-100 card-img rounded">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="html1" role="tabpanel">
+                <pre><code class="language-html"><script type="text/plain">
+                <nav class="nav">
+                    <a href="#" data-filter="*" data-target="#portfolio">All</a>
+                    <a href="#" data-filter=".illustration" data-target="#portfolio">Illustration</a>
+                    <a href="#" data-filter=".branding" data-target="#portfolio">Branding</a>
+                    <a href="#" data-filter=".photographing" data-target="#portfolio">Photographing</a>
+                </nav>
+
+                <div data-isotope='{"layoutMode": "masonry", "itemSelector": ".grid-item"}' id="portfolio">
+                    <div class="grid-item branding">
+                        <img src="../assets/images/photos/photo-10.jpg" alt="..." class="img-fluid w-100 rounded">
+                    </div>
+                    <div class="grid-item photographing">
+                        <img src="../assets/images/photos/photo-11.jpg" alt="..." class="img-fluid w-100 rounded">
+                    </div>
+                    <div class="grid-item branding">
+                        <img src="../assets/images/photos/photo-12.jpg" alt="..." class="img-fluid w-100 rounded">
+                    </div>
+                    <div class="grid-item photographing">
+                        <img src="../assets/images/photos/photo-13.jpg" alt="..." class="img-fluid w-100 rounded">
+                    </div>
+                    <div class="grid-item photographing">
+                        <img src="../assets/images/photos/photo-14.jpg" alt="..." class="img-fluid w-100 rounded">
+                    </div>
+                    <div class="grid-item illustration">
+                        <img src="../assets/images/photos/photo-15.jpg" alt="..." class="img-fluid w-100 rounded">
+                    </div>
+                    <div class="grid-item illustration">
+                        <img src="../assets/images/photos/photo-16.jpg" alt="..." class="img-fluid w-100 rounded">
+                    </div>
+                    <div class="grid-item branding">
+                        <img src="../assets/images/photos/photo-17.jpg" alt="..." class="img-fluid w-100 rounded">
+                    </div>
+                    <div class="grid-item branding">
+                        <img src="../assets/images/photos/photo-18.jpg" alt="..." class="img-fluid w-100 rounded">
+                    </div>
+                </div>
+                </script></code></pre>
+            </div>
+        </div>
+    </section>
 
 {% endblock content %}

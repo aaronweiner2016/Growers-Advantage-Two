@@ -6,7 +6,7 @@
 {% block content %}
     <section style="height: 100px;"></section>
 
-    <section class="py-6 py-lg-7 bg-light">
+    <section class="py-6 py-lg-7 bg-light mb-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-7 col-sm-6 col-md-4 col-lg-3 px-4 px-lg-4 mb-7 mb-lg-0">
@@ -98,7 +98,98 @@
         </div>
     </section>
 
-    <section class="mt-4" id="">
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="row no-gutters">
+                        <div class="col-md-6" style="background-color: #f5a800">
+                            <div class="w-100 p-4">
+                                <div class="mb-4"></div>
+                                <h4 class="mb-4">
+				            Contact us today for a free consultation!
+				      		</h4>
+                                <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea name="message" class="form-control" id="message" cols="30" rows="6" placeholder="Message"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="submit" value="Send Message" style="background-color: #90c23e;" class="btn btn-primary">
+                                                <div class="submitting"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex" style="background-color: #90c23e;">
+                            <div class="info-wrap w-100  p-4 img">
+                                <div class="mb-4"></div>
+                                <h4>Contact us</h4>
+                                <p class="mb-4">We're open for any suggestion or just to have a chat</p>
+                                <div class="dbox w-100 d-flex align-items-start">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-map-marker"></span>
+                                    </div>
+                                    <div class="pl-3">
+                                        <span class="d-inline-block p-3">
+                                            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>pin-location-1</title><path d="M16.726,18.285a1,1,0,0,0-.168,1.993,29.747,29.747,0,0,1,3.776.523.25.25,0,0,1,0,.488A40,40,0,0,1,12,22a40.006,40.006,0,0,1-8.333-.711.25.25,0,0,1,0-.488,29.551,29.551,0,0,1,3.736-.52,1,1,0,0,0-.17-1.992C0,18.9,0,20.4,0,21.044,0,23.712,8.317,24,12,24s12-.288,12-2.956C24,20.4,24,18.9,16.726,18.285Z"/><path d="M12,21.6a1,1,0,0,0,.842-.461c1.958-3.063,6.512-10.536,6.512-13.786a7.355,7.355,0,1,0-14.71,0c0,3.25,4.554,10.724,6.513,13.786A.993.993,0,0,0,12,21.6ZM8.5,7A3.5,3.5,0,1,1,12,10.5,3.5,3.5,0,0,1,8.5,7Z"/></svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="dbox w-100 d-flex align-items-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-phone"></span>
+                                    </div>
+                                    <div class="pl-3">
+                                        <span class="d-inline-block p-3">
+                                            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>phone-landline</title><path d="M18.5,11.956a4.005,4.005,0,0,1-3.961-3.442.248.248,0,0,0-.23-.218,45.021,45.021,0,0,0-4.618,0,.248.248,0,0,0-.23.218A4.005,4.005,0,0,1,5.5,11.956H4.251a.25.25,0,0,0-.25.25v7.75a2.5,2.5,0,0,0,2.5,2.5h11a2.5,2.5,0,0,0,2.5-2.5v-7.75a.25.25,0,0,0-.25-.25ZM12,17.512a1,1,0,1,1-1,1A1,1,0,0,1,12,17.512Zm-1-2.966a1,1,0,1,1,1,1A1,1,0,0,1,11,14.546Zm3,3.966a1,1,0,1,1,1,1A1,1,0,0,1,14,18.512Zm2-3.966a1,1,0,1,1-1-1A1,1,0,0,1,16,14.546Zm-7-1a1,1,0,1,1-1,1A1,1,0,0,1,9,13.546Zm0,3.966a1,1,0,1,1-1,1A1,1,0,0,1,9,17.512Z"/><path d="M21.1,2.466h0a45.381,45.381,0,0,0-18.2,0A3.7,3.7,0,0,0,0,5.956v2a2.5,2.5,0,0,0,2.5,2.5h3A2.5,2.5,0,0,0,8,7.956V7.144a.254.254,0,0,1,.232-.253,45.151,45.151,0,0,1,7.536,0A.254.254,0,0,1,16,7.144v.812a2.5,2.5,0,0,0,2.5,2.5h3a2.5,2.5,0,0,0,2.5-2.5v-2A3.7,3.7,0,0,0,21.1,2.466Z"/></svg>
+                                            <a href="tel://1234567920">+ 1235 2355 98</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="dbox w-100 d-flex align-items-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-paper-plane"></span>
+                                    </div>
+                                    <div class="pl-3">
+                                        <span class="d-inline-block p-3">
+                                            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>email-action-unread</title><path d="M23.888,5.832a.182.182,0,0,0-.2.039l-9.747,9.745a2.75,2.75,0,0,1-3.888,0L.31,5.871a.18.18,0,0,0-.2-.039A.182.182,0,0,0,0,6V18a2,2,0,0,0,2,2H22a2,2,0,0,0,2-2V6A.181.181,0,0,0,23.888,5.832Z"/><path d="M11.115,14.556a1.252,1.252,0,0,0,1.768,0L22.569,4.87a.5.5,0,0,0,.121-.511C22.58,4.03,22.274,4,22,4H2c-.275,0-.583.03-.691.359a.5.5,0,0,0,.121.511Z"/></svg>
+                                            <a href="mailto:info@yoursite.com">info@yoursite.com</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-4 pb-6 bg-light">
         <div class="d-flex flex-column justify-content-center">
             <div class="row justify-content-center text-center">
                 <div class="col-md-10 col-lg-8">
