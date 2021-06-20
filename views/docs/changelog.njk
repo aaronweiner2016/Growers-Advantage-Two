@@ -5,16 +5,17 @@
 {% block content %}
     <div class="container-fluid py-0">
         <div class="row">
-            {% include "partials/_sidebar.njk" %}
+            {# {% include "partials/_sidebar.njk" %} #}
 
             <div class="col-12 col-lg-6 col-xl-8 offset-lg-3 offset-xl-2">
                 <div class="row">
                     <div class="col py-5 docs-text">
                         <h1 class="h2">{{ title }}</h1>
                         <hr>
-                        
+
                         <section class="py-5">
-                            <p class="d-flex align-items-center"><span class="badge badge-pill badge-secondary py-1 mr-1">v1.0.2</span> - Nov 26, 2020</p>
+                            <p class="d-flex align-items-center">
+                                <span class="badge badge-pill badge-secondary py-1 mr-1">v1.0.2</span> - Nov 26, 2020</p>
                             <ul class="mb-4">
                                 <li>New: Shifted image running outside container (till the edge)</li>
                                 <li>Update: slightly redesigned Overview page</li>
@@ -52,8 +53,9 @@
                                 <li>src/images/photos/photo-94.jpg</li>
                                 <li>src/images/photos/photo-94.webp</li>
                             </ul>
-                            
-                            <p class="d-flex align-items-center"><span class="badge badge-pill badge-secondary py-1 mr-1">v1.0.1</span> - Sept 1, 2020</p>
+
+                            <p class="d-flex align-items-center">
+                                <span class="badge badge-pill badge-secondary py-1 mr-1">v1.0.1</span> - Sept 1, 2020</p>
                             <ul class="mb-4">
                                 <li>New: add thumbnail version of slider (changes in HTML)</li>
                                 <li>Update: slightly redesigned Overview page</li>
@@ -96,7 +98,8 @@
                                 <li>src/images/photos/photo-93.webp</li>
                             </ul>
 
-                            <p class="d-flex align-items-center"><span class="badge badge-pill badge-secondary py-1 mr-1">v1.0.0</span> - Aug 12, 2020</p>
+                            <p class="d-flex align-items-center">
+                                <span class="badge badge-pill badge-secondary py-1 mr-1">v1.0.0</span> - Aug 12, 2020</p>
                             <ul>
                                 <li>Initial release of Square. Lots more coming soon!</li>
                             </ul>
@@ -105,9 +108,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-lg-3 col-xl-2 sidebar sidebar-right py-6 d-none d-lg-block">
-                
-            </div>
+            <div class="col-12 col-lg-3 col-xl-2 sidebar sidebar-right py-6 d-none d-lg-block"></div>
         </div>
     </div>
 {% endblock %}

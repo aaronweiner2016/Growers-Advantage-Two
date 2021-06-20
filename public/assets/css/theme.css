@@ -4735,7 +4735,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (max-width: 1404px) {
+@media (max-width: 992px) {
   .navbar-expand-lg > .container,
   .navbar-expand-lg > .container-fluid, .navbar-expand-lg > .container-sm, .navbar-expand-lg > .container-md, .navbar-expand-lg > .container-lg, .navbar-expand-lg > .container-xl {
     padding-right: 0;
@@ -4743,7 +4743,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (min-width: 1404px) {
+@media (min-width: 992px) {
   .navbar-expand-lg {
     -ms-flex-flow: row nowrap;
         flex-flow: row nowrap;
@@ -7083,6 +7083,10 @@ a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
   background-color: #0a0a0a !important;
+}
+
+.bg-secondary-two {
+  background-color: #789904 !important;
 }
 
 .bg-secondary {
@@ -32512,7 +32516,7 @@ em {
   top: 0;
   width: 60%;
   height: 100%;
-  background-color: #90c23e;
+  background-color: #d5d7d8;
 }
 
 .bg-layer-secondary-top-100-left-60::before {
@@ -35183,11 +35187,11 @@ body main {
 @media (max-width: 991.98px) {
   .navbar-collapse {
     background-color: #fff;
-    padding: 1rem;
+    padding: 2rem;
     box-shadow: 0 0.625rem 1rem rgba(35, 35, 35, 0.1);
     position: fixed;
     top: 5.5rem;
-    left: 1rem;
+    left: 2rem;
     height: auto;
     max-height: calc(100% - 6.25rem);
     width: calc(100% - 2rem);
@@ -38064,6 +38068,36 @@ Css for product page images
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (min-width: 1151px) {
+  .column-flex {
+    width: 48%;
+  }
+}
+
+
+@media (max-width: 1150px) {
+  .column-flex {
+    width: 98%;
+    margin-bottom: 30px; 
+  }
+}
+
+@media (max-width: 750px) {
+  #product-column {
+    flex-direction: column;
+  }
+}
+
+#arrow {
+  color: black;
+  opacity: .3
+}
+
+.hover-btn:hover #arrow {
+  opacity: .9;
+  transition:  .18s ease-in;
 }
 
 /* /////////////////////////////// */

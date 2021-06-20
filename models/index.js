@@ -1,15 +1,13 @@
 'use strict';
 
-const Product = require('./Product');
-const Email = require('./email');
-const Category = require('./Category');
-const BlogCategory = require('./BlogCategories');
-const BlogPosts = require('./BlogPosts');
-
+const fs = require('fs');
 const Sequelize = require('sequelize');
 const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/config.json')[env];
+const path = require('path');
+const basename = path.basename(__filename);
 const db = {};
+
 
 let sequelize;
 if (config.use_env_variable) {
@@ -18,11 +16,15 @@ if (config.use_env_variable) {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
-db.Category = Category(sequelize);
-db.Product = Product(sequelize);
-db.Email = Email(sequelize);
-db.BlogCategory = BlogCategory(sequelize);
-db.BlogPosts = BlogPosts(sequelize);
+fs
+  .readdirSync(__dirname)
+  .filter(file => {
+    return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
+  })
+  .forEach(file => {
+    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
+    db[model.name] = model;
+  });
 
 Object.keys(db).forEach(modelName => {
   if (db[modelName].associate) {

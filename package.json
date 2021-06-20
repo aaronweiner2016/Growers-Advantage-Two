@@ -83,6 +83,7 @@
         "eslint": "^7.26.0",
         "express": "^4.17.1",
         "fetch-inject": "^2.0.4",
+        "fs": "0.0.1-security",
         "imagesloaded": "^4.1.4",
         "isotope-layout": "^3.0.6",
         "jarallax": "^1.12.1",

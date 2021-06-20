@@ -1,13 +1,12 @@
 const navData = require('../lib/navData')
 const db = require('../models')
-const Category = require('../models')
+const Products = require('../models')
 const router = require("express").Router();
 
 const data = {
   layout: '_layout.nkj',
   navbar: navData
 }
-
 
 router.get("/", async (req, res) => {
   res.render("coming-soon.njk", data)
@@ -66,8 +65,7 @@ router.get("/", async (req, res) => {
 // router.get("/residential", async (req, res) => {
 
 //   try {
-
-//     const productData = await db.Product.findAll(
+//     const productData = await db.Products.findAll(
 //       {
 //         where: {
 //           category_id: 1,
@@ -82,6 +80,7 @@ router.get("/", async (req, res) => {
 //       products
 //     });
 //   } catch (err) {
+//     console.log(err)
 //     res.status(500).json(err);
 //   }
 // })
@@ -92,7 +91,7 @@ router.get("/", async (req, res) => {
 
 //   try {
 
-//     const productData = await db.Product.findAll(
+//     const productData = await db.Products.findAll(
 //       {
 //         where: {
 //           category_id: 2,
@@ -135,7 +134,7 @@ router.get("/", async (req, res) => {
 
 //   try {
 //     console.log(req.params.id)
-//     const product = await db.Product.findOne(
+//     const product = await db.Products.findOne(
 //       {
 //         where: {
 //           id: req.params.id,
@@ -155,6 +154,7 @@ router.get("/", async (req, res) => {
 //       product
 //     })
 //   } catch (err) {
+//     console.log(err)
 //     res.status(500).json(err);
 //   }
 // })
