@@ -6,7 +6,49 @@
 {% block content %}
     <section style="height: 100px;"></section>
 
-    <section class="py-6 py-lg-7 bg-light mb-5">
+    <section class="bg-light pt-10 pb-7 pb-lg-9" id=content>
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-lg-6 pr-5 mb-6 mb-lg-0" data-aos="fade-right">
+                    <h1>Time to create <span class="font-weight-lighter" data-typed data-options='{"strings": ["efficiently", "precisely", "beautifully"]}'></span></h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius finibus odio, ac maximus augue tempus vitae. Morbi tincidunt arcu nulla, ac eleifend mi sagittis non.</p>
+                    <p>Nullam id molestie massa, in ultricies neque. Fusce quis nibh ut leo ullamcorper tempor. Sed finibus sapien nulla.</p>
+                    <a style="background-color: #789904; border-color: #789904" href="#explore" data-scroll class="btn btn-primary text-uppercase d-inline-flex align-items-center">Explore<svg width="16" height="16" class="ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>arrow-down-1</title><path d="M12,19.5a2.3,2.3,0,0,1-1.729-.78L.46,7.568A1.847,1.847,0,0,1,3.233,5.129l8.579,9.752a.25.25,0,0,0,.376,0l8.579-9.752A1.847,1.847,0,1,1,23.54,7.568L13.732,18.716A2.31,2.31,0,0,1,12,19.5Z"/></svg>
+                    </a>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="row no-gutters mx-n2 mx-lg-0 bg-cover" style="background-image: url(assets/images/images-growers/grow-6.jpeg)" data-jarallax data-speed=".8">
+                        <div class="col-6 p-0 border border-light border-7">
+                            <div class=square>
+                                <div class="square-inner position-absolute w-100 h-100">
+                                    <div class="bg-primary opacity-90 text-center text-white d-flex h-100 align-items-center justify-content-center">
+                                        <span class="font-size-4 font-weight-bold">Expand your reach</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 p-0 border border-light border-7">
+                            <div class=square>
+                                <div class="square-inner position-absolute w-100 h-100"></div>
+                            </div>
+                        </div>
+                        <div class="col-6 p-0 border border-light border-7">
+                            <div class=square>
+                                <div class="square-inner position-absolute w-100 h-100"></div>
+                            </div>
+                        </div>
+                        <div class="col-6 p-0 border border-light border-7">
+                            <div class=square>
+                                <div class="square-inner position-absolute w-100 h-100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {# <section class="py-6 py-lg-7 bg-light mb-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-7 col-sm-6 col-md-4 col-lg-3 px-4 px-lg-4 mb-7 mb-lg-0">
@@ -96,144 +138,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> #}
 
-    <section class="mt-4 pb-6">
-        <div class="d-flex flex-column justify-content-center">
-            <div class="row justify-content-center text-center">
-                <div class="col-md-10 col-lg-8">
-                    <h2 class="h1">Commecial Lights</h2>
-                    {# <p>Residential Grow Lights</p> #}
-                </div>
-            </div>
-            <div class="row pt-3 text-center d-flex justify-content-center">
-                {% for product in products %}
-                    <button id="productButton" style="background: none; color: inherit; border: none; padding: 0; font: inherit; cursor: pointer; outline: inherit; ">
-                        <div class="mr-3" data-aos="fade-up">
-                            <h3 data-id={{product.id}} id="productName">{{product.product_name}}</h3>
-                            {# <a href="/product"> #}
-                            <picture>
-                                <source srcset={{product.image}} type="image/jpg">
-                                <img style="height: 500px;" src={{product.image}} alt="printscreen-04" class="img-fluid shadow lift">
-                            </picture>
-                            {# </a> #}
-                        </div>
-                    </button>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-
-    <section class="py-7 py-lg-8 mb-6 mb-lg-7">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-7 mb-7 mb-lg-0" data-aos="fade-right">
-                    <h2 class="font-weight-normal">
-                        <strong>Visual Positioning System</strong> (VPS) <strong>and</strong> Obstacle Avoidance</h2>
-                    <p>Curabitur elit sem, sollicitudin vitae pharetra vel, accumsan eget eros. Morbi consectetur libero eu commodo lacinia. In orci lectus, sollicitudin vitae magna ac, tincidunt varius lectus.</p>
-                    <p>Nulla elementum eros purus, sit amet auctor lectus pharetra in. Vestibulum dui augue, euismod in metus vitae, pharetra vehicula neque. Aenean a orci enim. Donec est sem, venenatis et diam ac, viverra cursus ligula. Aliquam sapien diam, dignissim eu orci at, viverra dapibus urna.</p>
-                    <a href="#" class="btn btn-primary text-uppercase d-inline-flex align-items-center">Read more<svg width="16" height="16" class="ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <title>arrow-right-1</title><path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z"/></svg>
-                    </a>
-                </div>
-                <div class="col-md-9 col-lg-5">
-                    <div class="row">
-                        <div class="col-md-6 pr-md-3 mb-5" data-aos="fade-up">
-                            <div class="card bg-secondary text-white shadow h-100">
-                                <div class="card-body">
-                                    <svg width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <title>vr-360-remote-controller</title><path d="M10.75,7h-3a1.5,1.5,0,0,0-1.5,1.5v14A1.5,1.5,0,0,0,7.75,24h3a1.5,1.5,0,0,0,1.5-1.5V8.5A1.5,1.5,0,0,0,10.75,7Zm-1.5,7a2,2,0,1,1,2-2A2,2,0,0,1,9.25,14Z"/><circle cx="9.25" cy="12" r="0.75"/><path d="M4.466,9.892a.75.75,0,1,0-.432-1.436A10.9,10.9,0,0,0,2.587,9a.25.25,0,0,1-.33-.335,7.754,7.754,0,0,1,8.361-4.291.75.75,0,0,0,.264-1.477A9.244,9.244,0,0,0,3.809,19.469a.749.749,0,1,0,.882-1.212,7.779,7.779,0,0,1-2.425-2.915.25.25,0,0,1,.33-.335,10.962,10.962,0,0,0,1.438.537.75.75,0,1,0,.432-1.436C2.664,13.567,1.5,12.74,1.5,12S2.664,10.433,4.466,9.892Z"/><path d="M15.671,6.394a.751.751,0,0,0-.163,1.049A7.889,7.889,0,0,1,16.24,8.66.251.251,0,0,1,15.909,9a10.654,10.654,0,0,0-1.443-.54.75.75,0,1,0-.432,1.436C15.836,10.433,17,11.26,17,12s-1.164,1.567-2.966,2.108a.751.751,0,0,0-.5.934c.29.962.914.509.935.5a10.962,10.962,0,0,0,1.438-.537.25.25,0,0,1,.33.335,7.779,7.779,0,0,1-2.425,2.915.75.75,0,0,0-.165,1.048c.517.706.843.314,1.047.164A9.277,9.277,0,0,0,18.5,12a9.163,9.163,0,0,0-1.781-5.443A.75.75,0,0,0,15.671,6.394Z"/><path d="M18.5,2a1.491,1.491,0,0,0-.42.06.064.064,0,0,1-.055-.01A.062.062,0,0,1,18,2a1,1,0,0,1,1-1,.5.5,0,0,0,0-1,2,2,0,0,0-2,2V3.5A1.5,1.5,0,1,0,18.5,2Zm0,2a.5.5,0,1,1,.5-.5A.5.5,0,0,1,18.5,4Z"/><path d="M16,3.5a1.491,1.491,0,0,0-.269-.857.25.25,0,0,1,0-.286,1.5,1.5,0,1,0-2.68-1.244.5.5,0,0,0,.967.257A.5.5,0,1,1,14.5,2a.5.5,0,0,0,0,1,.5.5,0,1,1-.482.635.5.5,0,1,0-.963.267A1.5,1.5,0,0,0,16,3.5Z"/><path d="M22.5,0A1.5,1.5,0,0,0,21,1.5v2a1.5,1.5,0,0,0,3,0v-2A1.5,1.5,0,0,0,22.5,0ZM23,3.5a.5.5,0,0,1-1,0v-2a.5.5,0,0,1,1,0Z"/></svg>
-                                    <h3 class="h4 mt-5">Navigation</h3>
-                                    <p class="font-size-6 mb-0">Pellentesque auctor rhoncus finibus etim aliquam</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 pl-md-3 mb-5" data-aos="fade-up" data-aos-delay="100">
-                            <div class="card shadow h-100">
-                                <div class="card-body">
-                                    <svg width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <title>trip-distance</title><path d="M5.5,8.5A5.506,5.506,0,0,0,0,14c0,3.555,4.545,8.922,4.74,9.15a1,1,0,0,0,1.52,0C6.453,22.923,11,17.561,11,14A5.506,5.506,0,0,0,5.5,8.5Zm0,8A2.5,2.5,0,1,1,8,14,2.5,2.5,0,0,1,5.5,16.5Z"/><path d="M19.5.5A4.505,4.505,0,0,0,15,5c0,3.171,3.978,7.185,4.146,7.354a.5.5,0,0,0,.708,0C20.022,12.185,24,8.171,24,5A4.505,4.505,0,0,0,19.5.5Zm0,6A1.5,1.5,0,1,1,21,5,1.5,1.5,0,0,1,19.5,6.5Z"/><path d="M17.187,14.643l-7.2,6.22a1,1,0,0,0,1.307,1.514l7.2-6.221a1,1,0,1,0-1.306-1.513Z"/></svg>
-                                    <h3 class="h4 mt-5">Distance</h3>
-                                    <p class="font-size-6 mb-0">Nulla porttitor odio a suscipit facilisis at maecenas</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 pr-md-3 mb-5 mb-lg-0" data-aos="fade-up">
-                            <div class="card shadow h-100">
-                                <div class="card-body">
-                                    <svg width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <title>camera-display</title><path d="M21.444,6.125H20.128a.534.534,0,0,1-.481-.346C19.029,4.475,18.39,3.125,17,3.125H12c-1.071,0-1.636.778-2.659,2.191-.384.527-.51.809-.844.809h-6C.434,6.125,0,7.334,0,8.348V18.736a2.254,2.254,0,0,0,2.556,2.389H21.444A2.254,2.254,0,0,0,24,18.736V8.348C24,7.334,23.557,6.125,21.444,6.125Zm-1.444,6H17.5a.5.5,0,0,1,0-1H20a.5.5,0,0,1,0,1Zm.5,2.5a.5.5,0,0,1-.5.5H17.5a.5.5,0,0,1,0-1H20A.5.5,0,0,1,20.5,14.625Zm-6-3.5v6a1,1,0,0,1-1,1H4a1,1,0,0,1-1-1v-6a1,1,0,0,1,1-1h9.5A1,1,0,0,1,14.5,11.125Z"/><path d="M2.5,5.109l3,.016h0a.5.5,0,0,0,.5-.5v-.25a1.5,1.5,0,0,0-1.5-1.5h-1A1.5,1.5,0,0,0,2,4.375v.234A.5.5,0,0,0,2.5,5.109Z"/></svg>
-                                    <h3 class="h4 mt-5">Panorama</h3>
-                                    <p class="font-size-6 mb-0">Pellentesque auctor rhoncus finibus etim aliquam</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 pl-md-3" data-aos="fade-up" data-aos-delay="100">
-                            <div class="card shadow h-100">
-                                <div class="card-body">
-                                    <svg width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <title>earth-move</title><path d="M12,4.992a7,7,0,0,0,0,14h0a7,7,0,0,0,0-14Zm.193,11.964a.25.25,0,0,1-.386,0,8.091,8.091,0,0,1-1.255-2.121.248.248,0,0,1,.025-.233.251.251,0,0,1,.207-.11h2.432a.25.25,0,0,1,.232.343A8.074,8.074,0,0,1,12.193,16.956Zm-1.9-3.964a.249.249,0,0,1-.248-.222A6.986,6.986,0,0,1,10,11.992a7.206,7.206,0,0,1,.044-.777.25.25,0,0,1,.249-.223h3.414a.249.249,0,0,1,.248.223,6.739,6.739,0,0,1,0,1.555.248.248,0,0,1-.248.222Zm-3.793-1a5.38,5.38,0,0,1,.06-.787.25.25,0,0,1,.247-.213H8.284a.25.25,0,0,1,.249.272c-.02.236-.033.478-.033.728s.013.493.033.729a.25.25,0,0,1-.249.271H6.807a.25.25,0,0,1-.247-.213A5.369,5.369,0,0,1,6.5,11.992Zm5.307-4.963A.245.245,0,0,1,12,6.938a.248.248,0,0,1,.193.091,8.1,8.1,0,0,1,1.255,2.12.25.25,0,0,1-.232.343H10.784a.25.25,0,0,1-.232-.343A8.083,8.083,0,0,1,11.807,7.029Zm3.66,4.235a.25.25,0,0,1,.249-.272h1.477a.25.25,0,0,1,.247.213,5.191,5.191,0,0,1,0,1.574.249.249,0,0,1-.247.213H15.716a.25.25,0,0,1-.249-.271c.02-.236.033-.478.033-.729S15.487,11.5,15.467,11.264Zm1.211-2.153a.25.25,0,0,1-.213.381H15.338a.25.25,0,0,1-.239-.177,9.329,9.329,0,0,0-.746-1.771.251.251,0,0,1,.343-.338A5.542,5.542,0,0,1,16.678,9.111ZM9.3,7.206a.251.251,0,0,1,.343.338A9.329,9.329,0,0,0,8.9,9.315a.25.25,0,0,1-.239.177H7.535a.249.249,0,0,1-.212-.381A5.531,5.531,0,0,1,9.3,7.206ZM7.322,14.874a.253.253,0,0,1,0-.254.25.25,0,0,1,.218-.128H8.662a.25.25,0,0,1,.239.178,9.318,9.318,0,0,0,.746,1.77.25.25,0,0,1-.343.338A5.53,5.53,0,0,1,7.322,14.874Zm7.374,1.9a.251.251,0,0,1-.343-.338,9.318,9.318,0,0,0,.746-1.77.25.25,0,0,1,.239-.178h1.127a.25.25,0,0,1,.212.382A5.52,5.52,0,0,1,14.7,16.778Z"/><path d="M9.13,2.655a.5.5,0,0,0,.37.837h5a.5.5,0,0,0,.37-.837L12.74.319a1.035,1.035,0,0,0-1.48,0Z"/><path d="M23.673,11.253l-2.336-2.13a.5.5,0,0,0-.837.369v5a.5.5,0,0,0,.3.458.512.512,0,0,0,.2.042.5.5,0,0,0,.337-.13l2.336-2.13a1,1,0,0,0,0-1.479Z"/><path d="M14.5,20.492h-5a.5.5,0,0,0-.37.837l2.13,2.337a1,1,0,0,0,1.48,0l2.13-2.337a.5.5,0,0,0-.37-.837Z"/><path d="M3.2,9.035a.5.5,0,0,0-.539.088L.327,11.253a1,1,0,0,0,0,1.479l2.336,2.13a.5.5,0,0,0,.337.13.512.512,0,0,0,.2-.042.5.5,0,0,0,.3-.458v-5A.5.5,0,0,0,3.2,9.035Z"/></svg>
-                                    <h3 class="h4 mt-5">Positioning</h3>
-                                    <p class="font-size-6 mb-0">Sed egestas elit vestibulum orci vitae pharetra</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div>
-        <div class="modal-dialog cascading-modal" role="document">
-
-            <div class="modal-content">
-
-                <div class="modal-header primary-color white-text">
-                    <h4 class="title">
-                         Contact form</h4>
-                </div>
-                <div class="modal-body">
-
-                    <div class="md-form form-sm">
-
-                        <input type="text" id="materialFormNameModalEx1" class="form-control form-control-sm">
-                        <label for="materialFormNameModalEx1">Your name</label>
-                    </div>
-
-                    <div class="md-form form-sm">
-                        <i class="fa fa-lock prefix"></i>
-                        <input type="password" id="materialFormEmailModalEx1" class="form-control form-control-sm">
-                        <label for="materialFormEmailModalEx1">Your email</label>
-                    </div>
-
-                    <div class="md-form form-sm">
-                        <i class="fa fa-tag prefix"></i>
-                        <input type="text" id="materialFormSubjectModalEx1" class="form-control form-control-sm">
-                        <label for="materialFormSubjectModalEx1">Subject</label>
-                    </div>
-
-                    <div class="md-form form-sm">
-                        <i class="fa fa-pencil-alt prefix"></i>
-                        <textarea type="text" id="materialFormMessageModalEx1"
-            class="md-textarea form-control"></textarea>
-                        <label for="materialFormMessageModalEx1">Your message</label>
-                    </div>
-
-                    <div class="text-center mt-4 mb-2">
-                        <button class="btn btn-primary">Send
-            <i class="fa fa-send ml-2"></i>
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section class="mb-4" style="margin-left: 8%; margin-right: 8%; padding: 2%; box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;">
+    <section id="explore" class="mb-4" style="margin-left: 8%; margin-right: 8%; padding: 2%; box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;">
 
         <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
         <p class="text-center w-responsive mx-auto mb-5">Contact us today for your free consultation!</p>
@@ -300,6 +207,308 @@
         </div>
     </section>
 
-    <script src="/assets/js/clickProductCommercial.js"></script>
+    {# <section class="py-6 py-lg-7 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div style="margin-right: 5%;" class="col-9 col-sm-8 col-md-5 col-lg-4 mb-7 mb-lg-0 ml-n10">
+                    <picture>
+                        <source srcset="assets/images/images-growers/grow-tall.png" type="image/jpg">
+                        <img src="assets/images/images-growers/grow-tall.png" alt="photo-85" class="img-fluid w-100 shadow-sm">
+                    </picture>
+                </div>
+                <div class="col-md">
+                    <h2>How to use Visual Positioning Systems safely</h2>
+                    <p>Suspendisse rhoncus dolor at lorem laoreet vehicula. Vestibulum volutpat faucibus massa, et consequat leo finibus non. In iaculis lectus sed luctus facilisis.</p>
+                    <ul>
+                        <li>Top reasons to pick us</li>
+                        <li>And info pertaining to scientifically and factually show why!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> #}
+    <div style="height: 100px;"></div>
+    <section style="width: 100%;" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div style="width: 100%;" class="d-flex justify-content-around">
+                        <div style="width: 22px;"></div>
+                        <div style="width: 2px;"></div>
+                        <img style="max-width: 600px; width: 100%; max-height: 500px; height: 100%;" src="assets/images/images-growers/ga-commercial-1.png" alt="photo-33" class="h-auto img-fullplus" data-aos="fade-down">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="content" data-aos="fade-up" class="bg-light">
+        <div class="container mb-7 mb-lg-10 mt-n7">
+            <div class="row">
+                <div class="col">
+                    <div class="p-5 px-lg-7 py-lg-6 bg-white shadow">
+                        <div class="row no-gutters">
+                            <div class="col-lg-8">
+                                <p class="small text-uppercase font-weight-bold mb-0">July 27, 2019</p>
+                                <h2>We finished our office redesign,<br>it's pretty cool!</h2>
+                            </div>
+                            <div class="col-lg-8 col-xl-9">
+                                <h2>How to use Visual Positioning Systems safely</h2>
+                                <p>Suspendisse rhoncus dolor at lorem laoreet vehicula. Vestibulum volutpat faucibus massa, et consequat leo finibus non. In iaculis lectus sed luctus facilisis.</p>
+                                <ul>
+                                    <li>Top reasons to pick us</li>
+                                    <li>And info pertaining to scientifically and factually show why!</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 col-xl-3 d-flex justify-content-lg-end align-items-start">
+                                <a href="blog-single.html" class="btn btn-secondary text-uppercase d-inline-flex align-items-center px-3 px-sm-5">Read more<svg width="20" height="20" class="ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <title>navigation-next-alternate</title>
+                                        <path d="M23.7,10.209a1,1,0,0,0,0-1.414L20.2,5.3A1,1,0,0,0,18.5,6v1.75a.249.249,0,0,1-.25.25H12.5a4.005,4.005,0,0,0-4,4v2a1.5,1.5,0,0,0,3,0V12a1,1,0,0,1,1-1h5.75a.249.249,0,0,1,.25.25V13a1,1,0,0,0,1.708.707Z"/>
+                                        <path d="M16,12.5a1,1,0,0,0-1,1V18a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,18V6a.5.5,0,0,1,.5-.5H15a1,1,0,1,0,2,0,2,2,0,0,0-2-2H2a2,2,0,0,0-2,2v13a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2v-5A1,1,0,0,0,16,12.5Z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <a class="card shadow-sm lift mb-5 mb-lg-6">
+            <div class="row no-gutters">
+                <div class="col-lg-5 py-8 py-md-9">
+                    <div class="bg-image bg-cover" style="background-image: url(assets/images/images-growers/ga-commercial-1.png);"></div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card-body p-5 py-lg-6 px-lg-5">
+                        <p class="font-size-6 text-uppercase font-weight-bold mb-0">July 27, 2019</p>
+                        <h3 class="card-title">Sed nec tempor felis. Praesent lacinia mollis porttitor praesent aliquet sed<svg width="22" height="22" class="fill-secondary ml-2 mt-n1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>navigation-next-alternate</title><path d="M23.7,10.209a1,1,0,0,0,0-1.414L20.2,5.3A1,1,0,0,0,18.5,6v1.75a.249.249,0,0,1-.25.25H12.5a4.005,4.005,0,0,0-4,4v2a1.5,1.5,0,0,0,3,0V12a1,1,0,0,1,1-1h5.75a.249.249,0,0,1,.25.25V13a1,1,0,0,0,1.708.707Z"/><path d="M16,12.5a1,1,0,0,0-1,1V18a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,18V6a.5.5,0,0,1,.5-.5H15a1,1,0,1,0,2,0,2,2,0,0,0-2-2H2a2,2,0,0,0-2,2v13a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2v-5A1,1,0,0,0,16,12.5Z"/></svg>
+                        </h3>
+                        <p class="card-text">Etiam eu dignissim orci. Vestibulum mollis efficitur arcu, a interdum ligula porta in. Pellentesque eget vulputate massa. Duis eu rutrum dolor. Ut rutrum lacus et tellus congue congue. Curabitur condimentum viverra augue, id rutrum nulla tincidunt ac nam eu laoreet tortor...</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <section class="container">
+        <a class="card shadow-sm lift mb-5 mb-lg-6">
+            <div class="row no-gutters">
+                <div class="col-lg-7">
+                    <div class="card-body p-5 py-lg-6 px-lg-5">
+                        <p class="font-size-6 text-uppercase font-weight-bold mb-0">July 27, 2019</p>
+                        <h3 class="card-title">Sed nec tempor felis. Praesent lacinia mollis porttitor praesent aliquet sed<svg width="22" height="22" class="fill-secondary ml-2 mt-n1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>navigation-next-alternate</title><path d="M23.7,10.209a1,1,0,0,0,0-1.414L20.2,5.3A1,1,0,0,0,18.5,6v1.75a.249.249,0,0,1-.25.25H12.5a4.005,4.005,0,0,0-4,4v2a1.5,1.5,0,0,0,3,0V12a1,1,0,0,1,1-1h5.75a.249.249,0,0,1,.25.25V13a1,1,0,0,0,1.708.707Z"/><path d="M16,12.5a1,1,0,0,0-1,1V18a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,18V6a.5.5,0,0,1,.5-.5H15a1,1,0,1,0,2,0,2,2,0,0,0-2-2H2a2,2,0,0,0-2,2v13a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2v-5A1,1,0,0,0,16,12.5Z"/></svg>
+                        </h3>
+                        <p class="card-text">Etiam eu dignissim orci. Vestibulum mollis efficitur arcu, a interdum ligula porta in. Pellentesque eget vulputate massa. Duis eu rutrum dolor. Ut rutrum lacus et tellus congue congue. Curabitur condimentum viverra augue, id rutrum nulla tincidunt ac nam eu laoreet tortor...</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 py-8 py-md-9">
+                    <div class="bg-image bg-cover" style="background-image: url(assets/images/images-growers/ga-commercial-1.png);"></div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <section style="width: 100%;" class="d-flex justify-content-center">
+        <a href="/residential" style="background-color: #789904; border-color: #789904;" data-scroll data-aos="fade-right" data-aos-delay="700" class="hover-btn column-flex btn btn-secondary text-uppercase d-inline-flex align-items-center justify-content-center">
+            {# <div class="d-flex flex-column"> #}
+            <h3>Find out more about our ....</h3>
+            {# For all your home growing needs! #}
+            {# </div> #}
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" id="arrow" class="bi bi-arrow-right-circle ml-3" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+            </svg>
+        </a>
+    </section>
+
+    <section class="bg-primary py-6 py-lg-7 mb-6 mb-lg-7 text-white mt-6" role="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md mb-6 mb-md-0" data-aos="fade-up">
+                    <svg width="40" height="40" class="mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>crime-man-ninja</title><path d="M11.979,17.125c4.052,0,6.875-5.1,6.875-9.67a10.134,10.134,0,0,0-.4-2.808h0A6.3,6.3,0,0,0,11.979.125,6.322,6.322,0,0,0,5.51,4.654l0,.009a10.38,10.38,0,0,0-.4,2.8C5.105,12.035,7.929,17.125,11.979,17.125Zm4.638-5.844a.25.25,0,0,1-.312.148,13.712,13.712,0,0,0-4.3-.554,13.886,13.886,0,0,0-4.346.559.248.248,0,0,1-.312-.147,10.963,10.963,0,0,1-.722-3.4A.244.244,0,0,1,6.689,7.7a.25.25,0,0,1,.18-.077H17.09a.25.25,0,0,1,.25.262A11.031,11.031,0,0,1,16.617,11.281Z"/><path d="M21.632,18.127A.251.251,0,0,0,22,17.906V16.375a.25.25,0,0,1,.25-.25H23a.75.75,0,0,0,0-1.5h-.75a.25.25,0,0,1-.25-.25v-3a1.5,1.5,0,0,0-3,0v3a.25.25,0,0,1-.25.25H18a.75.75,0,0,0,0,1.5h.75a.25.25,0,0,1,.25.25v.2a.25.25,0,0,0,.132.22Z"/><path d="M23.033,19.792a11.994,11.994,0,0,0-2.45-1.4.25.25,0,0,0-.32.109l-1.181,1.667-2.367,3.338a.25.25,0,0,0,.219.37H23.5a.5.5,0,0,0,.5-.5V21.77A2.463,2.463,0,0,0,23.033,19.792Z"/><path d="M11.079,21.4,7.552,17.432a.5.5,0,0,0-.467-.16,14.53,14.53,0,0,0-6.118,2.52A2.461,2.461,0,0,0,0,21.77v1.605a.5.5,0,0,0,.5.5H7.826a.252.252,0,0,0,.19-.087l3.066-2.06A.251.251,0,0,0,11.079,21.4Z"/><path d="M18.31,17.837a.252.252,0,0,0-.161-.145c-.244-.069-.5-.136-.76-.2a.252.252,0,0,0-.249.08l-.633.586-5.731,5.305a.25.25,0,0,0,.189.413h3.191a.251.251,0,0,0,.22-.13l3.068-4.452.855-1.24A.252.252,0,0,0,18.31,17.837Z"/><path d="M8.489,8.826a.75.75,0,0,0,1.022,1.1.567.567,0,0,1,.557,0,.75.75,0,1,0,1.022-1.1A2.017,2.017,0,0,0,8.489,8.826Z"/><path d="M13.421,10.125a.746.746,0,0,0,.511-.2.567.567,0,0,1,.557,0,.75.75,0,1,0,1.022-1.1,2.017,2.017,0,0,0-2.6,0,.75.75,0,0,0,.511,1.3Z"/></svg>
+                    <h2 class="h5 mb-2">Not just for developers</h2>
+                    <p class="font-size-5 mb-0">You don't need to be an expert developer to harness the user friendly simplicity and flexibility of Square.</p>
+                </div>
+                <div class="col-md mb-6 mb-md-0" data-aos="fade-up" data-aos-delay="50">
+                    <svg width="40" height="40" class="mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>layout-dashboard</title><path d="M.793.786A1,1,0,0,0,.5,1.493V12.508a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1v-11a1,1,0,0,0-1-1L1.5.493A1,1,0,0,0,.793.786Z"/><path d="M22.5.493l-8,.014a1,1,0,0,0-1,1v5a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V1.493a1,1,0,0,0-1-1Z"/><path d="M10.207,23.214a1,1,0,0,0,.293-.707v-5a1,1,0,0,0-1-1h-8a1,1,0,0,0-1,1v4.985a1,1,0,0,0,1,1l8,.014A1,1,0,0,0,10.207,23.214Z"/><path d="M22.5,10.508h-8a1,1,0,0,0-1,1v11a1,1,0,0,0,1,1l8-.014a1,1,0,0,0,1-1V11.508A1,1,0,0,0,22.5,10.508Z"/></svg>
+                    <h2 class="h5 mb-2">Timeless design</h2>
+                    <p class="font-size-5 mb-0">Taking design cues from Swiss design and typography, Square offers elegant, contemporary page layouts.</p>
+                </div>
+                <div class="col-md mb-0" data-aos="fade-up" data-aos-delay="100">
+                    <svg width="40" height="40" class=" mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>pen-write</title><path d="M19,13a1,1,0,0,0-1,1v7a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V3A1,1,0,0,1,3,2h7a1,1,0,0,0,0-2H3A3,3,0,0,0,0,3V21a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V14A1,1,0,0,0,19,13Z"/><path d="M8.73,12.521a.5.5,0,0,0-.353.361L7.82,15.119,6.568,16.371a.75.75,0,0,0,0,1.061.76.76,0,0,0,1.06,0L8.892,16.17l2.207-.555a.5.5,0,0,0,.36-.35.5.5,0,0,0-.127-.487L9.217,12.65A.5.5,0,0,0,8.73,12.521Z"/><path d="M23.707.293a1,1,0,0,0-1.414,0l-.9.9a2.011,2.011,0,0,0-1.533.208l-.052-.051a3,3,0,0,0-4.235.006L11.961,4.961a1,1,0,0,0,0,1.414,1.013,1.013,0,0,0,1.415,0L17,2.761a1,1,0,0,1,1.407.007l-.707.707a.5.5,0,0,0,0,.707L19.818,6.3a.5.5,0,0,0,.707,0l1.768-1.768a2,2,0,0,0,.517-1.93l.9-.9A1,1,0,0,0,23.707.293Z"/><path d="M12.4,14.22a.5.5,0,0,0,.353-.147l6.356-6.355a.5.5,0,0,0,0-.707L16.99,4.889a.514.514,0,0,0-.707,0L9.927,11.245a.5.5,0,0,0,0,.707l2.121,2.121A.5.5,0,0,0,12.4,14.22Z"/></svg>
+                    <h2 class="h5 mb-2">Detailed documentation</h2>
+                    <p class="font-size-5 mb-0">Extensive documentation covering all components and tools makes implementation as elegant as the design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-size: 100%; background-image: url(/assets/images//images-growers/grow-6.jpeg); margin-left: 15%; margin-right: 15%; height: 400px; background-repeat: no-repeat;" class="hover-btn d-flex justify-content-center align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" id="arrow" class="bi bi-arrow-right-circle ml-3" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+        </svg>
+    </section>
+
+    <!--<section class="mt-4 pb-6">
+        <div class="d-flex flex-column justify-content-center">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-10 col-lg-8">
+                    <h2 class="h1">Commecial Lights</h2>
+                    {# <p>Residential Grow Lights</p> #}
+                </div>
+            </div>
+            <div class="row pt-3 text-center d-flex justify-content-center">
+                {% for product in products %}
+                    <button id="productButton" style="background: none; color: inherit; border: none; padding: 0; font: inherit; cursor: pointer; outline: inherit; ">
+                        <div class="mr-3" data-aos="fade-up">
+                            <h3 data-id={{product.id}} id="productName">{{product.product_name}}</h3>
+                            {# <a href="/product"> #}
+                            <picture>
+                                <source srcset={{product.image}} type="image/jpg">
+                                <img style="height: 500px;" src={{product.image}} alt="printscreen-04" class="img-fluid shadow lift">
+                            </picture>
+                            {# </a> #}
+                        </div>
+                    </button>
+                {% endfor %}
+            </div>
+        </div>
+    </section>-->
+
+    <section class="my-6 my-lg-7 bg-primary">
+        <div class="container py-8">
+            <div class="row justify-content-center align-items-center text-center">
+                <div class="col-lg-10 text-white" data-aos="zoom-in">
+                    <h3 class="font-size-4 font-weight-normal font-italic">Have just started working with SQUARE theme and have to say, it looks great. <br class="d-none d-lg-block"/>I love the simple and elegant layouts from a design point of view. <br class="d-none d-lg-block"/>Especially the Swiss inspired typography. I can't wait to get building with this theme.</h3>
+                    <p class="font-size-6 text-muted mb-0">Nelson Harris, CEO of AweSum</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-7 py-lg-8 mb-6 mb-lg-7">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 mb-7 mb-lg-0" data-aos="fade-right">
+                    <h2 class="font-weight-normal">
+                        <strong>Visual Positioning System</strong> (VPS) <strong>and</strong> Obstacle Avoidance</h2>
+                    <p>Curabitur elit sem, sollicitudin vitae pharetra vel, accumsan eget eros. Morbi consectetur libero eu commodo lacinia. In orci lectus, sollicitudin vitae magna ac, tincidunt varius lectus.</p>
+                    <p>Nulla elementum eros purus, sit amet auctor lectus pharetra in. Vestibulum dui augue, euismod in metus vitae, pharetra vehicula neque. Aenean a orci enim. Donec est sem, venenatis et diam ac, viverra cursus ligula. Aliquam sapien diam, dignissim eu orci at, viverra dapibus urna.</p>
+                    <a href="#" class="btn btn-primary text-uppercase d-inline-flex align-items-center">Read more<svg width="16" height="16" class="ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>arrow-right-1</title><path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z"/></svg>
+                    </a>
+                </div>
+                <div class="col-md-9 col-lg-5">
+                    <div class="row">
+                        <div class="col-md-6 pr-md-3 mb-5" data-aos="fade-up">
+                            <div class="card bg-secondary-two text-white shadow h-100">
+                                <div class="card-body">
+                                    <svg width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <title>vr-360-remote-controller</title><path d="M10.75,7h-3a1.5,1.5,0,0,0-1.5,1.5v14A1.5,1.5,0,0,0,7.75,24h3a1.5,1.5,0,0,0,1.5-1.5V8.5A1.5,1.5,0,0,0,10.75,7Zm-1.5,7a2,2,0,1,1,2-2A2,2,0,0,1,9.25,14Z"/><circle cx="9.25" cy="12" r="0.75"/><path d="M4.466,9.892a.75.75,0,1,0-.432-1.436A10.9,10.9,0,0,0,2.587,9a.25.25,0,0,1-.33-.335,7.754,7.754,0,0,1,8.361-4.291.75.75,0,0,0,.264-1.477A9.244,9.244,0,0,0,3.809,19.469a.749.749,0,1,0,.882-1.212,7.779,7.779,0,0,1-2.425-2.915.25.25,0,0,1,.33-.335,10.962,10.962,0,0,0,1.438.537.75.75,0,1,0,.432-1.436C2.664,13.567,1.5,12.74,1.5,12S2.664,10.433,4.466,9.892Z"/><path d="M15.671,6.394a.751.751,0,0,0-.163,1.049A7.889,7.889,0,0,1,16.24,8.66.251.251,0,0,1,15.909,9a10.654,10.654,0,0,0-1.443-.54.75.75,0,1,0-.432,1.436C15.836,10.433,17,11.26,17,12s-1.164,1.567-2.966,2.108a.751.751,0,0,0-.5.934c.29.962.914.509.935.5a10.962,10.962,0,0,0,1.438-.537.25.25,0,0,1,.33.335,7.779,7.779,0,0,1-2.425,2.915.75.75,0,0,0-.165,1.048c.517.706.843.314,1.047.164A9.277,9.277,0,0,0,18.5,12a9.163,9.163,0,0,0-1.781-5.443A.75.75,0,0,0,15.671,6.394Z"/><path d="M18.5,2a1.491,1.491,0,0,0-.42.06.064.064,0,0,1-.055-.01A.062.062,0,0,1,18,2a1,1,0,0,1,1-1,.5.5,0,0,0,0-1,2,2,0,0,0-2,2V3.5A1.5,1.5,0,1,0,18.5,2Zm0,2a.5.5,0,1,1,.5-.5A.5.5,0,0,1,18.5,4Z"/><path d="M16,3.5a1.491,1.491,0,0,0-.269-.857.25.25,0,0,1,0-.286,1.5,1.5,0,1,0-2.68-1.244.5.5,0,0,0,.967.257A.5.5,0,1,1,14.5,2a.5.5,0,0,0,0,1,.5.5,0,1,1-.482.635.5.5,0,1,0-.963.267A1.5,1.5,0,0,0,16,3.5Z"/><path d="M22.5,0A1.5,1.5,0,0,0,21,1.5v2a1.5,1.5,0,0,0,3,0v-2A1.5,1.5,0,0,0,22.5,0ZM23,3.5a.5.5,0,0,1-1,0v-2a.5.5,0,0,1,1,0Z"/></svg>
+                                    <h3 class="h4 mt-5">Navigation</h3>
+                                    <p class="font-size-6 mb-0">Pellentesque auctor rhoncus finibus etim aliquam</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pl-md-3 mb-5" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card shadow h-100">
+                                <div class="card-body">
+                                    <svg width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="color: #f5a800;">
+                                        <title>trip-distance</title><path d="M5.5,8.5A5.506,5.506,0,0,0,0,14c0,3.555,4.545,8.922,4.74,9.15a1,1,0,0,0,1.52,0C6.453,22.923,11,17.561,11,14A5.506,5.506,0,0,0,5.5,8.5Zm0,8A2.5,2.5,0,1,1,8,14,2.5,2.5,0,0,1,5.5,16.5Z"/><path d="M19.5.5A4.505,4.505,0,0,0,15,5c0,3.171,3.978,7.185,4.146,7.354a.5.5,0,0,0,.708,0C20.022,12.185,24,8.171,24,5A4.505,4.505,0,0,0,19.5.5Zm0,6A1.5,1.5,0,1,1,21,5,1.5,1.5,0,0,1,19.5,6.5Z"/><path d="M17.187,14.643l-7.2,6.22a1,1,0,0,0,1.307,1.514l7.2-6.221a1,1,0,1,0-1.306-1.513Z"/></svg>
+                                    <h3 class="h4 mt-5">Distance</h3>
+                                    <p class="font-size-6 mb-0">Nulla porttitor odio a suscipit facilisis at maecenas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 pr-md-3 mb-5 mb-lg-0" data-aos="fade-up">
+                            <div class="card shadow h-100">
+                                <div class="card-body">
+                                    <svg width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="color: #f5a800;">
+                                        <title>camera-display</title><path d="M21.444,6.125H20.128a.534.534,0,0,1-.481-.346C19.029,4.475,18.39,3.125,17,3.125H12c-1.071,0-1.636.778-2.659,2.191-.384.527-.51.809-.844.809h-6C.434,6.125,0,7.334,0,8.348V18.736a2.254,2.254,0,0,0,2.556,2.389H21.444A2.254,2.254,0,0,0,24,18.736V8.348C24,7.334,23.557,6.125,21.444,6.125Zm-1.444,6H17.5a.5.5,0,0,1,0-1H20a.5.5,0,0,1,0,1Zm.5,2.5a.5.5,0,0,1-.5.5H17.5a.5.5,0,0,1,0-1H20A.5.5,0,0,1,20.5,14.625Zm-6-3.5v6a1,1,0,0,1-1,1H4a1,1,0,0,1-1-1v-6a1,1,0,0,1,1-1h9.5A1,1,0,0,1,14.5,11.125Z"/><path d="M2.5,5.109l3,.016h0a.5.5,0,0,0,.5-.5v-.25a1.5,1.5,0,0,0-1.5-1.5h-1A1.5,1.5,0,0,0,2,4.375v.234A.5.5,0,0,0,2.5,5.109Z"/></svg>
+                                    <h3 class="h4 mt-5">Panorama</h3>
+                                    <p class="font-size-6 mb-0">Pellentesque auctor rhoncus finibus etim aliquam</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pl-md-3" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card shadow h-100">
+                                <div class="card-body">
+                                    <svg width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="color: #f5a800;">
+                                        <title>earth-move</title><path d="M12,4.992a7,7,0,0,0,0,14h0a7,7,0,0,0,0-14Zm.193,11.964a.25.25,0,0,1-.386,0,8.091,8.091,0,0,1-1.255-2.121.248.248,0,0,1,.025-.233.251.251,0,0,1,.207-.11h2.432a.25.25,0,0,1,.232.343A8.074,8.074,0,0,1,12.193,16.956Zm-1.9-3.964a.249.249,0,0,1-.248-.222A6.986,6.986,0,0,1,10,11.992a7.206,7.206,0,0,1,.044-.777.25.25,0,0,1,.249-.223h3.414a.249.249,0,0,1,.248.223,6.739,6.739,0,0,1,0,1.555.248.248,0,0,1-.248.222Zm-3.793-1a5.38,5.38,0,0,1,.06-.787.25.25,0,0,1,.247-.213H8.284a.25.25,0,0,1,.249.272c-.02.236-.033.478-.033.728s.013.493.033.729a.25.25,0,0,1-.249.271H6.807a.25.25,0,0,1-.247-.213A5.369,5.369,0,0,1,6.5,11.992Zm5.307-4.963A.245.245,0,0,1,12,6.938a.248.248,0,0,1,.193.091,8.1,8.1,0,0,1,1.255,2.12.25.25,0,0,1-.232.343H10.784a.25.25,0,0,1-.232-.343A8.083,8.083,0,0,1,11.807,7.029Zm3.66,4.235a.25.25,0,0,1,.249-.272h1.477a.25.25,0,0,1,.247.213,5.191,5.191,0,0,1,0,1.574.249.249,0,0,1-.247.213H15.716a.25.25,0,0,1-.249-.271c.02-.236.033-.478.033-.729S15.487,11.5,15.467,11.264Zm1.211-2.153a.25.25,0,0,1-.213.381H15.338a.25.25,0,0,1-.239-.177,9.329,9.329,0,0,0-.746-1.771.251.251,0,0,1,.343-.338A5.542,5.542,0,0,1,16.678,9.111ZM9.3,7.206a.251.251,0,0,1,.343.338A9.329,9.329,0,0,0,8.9,9.315a.25.25,0,0,1-.239.177H7.535a.249.249,0,0,1-.212-.381A5.531,5.531,0,0,1,9.3,7.206ZM7.322,14.874a.253.253,0,0,1,0-.254.25.25,0,0,1,.218-.128H8.662a.25.25,0,0,1,.239.178,9.318,9.318,0,0,0,.746,1.77.25.25,0,0,1-.343.338A5.53,5.53,0,0,1,7.322,14.874Zm7.374,1.9a.251.251,0,0,1-.343-.338,9.318,9.318,0,0,0,.746-1.77.25.25,0,0,1,.239-.178h1.127a.25.25,0,0,1,.212.382A5.52,5.52,0,0,1,14.7,16.778Z"/><path d="M9.13,2.655a.5.5,0,0,0,.37.837h5a.5.5,0,0,0,.37-.837L12.74.319a1.035,1.035,0,0,0-1.48,0Z"/><path d="M23.673,11.253l-2.336-2.13a.5.5,0,0,0-.837.369v5a.5.5,0,0,0,.3.458.512.512,0,0,0,.2.042.5.5,0,0,0,.337-.13l2.336-2.13a1,1,0,0,0,0-1.479Z"/><path d="M14.5,20.492h-5a.5.5,0,0,0-.37.837l2.13,2.337a1,1,0,0,0,1.48,0l2.13-2.337a.5.5,0,0,0-.37-.837Z"/><path d="M3.2,9.035a.5.5,0,0,0-.539.088L.327,11.253a1,1,0,0,0,0,1.479l2.336,2.13a.5.5,0,0,0,.337.13.512.512,0,0,0,.2-.042.5.5,0,0,0,.3-.458v-5A.5.5,0,0,0,3.2,9.035Z"/></svg>
+                                    <h3 class="h4 mt-5">Positioning</h3>
+                                    <p class="font-size-6 mb-0">Sed egestas elit vestibulum orci vitae pharetra</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6 mt-6 py-lg-7 mt-lg-7 bg-light">
+        <form method="post" action="/api/email/email" class="d-flex flex-column container justify-content-center align-items-center mt-5">
+            <div class="form-group d-flex flex-row">
+                <input name="email" placeholder="email@email.com...">
+                <button type="submit" class="ml-1" style="max-width: 100px; width: 100%; background-color: #f5a800; color: white;">Submit</button>
+            </div>
+            <small class="form-text text-muted mt-0">Send your email for future lighting updates and grow tips!</small>
+        </form>
+    </section>
+
+    {# <div>
+        <div class="modal-dialog cascading-modal" role="document">
+
+            <div class="modal-content">
+
+                <div class="modal-header primary-color white-text">
+                    <h4 class="title">
+                         Contact form</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="md-form form-sm">
+
+                        <input type="text" id="materialFormNameModalEx1" class="form-control form-control-sm">
+                        <label for="materialFormNameModalEx1">Your name</label>
+                    </div>
+
+                    <div class="md-form form-sm">
+                        <i class="fa fa-lock prefix"></i>
+                        <input type="password" id="materialFormEmailModalEx1" class="form-control form-control-sm">
+                        <label for="materialFormEmailModalEx1">Your email</label>
+                    </div>
+
+                    <div class="md-form form-sm">
+                        <i class="fa fa-tag prefix"></i>
+                        <input type="text" id="materialFormSubjectModalEx1" class="form-control form-control-sm">
+                        <label for="materialFormSubjectModalEx1">Subject</label>
+                    </div>
+
+                    <div class="md-form form-sm">
+                        <i class="fa fa-pencil-alt prefix"></i>
+                        <textarea type="text" id="materialFormMessageModalEx1"
+            class="md-textarea form-control"></textarea>
+                        <label for="materialFormMessageModalEx1">Your message</label>
+                    </div>
+
+                    <div class="text-center mt-4 mb-2">
+                        <button class="btn btn-primary">Send
+            <i class="fa fa-send ml-2"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div> #}
 
 {% endblock content %}

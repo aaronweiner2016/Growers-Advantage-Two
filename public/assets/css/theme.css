@@ -34,7 +34,7 @@ Copyright 2020 Webinning
   --gray: #999999;
   --gray-dark: #343a40;
   --primary: #232323;
-  --secondary: #da3458;
+  --secondary: #b1949b;
   --success: #60c39b;
   --info: #359bd0;
   --warning: #e1be5f;
@@ -7388,6 +7388,18 @@ button.bg-gray:focus {
   .d-sm-inline-flex {
     display: -ms-inline-flexbox !important;
     display: inline-flex !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .color-768 {
+    color: black;
+  }
+}
+
+@media (max-width: 767.98px)  {
+  .d-md-none1 {
+    display: none !important;
   }
 }
 
