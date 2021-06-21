@@ -619,6 +619,12 @@ pre code {
   overflow-y: scroll;
 }
 
+.container2 {
+  width: 100%;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
 .container,
 .container-fluid,
 .container-sm,
