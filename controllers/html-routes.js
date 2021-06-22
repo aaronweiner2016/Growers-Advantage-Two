@@ -1,6 +1,5 @@
 const navData = require('../lib/navData')
 const db = require('../models')
-const Products = require('../models')
 const router = require("express").Router();
 
 const data = {
@@ -16,10 +15,6 @@ router.get("/", async (req, res) => {
 
 router.get("/index", async (req, res) => {
   try {
-    const productOne = await db.Products.findOne({ where: { id: 1, } });
-    const productTwo = await db.Products.findOne({ where: { id: 2, } });
-    const productThree = await db.Products.findOne({ where: { id: 3, } });
-
     const productData = await db.Products.findAll(
       {
         where: {
