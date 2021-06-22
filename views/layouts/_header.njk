@@ -1,5 +1,6 @@
 <!-- Header, navbar -->
-<header style="background-color: white; {% if displayNone %} display:none; {% endif %}" class="{% if navPadding%}p-0{% endif %} navbar position-fixed navbar-expand-lg align-items-center w-100 {{'fixed-top navbar-togglable' if fixedTop else 'position-absolute z-index-10'}} {{'navbar-dark' if navbarDark else 'navbar-light'}}">
+{# navbar background light grey or white????? #}
+<header style="{% if displayNone %} display:none; {% endif %}" class="{% if navPadding%}p-0{% endif %} bg-light navbar position-fixed navbar-expand-lg align-items-center w-100 {{'fixed-top navbar-togglable' if fixedTop else 'position-absolute z-index-10'}} {{'navbar-dark' if navbarDark else 'navbar-light'}}">
 
     <div class="position-relative container{{'-fluid' if navbarFull}}">
         {% include "partials/_skip-main.njk" %}

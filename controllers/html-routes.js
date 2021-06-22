@@ -15,7 +15,32 @@ router.get("/", async (req, res) => {
 
 
 router.get("/index", async (req, res) => {
-  res.render("index.njk", data)
+  try {
+    const productOne = await db.Products.findOne({ where: { id: 1, } });
+    const productTwo = await db.Products.findOne({ where: { id: 2, } });
+    const productThree = await db.Products.findOne({ where: { id: 3, } });
+
+    const productData = await db.Products.findAll(
+      {
+        where: {
+          category_id: 1,
+        }
+      }
+    );
+
+    const products = [];
+
+    for (var i = 0; i < 3; i++) {
+      products.push(productData[i].get({ plain: true }));
+    }
+
+    res.render('index.njk', {
+      ...data,
+      products
+    });
+  } catch (err) {
+    console.log(err)
+  }
 })
 
 
@@ -74,14 +99,14 @@ router.get("/residential", async (req, res) => {
     );
 
     const products = productData.map((data) => data.get({ plain: true }));
-    console.log(products)
+    console.log("PRODUCTSS", products)
     res.render('product/residential.njk', {
       ...data,
       products
     });
   } catch (err) {
-    console.log(err)
-    res.status(500).json(err);
+    console.log("Errorr", err)
+    res.status(500).json("ERRR", err);
   }
 })
 
@@ -131,30 +156,22 @@ router.get("/product", async (req, res) => {
 })
 
 router.get("/product/:id", async (req, res) => {
-
   try {
-    console.log(req.params.id)
     const product = await db.Products.findOne(
       {
         where: {
           id: req.params.id,
-        },
-        // include: [
-        //   {
-        //     model: db.Category,
-        //   }
-        // ]
+        }
       }
     );
-    console.log(product)
-
-
+    console.log("PRODUCTSSS", product)
+    // why coming up null but still displaying????
     res.render("product/product.njk", {
       ...data,
       product
     })
   } catch (err) {
-    console.log(err)
+    console.log("ERR", err)
     res.status(500).json(err);
   }
 })
