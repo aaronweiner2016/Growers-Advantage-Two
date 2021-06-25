@@ -56,18 +56,6 @@ router.get("/contact", async (req, res) => {
 
 
 
-router.get("/presentation", async (req, res) => {
-  res.render("presentation.njk", data)
-})
-
-
-
-router.get("/pricing", async (req, res) => {
-  res.render("pricing.njk", data)
-})
-
-
-
 router.get("/services", async (req, res) => {
   res.render("services.njk", data)
 })
@@ -91,8 +79,13 @@ router.get("/residential", async (req, res) => {
       }
     );
 
-    const products = productData.map((data) => data.get({ plain: true }));
-    console.log("PRODUCTSS", products)
+    const products = [];
+
+    for (var i = 0; i < 3; i++) {
+      products.push(productData[i].get({ plain: true }));
+    }
+
+    console.log(products)
     res.render('product/residential.njk', {
       ...data,
       products

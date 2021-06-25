@@ -2,6 +2,7 @@
 {% set title = "Overview" %}
 {% set navbarFull = true %}
 {% set navPic = true %}
+{% set navPadding = true %}
 
 {% block content %}
 
@@ -110,30 +111,30 @@
 
     {# residential products #}
     <section class="d-flex flex-column justify-content-center">
-        <div class="row justify-content-center text-center">
+        <div class="row justify-content-left text-center charcoalGrow">
             <div class="col-md-10 col-lg-8">
-                <h2 class="h1">Residential Lights</h2>
-                <p>Residential Grow Lights</p>
+                <h2 class="h1 pt-3 pb-3 m-0 text-white">
+                    <span class="colorThemeGreen1">Residential</span> Grow Lights</h2>
             </div>
         </div>
         <div class="d-flex justify-content-center justify-content-around marginHomeGrow" id="product-column">
 
             {% for product in products %}
-                <a href="/product/{{product.id}}" class="Column1" style="text-decoration: none; background: none; color: inherit; border: none; padding: 0; font: inherit; cursor: pointer; outline: inherit;">
+                <a href="/product/{{product.id}}" class="ml-2 mr-2" style="text-decoration: none; background: none; color: inherit; border: none; padding: 0; font: inherit; cursor: pointer; outline: inherit;">
                     <div data-aos="fade-up" class="d-flex flex-column align-items-center">
                         <picture>
                             <source srcset={{product.image}} type="image/jpg">
-                            <img style="height: 500px;" src={{product.image}} alt="printscreen-04" class="img-fluid lift">
+                            <img style="max-height: 500px;" src={{product.image}} alt="printscreen-04" class="img-fluid lift">
                         </picture>
-                        <h3 class="productName">{{product.product_name}}</h3>
-                        <p>{{product.details}}</p>
+                        <h3 class="productNameGrow">{{product.product_name}}</h3>
+                        <p class="textCenterGrow">{{product.details}}</p>
                     </div>
                 </a>
             {% endfor %}
         </div>
     </br>
     <div class="d-flex justify-content-center widthOneHun">
-        <button class="btn btn-primary homeGrowProductBtn">Read about our technology</button>
+        <button class="btn charcoalGrow homeGrowProductBtn text-white">Read about our technology</button>
     </div>
 </section>
 
@@ -141,7 +142,7 @@
 <div class="heightOneHunGrow"></div>
 
 {# top reason to pick our residential lights!! #}
-<section class="container2">
+{# <section class="container2">
     <a class="card shadow-sm lift mb-5 mb-lg-6">
         <div class="row no-gutters">
             <div class="col-lg-5 py-8 py-md-9">
@@ -160,11 +161,11 @@
             </div>
         </div>
     </a>
-</section>
+</section> #}
 
 {# second reason to pick our residential lights #}
-<section class="container2">
-    <a class="card shadow-sm lift mb-5 mb-lg-6">
+{# <section class="container2">
+    <a class="card shadow-sm lift">
         <div class="row no-gutters">
             <div class="col-lg-5 order-lg-last py-8 py-md-9">
                 <div class="bg-image bg-cover" style="background-image: url(assets/images/photos/photo-35.jpg);"></div>
@@ -182,9 +183,127 @@
             </div>
         </div>
     </a>
+</section> #}
+
+{# <section class="container2">
+    <a class="card">
+        <div class="row no-gutters">
+            <div class="col-lg-7 py-8 py-md-9">
+                <div class="bg-image bg-cover" style="background-image: url(assets/images/images-growers/ga-commercial-1.png);"></div>
+            </div>
+            <div class="col-lg-5 charcoalGrow d-flex align-items-center" style="height: 500px;">
+                <div class="card-body p-5 py-lg-6 px-lg-5 bg-white shiftLeftGrowers" style="height: 300px; max-width: 400px; width: 100%;">
+                    <p class="font-size-6 text-uppercase font-weight-bold mb-0">July 27, 2019</p>
+                    <h3 class="card-title">Sed nec tempor felis. Praesent lacinia mollis porttitor praesent aliquet sed<svg width="22" height="22" class="fill-secondary ml-2 mt-n1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>navigation-next-alternate</title><path d="M23.7,10.209a1,1,0,0,0,0-1.414L20.2,5.3A1,1,0,0,0,18.5,6v1.75a.249.249,0,0,1-.25.25H12.5a4.005,4.005,0,0,0-4,4v2a1.5,1.5,0,0,0,3,0V12a1,1,0,0,1,1-1h5.75a.249.249,0,0,1,.25.25V13a1,1,0,0,0,1.708.707Z"/><path d="M16,12.5a1,1,0,0,0-1,1V18a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,18V6a.5.5,0,0,1,.5-.5H15a1,1,0,1,0,2,0,2,2,0,0,0-2-2H2a2,2,0,0,0-2,2v13a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2v-5A1,1,0,0,0,16,12.5Z"/></svg>
+                    </h3>
+                    <p class="card-text">Etiam eu dignissim orci. Vestibulum mollis efficitur arcu, a interdum ligula porta in. Pellentesque eget vulputate massa. Duis eu rutrum dolor. Ut rutrum lacus et tellus congue congue. Curabitur condimentum viverra augue, id rutrum nulla tincidunt ac nam eu laoreet tortor...
+                    Etiam eu dignissim orci. Vestibulum mollis efficitur arcu, a interdum ligula porta in. Pellentesque eget vulputate massa. Duis eu rutrum dolor. Ut rutrum lacus et tellus congue congue. Curabitur condimentum viverra augue, id rutrum nulla tincidunt ac nam eu laoreet tortor...
+                    </p>
+                </div>
+            </div>
+        </div>
+    </a>
+</section> #}
+
+<section class="bg-light" id="content">
+    <div class="flex-columnGrow row align-items-center">
+        <div data-aos="fade-right">
+            <div class="py-12 py-lg-15">
+                <div class="bg-image overlay-50 d-md-block" style="background-image: url(assets/images/images-growers/grow-6.jpeg);" data-jarallax data-speed=".9"></div>
+                {# <div class="bg-image overlay-50 d-md-block" style="max-width: 100%; max-height: 100%;background-image: url(assets/images/images-growers/grow-6.jpeg);"></div> #}
+            </div>
+        </div>
+        <div class="col-md d-flex flex-column align-items-center" data-aos="fade-left" data-aos-delay="300">
+            <div class="ml-md-n15-Grow bg-light">
+                <div class="bg-white p-4" style="max-width: 600px; width: 100%;">
+                    <p class="font-size-6 text-uppercase font-weight-bold mb-0">July 27, 2019</p>
+                    <h3 class="card-title">Sed nec tempor felis. Praesent lacinia mollis porttitor praesent aliquet sed<svg width="22" height="22" class="fill-secondary ml-2 mt-n1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>navigation-next-alternate</title><path d="M23.7,10.209a1,1,0,0,0,0-1.414L20.2,5.3A1,1,0,0,0,18.5,6v1.75a.249.249,0,0,1-.25.25H12.5a4.005,4.005,0,0,0-4,4v2a1.5,1.5,0,0,0,3,0V12a1,1,0,0,1,1-1h5.75a.249.249,0,0,1,.25.25V13a1,1,0,0,0,1.708.707Z"/><path d="M16,12.5a1,1,0,0,0-1,1V18a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,18V6a.5.5,0,0,1,.5-.5H15a1,1,0,1,0,2,0,2,2,0,0,0-2-2H2a2,2,0,0,0-2,2v13a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2v-5A1,1,0,0,0,16,12.5Z"/></svg>
+                    </h3>
+                    <p class="card-text">Etiam eu dignissim orci. Vestibulum mollis efficitur arcu, a interdum ligula porta in. Pellentesque eget vulputate massa. Duis eu rutrum dolor. Ut rutrum lacus et tellus congue congue. Curabitur condimentum viverra augue, id rutrum nulla tincidunt ac nam eu laoreet tortor... Etiam eu dignissim orci. Vestibulum mollis efficitur arcu, a interdum ligula porta in. Pellentesque eget vulputate massa. Duis eu rutrum dolor. Ut rutrum lacus et tellus congue congue. Curabitur condimentum viverra augue, id rutrum nulla tincidunt ac nam eu laoreet tortor...
+                                </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
+<div class="heightOneHunGrow"></div>
+
+<section class="bg-light" id="content">
+    {# issues on screen load -- flashing the 50% grey for a moment #}
+    <div class="flex-columnGrow row align-items-center">
+        <div class="col-md-6-Grow" data-aos="fade-right">
+            <div class="py-12 py-lg-15">
+                <div class="bg-image overlay-50 d-md-block" style="background-image: url(assets/images/images-growers/grow-6.jpeg);" data-jarallax data-speed=".9"></div>
+                {# <div class="bg-image overlay-50 d-md-block" style="max-width: 100%; max-height: 100%;background-image: url(assets/images/images-growers/grow-6.jpeg);"></div> #}
+            </div>
+        </div>
+        <div class="col-md d-flex flex-column align-items-center" data-aos="fade-left" data-aos-delay="300">
+            <div class="ml-md-n15-Grow bg-light">
+                <div class="bg-white p-4" style="max-width: 600px; width: 100%;">
+                    <p class="font-size-6 text-uppercase font-weight-bold mb-0">July 27, 2019</p>
+                    <h3 class="card-title">Sed nec tempor felis. Praesent lacinia mollis porttitor praesent aliquet sed<svg width="22" height="22" class="fill-secondary ml-2 mt-n1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>navigation-next-alternate</title><path d="M23.7,10.209a1,1,0,0,0,0-1.414L20.2,5.3A1,1,0,0,0,18.5,6v1.75a.249.249,0,0,1-.25.25H12.5a4.005,4.005,0,0,0-4,4v2a1.5,1.5,0,0,0,3,0V12a1,1,0,0,1,1-1h5.75a.249.249,0,0,1,.25.25V13a1,1,0,0,0,1.708.707Z"/><path d="M16,12.5a1,1,0,0,0-1,1V18a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,18V6a.5.5,0,0,1,.5-.5H15a1,1,0,1,0,2,0,2,2,0,0,0-2-2H2a2,2,0,0,0-2,2v13a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2v-5A1,1,0,0,0,16,12.5Z"/></svg>
+                    </h3>
+                    <p class="card-text">Etiam eu dignissim orci. Vestibulum mollis efficitur arcu, a interdum ligula porta in. Pellentesque eget vulputate massa. Duis eu rutrum dolor. Ut rutrum lacus et tellus congue congue. Curabitur condimentum viverra augue, id rutrum nulla tincidunt ac nam eu laoreet tortor... Etiam eu dignissim orci. Vestibulum mollis efficitur arcu, a interdum ligula porta in. Pellentesque eget vulputate massa. Duis eu rutrum dolor. Ut rutrum lacus et tellus congue congue. Curabitur condimentum viverra augue, id rutrum nulla tincidunt ac nam eu laoreet tortor...
+                                </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="heightOneHunGrow"></div>
+
+<section class="charcoalGrow" id="content">
+    <div class="flex-columnGrow row align-items-center">
+        <div class="col-md-6" data-aos="fade-right">
+            <div class="py-12 py-lg-15">
+                <div class="bg-image overlay-50 d-md-block" style="background-image: url(assets/images/images-growers/grow-6.jpeg);" data-jarallax data-speed=".8"></div>
+                {# <div class="bg-image overlay-50 d-md-block" style="background-image: url(assets/images/images-growers/grow-6.jpeg);"></div> #}
+            </div>
+        </div>
+        <div class="col-md d-flex flex-column align-items-center" data-aos="fade-left" data-aos-delay="300">
+            <div class="ml-md-n15-Grow bg-light">
+                <div class="bg-white p-4" style="max-width: 600px; width: 100%;">
+                    <p class="font-size-6 text-uppercase font-weight-bold mb-0">July 27, 2019</p>
+                    <h3 class="card-title">Sed nec tempor felis. Praesent lacinia mollis porttitor praesent aliquet sed<svg width="22" height="22" class="fill-secondary ml-2 mt-n1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>navigation-next-alternate</title><path d="M23.7,10.209a1,1,0,0,0,0-1.414L20.2,5.3A1,1,0,0,0,18.5,6v1.75a.249.249,0,0,1-.25.25H12.5a4.005,4.005,0,0,0-4,4v2a1.5,1.5,0,0,0,3,0V12a1,1,0,0,1,1-1h5.75a.249.249,0,0,1,.25.25V13a1,1,0,0,0,1.708.707Z"/><path d="M16,12.5a1,1,0,0,0-1,1V18a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,18V6a.5.5,0,0,1,.5-.5H15a1,1,0,1,0,2,0,2,2,0,0,0-2-2H2a2,2,0,0,0-2,2v13a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2v-5A1,1,0,0,0,16,12.5Z"/></svg>
+                    </h3>
+                    <p class="card-text">Etiam eu dignissim orci. Vestibulum mollis efficitur arcu, a interdum ligula porta in. Pellentesque eget vulputate massa. Duis eu rutrum dolor. Ut rutrum lacus et tellus congue congue. Curabitur condimentum viverra augue, id rutrum nulla tincidunt ac nam eu laoreet tortor... Etiam eu dignissim orci. Vestibulum mollis efficitur arcu, a interdum ligula porta in. Pellentesque eget vulputate massa. Duis eu rutrum dolor. Ut rutrum lacus et tellus congue congue. Curabitur condimentum viverra augue, id rutrum nulla tincidunt ac nam eu laoreet tortor...
+                                </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{# <section class="container2">
+    <div>
+        <div class="row no-gutters">
+            <div class="col-lg-5 order-lg-last py-8 py-md-9">
+                <div class="bg-image bg-cover" style="background-image: url(assets/images/photos/photo-35.jpg);"></div>
+            </div>
+            <div class="col-lg-7">
+                <div class="bg-image bg-cover overlay overlay-primary overlay-50" style="margin-right: 50%;"></div>
+                <div class="card-body p-5 py-lg-6 px-lg-5">
+                    <p class="font-size-6 text-uppercase font-weight-bold mb-0">July 10, 2019</p>
+                    <h3 class="card-title">Cras efficitur pellentesque purus, at rutrum tellus. Nullam at pretium ex<svg width="22" height="22" class="fill-secondary ml-2 mt-n1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>navigation-next-alternate</title><path d="M23.7,10.209a1,1,0,0,0,0-1.414L20.2,5.3A1,1,0,0,0,18.5,6v1.75a.249.249,0,0,1-.25.25H12.5a4.005,4.005,0,0,0-4,4v2a1.5,1.5,0,0,0,3,0V12a1,1,0,0,1,1-1h5.75a.249.249,0,0,1,.25.25V13a1,1,0,0,0,1.708.707Z"/><path d="M16,12.5a1,1,0,0,0-1,1V18a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,18V6a.5.5,0,0,1,.5-.5H15a1,1,0,1,0,2,0,2,2,0,0,0-2-2H2a2,2,0,0,0-2,2v13a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2v-5A1,1,0,0,0,16,12.5Z"/></svg>
+                    </h3>
+                    <p class="card-text">Nunc ex risus, venenatis mollis scelerisque non, molestie id lacus. Nullam convallis egestas dolor id condimentum. Curabitur et cursus risus. Mauris tristique, nibh eget tempor malesuada, dolor nibh mollis lectus, eu tristique justo elit at dui. Maecenas nec commodo velit, at sollicitudin ligula.
+                    Nunc ex risus, venenatis mollis scelerisque non, molestie id lacus. Nullam convallis egestas dolor id condimentum. Curabitur et cursus risus. Mauris tristique, nibh eget tempor malesuada, dolor nibh mollis lectus, eu tristique justo elit at dui. Maecenas nec commodo velit, at sollicitudin ligula.
+                    </p>
+                </div>
+            </div>
+        </>
+    </div>
+</section> #}
+
 {# related articles for home growers--- maybe something related to growing the bud itself or using the light? #}
+{# bg charcoal???????????????????????????????? #}
 <section class="py-6 mb-6">
     <div class="container">
         <div class="row">
@@ -202,14 +321,14 @@
                             <div class="swiper-slide">
                                 <div class="card shadow">
                                     <img src="../assets/images/images-growers/fish-farm.jpeg" alt="photo-37" class="card-img-top relatedGrowerArticles">
-                                    <div class="card-body">
+                                    <div class="card-body charcoalGrow">
                                         <p class="font-size-6 text-uppercase mb-0">
-                                            <small class="font-weight-bold">May 28, 2019</small>
+                                            <small class="font-weight-bold text-white">May 28, 2019</small>
                                         </p>
                                         <h3 class="h4 card-title mb-0">
-                                            <a href="#" class="text-body stretched-link">
+                                            <a href="#" class=" stretched-link text-white">
                                                     Quisque a aliquam enim. Vivamus venenatis et neque id iaculis
-                                                    <svg width="25" height="25" class="ml-2 mt-n1 colorThemeGreen1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <svg width="25" height="25" class="ml-2 mt-n1 orangeThemeGrower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                                     <title>navigation-next-alternate</title>
                                                     <path d="M23.7,10.209a1,1,0,0,0,0-1.414L20.2,5.3A1,1,0,0,0,18.5,6v1.75a.249.249,0,0,1-.25.25H12.5a4.005,4.005,0,0,0-4,4v2a1.5,1.5,0,0,0,3,0V12a1,1,0,0,1,1-1h5.75a.249.249,0,0,1,.25.25V13a1,1,0,0,0,1.708.707Z"></path>
                                                     <path d="M16,12.5a1,1,0,0,0-1,1V18a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,18V6a.5.5,0,0,1,.5-.5H15a1,1,0,1,0,2,0,2,2,0,0,0-2-2H2a2,2,0,0,0-2,2v13a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2v-5A1,1,0,0,0,16,12.5Z"></path>
@@ -222,14 +341,14 @@
                             <div class="swiper-slide">
                                 <div class="card shadow">
                                     <img src="../assets/images/images-growers/grow-tall.png" alt="photo-37" class="card-img-top relatedGrowerArticles">
-                                    <div class="card-body">
+                                    <div class="card-body charcoalGrow">
                                         <p class="font-size-6 text-uppercase mb-0">
-                                            <small class="font-weight-bold">May 28, 2019</small>
+                                            <small class="font-weight-bold text-white">May 28, 2019</small>
                                         </p>
                                         <h3 class="h4 card-title mb-0">
-                                            <a href="#" class="text-body stretched-link">
+                                            <a href="#" class=" stretched-link text-white">
                                                     Quisque a aliquam enim. Vivamus venenatis et neque id iaculis
-                                                    <svg width="25" height="25" class="ml-2 mt-n1 colorThemeGreen1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <svg width="25" height="25" class="ml-2 mt-n1 orangeThemeGrower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                                     <title>navigation-next-alternate</title>
                                                     <path d="M23.7,10.209a1,1,0,0,0,0-1.414L20.2,5.3A1,1,0,0,0,18.5,6v1.75a.249.249,0,0,1-.25.25H12.5a4.005,4.005,0,0,0-4,4v2a1.5,1.5,0,0,0,3,0V12a1,1,0,0,1,1-1h5.75a.249.249,0,0,1,.25.25V13a1,1,0,0,0,1.708.707Z"></path>
                                                     <path d="M16,12.5a1,1,0,0,0-1,1V18a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,18V6a.5.5,0,0,1,.5-.5H15a1,1,0,1,0,2,0,2,2,0,0,0-2-2H2a2,2,0,0,0-2,2v13a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2v-5A1,1,0,0,0,16,12.5Z"></path>
@@ -242,14 +361,14 @@
                             <div class="swiper-slide">
                                 <div class="card shadow">
                                     <img src="../assets/images/images-growers/leaf-2.png" alt="photo-37" class="card-img-top relatedGrowerArticles">
-                                    <div class="card-body">
+                                    <div class="card-body charcoalGrow">
                                         <p class="font-size-6 text-uppercase mb-0">
-                                            <small class="font-weight-bold">May 28, 2019</small>
+                                            <small class="font-weight-bold text-white">January 10, 2020</small>
                                         </p>
                                         <h3 class="h4 card-title mb-0">
-                                            <a href="#" class="text-body stretched-link">
+                                            <a href="#" class=" stretched-link text-white">
                                                     Quisque a aliquam enim. Vivamus venenatis et neque id iaculis
-                                                    <svg width="25" height="25" class="ml-2 mt-n1 colorThemeGreen1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <svg width="25" height="25" class="ml-2 mt-n1 orangeThemeGrower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                                     <title>navigation-next-alternate</title>
                                                     <path d="M23.7,10.209a1,1,0,0,0,0-1.414L20.2,5.3A1,1,0,0,0,18.5,6v1.75a.249.249,0,0,1-.25.25H12.5a4.005,4.005,0,0,0-4,4v2a1.5,1.5,0,0,0,3,0V12a1,1,0,0,1,1-1h5.75a.249.249,0,0,1,.25.25V13a1,1,0,0,0,1.708.707Z"></path>
                                                     <path d="M16,12.5a1,1,0,0,0-1,1V18a.5.5,0,0,1-.5.5H2.5A.5.5,0,0,1,2,18V6a.5.5,0,0,1,.5-.5H15a1,1,0,1,0,2,0,2,2,0,0,0-2-2H2a2,2,0,0,0-2,2v13a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2v-5A1,1,0,0,0,16,12.5Z"></path>
@@ -307,8 +426,16 @@
     </div>
     <div class="container mt-4">
         <div class="d-flex justify-content-end">
-            <div class="swiper-btn swiper-btn-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
-            <div class="swiper-btn swiper-btn-next ml-3" tabindex="0" role="button" aria-label="Next slide"></div>
+            {# <div class="swiper-btn swiper-btn-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
+            <div class="swiper-btn swiper-btn-next ml-3" tabindex="0" role="button" aria-label="Next slide"></div> #}
+            <div style="transform: scaleX(-1);" class="swiper-btn-prev" tabindex="0" role="button" aria-label="Previous slide" class="d-inline-block p-3">
+                <svg width="35" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="charcoalGrow2">
+                    <title>keyboard-arrow-right</title><path d="M23.707,11.291,18.929,6.513a1,1,0,0,0-1.707.707v3.028a.25.25,0,0,1-.25.25H1.5a1.5,1.5,0,0,0,0,3H16.972a.25.25,0,0,1,.25.25v3.028a1,1,0,0,0,1.707.707l4.778-4.778a1,1,0,0,0,0-1.414Z"/></svg>
+            </div>
+            <div class="swiper-btn-next ml-3" tabindex="0" role="button" aria-label="Next slide" class="d-inline-block p-3">
+                <svg width="35" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="charcoalGrow2">
+                    <title>keyboard-arrow-right</title><path d="M23.707,11.291,18.929,6.513a1,1,0,0,0-1.707.707v3.028a.25.25,0,0,1-.25.25H1.5a1.5,1.5,0,0,0,0,3H16.972a.25.25,0,0,1,.25.25v3.028a1,1,0,0,0,1.707.707l4.778-4.778a1,1,0,0,0,0-1.414Z"/></svg>
+            </div>
         </div>
     </div>
 </section>

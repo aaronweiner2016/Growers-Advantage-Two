@@ -3,9 +3,12 @@
 {% set title = "Overview" %}
 {% set navbarFull = true %}
 {% set navPic = true %}
+{% set navPadding = true %}
+{# {% set bgTransparent = true %} #}
 
 {% block content %}
     <div class="d-md-none1 heightOneHunGrow"></div>
+    {# timer on the slides??????????????????????? or entire thing a slider wiht set time out (javascript)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! #}
     <section class="bg-light pb-6 pb-md-0 mt-32" id="content">
         <div class="container">
             <div class="row no-gutters align-items-center">
@@ -25,7 +28,9 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md d-flex flex-column align-items-center ml-md-n7" data-aos="fade-left" data-aos-delay="300">
+                {# also possibly to much margin/padding ontop of pic at small screen!!!!!!!!!!!!!!!!!!! #}
+                {# fix down there on small screen!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! #}
+                <div class="col-md d-flex flex-column align-items-center ml-md-n9" data-aos="fade-left" data-aos-delay="300">
                     <div class="swiper">
                         <div class="swiper-container swiper-dark w-100" data-options='{"spaceBetween": 0, "slidesPerView": "auto"}'>
                             <div class="swiper-wrapper">
@@ -51,6 +56,7 @@
                         <div class="d-flex justify-content-end swiper-dark">
                             <div style="transform: scaleX(-1);" class="swiper-btn-prev" tabindex="0" role="button" aria-label="Previous slide" class="d-inline-block p-3">
                                 <svg width="35" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="colorThemeGreen1">
+                                    {# charcoal buttons??? #}
                                     <title>keyboard-arrow-right</title><path d="M23.707,11.291,18.929,6.513a1,1,0,0,0-1.707.707v3.028a.25.25,0,0,1-.25.25H1.5a1.5,1.5,0,0,0,0,3H16.972a.25.25,0,0,1,.25.25v3.028a1,1,0,0,0,1.707.707l4.778-4.778a1,1,0,0,0,0-1.414Z"/></svg>
                             </div>
                             <div class="swiper-btn-next ml-3" tabindex="0" role="button" aria-label="Next slide" class="d-inline-block p-3">
@@ -66,23 +72,22 @@
 
     <section class="d-flex flex-row justify-content-around flex-wrap homeResCommerLinkBtn">
         {# Go and change the hover on the buttons!!! #}
+        {# TODO: maybe border hover ?????????????????  #}
         <a href="/residential" style="background-color: #789904; border-color: #789904;" data-scroll data-aos="fade-right" data-aos-delay="700" class="hover-btn column-flex btn btn-secondary text-uppercase d-inline-flex align-items-center justify-content-center">
             <div class="d-flex flex-column">
-                <h3>Residential Lights</h3>
-        For all your home growing needs!
+                <h3>Residential Lights</h3> For all your home growing needs!
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" id="arrow" class="bi bi-arrow-right-circle ml-3" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                <path class="charcoalGrow2" fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
             </svg>
         </a>
 
         <a href="/commercial" style="background-color: #789904; border-color: #789904;" data-scroll data-aos="fade-left" data-aos-delay="700" class="hover-btn column-flex btn btn-secondary text-uppercase d-inline-flex align-items-center justify-content-center">
             <div class="d-flex flex-column">
-                <h3>Commercial Lights</h3>
-        Contact today to for consultation!     
+                <h3>Commercial Lights</h3> Contact today to for consultation!     
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" id="arrow" class="bi bi-arrow-right-circle ml-3" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                <path class="charcoalGrow2" fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
             </svg>
         </a>
     </section>
@@ -91,14 +96,14 @@
         <div class="d-flex justify-content-center justify-content-around marginHomeGrow" id="product-column">
 
             {% for product in products %}
-                <a href="/product/{{product.id}}" class="Column1" style="text-decoration: none; background: none; color: inherit; border: none; padding: 0; font: inherit; cursor: pointer; outline: inherit;">
+                <a href="/product/{{product.id}}" class="ml-2 mr-2" style="text-decoration: none; background: none; color: inherit; border: none; padding: 0; font: inherit; cursor: pointer; outline: inherit;">
                     <div data-aos="fade-up" class="d-flex flex-column align-items-center">
                         <picture>
                             <source srcset={{product.image}} type="image/jpg">
-                            <img style="height: 500px;" src={{product.image}} alt="printscreen-04" class="img-fluid lift">
+                            <img style="max-height: 500px;" src={{product.image}} alt="printscreen-04" class="img-fluid lift">
                         </picture>
-                        <h3 class="productName">{{product.product_name}}</h3>
-                        <p>{{product.details}}</p>
+                        <h3 class="productNameGrow">{{product.product_name}}</h3>
+                        <p class="textCenterGrow">{{product.details}}</p>
                     </div>
                 </a>
             {% endfor %}
@@ -106,7 +111,7 @@
         </div>
     </br>
     <div class="d-flex justify-content-center widthOneHun">
-        <a href="/residential" class="btn btn-primary homeGrowProductBtn">View All Products</a>
+        <a href="/residential" class="btn charcoalGrow homeGrowProductBtn text-white">View All Products</a>
     </div>
 </section>
 
@@ -116,6 +121,52 @@
         <source srcset="../assets/images/photos/photo-60.jpg" type="image/png">
         <img src="../assets/images/photos/photo-60.jpg" alt="..." class="img-fluid w-100">
     </picture>
+</section>
+
+<section class="my-6 my-lg-11 charcoalGrow" id="slider-multiple">
+    <div class="swiper fade show active">
+        <div style="overflow: visible;" class="swiper-container" data-options='{"slidesPerView": 1, "loop": true, "breakpoints": {"992": {"slidesPerView": 1}}}'>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="container py-4 d-flex flex-row">
+                        {# <div class="swiper-btn swiper-btn-prev mb-3" tabindex="0" role="button" aria-label="Previous slide"></div> #}
+                        <div class="mt-n7 row justify-content-center align-items-center text-center">
+                            <img class="testimonialImgCircleWH" data-aos="fade-down" src="https://www.iphonesavvy.com/sites/default/files/%5Bcurrent-date%3Afile_path%5D/jan-profile-circle.png">
+                            <div class="col-lg-10 text-white" data-aos="zoom-in">
+                                <h3 class="font-size-4 font-weight-normal font-italic">
+                                    <svg style="margin-top: -15px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                                        <path class="orangeThemeGrower" d="M50.6292648,26.225668c-0.1288986-1.3934994-0.0303001-5.1816006,3.5985985-10.4492006c0.2745018-0.3975,0.2247009-0.9335995-0.1161957-1.2743998c-1.4795036-1.4794998-2.395504-2.4131002-3.0379982-3.0663996c-0.8448029-0.8614006-1.2305031-1.2539005-1.795002-1.7657003c-0.3769035-0.3388004-0.9472008-0.3446999-1.3281021-0.0125999c-6.3251991,5.5038996-13.3505974,16.8768997-12.3339958,30.8105011c0.5956955,8.1815987,6.5634956,14.1200981,14.1894951,14.1200981c7.8260994,0,14.1932983-6.3661995,14.1932983-14.1923981C63.9993629,32.845768,58.0736694,26.6543674,50.6292648,26.225668z M49.8060646,52.5879669c-6.5489006,0-11.6767998-5.1581993-12.1953011-12.2645988c0,0,0,0,0-0.0009995c-1.1435966-15.6709003,8.1718025-25.8496017,10.9863014-28.5449009c0.2743988,0.2705002,0.5878983,0.5887995,1.0498009,1.0594997c0.5565987,0.5664005,1.3183975,1.3417997,2.4706993,2.4981003c-4.4053001,6.7870998-3.5741997,11.6229992-3.2099991,12.3164005c0.1728973,0.3290997,0.5273972,0.5508003,0.8984985,0.5508003c6.7236023,0,12.1932983,5.469698,12.1932983,12.1933002C61.9993629,47.1182671,56.5296669,52.5879669,49.8060646,52.5879669z"/>
+                                        <path class="orangeThemeGrower" d="M15.1136675,26.225668c-0.1299-1.3896008-0.0341997-5.1748009,3.5985994-10.4492006c0.2735004-0.3975,0.2245998-0.9335995-0.1161995-1.2743998c-1.4766006-1.4765997-2.3915997-2.4091997-3.0332003-3.0625c-0.8476-0.8633003-1.2343998-1.2568998-1.7987995-1.7695999c-0.3769999-0.3388004-0.9473-0.3437004-1.3281002-0.0136003c-6.3251996,5.5039005-13.3515997,16.875-12.3369999,30.8115005v0.0009995c0.5977,8.1805992,6.5664001,14.1190987,14.1924,14.1190987c7.8261995,0,14.1934004-6.3661995,14.1934004-14.1923981C28.4847679,32.8448677,22.5589676,26.6524677,15.1136675,26.225668z M14.2913675,52.5879669c-6.5478001,0-11.6786995-5.1581993-12.1982002-12.2655983v0.0009995c-1.1406-15.6748009,8.1747999-25.8516006,10.9892006-28.5459003c0.2754002,0.2705002,0.5899,0.5908003,1.0528002,1.0625c0.5555992,0.5663996,1.3163996,1.3408003,2.4667988,2.4951c-4.4052992,6.7880993-3.5741997,11.6229992-3.2099991,12.3153992c0.1729002,0.3291016,0.5283003,0.5518017,0.8993998,0.5518017c6.7237005,0,12.1934004,5.469698,12.1934004,12.1933002C26.4847679,47.1182671,21.0150681,52.5879669,14.2913675,52.5879669z"/>
+                                    </svg>
+                                    Have just started working with SQUARE theme and have to say, it looks great. <br class="d-none d-lg-block"/>I love the simple and elegant layouts from a design point of view. <br class="d-none d-lg-block"/>Especially the Swiss inspired typography. I can't wait to get building with this theme.
+                                    <svg style="margin-bottom: -10px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                                        <path class="orangeThemeGrower" d="M14.1933422,9.4116497c-7.8260994,0-14.1922989,6.3662004-14.1922989,14.1924c0,7.5498009,5.9247999,13.7420998,13.3690996,14.169899c0.1288996,1.3916016,0.0321999,5.1797028-3.5977001,10.4491997C9.4980431,48.6206512,9.547843,49.1567497,9.888648,49.497551c1.4853945,1.4853973,2.4033947,2.4208984,3.0458946,3.0751991c0.8408995,0.8554993,1.2247,1.2461014,1.7861996,1.7559013c0.1904001,0.1727982,0.4306002,0.259697,0.6719055,0.259697c0.2342949,0,0.4676943-0.0819969,0.6561956-0.2450981c6.3251991-5.5038986,13.3515987-16.8759995,12.3349991-30.8115005C27.7881413,15.3501501,21.820343,9.4116497,14.1933422,9.4116497z M15.4023428,52.2221489c-0.2723999-0.2684975-0.5830002-0.5848999-1.0410004-1.0508003c-0.5565996-0.5672989-1.3203001-1.3446999-2.4784994-2.5067978c4.4053001-6.7881012,3.5731993-11.6230011,3.2089996-12.3164024c-0.1729002-0.3290977-0.5274-0.5507965-0.8985004-0.5507965c-6.7225995,0-12.1922989-5.4697018-12.1922989-12.1933022c0-6.7227001,5.4696999-12.1924,12.1922989-12.1924c6.5489006,0,11.6777992,5.1582012,12.1963062,12.2646008C27.5322418,39.3501511,18.2168427,49.5268517,15.4023428,52.2221489z"/>
+                                        <path class="orangeThemeGrower" d="M63.9004402,23.5317497v-0.0009995C63.302742,15.3501501,57.3340416,9.4116497,49.7090416,9.4116497c-7.8261986,0-14.1933937,6.3662004-14.1933937,14.1924c0,7.5498009,5.9257927,13.7420998,13.3710938,14.169899c0.1289062,1.3906021,0.0312004,5.1767006-3.5996017,10.4491997c-0.2743988,0.3975029-0.2245979,0.9336014,0.1162033,1.2744026c1.4794998,1.4794998,2.3955002,2.4130974,3.0380974,3.0663986c0.8446999,0.8613014,1.2304993,1.2538986,1.7949028,1.7656021c0.1903992,0.1718979,0.4315987,0.2587967,0.6718979,0.2587967c0.2344055,0,0.4678001-0.0819969,0.6562004-0.2460976C57.8896484,48.8383484,64.9160385,37.4663506,63.9004402,23.5317497z M50.917942,52.2221489c-0.2743988-0.2705002-0.5877991-0.5887985-1.0498009-1.0594978c-0.5565987-0.5665016-1.3172989-1.3418007-2.4706993-2.4981003c4.4053001-6.7891006,3.5742989-11.6230011,3.2109985-12.3164024c-0.1728973-0.3280983-0.5282974-0.5507965-0.8993988-0.5507965c-6.7237015,0-12.1933937-5.4697018-12.1933937-12.1933022c0-6.7227001,5.4696922-12.1924,12.1933937-12.1924c6.5477982,0,11.6777,5.1582012,12.1972008,12.2656002v-0.0009995C63.0478401,39.3481483,53.7324409,49.5268517,50.917942,52.2221489z"/>
+                                    </svg>
+                                </h3>
+                                <p class="font-size-6 text-muted mb-0">Nelson Harris, CEO of AweSum</p>
+                            </div>
+                        </div>
+                        {# <div style="height: 100%;" class="d-flex align-items-center">
+                            <div class="swiper-btn swiper-btn-next mb-3" tabindex="0" role="button" aria-label="Next slide"></div>
+                        </div> #}
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="container py-4">
+                        <div class="mt-n7 row justify-content-center align-items-center text-center">
+                            <img class="testimonialImgCircleWH" data-aos="fade-down" src="https://www.iphonesavvy.com/sites/default/files/%5Bcurrent-date%3Afile_path%5D/jan-profile-circle.png">
+                            <div class="col-lg-10 text-white" data-aos="zoom-in">
+                                <h3 class="font-size-4 font-weight-normal font-italic">Have just started working with SQUARE theme and have to say, it looks great. <br class="d-none d-lg-block"/>I love the simple and elegant layouts from a design point of view. <br class="d-none d-lg-block"/>Especially the Swiss inspired typography. I can't wait to get building with this theme.</h3>
+                                <p class="font-size-6 text-muted mb-0">Nelson Harris, CEO of AweSum</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-around"></div>
+        </div>
+    </div>
 </section>
 
 <section class="py-6 mb-6">
@@ -242,41 +293,6 @@
         <div class="d-flex justify-content-end">
             <div class="swiper-btn swiper-btn-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
             <div class="swiper-btn swiper-btn-next ml-3" tabindex="0" role="button" aria-label="Next slide"></div>
-        </div>
-    </div>
-</section>
-
-<section class="my-6 my-lg-7 bg-primary" id="slider-multiple">
-    <div class="swiper fade show active">
-        <div style="overflow: visible;" class="swiper-container" data-options='{"slidesPerView": 1, "loop": true, "breakpoints": {"992": {"slidesPerView": 1}}}'>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="container py-4">
-                        <div class="mt-n7 row justify-content-center align-items-center text-center">
-                            <img class="testimonialImgCircleWH" data-aos="fade-down" src="https://www.iphonesavvy.com/sites/default/files/%5Bcurrent-date%3Afile_path%5D/jan-profile-circle.png">
-                            <div class="col-lg-10 text-white" data-aos="zoom-in">
-                                <h3 class="font-size-4 font-weight-normal font-italic">Have just started working with SQUARE theme and have to say, it looks great. <br class="d-none d-lg-block"/>I love the simple and elegant layouts from a design point of view. <br class="d-none d-lg-block"/>Especially the Swiss inspired typography. I can't wait to get building with this theme.</h3>
-                                <p class="font-size-6 text-muted mb-0">Nelson Harris, CEO of AweSum</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="container py-4">
-                        <div class="mt-n7 row justify-content-center align-items-center text-center">
-                            <img class="testimonialImgCircleWH" data-aos="fade-down" src="https://www.iphonesavvy.com/sites/default/files/%5Bcurrent-date%3Afile_path%5D/jan-profile-circle.png">
-                            <div class="col-lg-10 text-white" data-aos="zoom-in">
-                                <h3 class="font-size-4 font-weight-normal font-italic">Have just started working with SQUARE theme and have to say, it looks great. <br class="d-none d-lg-block"/>I love the simple and elegant layouts from a design point of view. <br class="d-none d-lg-block"/>Especially the Swiss inspired typography. I can't wait to get building with this theme.</h3>
-                                <p class="font-size-6 text-muted mb-0">Nelson Harris, CEO of AweSum</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="d-flex justify-content-end mt-3">
-                <div class="swiper-btn swiper-btn-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
-                <div class="swiper-btn swiper-btn-next ml-3" tabindex="0" role="button" aria-label="Next slide"></div>
-            </div>
         </div>
     </div>
 </section>

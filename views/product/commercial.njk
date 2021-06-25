@@ -2,6 +2,7 @@
 {% set title = "Overview" %}
 {% set navbarFull = true %}
 {% set navPic = true %}
+{% set navPadding = true %}
 
 {% block content %}
 
@@ -49,9 +50,9 @@
     </section>
 
     {# contact form for commercial lights #}
-    <section id="explore" class="mb-4 mt-n7 bg-white contactUsCommercialForm">
-        <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
-        <p class="text-center w-responsive mx-auto mb-5">Contact us today for your free consultation!</p>
+    <section id="explore" class="mb-4 mt-n7 charcoalGrow contactUsCommercialForm">
+        <h2 class="h1-responsive font-weight-bold text-center my-4 text-white">Contact us</h2>
+        <p class="text-center w-responsive mx-auto mb-5 text-white">Contact us today for your free consultation!</p>
         {# Fix Hovers for button and input boxes!!!! #}
         <div class="row">
             <div class="col-md-8 mb-md-0 mb-5">
@@ -60,13 +61,13 @@
                         <div class="col-md-6">
                             <div class="md-form mb-0">
                                 <input type="text" id="name" name="name" class="form-control contactUsFormInpBoxes">
-                                <label for="name" class="">Name/Business Name</label>
+                                <label for="name" class="text-white">Name/Business Name</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="md-form mb-0">
                                 <input type="text" id="email" name="email" class="form-control contactUsFormInpBoxes">
-                                <label for="email" class="">Email/Business Email</label>
+                                <label for="email" class="text-white">Email/Business Email</label>
                             </div>
                         </div>
                     </div>
@@ -74,7 +75,7 @@
                         <div class="col-md-12">
                             <div class="md-form mb-0">
                                 <input type="text" id="subject" name="subject" class="form-control contactUsFormInpBoxes">
-                                <label for="subject" class="">Subject</label>
+                                <label for="subject" class="text-white">Subject</label>
                             </div>
                         </div>
                     </div>
@@ -82,7 +83,7 @@
                         <div class="col-md-12">
                             <div class="md-form">
                                 <textarea type="text" id="message" name="message" rows="2" class="form-control contactUsFormInpBoxes md-textarea"></textarea>
-                                <label for="message">Your Message</label>
+                                <label for="message" class="text-white">Your Message</label>
                             </div>
                         </div>
                     </div>
@@ -98,17 +99,17 @@
                     <li>
                         <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="orangeThemeGrower">
                             <title>pin-location-1</title><path d="M16.726,18.285a1,1,0,0,0-.168,1.993,29.747,29.747,0,0,1,3.776.523.25.25,0,0,1,0,.488A40,40,0,0,1,12,22a40.006,40.006,0,0,1-8.333-.711.25.25,0,0,1,0-.488,29.551,29.551,0,0,1,3.736-.52,1,1,0,0,0-.17-1.992C0,18.9,0,20.4,0,21.044,0,23.712,8.317,24,12,24s12-.288,12-2.956C24,20.4,24,18.9,16.726,18.285Z"/><path d="M12,21.6a1,1,0,0,0,.842-.461c1.958-3.063,6.512-10.536,6.512-13.786a7.355,7.355,0,1,0-14.71,0c0,3.25,4.554,10.724,6.513,13.786A.993.993,0,0,0,12,21.6ZM8.5,7A3.5,3.5,0,1,1,12,10.5,3.5,3.5,0,0,1,8.5,7Z"/></svg>
-                        <p>Hood River, OR 23434</p>
+                        <p class="text-white">Hood River, OR 23434</p>
                     </li>
                     <li>
                         <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="orangeThemeGrower">
                             <title>phone-landline</title><path d="M18.5,11.956a4.005,4.005,0,0,1-3.961-3.442.248.248,0,0,0-.23-.218,45.021,45.021,0,0,0-4.618,0,.248.248,0,0,0-.23.218A4.005,4.005,0,0,1,5.5,11.956H4.251a.25.25,0,0,0-.25.25v7.75a2.5,2.5,0,0,0,2.5,2.5h11a2.5,2.5,0,0,0,2.5-2.5v-7.75a.25.25,0,0,0-.25-.25ZM12,17.512a1,1,0,1,1-1,1A1,1,0,0,1,12,17.512Zm-1-2.966a1,1,0,1,1,1,1A1,1,0,0,1,11,14.546Zm3,3.966a1,1,0,1,1,1,1A1,1,0,0,1,14,18.512Zm2-3.966a1,1,0,1,1-1-1A1,1,0,0,1,16,14.546Zm-7-1a1,1,0,1,1-1,1A1,1,0,0,1,9,13.546Zm0,3.966a1,1,0,1,1-1,1A1,1,0,0,1,9,17.512Z"/><path d="M21.1,2.466h0a45.381,45.381,0,0,0-18.2,0A3.7,3.7,0,0,0,0,5.956v2a2.5,2.5,0,0,0,2.5,2.5h3A2.5,2.5,0,0,0,8,7.956V7.144a.254.254,0,0,1,.232-.253,45.151,45.151,0,0,1,7.536,0A.254.254,0,0,1,16,7.144v.812a2.5,2.5,0,0,0,2.5,2.5h3a2.5,2.5,0,0,0,2.5-2.5v-2A3.7,3.7,0,0,0,21.1,2.466Z"/></svg>
-                        <p>704-806-6462</p>
+                        <p class="text-white">704-806-6462</p>
                     </li>
                     <li>
                         <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="orangeThemeGrower">
                             <title>email-action-unread</title><path d="M23.888,5.832a.182.182,0,0,0-.2.039l-9.747,9.745a2.75,2.75,0,0,1-3.888,0L.31,5.871a.18.18,0,0,0-.2-.039A.182.182,0,0,0,0,6V18a2,2,0,0,0,2,2H22a2,2,0,0,0,2-2V6A.181.181,0,0,0,23.888,5.832Z"/><path d="M11.115,14.556a1.252,1.252,0,0,0,1.768,0L22.569,4.87a.5.5,0,0,0,.121-.511C22.58,4.03,22.274,4,22,4H2c-.275,0-.583.03-.691.359a.5.5,0,0,0,.121.511Z"/></svg>
-                        <p>david.weiner@growersadvantage.net</p>
+                        <p class="text-white">david.weiner@growersadvantage.net</p>
                     </li>
                 </ul>
             </div>
@@ -164,7 +165,7 @@
         </div>
     </section>
 
-    {# second reason to choose our lights #}
+    {# second reason to choose our lights ---- Maybe info about ROI (Return on Investment) #}
     <section class="container2">
         <a class="card shadow-sm lift mb-5 mb-lg-6">
             <div class="row no-gutters">
@@ -222,7 +223,7 @@
     </section>
 
     {# Maybe three things we do best as a company/ what we pride ourselves on most! #}
-    <section class="bg-primary py-6 py-lg-7 mb-6 mb-lg-7 text-white mt-6" role="main">
+    <section class="charcoalGrow py-6 py-lg-7 mb-6 mb-lg-7 text-white mt-6" role="main">
         <div class="container">
             <div class="row">
                 <div class="col-md mb-6 mb-md-0" data-aos="fade-up">
@@ -255,19 +256,33 @@
     </section>
 
     {# Testimonial #}
-    <section class="my-6 my-lg-7 bg-primary" id="slider-multiple">
+    <section class="my-6 my-lg-11 charcoalGrow" id="slider-multiple">
         <div class="swiper fade show active">
             <div style="overflow: visible;" class="swiper-container" data-options='{"slidesPerView": 1, "loop": true, "breakpoints": {"992": {"slidesPerView": 1}}}'>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="container py-4">
+                        <div class="container py-4 d-flex flex-row">
+                            {# <div class="swiper-btn swiper-btn-prev mb-3" tabindex="0" role="button" aria-label="Previous slide"></div> #}
                             <div class="mt-n7 row justify-content-center align-items-center text-center">
                                 <img class="testimonialImgCircleWH" data-aos="fade-down" src="https://www.iphonesavvy.com/sites/default/files/%5Bcurrent-date%3Afile_path%5D/jan-profile-circle.png">
                                 <div class="col-lg-10 text-white" data-aos="zoom-in">
-                                    <h3 class="font-size-4 font-weight-normal font-italic">Have just started working with SQUARE theme and have to say, it looks great. <br class="d-none d-lg-block"/>I love the simple and elegant layouts from a design point of view. <br class="d-none d-lg-block"/>Especially the Swiss inspired typography. I can't wait to get building with this theme.</h3>
+                                    <h3 class="font-size-4 font-weight-normal font-italic">
+                                        <svg style="margin-top: -15px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                                            <path class="orangeThemeGrower" d="M50.6292648,26.225668c-0.1288986-1.3934994-0.0303001-5.1816006,3.5985985-10.4492006c0.2745018-0.3975,0.2247009-0.9335995-0.1161957-1.2743998c-1.4795036-1.4794998-2.395504-2.4131002-3.0379982-3.0663996c-0.8448029-0.8614006-1.2305031-1.2539005-1.795002-1.7657003c-0.3769035-0.3388004-0.9472008-0.3446999-1.3281021-0.0125999c-6.3251991,5.5038996-13.3505974,16.8768997-12.3339958,30.8105011c0.5956955,8.1815987,6.5634956,14.1200981,14.1894951,14.1200981c7.8260994,0,14.1932983-6.3661995,14.1932983-14.1923981C63.9993629,32.845768,58.0736694,26.6543674,50.6292648,26.225668z M49.8060646,52.5879669c-6.5489006,0-11.6767998-5.1581993-12.1953011-12.2645988c0,0,0,0,0-0.0009995c-1.1435966-15.6709003,8.1718025-25.8496017,10.9863014-28.5449009c0.2743988,0.2705002,0.5878983,0.5887995,1.0498009,1.0594997c0.5565987,0.5664005,1.3183975,1.3417997,2.4706993,2.4981003c-4.4053001,6.7870998-3.5741997,11.6229992-3.2099991,12.3164005c0.1728973,0.3290997,0.5273972,0.5508003,0.8984985,0.5508003c6.7236023,0,12.1932983,5.469698,12.1932983,12.1933002C61.9993629,47.1182671,56.5296669,52.5879669,49.8060646,52.5879669z"/>
+                                            <path class="orangeThemeGrower" d="M15.1136675,26.225668c-0.1299-1.3896008-0.0341997-5.1748009,3.5985994-10.4492006c0.2735004-0.3975,0.2245998-0.9335995-0.1161995-1.2743998c-1.4766006-1.4765997-2.3915997-2.4091997-3.0332003-3.0625c-0.8476-0.8633003-1.2343998-1.2568998-1.7987995-1.7695999c-0.3769999-0.3388004-0.9473-0.3437004-1.3281002-0.0136003c-6.3251996,5.5039005-13.3515997,16.875-12.3369999,30.8115005v0.0009995c0.5977,8.1805992,6.5664001,14.1190987,14.1924,14.1190987c7.8261995,0,14.1934004-6.3661995,14.1934004-14.1923981C28.4847679,32.8448677,22.5589676,26.6524677,15.1136675,26.225668z M14.2913675,52.5879669c-6.5478001,0-11.6786995-5.1581993-12.1982002-12.2655983v0.0009995c-1.1406-15.6748009,8.1747999-25.8516006,10.9892006-28.5459003c0.2754002,0.2705002,0.5899,0.5908003,1.0528002,1.0625c0.5555992,0.5663996,1.3163996,1.3408003,2.4667988,2.4951c-4.4052992,6.7880993-3.5741997,11.6229992-3.2099991,12.3153992c0.1729002,0.3291016,0.5283003,0.5518017,0.8993998,0.5518017c6.7237005,0,12.1934004,5.469698,12.1934004,12.1933002C26.4847679,47.1182671,21.0150681,52.5879669,14.2913675,52.5879669z"/>
+                                        </svg>
+                                    Have just started working with SQUARE theme and have to say, it looks great. <br class="d-none d-lg-block"/>I love the simple and elegant layouts from a design point of view. <br class="d-none d-lg-block"/>Especially the Swiss inspired typography. I can't wait to get building with this theme.
+                                    <svg style="margin-bottom: -10px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                                            <path class="orangeThemeGrower" d="M14.1933422,9.4116497c-7.8260994,0-14.1922989,6.3662004-14.1922989,14.1924c0,7.5498009,5.9247999,13.7420998,13.3690996,14.169899c0.1288996,1.3916016,0.0321999,5.1797028-3.5977001,10.4491997C9.4980431,48.6206512,9.547843,49.1567497,9.888648,49.497551c1.4853945,1.4853973,2.4033947,2.4208984,3.0458946,3.0751991c0.8408995,0.8554993,1.2247,1.2461014,1.7861996,1.7559013c0.1904001,0.1727982,0.4306002,0.259697,0.6719055,0.259697c0.2342949,0,0.4676943-0.0819969,0.6561956-0.2450981c6.3251991-5.5038986,13.3515987-16.8759995,12.3349991-30.8115005C27.7881413,15.3501501,21.820343,9.4116497,14.1933422,9.4116497z M15.4023428,52.2221489c-0.2723999-0.2684975-0.5830002-0.5848999-1.0410004-1.0508003c-0.5565996-0.5672989-1.3203001-1.3446999-2.4784994-2.5067978c4.4053001-6.7881012,3.5731993-11.6230011,3.2089996-12.3164024c-0.1729002-0.3290977-0.5274-0.5507965-0.8985004-0.5507965c-6.7225995,0-12.1922989-5.4697018-12.1922989-12.1933022c0-6.7227001,5.4696999-12.1924,12.1922989-12.1924c6.5489006,0,11.6777992,5.1582012,12.1963062,12.2646008C27.5322418,39.3501511,18.2168427,49.5268517,15.4023428,52.2221489z"/>
+                                            <path class="orangeThemeGrower" d="M63.9004402,23.5317497v-0.0009995C63.302742,15.3501501,57.3340416,9.4116497,49.7090416,9.4116497c-7.8261986,0-14.1933937,6.3662004-14.1933937,14.1924c0,7.5498009,5.9257927,13.7420998,13.3710938,14.169899c0.1289062,1.3906021,0.0312004,5.1767006-3.5996017,10.4491997c-0.2743988,0.3975029-0.2245979,0.9336014,0.1162033,1.2744026c1.4794998,1.4794998,2.3955002,2.4130974,3.0380974,3.0663986c0.8446999,0.8613014,1.2304993,1.2538986,1.7949028,1.7656021c0.1903992,0.1718979,0.4315987,0.2587967,0.6718979,0.2587967c0.2344055,0,0.4678001-0.0819969,0.6562004-0.2460976C57.8896484,48.8383484,64.9160385,37.4663506,63.9004402,23.5317497z M50.917942,52.2221489c-0.2743988-0.2705002-0.5877991-0.5887985-1.0498009-1.0594978c-0.5565987-0.5665016-1.3172989-1.3418007-2.4706993-2.4981003c4.4053001-6.7891006,3.5742989-11.6230011,3.2109985-12.3164024c-0.1728973-0.3280983-0.5282974-0.5507965-0.8993988-0.5507965c-6.7237015,0-12.1933937-5.4697018-12.1933937-12.1933022c0-6.7227001,5.4696922-12.1924,12.1933937-12.1924c6.5477982,0,11.6777,5.1582012,12.1972008,12.2656002v-0.0009995C63.0478401,39.3481483,53.7324409,49.5268517,50.917942,52.2221489z"/>
+                                        </svg>
+                                    </h3>
                                     <p class="font-size-6 text-muted mb-0">Nelson Harris, CEO of AweSum</p>
                                 </div>
                             </div>
+                            {# <div style="height: 100%;" class="d-flex align-items-center">
+                            <div class="swiper-btn swiper-btn-next mb-3" tabindex="0" role="button" aria-label="Next slide"></div>
+                        </div> #}
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -282,10 +297,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex justify-content-end mt-3">
-                    <div class="swiper-btn swiper-btn-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
-                    <div class="swiper-btn swiper-btn-next ml-3" tabindex="0" role="button" aria-label="Next slide"></div>
-                </div>
+                <div class="d-flex justify-content-around"></div>
             </div>
         </div>
     </section>
