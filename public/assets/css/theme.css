@@ -37043,7 +37043,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background: currentColor;
+  background: #789904;
 }
 
 .swiper-container:not(.swiper-container-horizontal) > .swiper-pagination-bullets .swiper-pagination-bullet {
@@ -38375,6 +38375,15 @@ Css for product page images
   margin-left: -15rem;
 }
 
+@media (min-width: 992.2px) {
+  .flex-columnGrowMin {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center;
+    justify-content: center; */
+  }
+}
+
 @media (max-width: 992px) {
   .flex-columnGrow {
     display: flex;
@@ -38398,3 +38407,26 @@ Css for product page images
     max-width: 50%;
   }
 } 
+
+
+.bgTopCommercial {
+  background-image: url(../images/images-growers/grow-6.jpeg);
+  background-size: contain;
+}
+
+@media (min-width: 800px) {
+  .marginGrow {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
