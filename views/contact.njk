@@ -7,73 +7,6 @@
 
 {% block content %}
 
-    <section id="explore" class="mt-11 mb-6 mt-lg-12 mb-lg-7 charcoalGrow contactUsCommercialForm">
-        <h2 class="h1-responsive font-weight-bold text-center my-4 text-white">Contact us</h2>
-        <p class="text-center w-responsive mx-auto mb-5 text-white">Contact us today for your free consultation!</p>
-        {# Fix Hovers for button and input boxes!!!! #}
-        <div class="row">
-            <div class="col-md-8 mb-md-0 mb-5">
-                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="md-form mb-0">
-                                <input type="text" id="name" name="name" class="form-control contactUsFormInpBoxes">
-                                <label for="name" class="text-white">Name/Business Name</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="md-form mb-0">
-                                <input type="text" id="email" name="email" class="form-control contactUsFormInpBoxes">
-                                <label for="email" class="text-white">Email/Business Email</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="md-form mb-0">
-                                <input type="text" id="subject" name="subject" class="form-control contactUsFormInpBoxes">
-                                <label for="subject" class="text-white">Subject</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="md-form">
-                                <textarea type="text" id="message" name="message" rows="2" class="form-control contactUsFormInpBoxes md-textarea"></textarea>
-                                <label for="message" class="text-white">Your Message</label>
-                            </div>
-                        </div>
-                    </div>
-
-                </form>
-                <div class="text-center text-md-left d-flex justify-content-center widthOneHun">
-                    <a class="btn btn-primary orangeGrowerThemeBorderBack" onclick="document.getElementById('contact-form').submit();">Send</a>
-                </div>
-                <div class="status"></div>
-            </div>
-            <div class="col-md-4 text-center">
-                {# possibly image here and info using those cards below!!!!!!!!!!!!!!!!!!!!!! #}
-                <ul class="list-unstyled mb-0">
-                    <li>
-                        <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="orangeThemeGrower">
-                            <title>pin-location-1</title><path d="M16.726,18.285a1,1,0,0,0-.168,1.993,29.747,29.747,0,0,1,3.776.523.25.25,0,0,1,0,.488A40,40,0,0,1,12,22a40.006,40.006,0,0,1-8.333-.711.25.25,0,0,1,0-.488,29.551,29.551,0,0,1,3.736-.52,1,1,0,0,0-.17-1.992C0,18.9,0,20.4,0,21.044,0,23.712,8.317,24,12,24s12-.288,12-2.956C24,20.4,24,18.9,16.726,18.285Z"/><path d="M12,21.6a1,1,0,0,0,.842-.461c1.958-3.063,6.512-10.536,6.512-13.786a7.355,7.355,0,1,0-14.71,0c0,3.25,4.554,10.724,6.513,13.786A.993.993,0,0,0,12,21.6ZM8.5,7A3.5,3.5,0,1,1,12,10.5,3.5,3.5,0,0,1,8.5,7Z"/></svg>
-                        <p class="text-white">Hood River, OR 23434</p>
-                    </li>
-                    <li>
-                        <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="orangeThemeGrower">
-                            <title>phone-landline</title><path d="M18.5,11.956a4.005,4.005,0,0,1-3.961-3.442.248.248,0,0,0-.23-.218,45.021,45.021,0,0,0-4.618,0,.248.248,0,0,0-.23.218A4.005,4.005,0,0,1,5.5,11.956H4.251a.25.25,0,0,0-.25.25v7.75a2.5,2.5,0,0,0,2.5,2.5h11a2.5,2.5,0,0,0,2.5-2.5v-7.75a.25.25,0,0,0-.25-.25ZM12,17.512a1,1,0,1,1-1,1A1,1,0,0,1,12,17.512Zm-1-2.966a1,1,0,1,1,1,1A1,1,0,0,1,11,14.546Zm3,3.966a1,1,0,1,1,1,1A1,1,0,0,1,14,18.512Zm2-3.966a1,1,0,1,1-1-1A1,1,0,0,1,16,14.546Zm-7-1a1,1,0,1,1-1,1A1,1,0,0,1,9,13.546Zm0,3.966a1,1,0,1,1-1,1A1,1,0,0,1,9,17.512Z"/><path d="M21.1,2.466h0a45.381,45.381,0,0,0-18.2,0A3.7,3.7,0,0,0,0,5.956v2a2.5,2.5,0,0,0,2.5,2.5h3A2.5,2.5,0,0,0,8,7.956V7.144a.254.254,0,0,1,.232-.253,45.151,45.151,0,0,1,7.536,0A.254.254,0,0,1,16,7.144v.812a2.5,2.5,0,0,0,2.5,2.5h3a2.5,2.5,0,0,0,2.5-2.5v-2A3.7,3.7,0,0,0,21.1,2.466Z"/></svg>
-                        <p class="text-white">704-806-6462</p>
-                    </li>
-                    <li>
-                        <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="orangeThemeGrower">
-                            <title>email-action-unread</title><path d="M23.888,5.832a.182.182,0,0,0-.2.039l-9.747,9.745a2.75,2.75,0,0,1-3.888,0L.31,5.871a.18.18,0,0,0-.2-.039A.182.182,0,0,0,0,6V18a2,2,0,0,0,2,2H22a2,2,0,0,0,2-2V6A.181.181,0,0,0,23.888,5.832Z"/><path d="M11.115,14.556a1.252,1.252,0,0,0,1.768,0L22.569,4.87a.5.5,0,0,0,.121-.511C22.58,4.03,22.274,4,22,4H2c-.275,0-.583.03-.691.359a.5.5,0,0,0,.121.511Z"/></svg>
-                        <p class="text-white">david.weiner@growersadvantage.net</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
     <section class="pt-11 mb-6 pt-lg-12 mb-lg-7" id="content">
         <div class="container">
             <div class="row">
@@ -136,41 +69,48 @@
                 <div class="col-md-6 col-lg-4 px-3 mb-3 mb-lg-0" data-aos="fade-up">
                     <div class="card shadow bg-light h-100 lift">
                         <div class="card-body py-5 px-2">
-                            <svg width="40" height="40" class="fill-secondary mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <title>building-modern-2</title><path d="M7.125,6h8a.5.5,0,0,0,.3-.9l-3.1-2.325a.5.5,0,0,1-.2-.4V1a1,1,0,0,0-2,0V2.375a.5.5,0,0,1-.2.4L6.825,5.1A.5.5,0,0,0,7.125,6Z"/><path d="M15.125,7.5h-8a.5.5,0,0,0-.5.5V23.5a.5.5,0,0,0,.5.5h8a.5.5,0,0,0,.5-.5V8A.5.5,0,0,0,15.125,7.5Zm-5,13a.75.75,0,0,1-1.5,0v-10a.75.75,0,0,1,1.5,0Zm3.5,0a.75.75,0,0,1-1.5,0v-10a.75.75,0,0,1,1.5,0Z"/><path d="M4.625,13h-4a.5.5,0,0,0-.5.5v10a.5.5,0,0,0,.5.5h4a.5.5,0,0,0,.5-.5v-10A.5.5,0,0,0,4.625,13Zm-1.25,8a.75.75,0,0,1-1.5,0V20a.75.75,0,0,1,1.5,0Zm0-4a.75.75,0,0,1-1.5,0V16a.75.75,0,0,1,1.5,0Z"/><path d="M23.42,12.811l-5.25-2.25a.75.75,0,0,0-1.045.689v12a.75.75,0,0,0,.75.75h5.25a.75.75,0,0,0,.75-.75V13.5A.749.749,0,0,0,23.42,12.811ZM19.875,20.5a.75.75,0,0,1-1.5,0v-1a.75.75,0,0,1,1.5,0Zm0-4.5a.75.75,0,0,1-1.5,0V15a.75.75,0,0,1,1.5,0Zm2.5,4.5a.75.75,0,0,1-1.5,0v-1a.75.75,0,0,1,1.5,0Zm0-4.5a.75.75,0,0,1-1.5,0V15a.75.75,0,0,1,1.5,0Z"/></svg>
-                            <p class="font-size-6 mb-0">Santa Clara, 2726 Vernon Street <br>California, CA 02110</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 px-3 mb-3 mb-lg-0" data-aos="fade-up" data-aos-delay="50">
-                    <div class="card shadow bg-light h-100 lift">
-                        <div class="card-body py-5 px-2">
-                            <svg width="40" height="40" class="fill-secondary mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <svg width="40" height="40" class="mb-3 orangeThemeGrower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <title>phone-landline</title><path d="M18.5,11.956a4.005,4.005,0,0,1-3.961-3.442.248.248,0,0,0-.23-.218,45.021,45.021,0,0,0-4.618,0,.248.248,0,0,0-.23.218A4.005,4.005,0,0,1,5.5,11.956H4.251a.25.25,0,0,0-.25.25v7.75a2.5,2.5,0,0,0,2.5,2.5h11a2.5,2.5,0,0,0,2.5-2.5v-7.75a.25.25,0,0,0-.25-.25ZM12,17.512a1,1,0,1,1-1,1A1,1,0,0,1,12,17.512Zm-1-2.966a1,1,0,1,1,1,1A1,1,0,0,1,11,14.546Zm3,3.966a1,1,0,1,1,1,1A1,1,0,0,1,14,18.512Zm2-3.966a1,1,0,1,1-1-1A1,1,0,0,1,16,14.546Zm-7-1a1,1,0,1,1-1,1A1,1,0,0,1,9,13.546Zm0,3.966a1,1,0,1,1-1,1A1,1,0,0,1,9,17.512Z"/><path d="M21.1,2.466h0a45.381,45.381,0,0,0-18.2,0A3.7,3.7,0,0,0,0,5.956v2a2.5,2.5,0,0,0,2.5,2.5h3A2.5,2.5,0,0,0,8,7.956V7.144a.254.254,0,0,1,.232-.253,45.151,45.151,0,0,1,7.536,0A.254.254,0,0,1,16,7.144v.812a2.5,2.5,0,0,0,2.5,2.5h3a2.5,2.5,0,0,0,2.5-2.5v-2A3.7,3.7,0,0,0,21.1,2.466Z"/></svg>
-                            <p class="font-size-6 mb-0">T: <a href="#" class="text-reset">408-919-1668</a><br>F: <a href="#" class="text-reset">408-919-1690</a>
+                            <p class="growMarginBottomComeSoon">David Weiner</p>
+                            <p class="font-size-6 mb-0">
+                                <a href="tel:704-806-6462" class="text-reset">704-806-6462</a><br>
+                                <a href = "mailto: david.weiner@growersadvantage.net" class="text-reset">david.weiner@growersadvantage.net</a>
                             </p>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6 col-lg-4 px-3 mb-3 mb-lg-0" data-aos="fade-up">
+                    <div class="card shadow bg-light h-100 lift">
+                        <div class="card-body py-5 px-2">
+                            <svg width="40" height="40" class="mb-3 orangeThemeGrower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>email-action-at</title><path d="M18.409,15.131A.758.758,0,0,1,18,15.25H6a.757.757,0,0,1-.405-.119L.385,11.781a.25.25,0,0,0-.385.21V22a2,2,0,0,0,2,2H22a2,2,0,0,0,2-2V12a.25.25,0,0,0-.385-.211Z"/><path d="M5.12,13.041a.25.25,0,0,0,.385-.21L5.5,2.25A.249.249,0,0,1,5.75,2h12.5a.25.25,0,0,1,.25.25l.01,10.575a.25.25,0,0,0,.385.21l4.053-2.607a.248.248,0,0,0,.115-.206.251.251,0,0,0-.107-.21L20.5,8.3l0-6.093a2.114,2.114,0,0,0-2-2.208H5.5a2.115,2.115,0,0,0-2,2.209L3.5,8.3l-2.458,1.71a.249.249,0,0,0,.007.415Z"/><path d="M7.375,9.6a4.7,4.7,0,0,0,3.51,3.52A4.973,4.973,0,0,0,12,13.251a4.716,4.716,0,0,0,1.221-.16.75.75,0,1,0-.386-1.449,3.343,3.343,0,0,1-1.616.018A3.231,3.231,0,0,1,8.837,9.27a3.286,3.286,0,0,1,.648-2.829,3.207,3.207,0,0,1,2.6-1.19A3.37,3.37,0,0,1,15.25,8.686V9.25a.5.5,0,0,1-1,0V8.5A2.25,2.25,0,1,0,12,10.75a2.225,2.225,0,0,0,1.142-.322A1.995,1.995,0,0,0,16.75,9.25V8.686a4.879,4.879,0,0,0-4.627-4.935,4.723,4.723,0,0,0-3.8,1.739A4.774,4.774,0,0,0,7.375,9.6ZM12,9.25a.75.75,0,1,1,.75-.75A.75.75,0,0,1,12,9.25Z"/></svg>
+                            <p class="growMarginBottomComeSoon">Growers Advantage</p>
+                            <p class="font-size-6 mb-0">
+                                <a href = "mailto: info@growersadvantage.net" class="text-reset">info@growersadvantage.net</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-md-6 col-lg-4 px-3 mb-3 mb-md-0" data-aos="fade-up" data-aos-delay="50">
                     <div class="card shadow bg-light h-100 lift">
                         <div class="card-body py-5 px-2">
-                            <svg width="40" height="40" class="fill-secondary mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <svg width="40" height="40" class="mb-4 orangeThemeGrower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <title>network-share</title><path d="M18.449,10.255c-.032-.333-.074-.655-.123-.968a.253.253,0,0,1,.057-.2A.249.249,0,0,1,18.574,9h2.805a.25.25,0,0,1,.239.178c.019.064.033.13.047.2a.249.249,0,0,0,.206.2,4.2,4.2,0,0,1,1.819.746.128.128,0,0,0,.144,0,.131.131,0,0,0,.061-.131C22.414.389,12.544-.036,11.963,0a12,12,0,0,0,.066,24h.006a1.024,1.024,0,0,0,.892-.572,1.035,1.035,0,0,0-.444-1.32,9.382,9.382,0,0,1-3.774-4.328.251.251,0,0,1,.146-.342.988.988,0,0,0,.676-.937,1,1,0,0,0-1-1h-.4a.251.251,0,0,1-.244-.2,15.606,15.606,0,0,1-.1-6.1A.249.249,0,0,1,8.03,9h8a.249.249,0,0,1,.245.2c.075.4.138.806.18,1.243a1.007,1.007,0,0,0,1.09.9A1.052,1.052,0,0,0,18.449,10.255ZM2.85,15.5a.25.25,0,0,1-.235-.167,9.883,9.883,0,0,1-.177-6.154A.25.25,0,0,1,2.677,9H5.484a.249.249,0,0,1,.247.287A17.9,17.9,0,0,0,5.531,12a17.189,17.189,0,0,0,.3,3.2.252.252,0,0,1-.246.3Zm5.222,5.157a.25.25,0,0,1-.311.371A10.036,10.036,0,0,1,3.966,17.9a.25.25,0,0,1,.2-.4H6.255a.25.25,0,0,1,.234.162A12.84,12.84,0,0,0,8.072,20.656Zm0-17.317A13.15,13.15,0,0,0,6.329,6.827.25.25,0,0,1,6.092,7H3.83a.25.25,0,0,1-.21-.386A10.04,10.04,0,0,1,7.764,2.969a.25.25,0,0,1,.311.37Zm7.439,3.548A.248.248,0,0,1,15.306,7H8.754a.25.25,0,0,1-.231-.346,10.049,10.049,0,0,1,3.364-4.385.249.249,0,0,1,.29,0,10.089,10.089,0,0,1,3.36,4.385A.25.25,0,0,1,15.514,6.887Zm2.217-.06a13.188,13.188,0,0,0-1.743-3.483.25.25,0,0,1,.312-.37,10.153,10.153,0,0,1,4.141,3.639.25.25,0,0,1-.21.386H17.968A.25.25,0,0,1,17.731,6.827Z"/><path d="M15.606,20.238a.253.253,0,0,1,.266-.051l2.576,1.031a.034.034,0,0,1,.021.031,2.77,2.77,0,1,0,.863-1.989.249.249,0,0,1-.266.051l-2.445-.978a.252.252,0,0,1-.157-.215c0-.044-.008-.1-.017-.164a.249.249,0,0,1,.12-.247L19.406,16a.249.249,0,0,1,.27.009,2.714,2.714,0,0,0,1.543.487,2.75,2.75,0,1,0-2.726-2.451.252.252,0,0,1-.12.243L15.532,16a.253.253,0,0,1-.271-.008,2.7,2.7,0,0,0-1.542-.488,2.788,2.788,0,0,0-2.75,2.75A2.752,2.752,0,0,0,13.719,21,2.8,2.8,0,0,0,15.606,20.238Z"/></svg>
                             <p class="mb-0">
-                                <a href="#" class="text-reset text-decoration-none">
+                                <a href="https://www.facebook.com/Growers-Advantage-105398138357094" class="text-reset text-decoration-none">
                                     <svg width="20" height="20" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                         <title>social-media-facebook</title><path d="M18.14,7.17A.5.5,0,0,0,17.77,7H14V5.59c0-.28.06-.6.51-.6h3a.44.44,0,0,0,.35-.15A.5.5,0,0,0,18,4.5V.5a.5.5,0,0,0-.5-.5H13.17C8.37,0,8,4.1,8,5.35V7H5.5a.5.5,0,0,0-.5.5v4a.5.5,0,0,0,.5.5H8V23.5a.5.5,0,0,0,.5.5h5a.5.5,0,0,0,.5-.5V12h3.35a.5.5,0,0,0,.5-.45l.42-4A.5.5,0,0,0,18.14,7.17Z"/></svg>
                                 </a>
-                                <a href="#" class="text-reset text-decoration-none">
+                                <a href="https://twitter.com/GA_LED_" class="text-reset text-decoration-none">
                                     <svg width="20" height="20" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                         <title>social-media-twitter</title><path d="M23.32,6.44a.5.5,0,0,0-.2-.87l-.79-.2A.5.5,0,0,1,22,4.67l.44-.89a.5.5,0,0,0-.58-.7l-2,.56a.5.5,0,0,1-.44-.08,5,5,0,0,0-3-1,5,5,0,0,0-5,5v.36a.25.25,0,0,1-.22.25c-2.81.33-5.5-1.1-8.4-4.44a.51.51,0,0,0-.51-.15A.5.5,0,0,0,2,4a7.58,7.58,0,0,0,.46,4.92.25.25,0,0,1-.26.36L1.08,9.06a.5.5,0,0,0-.57.59,5.15,5.15,0,0,0,2.37,3.78.25.25,0,0,1,0,.45l-.53.21a.5.5,0,0,0-.26.69,4.36,4.36,0,0,0,3.2,2.48.25.25,0,0,1,0,.47A10.94,10.94,0,0,1,1,18.56a.5.5,0,0,0-.2,1,20.06,20.06,0,0,0,8.14,1.93,12.58,12.58,0,0,0,7-2A12.5,12.5,0,0,0,21.5,9.06V8.19a.5.5,0,0,1,.18-.38Z"/></svg>
                                 </a>
-                                <a href="#" class="text-reset text-decoration-none">
+                                <a href="https://www.linkedin.com/in/growers-advantage-585234210/" class="text-reset text-decoration-none">
                                     <svg width="20" height="20" class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                         <title>professional-network-linkedin</title><rect x="2" y="8.5" width="5" height="14" rx="0.5" ry="0.5"/><ellipse cx="4.48" cy="4" rx="2.48" ry="2.5"/><path d="M18.5,22.5h3A.5.5,0,0,0,22,22V13.6C22,9.83,19.87,8,16.89,8a4.21,4.21,0,0,0-3.17,1.27A.41.41,0,0,1,13,9a.5.5,0,0,0-.5-.5h-3A.5.5,0,0,0,9,9V22a.5.5,0,0,0,.5.5h3A.5.5,0,0,0,13,22V14.5a2.5,2.5,0,0,1,5,0V22A.5.5,0,0,0,18.5,22.5Z"/></svg>
                                 </a>
-                                <a href="#" class="text-reset text-decoration-none">
+                                <a href="mailto: info@growersadvantage.net" class="text-reset text-decoration-none">
                                     <svg width="23" height="23" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                         <title>email-action-unread</title><path d="M23.888,5.832a.182.182,0,0,0-.2.039l-9.747,9.745a2.75,2.75,0,0,1-3.888,0L.31,5.871a.18.18,0,0,0-.2-.039A.182.182,0,0,0,0,6V18a2,2,0,0,0,2,2H22a2,2,0,0,0,2-2V6A.181.181,0,0,0,23.888,5.832Z"/><path d="M11.115,14.556a1.252,1.252,0,0,0,1.768,0L22.569,4.87a.5.5,0,0,0,.121-.511C22.58,4.03,22.274,4,22,4H2c-.275,0-.583.03-.691.359a.5.5,0,0,0,.121.511Z"/></svg>
                                 </a>
@@ -181,4 +121,72 @@
             </div>
         </div>
     </section>
+
+    <section id="explore" class="mt-11 mb-6 mt-lg-12 mb-lg-7 charcoalGrow contactUsCommercialForm">
+        <h2 class="h1-responsive font-weight-bold text-center my-4 text-white">Contact us</h2>
+        <p class="text-center w-responsive mx-auto mb-5 text-white">Contact us today for your free consultation!</p>
+        {# Fix Hovers for button and input boxes!!!! #}
+        <div class="row">
+            <div class="col-md-8 mb-md-0 mb-5">
+                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="name" class="form-control">
+                                <label for="name" class="text-white">Name/Business Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" id="email" name="email" class="form-control">
+                                <label for="email" class="text-white">Email/Business Email</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form mb-0">
+                                <input type="text" id="subject" name="subject" class="form-control">
+                                <label for="subject" class="text-white">Subject</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form">
+                                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                <label for="message" class="text-white">Your Message</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+                <div class="text-center text-md-left d-flex justify-content-center widthOneHun">
+                    <a class="btn btn-primary orangeGrowerThemeBorderBack" onclick="document.getElementById('contact-form').submit();">Send</a>
+                </div>
+                <div class="status"></div>
+            </div>
+            <div class="col-md-4 text-center">
+                {# possibly image here and info using those cards below!!!!!!!!!!!!!!!!!!!!!! #}
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="orangeThemeGrower">
+                            <title>pin-location-1</title><path d="M16.726,18.285a1,1,0,0,0-.168,1.993,29.747,29.747,0,0,1,3.776.523.25.25,0,0,1,0,.488A40,40,0,0,1,12,22a40.006,40.006,0,0,1-8.333-.711.25.25,0,0,1,0-.488,29.551,29.551,0,0,1,3.736-.52,1,1,0,0,0-.17-1.992C0,18.9,0,20.4,0,21.044,0,23.712,8.317,24,12,24s12-.288,12-2.956C24,20.4,24,18.9,16.726,18.285Z"/><path d="M12,21.6a1,1,0,0,0,.842-.461c1.958-3.063,6.512-10.536,6.512-13.786a7.355,7.355,0,1,0-14.71,0c0,3.25,4.554,10.724,6.513,13.786A.993.993,0,0,0,12,21.6ZM8.5,7A3.5,3.5,0,1,1,12,10.5,3.5,3.5,0,0,1,8.5,7Z"/></svg>
+                        <p class="text-white">Hood River, OR 23434</p>
+                    </li>
+                    <li>
+                        <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="orangeThemeGrower">
+                            <title>phone-landline</title><path d="M18.5,11.956a4.005,4.005,0,0,1-3.961-3.442.248.248,0,0,0-.23-.218,45.021,45.021,0,0,0-4.618,0,.248.248,0,0,0-.23.218A4.005,4.005,0,0,1,5.5,11.956H4.251a.25.25,0,0,0-.25.25v7.75a2.5,2.5,0,0,0,2.5,2.5h11a2.5,2.5,0,0,0,2.5-2.5v-7.75a.25.25,0,0,0-.25-.25ZM12,17.512a1,1,0,1,1-1,1A1,1,0,0,1,12,17.512Zm-1-2.966a1,1,0,1,1,1,1A1,1,0,0,1,11,14.546Zm3,3.966a1,1,0,1,1,1,1A1,1,0,0,1,14,18.512Zm2-3.966a1,1,0,1,1-1-1A1,1,0,0,1,16,14.546Zm-7-1a1,1,0,1,1-1,1A1,1,0,0,1,9,13.546Zm0,3.966a1,1,0,1,1-1,1A1,1,0,0,1,9,17.512Z"/><path d="M21.1,2.466h0a45.381,45.381,0,0,0-18.2,0A3.7,3.7,0,0,0,0,5.956v2a2.5,2.5,0,0,0,2.5,2.5h3A2.5,2.5,0,0,0,8,7.956V7.144a.254.254,0,0,1,.232-.253,45.151,45.151,0,0,1,7.536,0A.254.254,0,0,1,16,7.144v.812a2.5,2.5,0,0,0,2.5,2.5h3a2.5,2.5,0,0,0,2.5-2.5v-2A3.7,3.7,0,0,0,21.1,2.466Z"/></svg>
+                        <p class="text-white">704-806-6462</p>
+                    </li>
+                    <li>
+                        <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="orangeThemeGrower">
+                            <title>email-action-unread</title><path d="M23.888,5.832a.182.182,0,0,0-.2.039l-9.747,9.745a2.75,2.75,0,0,1-3.888,0L.31,5.871a.18.18,0,0,0-.2-.039A.182.182,0,0,0,0,6V18a2,2,0,0,0,2,2H22a2,2,0,0,0,2-2V6A.181.181,0,0,0,23.888,5.832Z"/><path d="M11.115,14.556a1.252,1.252,0,0,0,1.768,0L22.569,4.87a.5.5,0,0,0,.121-.511C22.58,4.03,22.274,4,22,4H2c-.275,0-.583.03-.691.359a.5.5,0,0,0,.121.511Z"/></svg>
+                        <p class="text-white">david.weiner@growersadvantage.net</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
 {% endblock content %}
