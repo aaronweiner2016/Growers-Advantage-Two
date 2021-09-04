@@ -2707,42 +2707,37 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #fff;
-  background-color: #da3458;
-  border-color: #da3458;
-  box-shadow: none !important;
-}
-
-.btn-grow {
-  color: #fff;
   background-color: #f5a800;
   border-color: #f5a800;
+  opacity: 1;
   box-shadow: none !important;
 }
 
 .btn-secondary:hover {
   color: #fff;
-  background-color: #c42446;
-  border-color: #b92243;
+  background-color: #f5a800;
+  border-color: #f5a800;
+  opacity: .9;
 }
 
 .btn-secondary:focus, .btn-secondary.focus {
   color: #fff;
-  background-color: #c42446;
-  border-color: #b92243;
+  background-color: #f5a800;
+  border-color: #f5a800;
   box-shadow: none !important, 0 0 0 0.2rem rgba(224, 82, 113, 0.5);
 }
 
 .btn-secondary.disabled, .btn-secondary:disabled {
   color: #fff;
-  background-color: #da3458;
-  border-color: #da3458;
+  background-color: #f5a800;
+  border-color: #f5a800;
 }
 
 .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
 .show > .btn-secondary.dropdown-toggle {
   color: #fff;
-  background-color: #b92243;
-  border-color: #ae203f;
+  background-color: #f5a800;
+  border-color: #f5a800;
 }
 
 .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus,
