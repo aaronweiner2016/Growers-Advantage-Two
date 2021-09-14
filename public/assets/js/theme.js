@@ -15,18 +15,18 @@ Copyright 2020 Webinning
 
 
 // Preloader
-var Preloader = new Promise(function(resolve) {
+var Preloader = new Promise(function (resolve) {
     // Variables
     var preloader = document.querySelector('.preloader');
 
     // Methods
     function init() {
-        setTimeout(function(){
+        setTimeout(function () {
             preloader.classList.add('fadeOut');
-            setTimeout(function(){
+            setTimeout(function () {
                 preloader.style.display = 'none';
             }, 500);
-            
+
             resolve();
         }, 1500); // minimum loading time in second
     }
@@ -43,15 +43,15 @@ var Preloader = new Promise(function(resolve) {
 
 
 // Navbar dropdown on hover
-var NavbarHover = (function() {
+var NavbarHover = (function () {
     // Variables
     var navbar = document.querySelectorAll('.navbar-nav .dropdown');
 
     // Methods
     function init() {
-        [].forEach.call(navbar, function(el, i){
-            addListenerMulti(el, 'mouseenter mouseleave click', function(e){
-                if(window.innerWidth > 991.98) {
+        [].forEach.call(navbar, function (el, i) {
+            addListenerMulti(el, 'mouseenter mouseleave click', function (e) {
+                if (window.innerWidth > 991.98) {
                     var dropdown = el.querySelector('[data-toggle="dropdown"]'),
                         instance = new bootstrap.Dropdown(dropdown);
 
@@ -69,26 +69,26 @@ var NavbarHover = (function() {
 
 
 // Navbar Toggler
-var NavbarToggler = (function() {
+var NavbarToggler = (function () {
     // Variables
     var navbarToggler = document.querySelector('.navbar-toggler');
 
     // Methods
     function init() {
         navbarState();
-        
-        navbarToggler.addEventListener('click', function() {
-            setTimeout(function(){
+
+        navbarToggler.addEventListener('click', function () {
+            setTimeout(function () {
                 navbarState();
             })
         }, false);
     }
 
-    function navbarState(){
+    function navbarState() {
         // Inner variables
         var expanded = navbarToggler.getAttribute('aria-expanded');
-        
-        if(expanded == 'true') {
+
+        if (expanded == 'true') {
             document.documentElement.style.overflow = "hidden";
             document.body.style.paddingRight = getScrollbarWidth() + "px";
         } else {
@@ -105,12 +105,12 @@ var NavbarToggler = (function() {
 
 
 // Cookie Consent
-var CC = (function() {
+var CC = (function () {
     // Variables
     var cookie = document.getElementById('cookie-consent');
     var template = document.getElementById('cookie-template');
 
-    
+
     // Methods
     function init() {
         detatch(template);
@@ -123,7 +123,7 @@ var CC = (function() {
 
 
     // Events
-    if(isExist(cookie)) {
+    if (isExist(cookie)) {
         fetchInject([
             '../assets/vendor/cookieconsent/build/cookieconsent.min.js',
             '../assets/vendor/cookieconsent/build/cookieconsent.min.css'
@@ -135,11 +135,11 @@ var CC = (function() {
 
 
 // Swiper
-var SwiperSlider = (function() {
+var SwiperSlider = (function () {
     // Variables
     var swiper = document.querySelectorAll('.swiper');
 
-    
+
     // Methods
     function init(elem, index) {
         // Inner variables
@@ -193,12 +193,12 @@ var SwiperSlider = (function() {
 
 
     // Events
-    if(swiper.length > 0) {
+    if (swiper.length > 0) {
         fetchInject([
             '../assets/vendor/swiper/css/swiper.min.css',
             '../assets/vendor/swiper/js/swiper.min.js'
         ]).then(() => {
-            [].forEach.call(swiper, function(el, i){
+            [].forEach.call(swiper, function (el, i) {
                 init(el, i);
             });
         });
@@ -207,12 +207,12 @@ var SwiperSlider = (function() {
 
 
 // TypedJS
-var TypedJS = (function() {
+var TypedJS = (function () {
     // Variables
     var typed = document.querySelectorAll('[data-typed]'),
         preloader = document.querySelector('.preloader');
 
-    
+
     // Methods
     function init(elem) {
         // Inner variables
@@ -226,10 +226,10 @@ var TypedJS = (function() {
             },
             mergedOptions = mergeObjects(options, dataOptions);
 
-        if(isExist(preloader)) {
-            Preloader.then(function() {
+        if (isExist(preloader)) {
+            Preloader.then(function () {
                 var typed = new Typed(elem, mergedOptions);
-            }, function(error) {
+            }, function (error) {
                 // error goes here
             });
         } else {
@@ -239,11 +239,11 @@ var TypedJS = (function() {
 
 
     // Events
-    if(typed.length > 0) {
+    if (typed.length > 0) {
         fetchInject([
             '../assets/vendor/typed.js/lib/typed.min.js'
         ]).then(() => {
-            [].forEach.call(typed, function(el, i){
+            [].forEach.call(typed, function (el, i) {
                 init(el);
             });
         });
@@ -252,11 +252,11 @@ var TypedJS = (function() {
 
 
 // Photoswipe
-var Photoswipe = (function() {
+var Photoswipe = (function () {
     // Variables
     var gallery = document.querySelectorAll('.gallery');
     var photoswipe = document.querySelectorAll('.gallery figure');
-    var ssRunning = false, 
+    var ssRunning = false,
         ssOnce = false,
         ssDelay = 3000 /*ms*/,
         ssButtonClass = document.querySelector('.pswp__button--playpause');
@@ -264,24 +264,24 @@ var Photoswipe = (function() {
     var dataOptions = {
         bgOpacity: 0.97
     };
-    
+
     // Methods
     function init() {
         var galleryElements = gallery;
         var dataOptions = {};
-        
-        for(var i = 0, l = galleryElements.length; i < l; i++) {
-            galleryElements[i].setAttribute('data-pswp-uid', i+1);
+
+        for (var i = 0, l = galleryElements.length; i < l; i++) {
+            galleryElements[i].setAttribute('data-pswp-uid', i + 1);
             galleryElements[i].onclick = onThumbnailsClick;
         }
 
         var hashData = photoswipeParseHash();
-        if(hashData.pid && hashData.gid) {
+        if (hashData.pid && hashData.gid) {
             openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
         }
     }
 
-    var parseThumbnailElements = function(elem) {
+    var parseThumbnailElements = function (elem) {
         var all = photoswipe;
         var items = [];
         var figureEl,
@@ -289,9 +289,9 @@ var Photoswipe = (function() {
             size,
             item;
 
-        for(var i = 0; i < all.length; i++) {
+        for (var i = 0; i < all.length; i++) {
             figureEl = all[i];
-            if(figureEl.nodeType !== 1) {
+            if (figureEl.nodeType !== 1) {
                 continue;
             }
             linkEl = figureEl.children[0];
@@ -310,10 +310,10 @@ var Photoswipe = (function() {
                     minZoom: 3
                 };
             }
-            if(figureEl.children.length > 1) {
+            if (figureEl.children.length > 1) {
                 item.title = figureEl.children[1].innerHTML;
             }
-            if(linkEl.children.length > 0) {
+            if (linkEl.children.length > 0) {
                 item.msrc = linkEl.children[0].getAttribute('src');
             }
 
@@ -323,12 +323,12 @@ var Photoswipe = (function() {
         return items;
     };
 
-    var onThumbnailsClick = function(e) {
+    var onThumbnailsClick = function (e) {
         e = e || window.event;
         e.preventDefault ? e.preventDefault() : e.returnValue = false;
         var eTarget = e.target || e.srcElement;
         var clickedListItem = closest(eTarget, 'figure');
-        if(!clickedListItem) {
+        if (!clickedListItem) {
             return;
         }
         var clickedGallery = clickedListItem.parentNode,
@@ -338,45 +338,45 @@ var Photoswipe = (function() {
             index;
 
         for (var i = 0; i < numChildNodes; i++) {
-            if(childNodes[i].nodeType !== 1) {
+            if (childNodes[i].nodeType !== 1) {
                 continue;
             }
-            if(childNodes[i] === clickedListItem) {
+            if (childNodes[i] === clickedListItem) {
                 index = nodeIndex;
                 break;
             }
             nodeIndex++;
         }
-        if(index >= 0) {
+        if (index >= 0) {
             openPhotoSwipe(index, clickedGallery);
         }
         return false;
     };
 
-    var photoswipeParseHash = function() {
+    var photoswipeParseHash = function () {
         var hash = window.location.hash.substring(1),
             params = {};
-        if(hash.length < 5) {
+        if (hash.length < 5) {
             return params;
         }
         var vars = hash.split('&');
         for (var i = 0; i < vars.length; i++) {
-            if(!vars[i]) {
+            if (!vars[i]) {
                 continue;
             }
             var pair = vars[i].split('=');
-            if(pair.length < 2) {
+            if (pair.length < 2) {
                 continue;
             }
             params[pair[0]] = pair[1];
         }
-        if(params.gid) {
+        if (params.gid) {
             params.gid = parseInt(params.gid, 10);
         }
         return params;
     };
 
-    var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+    var openPhotoSwipe = function (index, galleryElement, disableAnimation, fromURL) {
         var pswpElement = document.querySelectorAll('.pswp')[0],
             gallery,
             options,
@@ -390,10 +390,10 @@ var Photoswipe = (function() {
             var title = running ? "Pause Slideshow" : "Play Slideshow";
             el.classList.remove(running ? "play" : "pause"); // change icons defined in css
             el.classList.add(running ? "pause" : "play");
-            el.title =  title;
+            el.title = title;
             ssRunning = running;
         }
-        
+
         function gotoNextSlide() {
             if (ssRunning && !!gallery) {
                 ssOnce = true;
@@ -407,22 +407,22 @@ var Photoswipe = (function() {
             maxSpreadZoom: 5,
             minZoom: 3,
             closeOnScroll: false,
-            preload: [1,3],
+            preload: [1, 3],
             galleryUID: galleryElement.parentNode.getAttribute('data-pswp-uid') || galleryElement.getAttribute('data-pswp-uid'),
-            getThumbBoundsFn: function(index) {
+            getThumbBoundsFn: function (index) {
                 var thumbnail = items[index].el.getElementsByTagName('img')[0] || items[index].el.getElementsByTagName('svg')[0],
                     pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
                     rect = thumbnail.getBoundingClientRect();
-                return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+                return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
             }
         };
 
         var mergedOptions = mergeObjects(options, dataOptions);
 
-        if(fromURL) {
-            if(mergedOptions.galleryPIDs) {
-                for(var j = 0; j < items.length; j++) {
-                    if(items[j].pid === index) {
+        if (fromURL) {
+            if (mergedOptions.galleryPIDs) {
+                for (var j = 0; j < items.length; j++) {
+                    if (items[j].pid === index) {
                         mergedOptions.index = j;
                         break;
                     }
@@ -433,10 +433,10 @@ var Photoswipe = (function() {
         } else {
             mergedOptions.index = parseInt(index, 10);
         }
-        if(isNaN(mergedOptions.index)) {
+        if (isNaN(mergedOptions.index)) {
             return;
         }
-        if(disableAnimation) {
+        if (disableAnimation) {
             mergedOptions.showAnimationDuration = 0;
         }
 
@@ -444,16 +444,16 @@ var Photoswipe = (function() {
 
         setSlideshowState(ssButtonClass, false /* not running from the start */);
 
-        gallery.listen('beforeChange', function() {
+        gallery.listen('beforeChange', function () {
             var videos = document.querySelectorAll('.pswp__video');
             var currItem = gallery.currItem.container;
-            
+
             if (currItem.getAttribute('data-type') == 'video') {
                 for (var i = 0; i < videos.length; ++i) {
                     videos[i].classList.remove('active')
                 }
                 currItem.querySelectorAll('.pswp__video')[0].classList.add('active');
-                [].forEach.call(videos, function(el, i){
+                [].forEach.call(videos, function (el, i) {
                     if (!el.classList.contains('active')) {
                         el.setAttribute('src', el.getAttribute('src'));
                     }
@@ -461,18 +461,18 @@ var Photoswipe = (function() {
             }
         });
 
-        gallery.listen('close', function() {
+        gallery.listen('close', function () {
             var currItem = gallery.currItem.container;
 
             if (currItem.getAttribute('data-type') == 'video') {
-                [].forEach.call(videos, function(el, i){
+                [].forEach.call(videos, function (el, i) {
                     el.setAttribute('src', el.getAttribute('src'));
                 });
             }
         });
 
-        gallery.listen('afterChange', function() { 
-            if(gallery.options.getNumItemsFn() > 1) {
+        gallery.listen('afterChange', function () {
+            if (gallery.options.getNumItemsFn() > 1) {
                 if (ssRunning && ssOnce) {
                     ssOnce = false;
                     setTimeout(gotoNextSlide, ssDelay);
@@ -486,7 +486,7 @@ var Photoswipe = (function() {
             }
         });
 
-        gallery.listen('destroy', function() {
+        gallery.listen('destroy', function () {
             gallery = null;
         });
 
@@ -495,7 +495,7 @@ var Photoswipe = (function() {
 
 
     // Events
-    if(photoswipe.length > 0) {
+    if (photoswipe.length > 0) {
         fetchInject([
             '../assets/vendor/photoswipe/dist/photoswipe.min.js',
             '../assets/vendor/photoswipe/dist/photoswipe-ui-default.min.js',
@@ -507,11 +507,11 @@ var Photoswipe = (function() {
 
 
 // AOS
-var AOSAnimation = (function() {
+var AOSAnimation = (function () {
     // Variables
     var aos = document.querySelectorAll('[data-aos]'),
         preloader = document.querySelector('.preloader');
-    
+
 
     // Methods
     function init() {
@@ -522,12 +522,12 @@ var AOSAnimation = (function() {
             duration: 750
         };
 
-        if(isExist(preloader)) {
-            Preloader.then(function() {
-                setTimeout(function(){
+        if (isExist(preloader)) {
+            Preloader.then(function () {
+                setTimeout(function () {
                     AOS.init(options);
                 }, 200);
-            }, function(error) {
+            }, function (error) {
                 // error goes here
             });
         } else {
@@ -537,18 +537,18 @@ var AOSAnimation = (function() {
 
 
     // Events
-    if(aos.length > 0) {
+    if (aos.length > 0) {
         init();
     }
 }());
 
 
 // Smooth scroll
-var Scroll = (function() {
+var Scroll = (function () {
     // Variables
     var smoothScroll = document.querySelector('[data-scroll]');
 
-    
+
     // Methods
     function init() {
         var scroll = new SmoothScroll('[data-scroll]', {
@@ -560,7 +560,7 @@ var Scroll = (function() {
 
 
     // Events
-    if(isExist(smoothScroll)) {
+    if (isExist(smoothScroll)) {
         fetchInject([
             '../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js'
         ]).then(() => {
@@ -571,12 +571,12 @@ var Scroll = (function() {
 
 
 // Countdown
-var Countdown = (function() {
+var Countdown = (function () {
     // Variables
     var counter = document.querySelectorAll('[data-countdown]'),
         days, hours, minutes, seconds;
 
-    
+
     // Methods
     function init(elem) {
         // Inner variables
@@ -584,7 +584,7 @@ var Countdown = (function() {
             endMessage = elem.getAttribute('data-end-message') || "Let's Begin!",
             now = new Date().getTime();
 
-        if(endDate.getTime() - now < 0) {
+        if (endDate.getTime() - now < 0) {
             elem.innerHTML = endMessage;
         } else {
             updateCounter(elem, endDate, endMessage);
@@ -598,7 +598,7 @@ var Countdown = (function() {
             minutesElem = elem.querySelector('.minutes'),
             secondsElem = elem.querySelector('.seconds');
 
-        var x = setInterval(function() {
+        var x = setInterval(function () {
             var startDate = new Date().getTime(),
                 timeRemaining = parseInt((endDate - startDate) / 1000);
 
@@ -624,8 +624,8 @@ var Countdown = (function() {
 
 
     // Events
-    if(counter.length > 0) {
-        [].forEach.call(counter, function(el, i){
+    if (counter.length > 0) {
+        [].forEach.call(counter, function (el, i) {
             init(el);
         });
     }
@@ -633,11 +633,11 @@ var Countdown = (function() {
 
 
 // Sticky
-var StickyElement = (function() {
+var StickyElement = (function () {
     // Variables
     var stickyItem = document.querySelector('[data-sticky]');
 
-    
+
     // Methods
     function init() {
         var sticky = new Sticky('[data-sticky]');
@@ -645,7 +645,7 @@ var StickyElement = (function() {
 
 
     // Events
-    if(isExist(stickyItem)) {
+    if (isExist(stickyItem)) {
         fetchInject([
             '../assets/vendor/sticky-js/dist/sticky.min.js'
         ]).then(() => {
@@ -656,12 +656,12 @@ var StickyElement = (function() {
 
 
 // CountUp
-var CounterUp = (function() {
+var CounterUp = (function () {
     // Variables
     var countup = document.querySelectorAll('[data-countup]'),
         preloader = document.querySelector('.preloader');
 
-    
+
     // Methods
     function init(elem) {
         // Inner variables
@@ -670,21 +670,21 @@ var CounterUp = (function() {
             decimals = elem.getAttribute('data-decimals') || 0,
             duration = elem.getAttribute('data-duration') || 2,
             options = JSON.parse(elem.getAttribute('data-options'));
-            
+
         var counter = new CountUp(elem, from, to, decimals, duration, options);
 
         if (!counter.error) {
-            addListenerMulti(window, 'load scroll', function(e){
-                if(isExist(preloader)) {
-                    Preloader.then(function() {
-                        if(isInViewport(elem)) {
+            addListenerMulti(window, 'load scroll', function (e) {
+                if (isExist(preloader)) {
+                    Preloader.then(function () {
+                        if (isInViewport(elem)) {
                             counter.start();
                         }
-                    }, function(error) {
+                    }, function (error) {
                         // error goes here
                     });
                 } else {
-                    if(isInViewport(elem)) {
+                    if (isInViewport(elem)) {
                         counter.start();
                     }
                 }
@@ -694,11 +694,11 @@ var CounterUp = (function() {
 
 
     // Events
-    if(countup.length > 0) {
+    if (countup.length > 0) {
         fetchInject([
             '../assets/vendor/countup.js/dist/countUp.min.js'
         ]).then(() => {
-            [].forEach.call(countup, function(el, i){
+            [].forEach.call(countup, function (el, i) {
                 init(el);
             });
         });
@@ -707,20 +707,20 @@ var CounterUp = (function() {
 
 
 // Jarallax
-var Jarallax = (function() {
+var Jarallax = (function () {
     // Variables
     var jarallax = document.querySelector('[data-jarallax]'),
         jarallaxVideo = document.querySelector('[data-jarallax-video]');
 
 
     // Events
-    if(isExist(jarallax)) {
+    if (isExist(jarallax)) {
         fetchInject([
             '../assets/vendor/jarallax/dist/jarallax.min.js',
             '../assets/vendor/jarallax/dist/jarallax.css'
         ]);
     }
-    if(isExist(jarallaxVideo)) {
+    if (isExist(jarallaxVideo)) {
         fetchInject([
             '../assets/vendor/jarallax/dist/jarallax-video.min.js'
         ]);
@@ -729,7 +729,7 @@ var Jarallax = (function() {
 
 
 // Floating objects
-var FloatingObjects = (function() {
+var FloatingObjects = (function () {
     // Variables
     var container = document.querySelector('.floating-objects');
     var objects = document.querySelectorAll(".floating-objects span");
@@ -737,7 +737,7 @@ var FloatingObjects = (function() {
     var transitionDurationProperty = getSupportedPropertyName(transitionDurations);
     var transforms = ["transform", "msTransform", "webkitTransform", "mozTransform", "oTransform"];
     var transformProperty = getSupportedPropertyName(transforms);
-    
+
     // Methods
     function init() {
         setInitialProperties();
@@ -747,12 +747,12 @@ var FloatingObjects = (function() {
         for (var i = 0; i < objects.length; i++) {
             var object = objects[i];
             var circleSize = Math.round(250 + Math.random() * 100);
-            
+
             object.style.width = circleSize + "px";
             object.style.height = circleSize + "px";
             object.style.opacity = .005 + Math.random() * .06;
-    
-            setTranslate3DTransform(object);	
+
+            setTranslate3DTransform(object);
         }
         setTimeout(addTransition, 100);
 
@@ -762,51 +762,51 @@ var FloatingObjects = (function() {
     function addTransition() {
         for (var i = 0; i < objects.length; i++) {
             var object = objects[i];
-            
+
             object.addEventListener("transitionend", updatePosition, false);
             object.addEventListener("webkitTransitionEnd", updatePosition, false);
             object.addEventListener("mozTransitionEnd", updatePosition, false);
             object.addEventListener("msTransitionEnd", updatePosition, false);
             object.addEventListener("oTransitionEnd", updatePosition, false);
-            
+
             setTranslate3DTransform(object);
             setTransitionDuration(object);
         }
     }
-    
+
     function updatePosition(e) {
         var object = e.currentTarget;
-        
+
         if (e.propertyName.indexOf("transform") != -1) {
             setTranslate3DTransform(object);
             setTransitionDuration(object);
         }
     }
 
-    function getContainerWidth(){
+    function getContainerWidth() {
         return container.offsetWidth;
     }
 
-    function getContainerHeight(){
+    function getContainerHeight() {
         return container.offsetHeight;
     }
-    
+
     function getRandomXPosition() {
         return Math.round(-250 + Math.random() * getContainerWidth() + 250);
     }
-    
+
     function getRandomYPosition() {
         return Math.round(-100 + Math.random() * getContainerHeight() + 100);
     }
-    
+
     function getRandomDuration() {
         return (25 + Math.random() * 50) + "s";
     }
-    
+
     function getRandomSize() {
         return (0.1 + Math.random() * .7);
     }
-    
+
     function getSupportedPropertyName(properties) {
         for (var i = 0; i < properties.length; i++) {
             if (typeof document.body.style[properties[i]] != "undefined") {
@@ -815,11 +815,11 @@ var FloatingObjects = (function() {
         }
         return null;
     }
-    
+
     function setTranslate3DTransform(element) {
         element.style[transformProperty] = "translate3d(" + getRandomXPosition() + "px" + ", " + getRandomYPosition() + "px" + ", 0) scale(" + getRandomSize() + ")";
     }
-    
+
     function setTransitionDuration(element) {
         if (transitionDurationProperty) {
             element.style[transitionDurationProperty] = getRandomDuration();
@@ -828,14 +828,14 @@ var FloatingObjects = (function() {
 
 
     // Events
-    if(isExist(objects)) {
+    if (isExist(objects)) {
         init();
     }
 }());
 
 
 // Alert
-var Alert = (function() {
+var Alert = (function () {
     // Variables
     var alert = document.querySelectorAll('.alert'),
         navbarCollapse = document.querySelector('.navbar-collapse');
@@ -846,57 +846,57 @@ var Alert = (function() {
         // Inner variables
         var elemId = elem.getAttribute('id');
 
-        if(!isExist(getCookie(elemId))) {
+        if (!isExist(getCookie(elemId))) {
             manageAlert(elem);
         }
     }
 
-    function manageAlert(elem){
+    function manageAlert(elem) {
         // Inner variables
         var elemId = elem.getAttribute('id'),
             alertClose = elem.querySelector('[data-dismiss="alert"]');
 
-        if(elem.style.display == 'none') {
+        if (elem.style.display == 'none') {
             elem.style.display = '';
         }
 
-        if(isExist(alertClose)) {
-            alertClose.addEventListener('click', function() {
+        if (isExist(alertClose)) {
+            alertClose.addEventListener('click', function () {
                 setCookie(elemId, 'dismissed', 30);
 
                 // Alert Ad specific
-                if(elem.classList.contains('alert-ad')) {
+                if (elem.classList.contains('alert-ad')) {
                     document.body.style.transition = 'padding-top .4s linear';
                     document.body.style.paddingTop = '';
-                    if(isExist(navbarCollapse)) {
+                    if (isExist(navbarCollapse)) {
                         navbarCollapse.style.top = '';
                         navbarCollapse.style.maxHeight = '';
                     }
-                    
+
                 }
             }, false);
         }
 
 
         // Alert Ad specific
-        if(elem.classList.contains('alert-ad')) {
+        if (elem.classList.contains('alert-ad')) {
             manageAnimations(elem);
 
-            window.addEventListener('resize', function(){
+            window.addEventListener('resize', function () {
                 manageAnimations(elem);
             });
         }
     }
 
-    function manageAnimations(elem){
-        setTimeout(function(){
+    function manageAnimations(elem) {
+        setTimeout(function () {
             var alertHeight = elem.offsetHeight;
 
             document.body.style.transition = 'padding-top .4s linear';
             document.body.style.paddingTop = alertHeight + 'px';
             elem.style.transition = 'margin-top .3s linear';
             elem.style.marginTop = 0;
-            if(isExist(navbarCollapse)) {
+            if (isExist(navbarCollapse)) {
                 navbarCollapse.style.top = 'calc(5.5rem + ' + alertHeight + 'px)';
                 navbarCollapse.style.maxHeight = 'calc(100% - 6.25rem - ' + alertHeight + 'px)';
             }
@@ -905,8 +905,8 @@ var Alert = (function() {
 
 
     // Events
-    if(alert.length > 0) {
-        [].forEach.call(alert, function(el, i){
+    if (alert.length > 0) {
+        [].forEach.call(alert, function (el, i) {
             init(el);
         });
     }
@@ -914,32 +914,32 @@ var Alert = (function() {
 
 
 // Isotope
-var Isotope = (function() {
+var Isotope = (function () {
     // Variables
     var grid = document.querySelector('[data-isotope]'),
         filter = document.querySelectorAll('[data-filter]');
 
-    
+
     // Methods
     function init() {
         var iso = new Isotope(grid);
 
-        imagesLoaded(grid).on('progress', function() {
+        imagesLoaded(grid).on('progress', function () {
             iso.layout();
         });
 
-        [].forEach.call(filter, function(el, i){
-            el.addEventListener('click', function() {
+        [].forEach.call(filter, function (el, i) {
+            el.addEventListener('click', function () {
                 iso.arrange({
                     filter: el.getAttribute('data-filter')
                 })
             }, false);
         });
     }
-    
+
 
     // Events
-    if(isExist(grid)) {
+    if (isExist(grid)) {
         fetchInject([
             '../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js',
             '../assets/vendor/isotope-layout/dist/isotope.pkgd.min.js'
@@ -951,11 +951,11 @@ var Isotope = (function() {
 
 
 // Mapbox
-var Mapbox = (function() {
+var Mapbox = (function () {
     // Variables
     var mapbox = document.querySelectorAll('[data-toggle="map"]');
 
-    
+
     // Methods
     function init(elem) {
         // Inner variables
@@ -968,31 +968,31 @@ var Mapbox = (function() {
                 interactive: false
             },
             mergedOptions = mergeObjects(options, dataOptions);
-            
-        mapboxgl.accessToken = 'pk.eyJ1IjoibGV2aXBhZHJlIiwiYSI6ImNrZGtmN3JmdjBueGsyeXF4d3BvM3F2MWsifQ.gImQw8-AIIZJxr0LzFo1sw'; // Create a new access token on https://account.mapbox.com/access-tokens/
+
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYWFyb25qYWNvYndlaW5lciIsImEiOiJja3RqZHk1bGIxYXY5MnBxbmNyZGxuaTBsIn0.Dir9jcUMkrL6XdOyEHKxzg'; // Create a new access token on https://account.mapbox.com/access-tokens/
 
         var map = new mapboxgl.Map(mergedOptions);
 
-        if(isExist(elem.getAttribute('data-marker'))) {
+        if (isExist(elem.getAttribute('data-marker'))) {
             var marker = new mapboxgl.Marker({
                 color: getCssVariable('--map-marker-color')
             })
-            .setLngLat(mergedOptions.center)
-            .addTo(map);
+                .setLngLat(mergedOptions.center)
+                .addTo(map);
         }
-        if(isExist(elem.getAttribute('data-controls'))){
+        if (isExist(elem.getAttribute('data-controls'))) {
             map.addControl(new mapboxgl.NavigationControl());
         }
     }
 
 
     // Events
-    if(mapbox.length > 0) {
+    if (mapbox.length > 0) {
         fetchInject([
             'https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js',
             'https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css'
         ]).then(() => {
-            [].forEach.call(mapbox, function(el, i){
+            [].forEach.call(mapbox, function (el, i) {
                 init(el);
             });
         });
@@ -1001,7 +1001,7 @@ var Mapbox = (function() {
 
 
 // Price toggle
-var Prices = (function() {
+var Prices = (function () {
     // Variables
     var priceSwitcher = document.querySelectorAll('[data-toggle="price"]');
 
@@ -1012,16 +1012,16 @@ var Prices = (function() {
         var targetElem = elem.getAttribute('data-target'),
             target = document.querySelectorAll(targetElem);
 
-        elem.addEventListener('click', function() {
+        elem.addEventListener('click', function () {
             // Inner variables
             var switchedValues = elem.getAttribute('data-switcher');
 
-            [].forEach.call(target, function(t, i){
+            [].forEach.call(target, function (t, i) {
                 var from = 0,
                     to = t.getAttribute('data-' + switchedValues);
-                
+
                 var counter = new CountUp(t, from, to);
-    
+
                 if (!counter.error) {
                     counter.start();
                 }
@@ -1031,11 +1031,11 @@ var Prices = (function() {
 
 
     // Events
-    if(priceSwitcher.length > 0) {
+    if (priceSwitcher.length > 0) {
         fetchInject([
             '../assets/vendor/countup.js/dist/countUp.min.js'
         ]).then(() => {
-            [].forEach.call(priceSwitcher, function(el, i){
+            [].forEach.call(priceSwitcher, function (el, i) {
                 init(el);
             });
         });
@@ -1044,24 +1044,24 @@ var Prices = (function() {
 
 
 // Link group
-var LinkGroup = (function() {
+var LinkGroup = (function () {
     // Variables
     var linkGroup = document.querySelectorAll('[data-link-group]');
 
 
     // Methods
     function init(elem) {
-        elem.addEventListener('click', function(e) {
+        elem.addEventListener('click', function (e) {
             // Inner variables
             var linkGroupName = elem.getAttribute('data-link-group'),
                 linkGroups = document.querySelectorAll('[data-link-group="' + linkGroupName + '"]');
 
-            [].forEach.call(linkGroups, function(el, i){
+            [].forEach.call(linkGroups, function (el, i) {
                 el.classList.remove('active');
             });
             elem.classList.add('active');
 
-            if (elem.getAttribute("href") && elem.getAttribute("href").slice(0,1) == "#") {
+            if (elem.getAttribute("href") && elem.getAttribute("href").slice(0, 1) == "#") {
                 e.preventDefault();
             }
         }, false);
@@ -1069,8 +1069,8 @@ var LinkGroup = (function() {
 
 
     // Events
-    if(linkGroup.length > 0) {
-        [].forEach.call(linkGroup, function(el, i){
+    if (linkGroup.length > 0) {
+        [].forEach.call(linkGroup, function (el, i) {
             init(el);
         });
     }
@@ -1078,7 +1078,7 @@ var LinkGroup = (function() {
 
 
 // Navbar togglable
-var NavbarTogglable = (function() {
+var NavbarTogglable = (function () {
     // Variables
     var navbarTogglable = document.querySelector('.navbar-togglable');
 
@@ -1092,19 +1092,19 @@ var NavbarTogglable = (function() {
             logoColorOrig1 = logo.querySelectorAll('path')[0].getAttribute('fill'),
             logoColorOrig2 = logo.querySelectorAll('path')[1].getAttribute('stroke');
 
-        if(navbarTogglable.classList.contains('navbar-dark')) {
+        if (navbarTogglable.classList.contains('navbar-dark')) {
             navbarColorOrig = 'navbar-dark';
             isNavbarColorDark = true;
         }
 
-        window.addEventListener('scroll', function(e) {
+        window.addEventListener('scroll', function (e) {
             // Inner variables
             var pageYScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-            if(pageYScroll > 10) {
+            if (pageYScroll > 10) {
                 navbarTogglable.classList.add('bg-white');
 
-                if(isNavbarColorDark) {
+                if (isNavbarColorDark) {
                     navbarTogglable.classList.remove('navbar-dark');
                     navbarTogglable.classList.add('navbar-light');
                 }
@@ -1114,7 +1114,7 @@ var NavbarTogglable = (function() {
             } else {
                 navbarTogglable.classList.remove('bg-white');
 
-                if(isNavbarColorDark) {
+                if (isNavbarColorDark) {
                     navbarTogglable.classList.remove('navbar-light');
                     navbarTogglable.classList.add('navbar-dark');
                 }
@@ -1127,18 +1127,18 @@ var NavbarTogglable = (function() {
 
 
     // Events
-    if(isExist(navbarTogglable)) {
+    if (isExist(navbarTogglable)) {
         init();
     }
 }());
 
 
 // Rotating cube
-var Cube = (function() {
+var Cube = (function () {
     // Variables
     var cube = document.querySelector('.cube');
     const defaultPerspective = '-170px',
-          speed = 0.05;
+        speed = 0.05;
     var mouseX = 0,
         mouseY = 0,
         clientX = 0,
@@ -1167,7 +1167,7 @@ var Cube = (function() {
 
     function touchPositionEnd(e) {
         var deltaX, deltaY;
-        
+
         deltaX = e.changedTouches[0].clientX - clientX;
         deltaY = e.changedTouches[0].clientY - clientY;
     }
@@ -1178,22 +1178,22 @@ var Cube = (function() {
         var newStyle = `translateZ(${defaultPerspective}) rotateY(${lastXDeg}deg) rotateX(${lastYDeg}deg)`;
         document.querySelector('.cube').style.transform = newStyle;
     }
-    
+
     function getAngle(x) {
         return 45 - 90 * x; // 180 - 360 * x
     }
-    
+
     function getWidth() {
         return closest(cube, 'section').offsetWidth;
     }
-    
+
     function getHeight() {
         return closest(cube, 'section').offsetHeight;
     }
 
 
     // Events
-    if(isExist(cube)) {
+    if (isExist(cube)) {
         init();
     }
 }());
@@ -1201,7 +1201,7 @@ var Cube = (function() {
 
 // Helper functions
 function isExist(el) {
-    if(typeof(el) != 'undefined' && el != null) {
+    if (typeof (el) != 'undefined' && el != null) {
         return true;
     } else {
         return false;
@@ -1214,10 +1214,10 @@ function addListenerMulti(el, s, fn) {
     });
 }
 
-function mergeObjects(){
+function mergeObjects() {
     var res = {};
-    for(var i = 0; i < arguments.length; i++){
-        for(var x in arguments[i]){
+    for (var i = 0; i < arguments.length; i++) {
+        for (var x in arguments[i]) {
             res[x] = arguments[i][x];
         };
     };
@@ -1234,7 +1234,7 @@ function detatch(el) {
 
 function closest(el, selector) {
     const matchesSelector = el.matches || el.webkitMatchesSelector || el.mozMatchesSelector || el.msMatchesSelector;
-  
+
     while (el) {
         if (matchesSelector.call(el, selector)) {
             return el;
@@ -1256,7 +1256,7 @@ function getCookie(name) {
 
 function setCookie(name, value, days) {
     var d = new Date;
-    d.setTime(d.getTime() + 24*60*60*1000*days);
+    d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
     document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
 }
 

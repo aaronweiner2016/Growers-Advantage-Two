@@ -7,7 +7,9 @@
 {# {% set bgTransparent = true %} #}
 
 {% block content %}
-    <div style="height: 120px;"></div>
+    {% include "partials/_preloader.njk" %}
+
+    {# <div style="height: 120px;"></div> #}
     {# class="d-md-none1" #}
     <!--<section class="bg-light pb-6 pb-md-0 mt-32" id="content">
         <div class="container">
@@ -70,12 +72,12 @@
         </div>
     </section>-->
 
-    <section id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        {# <ol class="carousel-indicators">
+    {# <section id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
             <li style="height: 30px; width: 40px; background-color: black;" data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li style="height: 30px; width: 40px; background-color: black;" data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li style="height: 30px; width: 40px; background-color: black;" data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol> #}
+        </ol>
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item bg-cover w-100 vh-75 overlay overlay-primary-gradient-top-50 overlay-50" data-jarallax data-speed=".8" style="background-image: url('assets/images/images-growers/grow-6.jpeg')">
                 <div class="row vh-100 text-center text-white">
@@ -100,8 +102,7 @@
                     </div>
                 </div>
             </div>
-            {# <div class="carousel-item active bg-cover w-100 vh-75 overlay overlay-primary-gradient-top-50 overlay-50"> #}
-            <div class="carousel-item active bg-cover bg-layer-light-top-80-left-60 min-vh-100">
+            <div class="carousel-item active bg-cover vh-75 bg-layer-light-top-80-left-60 min-vh-100">
                 <div class="container-sm mt-n10">
                     <div class="row no-gutters align-items-center">
                         <div class="col-lg-7 pt-12 pt-lg-0 pr-5" data-aos="fade-right" data-aos-delay="100">
@@ -158,7 +159,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-    </section>
+    </section> #}
 
     {# <section class="bg-layer-light-top-80-left-60 min-vh-100">
         <div class="container-sm">
@@ -185,49 +186,86 @@
         </div>
     </section> #}
 
-    {# <section class="d-flex flex-row justify-content-around flex-wrap homeResCommerLinkBtn">
-        <a href="/residential" style="background-color: #789904; border-color: #789904;" data-scroll data-aos="fade-right" data-aos-delay="700" class="hover-btn column-flex btn btn-secondary text-uppercase d-inline-flex align-items-center justify-content-center">
-            <div class="d-flex flex-column">
-                <h3>Residential Lights</h3> For all your home growing needs!
+    {# <section id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <div class="col-lg-5 pt-12" data-aos="fade-left">
+                    <div class="img-shifted img-shifted-with-edge shift-right vh-75">
+                        <div class="bg-image bg-cover" style="background-image: url(assets/images/images-growers/fish-farm.jpeg);" data-jarallax data-speed=".8"></div>
+                    </div>
+                </div>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" id="arrow" class="bi bi-arrow-right-circle ml-3" viewBox="0 0 16 16">
-                <path class="charcoalGrow2" fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
-            </svg>
+            <div class="carousel-item">
+                <div class="col-lg-5 pt-12" data-aos="fade-left">
+                    <div class="img-shifted img-shifted-with-edge shift-right vh-75">
+                        <div class="bg-image bg-cover" style="background-image: url(assets/images/images-growers/fish-farm.jpeg);" data-jarallax data-speed=".8"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="col-lg-5 pt-12" data-aos="fade-left">
+                    <div class="img-shifted img-shifted-with-edge shift-right vh-75">
+                        <div class="bg-image bg-cover" style="background-image: url(assets/images/images-growers/fish-farm.jpeg);" data-jarallax data-speed=".8"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
         </a>
-
-        <a href="/commercial" style="background-color: #789904; border-color: #789904;" data-scroll data-aos="fade-left" data-aos-delay="700" class="hover-btn column-flex btn btn-secondary text-uppercase d-inline-flex align-items-center justify-content-center">
-            <div class="d-flex flex-column">
-                <h3>Commercial Lights</h3> Contact today to for consultation!     
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" id="arrow" class="bi bi-arrow-right-circle ml-3" viewBox="0 0 16 16">
-                <path class="charcoalGrow2" fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
-            </svg>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
         </a>
     </section> #}
 
-    {# <section class="d-flex flex-column justify-content-center ml-2 mr-2"> #}
-    {# <div class="d-flex justify-content-center justify-content-around marginHomeGrow" id="product-column"> #}
-
-    {# {% for product in products %} #}
-    {# possibly change color of hover border to charcoal #}
-    {# <a href="/product/{{product.id}}" class="ml-2 mr-2" style="text-decoration: none; background: none; color: inherit; border: none; padding: 0; font: inherit; cursor: pointer; outline: inherit;"> #}
-    {# <div data-aos="fade-up" class="d-flex flex-column align-items-center"> #}
-    {# <picture> #}
-    {# <source srcset={{product.image}} type="image/jpg"> #}
-    {# <img style="max-height: 500px;" src={{product.image}} alt="printscreen-04" class="img-fluid lift Column11"> #}
-    {# </picture> #}
-    {# <h3 class="productNameGrow">{{product.product_name}}</h3> #}
-    {# <p class="textCenterGrow">{{product.details}}</p> #}
-    {# </div>
-    </a> #}
-    {# {% endfor %} #}
-
-    {# </div>
-    </br>
-    <div class="d-flex justify-content-center widthOneHun">
-    <a href="/residential" class="btn charcoalGrow homeGrowProductBtn text-white">View All Products</a>
-    </div>
-    </section> #}
+    <section class="bg-layer-light-top-80-left-60 min-vh-100 mt-lg-n5">
+        <div class="container-sm">
+            <div class="row no-gutters align-items-center">
+                <div class="col-lg-7 pt-12 pt-lg-0 pr-5" data-aos="fade-right" data-aos-delay="100">
+                    <h1 class="display-3">The Grow Lights<br>
+                        <span class="font-weight-lighter">That Grow Right</span></h1>
+                    <p class="mb-6" style="text-transform: uppercase;">With Grower’s Advantage Specialty LED lighting solutions.
+                                    Designed by growers…for growers, we understand the aspects of your growing style to maximize crop performance.
+                                    Contact us today to understand the ADVANTAGE of Grower’s Advantage.
+                                    More information coming soon.</p>
+                    <a href="/contact" data-scroll class="btn btn-secondary text-uppercase d-inline-flex align-items-center">Contact Us<svg width="16" height="16" class="ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>arrow-right-1</title>
+                            <path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-lg-5 pt-12" data-aos="fade-left">
+                    <div class="img-shifted img-shifted-with-edge shift-right vh-75">
+                        <section id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active container2">
+                                    <div class="bg-image bg-cover d-flex align-items-center justify-content-center mt-lg-n10 flex-column image2" style="background-image: url(assets/images/images-growers/fish-farm.jpeg);" data-jarallax data-speed=".8">
+                                        {# <img src="assets/images/images-growers/fish-farm.jpeg" alt="Avatar" class="image2 mt-lg-n5" style="width:100%;" data-jarallax data-speed=".8"> #}
+                                    </div>
+                                    <div class="middle2 mt-lg-n5">
+                                        <div style="font-size: 2em; font-style: oblique; font-weight: bolder">Higher yielding plants</div>
+                                        <button class="btn btn-secondary">See Advantage</button>
+                                    </div>
+                                    {# <div class="bg-image bg-cover d-flex align-items-center justify-content-center mt-lg-n10 flex-column" style="background-image: url(assets/images/images-growers/fish-farm.jpeg);" data-jarallax data-speed=".8"> #}
+                                    {# <button class="opacityGrow text2 middle2" data-aos="fade-up" data-aos-delay="1000">Higher Yields</button>
+                                        <button class="btn btn-secondary mb-lg-n10 text2 middle2" data-aos="fade-up" data-aos-delay="500">See Advantage</button> #}
+                                    {# </div> #}
+                                </div>
+                                {# <div class="carousel-item">
+                                    <div class="bg-image bg-cover" style="background-image: url(assets/images/images-growers/fish-farm.jpeg);" data-jarallax data-speed=".8"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="bg-image bg-cover" style="background-image: url(assets/images/images-growers/fish-farm.jpeg);" data-jarallax data-speed=".8"></div>
+                                </div> #}
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     {# <section class="mt-n6 mb-6 mt-lg-n7 mb-lg-7">
         <div class=container>
@@ -284,13 +322,13 @@
                 <div class="col-lg-6 col-sm-10 p-0 mt-n9">
                     <ul class="nav flex-column flex-md-row nav-tabs border-0 ml-n3" id="myTab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link border-0 active" id="mobile-tab" data-toggle="tab" href="#mobile" role="tab" aria-controls="mobile" aria-selected="true">Mobile development</a>
+                            <a class="nav-link border-0 active" style="font-size: 1em;" id="mobile-tab" data-toggle="tab" href="#mobile" role="tab" aria-controls="mobile" aria-selected="true">Mobile development</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link border-0" id="data-tab" data-toggle="tab" href="#data" role="tab" aria-controls="data" aria-selected="false">Data analysis</a>
+                            <a class="nav-link border-0" style="font-size: 1em;" id="data-tab" data-toggle="tab" href="#data" role="tab" aria-controls="data" aria-selected="false">Data analysis</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link border-0" id="online-tab" data-toggle="tab" href="#online" role="tab" aria-controls="online" aria-selected="false">Online security</a>
+                            <a class="nav-link border-0" style="font-size: 1em;" id="online-tab" data-toggle="tab" href="#online" role="tab" aria-controls="online" aria-selected="false">Online security</a>
                         </li>
                     </ul>
                     <div class="tab-content d-flex h-100 align-items-center" id="myTabContent">
@@ -446,15 +484,118 @@
                         </div>
                     </div>
                 </div>
-                {# <div class="col-lg-4 mt-6 mt-lg-n10"> #}
-                {# <div class="device-iphone"> #}
-                <img style="height: 100%; width: 100%;" src="https://www.luxxlighting.com/Luxx/item-images/LUX-645-277_02.jpg?resizeid=21&resizeh=800&resizew=800" alt="phone-frame" class="w-100 col-lg-6 col-sm-10 mt-6 mt-lg-n10 p-0"></div>
-            {# </div> #}
+                <img style="height: 100%; width: 100%;" class="w-100 col-lg-6 col-sm-10 mt-6 mt-lg-n10 p-0" src="https://www.luxxlighting.com/Luxx/item-images/LUX-645-277_02.jpg?resizeid=21&resizeh=800&resizew=800" alt="phone-frame"/>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-{# <section class="w-100 d-flex align-items-center flex-column">
+    <section class="my-6">
+        <div class="container-fluid px-0">
+            <div class="row no-gutters">
+                <div class="col-lg-6">
+                    <div class="bg-image bg-cover" style="background-image: url(assets/images/images-growers/grow-18.jpeg);" data-jarallax data-speed=".9"></div>
+                </div>
+                <div class="col-lg-5 p-5 p-lg-7 align-items-center">
+                    <h2>We deliver <span class="font-weight-lighter" data-typed data-options='{"strings": ["design.", "quality.", "inspiration."]}'></span></h2>
+                    <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis commodo tortor a mi auctor dapibus. Morbi rutrum, nisi eu sodales.</p>
+                    <div class="mt-6 mb-5">
+                        <div class="d-flex" data-aos="fade-left">
+                            <div class="d-flex align-items-start mt-1">
+                                <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <title>check</title>
+                                    <path d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-2">
+                                <h3 class="h5 mb-1">Lorem ipsum dolor sit amet</h3>
+                                <p class="font-size-5 mb-3">Quisque ultricies quam in rhoncus dictum. Morbi viverra mi non ex auctor, sit amet efficitur sem.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex" data-aos="fade-left" data-aos-delay="100">
+                            <div class="d-flex align-items-start mt-1">
+                                <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <title>check</title>
+                                    <path d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-2">
+                                <h3 class="h5 mb-1">Vestibulum ante ipsum</h3>
+                                <p class="font-size-5 mb-3">Donec consequat ultrices nunc eget faucibus. Suspendisse placerat.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex" data-aos="fade-left" data-aos-delay="200">
+                            <div class="d-flex align-items-start mt-1">
+                                <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <title>check</title>
+                                    <path d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-2">
+                                <h3 class="h5 mb-1">Mauris turpis mi</h3>
+                                <p class="font-size-5 mb-3">Nunc tortor eros, posuere in nibh non, ornare fermentum leo. Nulla sit amet erat a tortor egestas.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex" data-aos="fade-left" data-aos-delay="300">
+                            <div class="d-flex align-items-start mt-1">
+                                <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <title>check</title>
+                                    <path d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-2">
+                                <h3 class="h5 mb-1">Phasellus pulvinar euismod</h3>
+                                <p class="font-size-5 mb-3">Phasellus quis vehicula metus. Vivamus pulvinar vulputate sapien, id bibendum urna rutrum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-secondary text-uppercase d-block d-lg-inline-flex align-items-center">Contact Us<svg width="16" height="16" class="ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>arrow-right-1</title><path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6 mb-6 py-lg-7 mb-lg-7">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="row justify-content-center no-gutters">
+                        <div class="col-12 text-center">
+                            <h2>You still have questions?</h2>
+                            <p>Fusce ullamcorper nisi congue, suscipit neque in, dictum turpis.<br class="d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="col-md-7 pr-md-7 col-lg-6 pr-lg-6 position-relative z-index-1" data-aos="fade-up">
+                            <div class="card shadow text-secondary mb-5 lift">
+                                <div class="card-body p-5 px-lg-7 py-lg-6 text-center">
+                                    <svg width="45" height="45" class="mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <title class="orangeThemeGrower">phone-actions-24-support</title><path d="M17.169,16.163a2.5,2.5,0,0,0-3.536,0l-.386.385a46.9,46.9,0,0,1-5.789-5.789l.386-.386a2.5,2.5,0,0,0,0-3.535L5.721,4.717a2.556,2.556,0,0,0-3.535,0L1.022,5.881a3.507,3.507,0,0,0-.441,4.4A46.945,46.945,0,0,0,13.722,23.426a3.549,3.549,0,0,0,4.4-.443l1.164-1.164a2.5,2.5,0,0,0,0-3.535Z" class="orangeThemeGrower"/><path d="M23,.007A5.694,5.694,0,0,0,17.31,5.694v.938a1,1,0,0,0,1,1H22v.875a1,1,0,1,0,2,0v-7.5A1,1,0,0,0,23,.007ZM22,5.632H19.311A3.7,3.7,0,0,1,22,2.144Z" class="orangeThemeGrower"/><path d="M11.279,4.35a1,1,0,0,0,1-1,1.344,1.344,0,0,1,2.661-.269c.136.674-.032.892-.952,1.7L10.617,7.757a1,1,0,0,0,.662,1.75h5.156a1,1,0,0,0,0-2H13.924l1.385-1.223c.924-.812,1.97-1.734,1.591-3.6a3.344,3.344,0,0,0-6.621.668A1,1,0,0,0,11.279,4.35Z" class="orangeThemeGrower"/></svg>
+                                    <h3 class="mb-0">
+                                        <a href="#" class="orangeThemeGrower">(+1) 803-320-1295</a>
+                                    </h3>
+                                    <p class="font-size-5 text-muted mb-0">Available in 24/7</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ml-md-n8 mt-md-5 col-lg-5 ml-lg-n8 mt-lg-6" data-aos="fade-up" data-aos-delay="50">
+                            <div class="card bg-light shadow lift">
+                                <div class="card-body p-5 px-lg-7 py-lg-6 text-center">
+                                    <svg width="45" height="45" class="mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <title class="colorThemeGreen1">email-action-at</title><path d="M18.409,15.131A.758.758,0,0,1,18,15.25H6a.757.757,0,0,1-.405-.119L.385,11.781a.25.25,0,0,0-.385.21V22a2,2,0,0,0,2,2H22a2,2,0,0,0,2-2V12a.25.25,0,0,0-.385-.211Z" class="colorThemeGreen1"/><path d="M5.12,13.041a.25.25,0,0,0,.385-.21L5.5,2.25A.249.249,0,0,1,5.75,2h12.5a.25.25,0,0,1,.25.25l.01,10.575a.25.25,0,0,0,.385.21l4.053-2.607a.248.248,0,0,0,.115-.206.251.251,0,0,0-.107-.21L20.5,8.3l0-6.093a2.114,2.114,0,0,0-2-2.208H5.5a2.115,2.115,0,0,0-2,2.209L3.5,8.3l-2.458,1.71a.249.249,0,0,0,.007.415Z" class="colorThemeGreen1"/><path d="M7.375,9.6a4.7,4.7,0,0,0,3.51,3.52A4.973,4.973,0,0,0,12,13.251a4.716,4.716,0,0,0,1.221-.16.75.75,0,1,0-.386-1.449,3.343,3.343,0,0,1-1.616.018A3.231,3.231,0,0,1,8.837,9.27a3.286,3.286,0,0,1,.648-2.829,3.207,3.207,0,0,1,2.6-1.19A3.37,3.37,0,0,1,15.25,8.686V9.25a.5.5,0,0,1-1,0V8.5A2.25,2.25,0,1,0,12,10.75a2.225,2.225,0,0,0,1.142-.322A1.995,1.995,0,0,0,16.75,9.25V8.686a4.879,4.879,0,0,0-4.627-4.935,4.723,4.723,0,0,0-3.8,1.739A4.774,4.774,0,0,0,7.375,9.6ZM12,9.25a.75.75,0,1,1,.75-.75A.75.75,0,0,1,12,9.25Z" class="colorThemeGreen1"/></svg>
+                                    <h3 class="mb-0">
+                                        <a href="#" class="colorThemeGreen1">help@domain.com</a>
+                                    </h3>
+                                    <p class="font-size-5 text-muted mb-0">Happy to help</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {# <section class="w-100 d-flex align-items-center flex-column">
         <div class="row justify-content-left text-center charcoalGrow w-100 mb-5">
             <div class="col-md-10 col-lg-8">
                 <h2 class="h1 pt-3 pb-3 m-0 text-white">
@@ -501,14 +642,14 @@
         </picture>
     </section> #}
 
-{# <section class="my-6 my-lg-11 charcoalGrow" id="slider-multiple">
+    {# <section class="my-6 my-lg-11 charcoalGrow" id="slider-multiple">
         <div class="swiper fade show active">
             <div style="overflow: visible;" class="swiper-container" data-options='{"slidesPerView": 1, "loop": true, "breakpoints": {"992": {"slidesPerView": 1}}}'>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="container py-4 d-flex flex-row"> #}
-{# <div class="swiper-btn swiper-btn-prev mb-3" tabindex="0" role="button" aria-label="Previous slide"></div> #}
-{# <div class="mt-n7 row justify-content-center align-items-center text-center">
+    {# <div class="swiper-btn swiper-btn-prev mb-3" tabindex="0" role="button" aria-label="Previous slide"></div> #}
+    {# <div class="mt-n7 row justify-content-center align-items-center text-center">
                                 <img class="testimonialImgCircleWH" data-aos="fade-down" src="https://www.iphonesavvy.com/sites/default/files/%5Bcurrent-date%3Afile_path%5D/jan-profile-circle.png">
                                 <div class="col-lg-10 text-white" data-aos="zoom-in">
                                     <h3 class="font-size-4 font-weight-normal font-italic">
@@ -525,10 +666,10 @@
                                     <p class="font-size-6 text-muted mb-0">Nelson Harris, CEO of AweSum</p>
                                 </div>
                             </div> #}
-{# <div style="height: 100%;" class="d-flex align-items-center">
+    {# <div style="height: 100%;" class="d-flex align-items-center">
                             <div class="swiper-btn swiper-btn-next mb-3" tabindex="0" role="button" aria-label="Next slide"></div>
                         </div> #}
-{# </div>
+    {# </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="container py-4">
@@ -547,7 +688,7 @@
         </div>
     </section> #}
 
-{# <section class="py-6 mb-6">
+    {# <section class="py-6 mb-6">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -675,7 +816,7 @@
         </div>
     </section> #}
 
-{# <section class="py-6 mt-6 py-lg-7 mt-lg-7 bg-light">
+    {# <section class="py-6 mt-6 py-lg-7 mt-lg-7 bg-light">
         <div class="container">
             <div class="row justify-content-center align-items-center">
                 <div class="col-lg-6 col-xl-7 text-center text-lg-right">
@@ -695,7 +836,7 @@
         </form>
     </section> #}
 
-{# <section class="pt-6 pb-5 mb-6 pt-lg-7 pb-lg-6 mb-lg-7 bg-layer-primary-top-100-left-60 position-relative overflow-hidden">
+    {# <section class="pt-6 pb-5 mb-6 pt-lg-7 pb-lg-6 mb-lg-7 bg-layer-primary-top-100-left-60 position-relative overflow-hidden">
     <div class="container-fluid px-0">
         <div class="row">
             <div class="col">
@@ -737,5 +878,25 @@
         </div>
     </div>
 </section> #}
+
+    {# <section class="d-flex flex-row justify-content-around flex-wrap homeResCommerLinkBtn">
+        <a href="/residential" style="background-color: #789904; border-color: #789904;" data-scroll data-aos="fade-right" data-aos-delay="700" class="hover-btn column-flex btn btn-secondary text-uppercase d-inline-flex align-items-center justify-content-center">
+            <div class="d-flex flex-column">
+                <h3>Residential Lights</h3> For all your home growing needs!
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" id="arrow" class="bi bi-arrow-right-circle ml-3" viewBox="0 0 16 16">
+                <path class="charcoalGrow2" fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+            </svg>
+        </a>
+
+        <a href="/commercial" style="background-color: #789904; border-color: #789904;" data-scroll data-aos="fade-left" data-aos-delay="700" class="hover-btn column-flex btn btn-secondary text-uppercase d-inline-flex align-items-center justify-content-center">
+            <div class="d-flex flex-column">
+                <h3>Commercial Lights</h3> Contact today to for consultation!     
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" id="arrow" class="bi bi-arrow-right-circle ml-3" viewBox="0 0 16 16">
+                <path class="charcoalGrow2" fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+            </svg>
+        </a>
+    </section> #}
 
 {% endblock content %}
