@@ -35658,7 +35658,7 @@ section {
   margin: auto;
   width: 50px;
   height: 50px;
-  border: 4px solid #232323;
+  border: 4px solid #f5a800;
   -webkit-animation: preloader 2s infinite ease;
           animation: preloader 2s infinite ease;
 }
@@ -35668,7 +35668,7 @@ section {
   vertical-align: top;
   display: inline-block;
   width: 100%;
-  background-color: #232323;
+  background-color: #789904;
   -webkit-animation: preloader-shape 2s infinite ease-in;
           animation: preloader-shape 2s infinite ease-in;
 }
